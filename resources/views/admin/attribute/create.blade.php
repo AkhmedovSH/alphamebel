@@ -10,7 +10,7 @@
 
             <!-- Default box -->
             <div class="box">
-                {!! Form::open(['route' => 'categories.store'], 'autocomplete' => 'off') !!}
+                {!! Form::open(['route' => 'attribute.store']) !!}
                 <div class="box-header with-border">
                     <h3 class="box-title">Добавляем категорию</h3>
                     @include('admin.errors')
@@ -21,8 +21,17 @@
                             <label for="exampleInputEmail1">Название</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="Название">
                         </div>
+                        <div class="form-group">
+                            <label>Категория</label>
+                            {{Form::select('filter_id',
+                                $filters,
+                                null,
+                                ['class' => 'form-control select2'])
+                            }}
+                        </div>
                     </div>
                 </div>
+                
                 <!-- /.box-body -->
                 <div class="box-footer">
                     <button class="btn btn-default">Назад</button>

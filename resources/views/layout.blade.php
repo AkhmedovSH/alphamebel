@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/assets/style/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/style/owl.carousel.min.css">
     <link rel="stylesheet" href="/assets/style/owl.theme.default.min.css">
-    <link rel="stylesheet" href="/assets/style/main.css">
     <link rel="stylesheet" href="/assets/style/about.css">
     <link rel="stylesheet" href="/assets/style/dealers.css">
     <link rel="stylesheet" href="/assets/style/delivery.css">
@@ -24,6 +23,7 @@
     <link rel="stylesheet" href="/assets/style/vacancy.css">
     <link rel="stylesheet" href="/assets/style/wearechoosen.css">
     <link rel="stylesheet" href="/assets/style/stocks.css">
+    <link rel="stylesheet" href="/assets/style/main.css">
     <title>Alpha Mebel</title>
 </head>
 <body>

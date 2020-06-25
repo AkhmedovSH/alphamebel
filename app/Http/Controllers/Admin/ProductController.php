@@ -34,13 +34,15 @@ class ProductController extends Controller
 
         $data = Product::add($request->all());
         $data->uploadImage($request->file('image'));
+        $product->uploadMultipleImages($request->file('images'));
         return redirect()->route('product.index');
     }
 
     public function edit($id)
     {
         $data = Product::find($id);
-        return view('admin.product.edit', compact('data'));
+        $images = json_decode($data->images);
+        return view('admin.product.edit', compact('data', 'images'));
     }
 
     /**

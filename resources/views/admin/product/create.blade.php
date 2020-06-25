@@ -25,11 +25,12 @@
                         </div>
 
                         <div class="form-group">
-                           
-                            <label for="exampleInputFile">Лицевая картинка</label>
+                            <label for="exampleInputFile">Лицевая картинка jpeg jpg png (300x300)</label>
                             <input type="file" id="exampleInputFile" name="image">
-
-                            <p class="help-block">Какое-нибудь уведомление о форматах..</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">Выбор нескольких картинок (зажимая Ctrl) (300x300)</label>
+                            <input type="file" id="exampleInputFile" name="images[]" multiple>
                         </div>
                         <div class="form-group">
                             <label>Категория</label>

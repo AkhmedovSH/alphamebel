@@ -10,7 +10,7 @@
     </section>
     <!-- Main content -->
     <section class="content">
-        12321
+        
     </section>
     <!-- /.content -->
 </div>

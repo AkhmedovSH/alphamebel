@@ -4,12 +4,6 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                Добавить категорию
-                <small>приятные слова..</small>
-            </h1>
-        </section>
 
         <!-- Main content -->
         <section class="content">
@@ -20,7 +14,7 @@
                     <h3 class="box-title">Меняем категорию</h3>
                 </div>
                 <div class="box-body">
-                    {{Form::open(['route'=>['categories.update',$category->id], 'method'=>'put'])}}
+                    {{Form::open(['route'=>['categories.update', $category->id], 'method'=>'put', 'autocomplete' => 'off'])}}
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Название</label>
