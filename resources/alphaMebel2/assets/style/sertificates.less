@@ -1,0 +1,140 @@
+.sertificates {
+    padding: 40px 0;
+
+    h1 {
+        font-weight: bold;
+        font-size: 26px;
+    }
+
+    &>p {
+        font-size: 16px;
+        font-weight: 400;
+        width: 70%;
+        margin-bottom: 30px;
+    }
+
+    .content {
+        margin-bottom: 40px;
+
+        h2 {
+            font-weight: bold;
+            font-size: 14px;
+            position: relative;
+            padding-left: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 25px;
+            margin: 0;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                height: 25px;
+                width: 25px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: url(../../assets/img/sertificates/folder.svg) no-repeat center center;
+            }
+        }
+
+        .list {
+            border: 1px solid #828282;
+            padding: 20px 15px;
+            position: relative;
+            margin-bottom: -1px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 25px;
+                height: 25px;
+                width: 25px;
+                background: url(../../assets/img/sertificates/open.svg) no-repeat center center;
+            }
+
+            .items {
+                display: none;
+            }
+
+            &.active {
+                &::after {
+                    background: url(../../assets/img/sertificates/close.svg) no-repeat center center;
+                }
+
+                .items {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 20px 0;
+
+                    a p {
+                        margin-left: 40px;
+                        font-weight: 500;
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+}
+
+#lightbox p {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background: url(../img/elements/menu-close.svg) no-repeat center center white;
+    cursor: pointer;
+}
+
+#slideshow {
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    width: 95%;
+    height: 95%;
+    margin: 10 auto;
+    padding: 0px;
+    background-color: transparent;
+}
+
+#slideshow img {
+    position: absolute;
+    top: 5%;
+    left: 0px;
+    right: 0px;
+    bottom: 5%;
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
+
+@media(max-width:576px){
+    .sertificates{
+        &> p{
+            margin: 0;
+            margin-bottom: 20px;
+            width: 100%;
+            padding: 0 15px;
+        }
+        h1{
+            padding: 0 15px;
+        }
+    } 
+}

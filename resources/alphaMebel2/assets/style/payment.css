@@ -1,0 +1,124 @@
+.payment .content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.payment .content .img {
+  position: relative;
+}
+.payment .content .img img {
+  width: 100%;
+  object-fit: contain;
+}
+.payment .content .img::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  height: 104%;
+  width: 350px;
+  top: 0;
+  left: -15px;
+  background: #F7D917;
+}
+.payment .content .desc {
+  flex-grow: 1;
+  padding: 30px 15px 30px 120px;
+}
+.payment .content .desc h1 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  position: relative;
+  margin-bottom: 20px;
+}
+.payment .content .desc h1::before {
+  content: '';
+  position: absolute;
+  top: 40%;
+  left: -60px;
+  height: 8px;
+  width: 40px;
+  background: #4B4B4B;
+}
+.payment .content .desc .subheading {
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.payment .content .desc p {
+  font-size: 14px;
+  line-height: 150%;
+  color: #828282;
+  margin-bottom: 12px;
+}
+.payment .content .desc p span {
+  color: #4B4B4B;
+}
+.payment .manager {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.payment .manager p {
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 40px;
+}
+@media (max-width: 1330px) {
+  .payment .content {
+    align-items: flex-start;
+  }
+  .payment .content .img {
+    height: 630px;
+  }
+  .payment .content .img::before {
+    width: 200px;
+  }
+  .payment .content .img img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .payment .content .desc {
+    padding-left: 80px;
+  }
+}
+@media (max-width: 760px) {
+  .payment .content {
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  .payment .content .img {
+    height: 460px;
+    padding: 0;
+  }
+  .payment .content .img::before {
+    width: 180px;
+  }
+  .payment .content .desc {
+    padding-left: 30px;
+  }
+  .payment .content .desc h1 {
+    font-size: 26px;
+  }
+  .payment .content .desc h1::before {
+    display: none;
+  }
+  .payment .content .desc .subheading,
+  .payment .content .desc p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 576px) {
+  .payment .content .desc {
+    padding: 20px 0;
+  }
+  .payment .content .desc h1 {
+    font-size: 16px;
+  }
+  .payment .content .img {
+    display: none;
+  }
+}

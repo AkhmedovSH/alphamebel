@@ -1,0 +1,235 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.virtual_design {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background: #f9f9f9;
+  margin: 40px auto 60px auto;
+  padding: 60px 30px;
+}
+
+.virtual_design .owl-carousel {
+  position: relative;
+}
+
+.virtual_design .owl-carousel > div {
+  width: 100%;
+}
+
+.virtual_design .owl-carousel .form_inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.virtual_design .owl-carousel .form_inputs h2 {
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.virtual_design .owl-carousel .form_inputs h2 span {
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  color: red;
+}
+
+.virtual_design .owl-carousel .form_inputs h2.title {
+  margin-top: 50px;
+}
+
+.virtual_design .owl-carousel .form_inputs input,
+.virtual_design .owl-carousel .form_inputs select {
+  width: 50%;
+  margin: 15px auto;
+  padding: 15px 8px;
+  outline: none;
+}
+
+.virtual_design .owl-carousel .form_inputs input::-webkit-outer-spin-button, .virtual_design .owl-carousel .form_inputs input::-webkit-inner-spin-button,
+.virtual_design .owl-carousel .form_inputs select::-webkit-outer-spin-button,
+.virtual_design .owl-carousel .form_inputs select::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
+.virtual_design .owl-carousel .leavecomment .content {
+  margin-top: 20px;
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.virtual_design .owl-carousel .leavecomment .content h2 {
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.virtual_design .owl-carousel .leavecomment .content h2 span {
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  color: red;
+}
+
+.virtual_design .owl-carousel .leavecomment .content h2.title {
+  margin-top: 20px;
+}
+
+.virtual_design .owl-carousel .leavecomment .content span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.virtual_design .owl-carousel .leavecomment .content .commentholder {
+  position: relative;
+}
+
+.virtual_design .owl-carousel .leavecomment .content .commentholder textarea {
+  height: 150px;
+  width: 450px;
+  outline: none;
+  padding: 5px;
+}
+
+.virtual_design .owl-carousel .leavecomment .content .commentholder input[type="submit"] {
+  position: absolute;
+  left: 105%;
+  bottom: 8px;
+  padding: 11px 25px;
+  background: #fcdf28;
+  border: none;
+}
+
+.virtual_design .owl-carousel .owl-nav {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  padding: 0 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.virtual_design .owl-carousel .owl-nav .owl-next span {
+  display: none;
+}
+
+.virtual_design .owl-carousel .owl-nav .owl-next:hover::before {
+  background: #fcdf28;
+}
+
+.virtual_design .owl-carousel .owl-nav .owl-next::before {
+  content: "Далее";
+  background: #f0d20e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 11px 25px;
+  text-transform: uppercase;
+}
+
+.virtual_design .owl-carousel .owl-nav .owl-next.disabled {
+  display: none;
+}
+
+.virtual_design .owl-carousel .owl-nav .owl-prev span {
+  display: none;
+}
+
+.virtual_design .owl-carousel .owl-nav .owl-prev:hover::before {
+  background: #fcdf28;
+}
+
+.virtual_design .owl-carousel .owl-nav .owl-prev::before {
+  content: "Назад";
+  background: #f0d20e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 11px 25px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 500px) {
+  .virtual_design .owl-carousel .form_inputs h2 {
+    font-size: 14px;
+  }
+  .virtual_design .owl-carousel .form_inputs h2 span {
+    font-size: 14px;
+  }
+  .virtual_design .owl-carousel .form_inputs input,
+  .virtual_design .owl-carousel .form_inputs select {
+    width: 80%;
+    font-size: 12px;
+    margin: 5px auto;
+    padding: 0 10px;
+    height: 30px;
+  }
+  .virtual_design .owl-carousel .leavecomment .content h2 {
+    font-size: 14px;
+  }
+  .virtual_design .owl-carousel .leavecomment .content h2 span {
+    font-size: 14px;
+  }
+  .virtual_design .owl-carousel .leavecomment .content .commentholder {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+  }
+  .virtual_design .owl-carousel .leavecomment .content .commentholder textarea {
+    width: 100%;
+    height: 100px;
+  }
+  .virtual_design .owl-carousel .leavecomment .content .commentholder input[type="submit"] {
+    position: unset;
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+  .virtual_design .owl-carousel .owl-nav {
+    padding: 0;
+  }
+  .virtual_design .owl-carousel .owl-nav .owl-next,
+  .virtual_design .owl-carousel .owl-nav .owl-prev {
+    padding: 8px 15px;
+    font-size: 11px;
+  }
+}

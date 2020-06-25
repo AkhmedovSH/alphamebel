@@ -1,0 +1,271 @@
+.sales {
+  display: flex;
+  padding: 40px 0;
+}
+.sales .primary-fliter h1 {
+  font-size: 14px;
+  line-height: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #828282;
+  width: 50%;
+}
+.sales .primary-fliter ul li {
+  font-size: 14px;
+  line-height: 16px;
+  color: #828282;
+  margin: 10px 0;
+}
+.sales .primary-fliter ul li.active,
+.sales .primary-fliter ul li:hover {
+  color: #4B4B4B;
+}
+.sales .content .sale-collection-filter {
+  margin-bottom: 40px;
+}
+.sales .content .sale-collection-filter h2 {
+  display: none;
+}
+.sales .content .sale-collection-filter ul {
+  display: flex;
+  width: 100%;
+}
+.sales .content .sale-collection-filter ul a {
+  width: 100%;
+  text-align: center;
+  padding: 24px 0;
+  background: #F3F3F3;
+  border-right: 1px solid #828282;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sales .content .sale-collection-filter ul a li {
+  font-size: 11px;
+  line-height: 13px;
+  text-transform: uppercase;
+  color: #828282;
+}
+.sales .content .sale-collection-filter ul a.active li,
+.sales .content .sale-collection-filter ul a:hover li {
+  color: #4B4B4B;
+}
+.sales .content .sale-collection-filter ul a:last-child {
+  border-right: 0;
+}
+.sales .content .contents {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sales .content .contents .card {
+  border: none;
+  border-radius: 0;
+  margin-bottom: 30px;
+}
+.sales .content .contents .card > div {
+  background: #F3F3F3;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0;
+}
+.sales .content .contents .card > div:hover {
+  box-shadow: 2px 2px 5px #828282, -2px -2px 5px #828282;
+}
+.sales .content .contents .card p {
+  font-size: 26px;
+  line-height: 130%;
+  padding: 25px 15px;
+}
+.sales .content .contents .card .img {
+  width: 100%;
+  height: 300px;
+}
+.sales .content .contents .card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sales .content .contents .card a {
+  font-size: 11px;
+  line-height: 130%;
+  padding: 12px 15px;
+  margin: 25px;
+  border: 1px solid #4B4B4B;
+  align-self: flex-end;
+}
+.sales .content .contents .card a:hover {
+  border: 1px solid #F7D917;
+  background: #F7D917;
+}
+.sales .content #saleswrapper #page-navi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sales .content #saleswrapper #page-navi li:first-child a,
+.sales .content #saleswrapper #page-navi li:last-child a {
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(../img/elements/arrow-left-black.svg) no-repeat center center;
+  background-size: 15px 15px;
+}
+.sales .content #saleswrapper #page-navi li:first-child a.disable,
+.sales .content #saleswrapper #page-navi li:last-child a.disable {
+  opacity: 0.5;
+}
+.sales .content #saleswrapper #page-navi li:first-child a:hover,
+.sales .content #saleswrapper #page-navi li:last-child a:hover {
+  background: url(../img/elements/arrow-left-white.svg) no-repeat center center #F7D917;
+  background-size: 15px 15px;
+  border: none;
+}
+.sales .content #saleswrapper #page-navi li:last-child a {
+  transform: rotate(180deg);
+}
+.sales .content #saleswrapper #page-navi li a {
+  height: 50px;
+  width: 50px;
+  background: none;
+  border: 1px solid #828282;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  color: #828282;
+}
+.sales .content #saleswrapper #page-navi li a.current,
+.sales .content #saleswrapper #page-navi li a:hover {
+  background: #F7D917;
+  border: none;
+  color: white;
+}
+.sales .content #saleswrapper #page-navi li a.disable:hover {
+  background: url(../img/elements/arrow-left-black.svg) no-repeat center center;
+  color: #828282;
+  border: 1px solid #828282;
+  background-size: 15px 15px;
+}
+@media (max-width: 576px) {
+  .sales {
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+  .sales .primary-fliter {
+    text-align: center;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .sales .primary-fliter h1 {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 150%;
+    position: relative;
+    border-bottom: 0;
+  }
+  .sales .primary-fliter h1::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 10px;
+    width: 10px;
+    background: url(../img/elements/arrow-down-black.svg) no-repeat center center;
+    background-size: contain;
+    transition: 0.3s;
+  }
+  .sales .primary-fliter h1.opened::after {
+    transform: rotate(180deg);
+  }
+  .sales .primary-fliter ul {
+    display: none;
+    background: #F3F3F3;
+  }
+  .sales .primary-fliter ul.active {
+    display: block;
+  }
+  .sales .primary-fliter ul li {
+    padding: 15px 0;
+    margin: 0;
+    position: relative;
+  }
+  .sales .primary-fliter ul li::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 35%;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #828282;
+  }
+  .sales .content {
+    padding: 0;
+  }
+  .sales .content .sale-collection-filter {
+    margin-bottom: 10px;
+  }
+  .sales .content .sale-collection-filter h2 {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    margin: 15px auto;
+    text-align: center;
+    font-size: 14px;
+    line-height: 150%;
+    position: relative;
+  }
+  .sales .content .sale-collection-filter h2::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 10px;
+    width: 10px;
+    background: url(../img/elements/arrow-down-black.svg) no-repeat center center;
+    background-size: contain;
+    transition: 0.3s;
+  }
+  .sales .content .sale-collection-filter h2.opened::after {
+    transform: rotate(180deg);
+  }
+  .sales .content .sale-collection-filter ul {
+    display: none;
+  }
+  .sales .content .sale-collection-filter ul.active {
+    display: block;
+  }
+  .sales .content .sale-collection-filter ul.active a {
+    padding: 15px 0;
+    border: 0;
+    position: relative;
+  }
+  .sales .content .sale-collection-filter ul.active a li {
+    position: relative;
+  }
+  .sales .content .sale-collection-filter ul.active a li::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    height: 1px;
+    width: 100px;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #828282;
+  }
+  .sales .content .sale-collection-filter .card {
+    padding: 0;
+  }
+  .sales .content #saleswrapper #page-navi li:first-child a,
+  .sales .content #saleswrapper #page-navi li:last-child a {
+    background-size: 10px 10px;
+  }
+  .sales .content #saleswrapper #page-navi li a {
+    height: 40px;
+    width: 40px;
+    font-size: 14px;
+  }
+}

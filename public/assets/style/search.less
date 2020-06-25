@@ -1,0 +1,199 @@
+@dark-grey: #4B4B4B;
+@middle-grey: #828282;
+@light-grey: #F3F3F3;
+@yellow: #F7D917;
+@yellow-hover: #F0D20E;
+@yellow-main: #EECF05;
+@sale-red: #F04949;
+
+.search {
+    display: flex;
+    justify-content: center;
+
+    .search_input {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 65%;
+        h1 {
+            text-align: center;
+            font-weight: 700;
+            font-size: 26px;
+            margin: 40px 0;
+        }
+
+        .search__form {
+            display: flex;
+            border: 1px solid @middle-grey;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            input {
+                width: 100%;
+                border: none;
+                font-size: 14px;
+                color: @middle-grey;
+                padding: 15px;
+            }
+
+            &:hover {
+                border:1px solid  @yellow;
+            }
+
+            .search__button {
+                border: none;
+                padding: 15px 20px;
+                background: transparent;
+            }
+        }
+    }
+}
+
+.single-products{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 70px;
+    .card{
+        background: @light-grey;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 40px;
+        .img{
+            height: 310px;
+            position: relative;
+            .discount{
+                position: absolute;
+                top: 35px;
+                left: 0;
+                font-size: 14px;
+                line-height: 130%;
+                padding: 6px 13px;
+                background: @yellow;
+            }
+            .sale{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                font-size: 16px;
+                line-height: 130%;
+                padding: 12px 22px;
+                color: white;
+                background: #F04949;
+            }
+            
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .title{
+            font-size: 14px;
+            line-height: 130%;
+            padding: 20px;
+            p{
+                margin-bottom: 10px;
+            }
+            .code{
+                color: @middle-grey;
+            }
+        }
+        .size{
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .order{
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            p:first-child{
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 120%;
+                margin-bottom: 10px;
+            }
+            p:nth-child(2){
+                font-size: 12px;
+                line-height: 130%;
+                color: @middle-grey;
+                text-decoration: line-through;
+            }
+            button{
+                padding: 12px 25px;
+                border: 0.5px solid @dark-grey;
+                &:hover{
+                    background: @yellow;
+                    border: 0.5px solid @yellow;
+                }
+            }
+        }
+        &:hover{
+            .size{
+                display: flex;
+            }
+            .title .code{
+                display: none;
+            }
+        }
+    }
+}
+
+.search_title {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.single-products {
+    padding-top: 10px;
+}
+
+@media(max-width: 960px) {
+    .search {
+        .search_input {
+            width: 80%;
+        }
+    }
+}
+@media(max-width: 500px) {
+    .search {
+        .search_input {
+            width: 100%;
+
+            h1 {
+                margin: 20px 0;
+                font-size: 18px;
+            }
+        }
+    }
+
+    .single-products {
+        padding-right: 0;
+        padding-left: 0;
+        > a {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .card {
+            .title {
+                padding: 10px;
+            }
+
+            .order {
+                button {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

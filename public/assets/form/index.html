@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример отправки формы на телеграм</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <h1>При вставке формы kiranosend.php необходимо указать "action" у формы и "name" у инпутов</h1>
+    <p>
+        Чтобы подключить данную форму в чат заказчика, необходимо: <br>
+        1. Создать чат.<br>
+        2. Добавить туда бота: @kirano_send_bot<br>
+        3. Написать в созданный чат /start_название сайта<br>
+        4. Перейти по ссылке: https://api.telegram.org/botXXXXXXXXXXXXXXXXX/getUpdates<br>
+        5. Копируем последний: "chat": {"id":-xxxxxxxxx}<br>
+        6. Вставляем в kiranosend.php
+    </p>
+
+    <form action="./kiranosend.php" method="POST" id="form">
+        <p>Заполните заявку</p>
+        <input type="text" style="display: none;" name="web_page" value="BCTDENIM.COM">
+        <input type="text" placeholder="Ваше имя" name="user_name">
+        <input type="number" placeholder="Номер телефона" name="user_phone">
+        <!-- <input type="mail" placeholder="E-mail" name="user_email"> -->
+        <!-- <input type="text" placeholder="Любое текстовое сообщение" name="user_text"> -->
+        <button type="submit">Отправить форму на телеграм</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+{
+    "i18n-ally.localesPaths": [
+        "resources/lang",
+        "public/plugins/ckeditor/lang",
+        "public/plugins/ckeditorbefore/lang",
+        "public/plugins/ckfinder/lang",
+        "public/plugins/ckeditorbefore/plugins/iframe/lang",
+        "public/plugins/ckeditor/plugins/a11yhelp/dialogs/lang",
+        "public/plugins/ckeditor/plugins/specialchar/dialogs/lang",
+        "public/plugins/ckeditorbefore/plugins/a11yhelp/dialogs/lang",
+        "public/plugins/ckeditorbefore/plugins/specialchar/dialogs/lang"
+    ]
+}

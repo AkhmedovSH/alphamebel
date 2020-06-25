@@ -1,0 +1,331 @@
+.basket {
+  margin-top: 40px;
+}
+.basket h1 {
+  font-size: 26px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.basket .client-code {
+  font-size: 11px;
+  line-height: 13px;
+  text-transform: uppercase;
+  color: #828282;
+  margin-bottom: 40px;
+}
+.basket ul {
+  padding: 50px 0;
+}
+.basket ul li:first-child {
+  padding-bottom: 20px;
+  border-bottom: 0.5px solid #F3F3F3;
+  display: flex;
+  text-align: center;
+}
+.basket ul .items {
+  padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 0.5px solid #F3F3F3;
+}
+.basket ul .items .info {
+  display: flex;
+  align-items: center;
+}
+.basket ul .items .info .img {
+  height: 100px;
+  width: 120px;
+  margin-right: 30px;
+}
+.basket ul .items .info .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.basket ul .items .info .name span {
+  font-size: 12px;
+  color: #828282;
+}
+.basket ul .items .price {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.basket ul .items .price .quantity {
+  display: flex;
+}
+.basket ul .items .price .quantity button,
+.basket ul .items .price .quantity input {
+  background: none;
+  border: none;
+  outline: none;
+  height: 65px;
+  width: 65px;
+  border: 1px solid #828282;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  text-align: center;
+}
+.basket ul .items .price .quantity button:nth-child(2),
+.basket ul .items .price .quantity input:nth-child(2) {
+  margin: 0 -1px;
+}
+.basket ul .items .price .quantity input::-webkit-outer-spin-button,
+.basket ul .items .price .quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+.basket ul .items .price .priceinner,
+.basket ul .items .price .common-price {
+  text-align: center;
+}
+.basket ul .items .price .priceinner p,
+.basket ul .items .price .common-price p {
+  font-weight: 700;
+  font-size: 18px;
+}
+.basket ul .items .price .priceinner p span,
+.basket ul .items .price .common-price p span {
+  font-weight: 700;
+}
+.basket ul .items .price .priceinner p.old-orice,
+.basket ul .items .price .common-price p.old-orice {
+  font-weight: 400;
+  font-size: 14px;
+  color: #828282;
+  text-decoration: line-through;
+}
+.basket ul .items .remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.basket .credit-pay {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.basket .credit-pay .order {
+  display: flex;
+  align-items: center;
+}
+.basket .credit-pay .order label {
+  margin: 0;
+}
+.basket .credit-pay .order input {
+  margin-right: 10px;
+}
+.basket .credit-pay p {
+  font-size: 18px;
+  font-weight: 700;
+}
+.basket .credit-pay p span {
+  font-weight: 700;
+  color: #F04949;
+}
+.basket .order-form {
+  margin: 60px auto;
+  text-align: center;
+}
+.basket .order-form h2 {
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+.basket .order-form .form {
+  text-align: justify;
+}
+.basket .order-form .form input,
+.basket .order-form .form select,
+.basket .order-form .form textarea {
+  background: none;
+  border: 1px solid #828282;
+  color: #828282;
+  padding: 15px 10px;
+  margin-bottom: 40px;
+  outline: none;
+}
+.basket .order-form .form input.tel,
+.basket .order-form .form select.tel,
+.basket .order-form .form textarea.tel,
+.basket .order-form .form input.name,
+.basket .order-form .form select.name,
+.basket .order-form .form textarea.name,
+.basket .order-form .form input.email,
+.basket .order-form .form select.email,
+.basket .order-form .form textarea.email,
+.basket .order-form .form input.paytype,
+.basket .order-form .form select.paytype,
+.basket .order-form .form textarea.paytype {
+  width: 49%;
+}
+.basket .order-form .form input.adress,
+.basket .order-form .form select.adress,
+.basket .order-form .form textarea.adress {
+  width: 100%;
+}
+.basket .order-form .form input::-webkit-outer-spin-button,
+.basket .order-form .form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+.basket .order-form .form textarea {
+  resize: none;
+  height: 200px;
+  width: 100%;
+}
+.basket .order-form .form .complete-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.basket .order-form .form .complete-order .privacy-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.basket .order-form .form .complete-order .privacy-agreement input {
+  height: 15px;
+  width: 15px;
+  margin-bottom: 0;
+  margin-right: 15px;
+  outline: none;
+}
+.basket .order-form .form .complete-order .privacy-agreement label {
+  font-size: 16px;
+  line-height: 150%;
+  color: #828282;
+  margin-right: 10px;
+  margin-bottom: 0;
+}
+.basket .order-form .form .complete-order .privacy-agreement label a {
+  color: #4B4B4B;
+  text-decoration: underline;
+}
+.basket .order-form .form .complete-order button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 33px;
+  font-size: 14px;
+  line-height: 130%;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid #4B4B4B;
+  outline: none;
+}
+.basket .order-form .form .complete-order button:hover {
+  background: #F7D917;
+  border: 1px solid #F7D917;
+}
+.basket .order-form .form .warning-text {
+  font-size: 14px;
+  line-height: 150%;
+  color: #828282;
+}
+@media (max-width: 960px) {
+  .basket ul {
+    padding-top: 0;
+  }
+  .basket ul .items .price .quantity button,
+  .basket ul .items .price .quantity input {
+    height: 40px;
+    width: 40px;
+  }
+  .basket .client-code {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 760px) {
+  .basket ul li:first-child {
+    display: none;
+  }
+  .basket ul .items .info .name {
+    font-size: 14px;
+  }
+  .basket ul .items .price {
+    order: 2;
+    flex-direction: column;
+  }
+  .basket ul .items .price .priceinner {
+    order: 0;
+  }
+  .basket ul .items .price .quantity {
+    margin: 10px 0;
+  }
+  .basket ul .items .price .quantity button,
+  .basket ul .items .price .quantity input {
+    height: 50px;
+    width: 50px;
+  }
+  .basket .order-form .form .complete-order .privacy-agreement p {
+    font-size: 14px;
+  }
+  .basket .credit-pay .order {
+    order: 2;
+    margin-top: 20px;
+  }
+  .basket .credit-pay .price {
+    width: 210px;
+    margin: 0 auto;
+    font-size: 11px;
+  }
+  .basket .credit-pay .price p {
+    font-weight: 300;
+  }
+  .basket .credit-pay .price p span {
+    font-size: 20px;
+  }
+  .basket .order-form {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .basket .credit-pay {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .basket .credit-pay .order {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  .basket .credit-pay .price p,
+  .basket .credit-pay .order p {
+    font-size: 16px;
+  }
+  .basket .credit-pay .price p span,
+  .basket .credit-pay .order p span {
+    font-weight: 700;
+  }
+  .basket .order-form .form input.name,
+  .basket .order-form .form input.tel,
+  .basket .order-form .form input.email,
+  .basket .order-form .form select.paytype {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .basket .order-form .form select.paytype option {
+    font-size: 12px;
+  }
+  .basket .order-form .form .complete-order {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .basket .order-form .form .complete-order .privacy-agreement {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .basket .order-form .form .complete-order .privacy-agreement input {
+    height: 30px;
+    width: 30px;
+  }
+}

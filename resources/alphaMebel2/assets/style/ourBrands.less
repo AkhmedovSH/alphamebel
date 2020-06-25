@@ -1,0 +1,112 @@
+@dark-grey: #4B4B4B;
+@middle-grey: #828282;
+@light-grey: #F3F3F3;
+@yellow: #F7D917;
+@yellow-hover: #F0D20E;
+@yellow-main: #EECF05;
+@sale-red: #F04949;
+
+.brands {
+    .block {
+        margin-bottom: 70px;
+
+        .img {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+
+            .main-img {
+                padding: 0;
+
+                img {
+                    width: 100%;
+                    object-fit: contain
+                }
+
+                ;
+            }
+
+            .logo {
+                flex-grow: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    padding-bottom: 30px;
+                    border-bottom: 2px solid @middle-grey;
+                }
+            }
+        }
+
+        .desc {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            p {
+                font-size: 16px;
+                line-height: 150%;
+                color: @middle-grey;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media(max-width:960px) {
+    .brands .block .desc p {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:760px) {
+    .brands .block {
+        .img {
+            margin-bottom: 30px;
+
+            .main-img {
+                height: 260px;
+
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .logo img {
+                width: 230px;
+            }
+        }
+    }
+
+
+}
+
+@media(max-width:576px) {
+    .brands .block {
+        margin-bottom: 30px;
+
+        .img {
+            margin-top: 20px;
+
+            .main-img {
+                display: none;
+            }
+        }
+
+        .desc {
+            flex-wrap: wrap;
+
+            p {
+                margin-bottom: 15px;
+                font-size: 12px;
+            }
+        }
+
+
+        .logo img {
+            width: 230px;
+        }
+    }
+}

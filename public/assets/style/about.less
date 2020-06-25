@@ -1,0 +1,248 @@
+@dark-grey: #4B4B4B;
+@middle-grey: #828282;
+@light-grey: #F3F3F3;
+@yellow: #F7D917;
+@yellow-hover: #F0D20E;
+@yellow-main: #EECF05;
+@sale-red: #F04949;
+
+.about {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .about-alpha {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+        margin-bottom: 80px;
+
+        .desc {
+            padding-left: 60px;
+
+            h1 {
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 120%;
+                margin-bottom: 20px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background: @yellow;
+                    left: -12%;
+                    top: 40%;
+                    height: 8px;
+                    width: 45px;
+                }
+            }
+
+            h2 {
+                font-size: 18px;
+                line-height: 150%;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 150%;
+                color: @middle-grey;
+                margin-bottom: 20px;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 350px;
+            width: 200px;
+            background: @light-grey;
+        }
+
+        .img {
+            text-align: center;
+            height: 600px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.about-office {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 80px;
+
+    .img {
+        padding: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -5%;
+            z-index: -1;
+            left: 0;
+            height: 110%;
+            width: 450px;
+            background: @yellow;
+        }
+
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .desc {
+        margin-left: 10%;
+
+        h2 {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 120%;
+            position: relative;
+            margin-bottom: 30px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                background: @yellow;
+                left: -20%;
+                top: 40%;
+                height: 8px;
+                width: 45px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 150%;
+            color: @middle-grey;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: -10%;
+            right: 0;
+            height: 120%;
+            width: 200px;
+            background: @light-grey;
+        }
+    }
+}
+
+
+@media(max-width: 1200px) {
+    .about-office {
+        .img {
+            height: 360px;
+
+            &::before {
+                width: 250px;
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .desc {
+            margin-left: 7%;
+        }
+    }
+
+}
+
+@media(max-width: 760px) {
+    .about {
+        .about-alpha {
+            &::before {
+                display: none;
+            }
+
+            .desc {
+                padding-left: 0px;
+
+                h1::before {
+                    display: none;
+                }
+            }
+        }
+
+    }
+
+    .about-office .desc {
+        padding-left: 30px;
+        margin-left: 0;
+
+        h2::before {
+            display: none;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .about {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        .about-alpha {
+            margin-bottom: 10px;
+
+            .desc {
+                padding-left: 15px;
+
+                h1 {
+                    font-size: 16px;
+                }
+
+                h2,
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            .img {
+                display: none;
+
+            }
+        }
+    }
+
+    .about-office {
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+
+        .img {
+            margin-bottom: 35px;
+        }
+
+        .desc {
+            padding-left: 15px;
+
+            h2 {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

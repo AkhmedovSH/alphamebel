@@ -1,0 +1,67 @@
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.question h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 40px 0 30px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.question p {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+.question span {
+  font-size: 16px;
+  color: #828282;
+}
+.question form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  min-width: 500px;
+}
+.question form input,
+.question form textarea {
+  width: 100%;
+  margin: 15px 0;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid #828282;
+  resize: none;
+  outline: none;
+}
+.question form input[type=submit],
+.question form textarea[type=submit] {
+  width: 170px;
+}
+.question form input[type=submit]:hover,
+.question form textarea[type=submit]:hover {
+  background: #F7D917;
+  border: 1px solid #F7D917;
+}
+.question form input[type=number],
+.question form textarea[type=number] {
+  -moz-appearance: textfield;
+}
+.question form input[type=number]::-webkit-outer-spin-button,
+.question form textarea[type=number]::-webkit-outer-spin-button,
+.question form input[type=number]::-webkit-inner-spin-button,
+.question form textarea[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.question form textarea {
+  height: 150px;
+}
+@media (max-width: 600px) {
+  .question form {
+    min-width: 260px;
+    width: 95%;
+  }
+}

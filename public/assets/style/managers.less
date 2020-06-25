@@ -1,0 +1,126 @@
+@dark-grey: #4B4B4B;
+@middle-grey: #828282;
+@light-grey: #F3F3F3;
+@yellow: #F7D917;
+@yellow-hover: #F0D20E;
+@yellow-main: #EECF05;
+@sale-red: #F04949;
+
+.managers {
+    padding: 30px 15px;
+
+    h1 {
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        text-align: center;
+        color: @middle-grey;
+        font-weight: 700;
+        font-size: 18px;
+        margin: 20px 0 40px 0;
+    }
+
+    .row>div {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        border-radius: 0;
+        margin-bottom: 15px;
+
+        .img {
+            height: 100px;
+            width: 100px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .desc {
+            margin-left: 15px;
+
+            p {
+                font-weight: 700;
+                font-size: 14px;
+                margin: 0;
+            }
+
+            p.email {
+                font-weight: 400;
+            }
+
+            p.tel{
+                display: flex;
+                height: 25px;
+                align-items: center;
+                background: @yellow;
+                padding-right: 20px;
+                padding-left: 5px;
+                position: relative;
+                overflow: hidden;
+                margin: 5px 0;
+
+                &::after{
+                    content: '';
+                    height: 20px;
+                    width: 20px;
+                    position: absolute;
+                    right: -10px;
+                    background: white;
+                    transform: rotate(45deg);
+                }
+                a{
+                    display: flex;
+                    img{
+                        margin-left: 5px;
+                    }
+                }
+            }
+
+            span {
+                font-size: 12px;
+                color: @middle-grey;
+            }
+        }
+    }
+
+    .row{
+        margin-bottom: 40px;
+    }
+
+}
+
+@media(max-width:1500px) {
+    .managers .row .card .img {
+        height: 260px;
+    }
+}
+
+@media(max-width:1200px) {
+    .managers .row .card .img {
+        height: 210px;
+    }
+}
+
+@media(max-width:576px) {
+    .managers .row {
+        &>div {
+            justify-content: center;
+        }
+
+        .card .img {
+            height: 180px;
+        }
+    }
+
+    .managers h1 {
+        font-size: 20px;
+    }
+}

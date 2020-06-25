@@ -1,0 +1,204 @@
+@dark-grey: #4B4B4B;
+@middle-grey: #828282;
+@light-grey: #F3F3F3;
+@yellow: #F7D917;
+@yellow-hover: #F0D20E;
+@yellow-main: #EECF05;
+@sale-red: #F04949;
+
+
+
+.installment-main {
+    font-weight: 300;
+
+    .installment-info {
+        display: flex;
+        padding-left: 40px;
+        padding-top: 40px;
+        align-items: flex-start;
+
+        span {
+            display: flex;
+            width: 40px;
+            height: 8px;
+            background: @dark-grey;
+            margin-top: 19px;
+        }
+
+        .installment-info-desc {
+
+            .installment-title {
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+
+
+            }
+
+            .installment-desc {
+                font-size: 14px;
+                color: @middle-grey;
+                margin-top: 30px;
+                max-width: 450px;
+            }
+
+            .installment-requirements {
+                margin-top: 30px;
+
+                p {
+                    color: @dark-grey;
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+
+                .requirements-detail {
+                    font-weight: 300;
+                    color: @middle-grey;
+                    margin: 10px 0;
+                }
+            }
+        }
+
+        .installment-info-img {
+            height: 630px;
+            margin-top: -40px;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &::before {
+                content: " ";
+                display: flex;
+                position: absolute;
+                left: -20px;
+                bottom: -20px;
+                background: @yellow;
+                height: 100%;
+                width: 70%;
+                z-index: -1;
+
+            }
+        }
+
+    }
+
+    .installment-process-info {
+        margin-top: 90px;
+
+        .installment-info-desc {
+
+            .installment-title {
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                padding-left: 40px;
+                text-transform: uppercase;
+                font-size: 36px;
+
+                &::before {
+                    content: " ";
+                    width: 40px;
+                    height: 8px;
+                    background: #000;
+                    display: flex;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .installment-process-desc {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 0;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .manager-contact {
+        a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+
+            img {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+
+@media(max-width:560px) {
+    .installment-main {
+        text-align: center;
+
+        .installment-info {
+            padding: 30px 0;
+
+            .installment-info-desc {
+                .installment-desc {
+                    margin: 0;
+                    max-width: unset;
+                }
+
+                .installment-title {
+                    text-align: center;
+                    display: block;
+                    font-size: 16px;
+                }
+
+                .installment-requirements {
+                    font-size: 14px;
+
+                    .requirements-detail {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .installment-info-img {
+                display: none;
+            }
+
+        }
+
+        .installment-process-info {
+            margin-top: 10px;
+
+            .installment-info-desc {
+                .installment-title {
+                    font-size: 16px;
+                    text-align: center;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .installment-process-desc div {
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+    }
+}

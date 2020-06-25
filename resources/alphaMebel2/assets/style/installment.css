@@ -1,0 +1,147 @@
+.installment-main {
+  font-weight: 300;
+}
+.installment-main .installment-info {
+  display: flex;
+  padding-left: 40px;
+  padding-top: 40px;
+  align-items: flex-start;
+}
+.installment-main .installment-info span {
+  display: flex;
+  width: 40px;
+  height: 8px;
+  background: #4B4B4B;
+  margin-top: 19px;
+}
+.installment-main .installment-info .installment-info-desc .installment-title {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.installment-main .installment-info .installment-info-desc .installment-desc {
+  font-size: 14px;
+  color: #828282;
+  margin-top: 30px;
+  max-width: 450px;
+}
+.installment-main .installment-info .installment-info-desc .installment-requirements {
+  margin-top: 30px;
+}
+.installment-main .installment-info .installment-info-desc .installment-requirements p {
+  color: #4B4B4B;
+  font-weight: 700;
+  font-size: 18px;
+}
+.installment-main .installment-info .installment-info-desc .installment-requirements .requirements-detail {
+  font-weight: 300;
+  color: #828282;
+  margin: 10px 0;
+}
+.installment-main .installment-info .installment-info-img {
+  height: 630px;
+  margin-top: -40px;
+  position: relative;
+}
+.installment-main .installment-info .installment-info-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.installment-main .installment-info .installment-info-img::before {
+  content: " ";
+  display: flex;
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  background: #F7D917;
+  height: 100%;
+  width: 70%;
+  z-index: -1;
+}
+.installment-main .installment-process-info {
+  margin-top: 90px;
+}
+.installment-main .installment-process-info .installment-info-desc .installment-title {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+.installment-main .installment-process-info .installment-info-desc .installment-title::before {
+  content: " ";
+  width: 40px;
+  height: 8px;
+  background: #000;
+  display: flex;
+  margin-right: 10px;
+}
+.installment-main .installment-process-desc {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
+.installment-main .installment-process-desc div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.installment-main .installment-process-desc div p {
+  margin-top: 40px;
+}
+.installment-main .manager-contact a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.installment-main .manager-contact a img {
+  margin-top: 40px;
+}
+@media (max-width: 560px) {
+  .installment-main {
+    text-align: center;
+  }
+  .installment-main .installment-info {
+    padding: 30px 0;
+  }
+  .installment-main .installment-info .installment-info-desc .installment-desc {
+    margin: 0;
+    max-width: unset;
+  }
+  .installment-main .installment-info .installment-info-desc .installment-title {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+  }
+  .installment-main .installment-info .installment-info-desc .installment-requirements {
+    font-size: 14px;
+  }
+  .installment-main .installment-info .installment-info-desc .installment-requirements .requirements-detail {
+    font-size: 14px;
+  }
+  .installment-main .installment-info .installment-info-img {
+    display: none;
+  }
+  .installment-main .installment-process-info {
+    margin-top: 10px;
+  }
+  .installment-main .installment-process-info .installment-info-desc .installment-title {
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .installment-main .installment-process-info .installment-info-desc .installment-title::before {
+    display: none;
+  }
+  .installment-main .installment-process-desc div {
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+}
