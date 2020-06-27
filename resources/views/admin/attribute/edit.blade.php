@@ -20,22 +20,6 @@
                             <label for="exampleInputEmail1">Название</label>
                             <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="{{ $data->title }}">
                         </div>
-
-                        <div class="form-group">
-                            <img src="{{$product->getImage()}}" class="img-responsive" width="200" style="margin: 0 auto;">
-                            <label for="exampleInputFile">Лицевая картинка jpeg jpg png (300x300)</label>
-                            <input type="file" id="exampleInputFile" name="image">
-                        </div>
-                        <div class="form-group">
-                            @if(isset($images))
-                                @foreach ($images as $image)
-                                <img src="/uploads/products/{{ $image->image }}" class="img-responsive" width="15%" style="display:inline-flex">
-                                @endforeach
-                            @endif
-                            <label for="exampleInputFile">Выбор нескольких картинок (зажимая Ctrl) (300x300)</label>
-                            <input type="file" id="exampleInputFile" name="images[]" multiple>
-                        </div>
-
                         <div class="form-group">
                             <label>Категория</label>
                             {{Form::select('filter_id',

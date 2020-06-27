@@ -68,7 +68,7 @@
         </div>
         <ul class="product-navigation__list">
             <li class="products-for-mobile">коллекции</li>
-            <a class="product-navigation__list-item" href="collections/beds/beds.html">
+            <a class="product-navigation__list-item" href="{{ url('beds') }}">
                 <li>Спальни</li>
             </a>
             <a class="product-navigation__list-item" href="collections/livingrooms/livingrooms.html">

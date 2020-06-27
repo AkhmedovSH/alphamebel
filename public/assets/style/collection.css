@@ -49,7 +49,7 @@
   margin-bottom: 15px;
   height: 20px;
 }
-.collections-filter #filterContent > div li input {
+.collections-filter #filterContent > div  input {
   visibility: hidden;
 }
 .collections-filter #filterContent > div li label {
@@ -67,7 +67,7 @@
   border: 1px solid #828282;
   transition: 0.2s;
 }
-.collections-filter #filterContent > div li input:checked + label::before {
+.collections-filter #filterContent > div  input:checked + label::before {
   width: 20px;
   height: 20px;
   border: 1px solid #F7D917;
@@ -88,8 +88,8 @@
 .collections-filter__btns #accept {
   background: none;
   border: 1px solid #4B4B4B;
-  padding: 12px 13px;
-  margin-left: 20px;
+  padding: 10px 10px;
+  margin-left: 5px;
 }
 .collections-filter__btns #accept:hover {
   border: 1px solid #F7D917;

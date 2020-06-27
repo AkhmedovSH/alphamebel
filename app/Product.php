@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Storage;
 class Product extends Model
 {
 
+    public function getImage(){
+        if ($this->image == null){
+            return '/img/no-image.png';
+        }
+        return '/uploads/products/'. $this->image;
+    }
 
     public function removeImage(){
         if ($this->image != null){

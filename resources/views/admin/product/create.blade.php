@@ -8,7 +8,7 @@
         <!-- Main content -->
         <section class="content">
         {{Form::open([
-           'route' =>'posts.store',
+           'route' =>'product.store',
            'files' => true
         ])}}
             <!-- Default box -->

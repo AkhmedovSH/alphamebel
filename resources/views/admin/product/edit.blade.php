@@ -9,7 +9,7 @@
         <!-- Main content -->
         <section class="content">
         {{Form::open([
-            'route' => ['posts.update', $post->id],
+            'route' => ['product.update', $data->id],
             'files' => true,
             'method' => 'put'
         ])}}
@@ -24,7 +24,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Заголовок</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" name="title" value="{{$post->title}}">
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="title" value="{{$data->title}}">
                         </div>
                         <div class="form-group">
                             <img src="{{$post->getImage()}}" alt="" class="img-responsive" width="200">
@@ -56,7 +56,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Полный текст </label>
-                            <textarea name="content" id="my-editor" cols="30" rows="10" class="form-control">{{$post->content}}</textarea>
+                            <textarea name="content" id="my-editor" cols="30" rows="10" class="form-control">{{$data->content}}</textarea>
                         </div>
                     </div>
 

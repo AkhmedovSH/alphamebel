@@ -14,7 +14,7 @@
                     <h3 class="box-title">Меняем категорию</h3>
                 </div>
                 <div class="box-body">
-                    {{Form::open(['route'=>['attribute.update', $data->id], 'method'=>'put', 'autocomplete' => 'off'])}}
+                    {{Form::open(['route'=>['filter.update', $data->id], 'method'=>'put', 'autocomplete' => 'off'])}}
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Название</label>

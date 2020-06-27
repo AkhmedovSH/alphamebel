@@ -1,10 +1,5 @@
-@extends('layout')
-
-
-@section('content')
-
-<product-component :products="{{ $products }}" :filters="{{ $filters }}" :category="{{ $category }}"></product-component>
-{{-- <main>
+<template>
+<main>
     <div class="crumbs container">
         <ul>
             <a href="/">
@@ -22,20 +17,21 @@
                 <img src="/assets/img/elements/filter-icon.svg" alt="">
             </div>
             <form id="filterContent" class="content">
-                @foreach ($filters as $filter)
-                <div class="styles">
-                    <h4>{{ $filter->title }}</h4>
+                <span>Selected Ids: {{ filterIds }}</span>
+                <div class="styles" v-for="(filter, index) in filters" :key="index">
+                    <h4>{{ filter.title }}</h4>
                     <ul>
-                        @foreach ($filter->attributes as $attribute)
-                            <li>
-                                <input type="checkbox" v-model="filterIds" value="{{ $attribute->id }}" />
-                                <label for="classic">{{ $attribute->title }}</label>
-                            </li>
-                        @endforeach
+                        <li v-for="(attribute, index) in filter.attributes" :key="index" >
+                            <input class="filter-items" :id="'classic' + attribute.id" type="checkbox"
+                            v-model="attribute.checked"
+                            @click="checkedFilters(attribute)"
+                            :true-value="1"
+                            :false-value="0"
+                            />
+                            <label :for="'classic' + attribute.id">{{ attribute.title }}</label>
+                        </li>
                     </ul>
                 </div>
-                @endforeach
-                
                 <div class="collections-filter__btns bedrooms-filter__btns">
                     <button type="reset" id="reset">
                         Сбросить фильтры
@@ -322,5 +318,25 @@
             </div>
         </div>
     </div>
-</main> --}}
-@endsection
+</main>
+</template>
+
+<script>
+    export default {
+        props:['products', 'filters', 'category'],
+         data() {
+            return {
+                data: {},
+                filterIds: []
+            };
+        },
+        methods: {
+            checkedFilters(attribute){
+                console.log(this.filters[0]['attributes'][0]);
+            }
+        },
+        mounted() {
+            console.log(this.products, this.filters, this.category)
+        }
+    }
+</script>

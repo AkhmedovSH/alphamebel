@@ -24,7 +24,8 @@ class AttributeController extends Controller
             'title' => 'required',
         ]);
         Attribute::create($request->all());
-        return redirect()->route('attribute.index');
+        return redirect()->back();
+        //return redirect()->route('attribute.index');
     }
 
     public function edit($id){

@@ -39,6 +39,9 @@ Route::get('/vacancy', 'StaticPageController@vacancy');
 Route::get('/wearechoosen', 'StaticPageController@wearechoosen');
 
 
+Route::get('/beds', 'ProductController@beds');
+
+
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/', 'DashboardController@index');
     Route::resource('/categories','CategoriesController');
