@@ -39,9 +39,20 @@ Route::get('/vacancy', 'StaticPageController@vacancy');
 Route::get('/wearechoosen', 'StaticPageController@wearechoosen');
 
 
-Route::get('/beds', 'ProductController@beds');
+
+/************************** CATEGORIES **************************/
+Route::get('/beds/{category_id}', 'ProductController@beds');
 Route::get('/singleBed/{category_id}/{product_id}', 'ProductController@singleBed');
 
+Route::get('/livingRooms/{category_id}', 'ProductController@livingRooms');
+Route::get('/singleLivingRoom/{category_id}/{product_id}', 'ProductController@singleLivingRoom');
+
+Route::get('/nursery/{category_id}', 'ProductController@/nursery');
+Route::get('/singleNursery/{category_id}/{product_id}', 'ProductController@singleNursery');
+
+Route::get('/halls/{category_id}', 'ProductController@halls');
+Route::get('/singleHalls/{category_id}/{product_id}', 'ProductController@singleHalls');
+/************************** CATEGORIES **************************/
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/', 'DashboardController@index');

@@ -45,10 +45,10 @@
             <div class="cards-row w-100 p-0 m-0 contents">
                 <div class="blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6" v-for="(product, index) in data" :key="index">
                     <div class="card">
-                        <a :href="'singleBed/' + category.id + '/' + product.id">
+                        <a :href="'/singleBed/' + category.id + '/' + product.id">
                             <p class="title">{{ product.title }}</p>
                             <div class="img">
-                                <img src="/assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt="">
+                                <img :src="'/uploads/products/' + product.image">
                             </div>
                         </a>
                         <div class="details">

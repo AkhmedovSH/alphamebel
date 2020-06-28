@@ -12,6 +12,7 @@ class Product extends Model
 
     protected $casts = [
         'attribute_ids' => 'array',
+        'images' => 'array',
     ];
 
     public static function add($fields)
@@ -42,7 +43,7 @@ class Product extends Model
 
     public function removeImage(){
         if ($this->image != null){
-            Storage::delete('uploads/slider/'. $this->image);
+            Storage::delete('uploads/products/'. $this->image);
         }
     }
 
@@ -51,7 +52,7 @@ class Product extends Model
         $this->removeImage();
         $filename = rand(1000, 1000000000). '.' . $image->extension();
 
-        $image->move('uploads/slider/', $filename);
+        $image->move('uploads/products/', $filename);
         $this->image = $filename;
         $this->save();
     }
@@ -63,7 +64,7 @@ class Product extends Model
         foreach($images as $image)
         {
             $filename = rand(1000, 1000000000). '.' . $image->extension();
-            $image->storeAs('uploads/products/', $filename);
+            $image->move('uploads/products/', $filename);
             //array_push($names, $filename);  
             $names[$incI]['image'] = $filename;
             $incI++;

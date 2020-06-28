@@ -49,8 +49,8 @@ class ProductController extends Controller
         $data = Product::find($id);
         $attributes = Attribute::pluck('title', 'id')->all();
         $categories = Category::pluck('title', 'id')->all();
-        $images = json_decode($data->images);
-        return view('admin.product.edit', compact('data', 'images', 'attributes', 'categories'));
+        //$images = json_decode($data->images);
+        return view('admin.product.edit', compact('data', 'attributes', 'categories'));
     }
 
     /**
@@ -72,6 +72,7 @@ class ProductController extends Controller
         $data = Product::find($id);
         $data->edit($request->all());
         $data->uploadImage($request->file('image'));
+        $data->uploadMultipleImages($request->file('images'));
         return redirect()->route('product.index');
     }
 

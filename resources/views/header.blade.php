@@ -67,8 +67,8 @@
             <p>каталог товаров <img src="/assets/img/elements/arrow-down-black.svg" alt=""></p>
         </div>
         <ul class="product-navigation__list">
-            <li class="products-for-mobile">коллекции</li>
-            <a class="product-navigation__list-item" href="{{ url('beds') }}">
+            {{-- <li class="products-for-mobile">коллекции</li> --}}
+            <a class="product-navigation__list-item" href="{{ url('beds/' .  10) }}">
                 <li>Спальни</li>
             </a>
             <a class="product-navigation__list-item" href="collections/livingrooms/livingrooms.html">
@@ -86,7 +86,7 @@
             <a class="product-navigation__list-item" href="collections/kitchens/kitchens.html">
                 <li>кухни</li>
             </a>
-            <li class="products-for-mobile">предметы мебели</li>
+            {{-- <li class="products-for-mobile">предметы мебели</li> --}}
 
             <a class="product-navigation__list-item light-bg" href="goods/sofa/singlesofas.html">
                 <li>мягкая мебель</li>

@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/assets/style/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/style/owl.carousel.min.css">
     <link rel="stylesheet" href="/assets/style/owl.theme.default.min.css">
@@ -39,14 +38,15 @@
 
     </div>
 
+<script src="{{  asset('js/app.js')}}"></script>
 <script src="/assets/script/jquery-3.4.1.min.js"></script>
-<script src="/assets/script/owl.carousel.min.js"></script>
 <script src="/assets/script/jquery.lazyload.min.js"></script>
 <script src="/assets/script/jquery.mask.js"></script>
 <script src="/assets/script/bootstrap.min.js"></script>
+<script src="/assets/script/owl.carousel.min.js"></script>
 <script src="/assets/script/carousel.js"></script>
 <script src="/assets/script/common.js"></script>
-<script src="{{  asset('js/app.js')}}"></script>
+
 <script>
     $(document).ready(function () {
         $(".headercarousel").owlCarousel({

@@ -6,6 +6,7 @@ use App\Post;
 use App\Filter;
 use App\Slider;
 use App\Product;
+use App\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

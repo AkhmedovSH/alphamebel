@@ -5,61 +5,43 @@
 <main>
     <div class="crumbs container">
         <ul>
-            <a href="../../index.html">
+            <a href="/">
                 <li>Главная / </li>
             </a>
             <a href="beds.html">
                 <li>Спальни / </li>
             </a>
             <a>
-                <li>Ramini Bosko</li>
+                <li>{{ $product->title }}</li>
             </a>
         </ul>
     </div>
     <div class="collections-inside container">
         <div class="title col-12">
-            <h1>Спальни Ramini Bosko</h1>
+            <h1>{{ $product->title }}</h1>
         </div>
         <div class="about-item">
             <div class="slider col-xl-7 col-lg-7 col-md-6 col-sm-12">
                 <div class="img">
                     <div class="mainslider-card_main">
-                        <img src="../../assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt=""
-                            class="main_img">
+                        <img src="{{asset('uploads/products/'). '/'. $product->image }}" class="main_img">
                     </div>
+                       
                     <div class="img_markers collectioncarousel owl-carousel">
-                        <div class="mainslider-sub-img">
-                            <img src="../../assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt=""
-                                class="img_item1">
-                        </div>
-                        <div class="mainslider-sub-img">
-                            <img src="../../assets/img/collections/beds/raminibosco/single.jpg" alt=""
-                                class="img_item1">
-                        </div>
-                        <div class="mainslider-sub-img">
-                            <img src="../../assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt=""
-                                class="img_item1">
-                        </div>
-                        <div class="mainslider-sub-img">
-                            <img src="../../assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt=""
-                                class="img_item1">
-                        </div>
-                        <div class="mainslider-sub-img">
-                            <img src="../../assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt=""
-                                class="img_item1">
-                        </div>
-                        <div class="mainslider-sub-img">
-                            <img src="../../assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt=""
-                                class="img_item1">
-                        </div>
+                        @if($product->images != null)
+                           @foreach (json_decode($product['images']) as $item)
+                           <img src="{{ asset('uploads/products/'). '/'. $item->image }}" class="img_item1">
+                           @endforeach
+                        @endif
                     </div>
+                    
                     <div class="close">
                     </div>
                 </div>
             </div>
             <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12">
                 <div class="tabs">
-                    <h2>Спальни Ramini Bosko</h2>
+                    <h2>{{ $product->title }}</h2>
                     <ul class="nav nav-pills" id="pills-tab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="pills-properties-tab" data-toggle="pill"
@@ -77,39 +59,22 @@
                             aria-labelledby="pills-properties-tab">
                             <div class="tab-properties">
                                 <ul>
+                                    @foreach($attributes as $attribute)
                                     <li>
-                                        <p>Стиль</p>
-                                        <span>Классика</span>
+                                        <p>{{ $attribute->filter->title }}</p>
+                                        <span>{{ $attribute->title }}</span>
                                     </li>
-                                    <li>
-                                        <p>Производитель</p>
-                                        <span>Шатура</span>
-                                    </li>
-                                    <li>
-                                        <p>Цвет корпуса</p>
-                                        <span>Светлый</span>
-                                    </li>
-                                    <li>
-                                        <p>Цвет фасада</p>
-                                        <span>Шатура</span>
-                                    </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="pills-desc" role="tabpanel" aria-labelledby="pills-desc-tab">
                             <p>
-                                Спальня «Лючия светлая» выполнена в уникальном стиле арт
-                                повери, который художники называют искусством упрощения. Изящные формы и богатый
-                                декор
-                                сочетаются с лаконичными цветовыми решениями. Благодаря этому обстановка выглядит
-                                роскошно,
-                                но не бросается в глаза и не отвлекает внимание. Это делает отдых по-настоящему
-                                комфортным и
-                                позволяет снимать излишнее напряжение после тяжелого дня.
+                                {!! $product->description !!}
                             </p>
                             <h3>текстуры</h3>
                             <div class="texture">
-                                <img src="../../assets/img/collections/beds/raminibosco/texture.png" alt="">
+                                <img src="/assets/img/collections/beds/raminibosco/texture.png" >
                             </div>
                             <p class="front">
                                 Корпус и фасад: Ясень Aveiro Esche декапе
@@ -124,12 +89,12 @@
                 <div class="sub-content col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="goodscard content">
                         <div class="img">
-                            <a href="../../goods/beds/bed1.html" class="goodsimg-main card_main">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="main_img">
+                            <a href="/goods/beds/bed1.html" class="goodsimg-main card_main">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="main_img">
                             </a>
                             <div class="img_markers">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="img_item1">
-                                <img src="../../assets/img/goods/beds/item (3).jpg" alt="" class="img_item2">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="img_item1">
+                                <img src="/assets/img/goods/beds/item (3).jpg"  class="img_item2">
                             </div>
                             <div class="stock">
                                 <span>-10%</span>
@@ -137,7 +102,7 @@
                             </div>
                         </div>
                         <div class="desc">
-                            <a href="../../goods/beds/bed1.html">
+                            <a href="/goods/beds/bed1.html">
                                 <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
                                 <p class="code">Код: 484700</p>
                                 <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция, Bogema,
@@ -162,12 +127,12 @@
                 <div class="sub-content col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="goodscard content">
                         <div class="img">
-                            <a href="../../goods/beds/bed1.html" class="goodsimg-main card_main">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="main_img">
+                            <a href="/goods/beds/bed1.html" class="goodsimg-main card_main">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="main_img">
                             </a>
                             <div class="img_markers">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="img_item1">
-                                <img src="../../assets/img/goods/beds/item (3).jpg" alt="" class="img_item2">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="img_item1">
+                                <img src="/assets/img/goods/beds/item (3).jpg"  class="img_item2">
                             </div>
                             <div class="stock">
                                 <span>-10%</span>
@@ -175,7 +140,7 @@
                             </div>
                         </div>
                         <div class="desc">
-                            <a href="../../goods/beds/bed1.html">
+                            <a href="/goods/beds/bed1.html">
                                 <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
                                 <p class="code">Код: 484700</p>
                                 <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция, Bogema,
@@ -200,12 +165,12 @@
                 <div class="sub-content col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="goodscard content">
                         <div class="img">
-                            <a href="../../goods/beds/bed1.html" class="goodsimg-main card_main">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="main_img">
+                            <a href="/goods/beds/bed1.html" class="goodsimg-main card_main">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="main_img">
                             </a>
                             <div class="img_markers">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="img_item1">
-                                <img src="../../assets/img/goods/beds/item (3).jpg" alt="" class="img_item2">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="img_item1">
+                                <img src="/assets/img/goods/beds/item (3).jpg"  class="img_item2">
                             </div>
                             <div class="stock">
                                 <span>-10%</span>
@@ -213,7 +178,7 @@
                             </div>
                         </div>
                         <div class="desc">
-                            <a href="../../goods/beds/bed1.html">
+                            <a href="/goods/beds/bed1.html">
                                 <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
                                 <p class="code">Код: 484700</p>
                                 <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция, Bogema,
@@ -238,12 +203,12 @@
                 <div class="sub-content col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="goodscard content">
                         <div class="img">
-                            <a href="../../goods/beds/bed1.html" class="goodsimg-main card_main">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="main_img">
+                            <a href="/goods/beds/bed1.html" class="goodsimg-main card_main">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="main_img">
                             </a>
                             <div class="img_markers">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="img_item1">
-                                <img src="../../assets/img/goods/beds/item (3).jpg" alt="" class="img_item2">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="img_item1">
+                                <img src="/assets/img/goods/beds/item (3).jpg"  class="img_item2">
                             </div>
                             <div class="stock">
                                 <span>-10%</span>
@@ -251,7 +216,7 @@
                             </div>
                         </div>
                         <div class="desc">
-                            <a href="../../goods/beds/bed1.html">
+                            <a href="/goods/beds/bed1.html">
                                 <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
                                 <p class="code">Код: 484700</p>
                                 <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция, Bogema,
@@ -276,12 +241,12 @@
                 <div class="sub-content col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="goodscard content">
                         <div class="img">
-                            <a href="../../goods/beds/bed1.html" class="goodsimg-main card_main">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="main_img">
+                            <a href="/goods/beds/bed1.html" class="goodsimg-main card_main">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="main_img">
                             </a>
                             <div class="img_markers">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="img_item1">
-                                <img src="../../assets/img/goods/beds/item (3).jpg" alt="" class="img_item2">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="img_item1">
+                                <img src="/assets/img/goods/beds/item (3).jpg"  class="img_item2">
                             </div>
                             <div class="stock">
                                 <span>-10%</span>
@@ -289,7 +254,7 @@
                             </div>
                         </div>
                         <div class="desc">
-                            <a href="../../goods/beds/bed1.html">
+                            <a href="/goods/beds/bed1.html">
                                 <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
                                 <p class="code">Код: 484700</p>
                                 <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция, Bogema,
@@ -314,12 +279,12 @@
                 <div class="sub-content col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="goodscard content">
                         <div class="img">
-                            <a href="../../goods/beds/bed1.html" class="goodsimg-main card_main">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="main_img">
+                            <a href="/goods/beds/bed1.html" class="goodsimg-main card_main">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="main_img">
                             </a>
                             <div class="img_markers">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="img_item1">
-                                <img src="../../assets/img/goods/beds/item (3).jpg" alt="" class="img_item2">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="img_item1">
+                                <img src="/assets/img/goods/beds/item (3).jpg"  class="img_item2">
                             </div>
                             <div class="stock">
                                 <span>-10%</span>
@@ -327,7 +292,7 @@
                             </div>
                         </div>
                         <div class="desc">
-                            <a href="../../goods/beds/bed1.html">
+                            <a href="/goods/beds/bed1.html">
                                 <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
                                 <p class="code">Код: 484700</p>
                                 <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция, Bogema,
@@ -352,12 +317,12 @@
                 <div class="sub-content col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="goodscard content">
                         <div class="img">
-                            <a href="../../goods/beds/bed1.html" class="goodsimg-main card_main">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="main_img">
+                            <a href="/goods/beds/bed1.html" class="goodsimg-main card_main">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="main_img">
                             </a>
                             <div class="img_markers">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="img_item1">
-                                <img src="../../assets/img/goods/beds/item (3).jpg" alt="" class="img_item2">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="img_item1">
+                                <img src="/assets/img/goods/beds/item (3).jpg"  class="img_item2">
                             </div>
                             <div class="stock">
                                 <span>-10%</span>
@@ -365,7 +330,7 @@
                             </div>
                         </div>
                         <div class="desc">
-                            <a href="../../goods/beds/bed1.html">
+                            <a href="/goods/beds/bed1.html">
                                 <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
                                 <p class="code">Код: 484700</p>
                                 <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция, Bogema,
@@ -390,12 +355,12 @@
                 <div class="sub-content col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="goodscard content">
                         <div class="img">
-                            <a href="../../goods/beds/bed1.html" class="goodsimg-main card_main">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="main_img">
+                            <a href="/goods/beds/bed1.html" class="goodsimg-main card_main">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="main_img">
                             </a>
                             <div class="img_markers">
-                                <img src="../../assets/img/goods/beds/item (2).jpg" alt="" class="img_item1">
-                                <img src="../../assets/img/goods/beds/item (3).jpg" alt="" class="img_item2">
+                                <img src="/assets/img/goods/beds/item (2).jpg"  class="img_item1">
+                                <img src="/assets/img/goods/beds/item (3).jpg"  class="img_item2">
                             </div>
                             <div class="stock">
                                 <span>-10%</span>
@@ -403,7 +368,7 @@
                             </div>
                         </div>
                         <div class="desc">
-                            <a href="../../goods/beds/bed1.html">
+                            <a href="/goods/beds/bed1.html">
                                 <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
                                 <p class="code">Код: 484700</p>
                                 <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция, Bogema,
@@ -432,13 +397,18 @@
     <div id="addedToBasket">
         <p>Товар добавлен в корзину</p>
         <div id="addedItemClose">
-            <img src="../../assets/img/elements/menu-close-white.svg" alt="">
+            <img src="/assets/img/elements/menu-close-white.svg" >
         </div>
     </div>
 
 </main>
 @endsection
 
+
+<script src="/assets/script/jquery-3.4.1.min.js"></script>
+<script src="/assets/script/bootstrap.min.js"></script>
+<script src="/assets/script/owl.carousel.min.js"></script>
+<script src="/assets/script/carousel.js"></script>
 
 <script>
     $('.sub-img img').map((index, item) => {
@@ -447,16 +417,14 @@
             $(item).parent().parent().prev('.card_main').children('img').attr('src', src);
         })
     });
-</script>
-<script>
+
     $('.mainslider-sub-img img').map((index, item) => {
         $(item).on('click', x => {
             let src = $(item).attr('src');
             $('.mainslider-card_main').children('img').attr('src', src);
         })
     });
-</script>
-<script>
+
     $(document).ready(function () {
         $(".collectioncarousel").owlCarousel({
             items: 4,
@@ -476,8 +444,7 @@
             }
         });
     });
-</script>
-<script>
+    
     $(document).ready(function () {
         $('.mainslider-card_main').click(function () {
             $(this).parent('.img').toggleClass("active");
