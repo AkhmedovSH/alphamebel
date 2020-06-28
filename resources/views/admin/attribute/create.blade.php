@@ -22,7 +22,7 @@
                             <input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="Название" autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <label>Категория</label>
+                            <label>Фильтр</label>
                             {{Form::select('filter_id',
                                 $filters,
                                 null,

@@ -95,244 +95,18 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 //
 //
 //
@@ -422,17 +196,66 @@ __webpack_require__.r(__webpack_exports__);
   props: ['products', 'filters', 'category'],
   data: function data() {
     return {
-      data: {},
-      filterIds: []
+      initialData: [],
+      attributeIds: [],
+      data: [],
+      filteredProducts: []
     };
   },
   methods: {
-    checkedFilters: function checkedFilters(attribute) {
-      console.log(this.filters[0]['attributes'][0]);
+    selectAttribute: function selectAttribute(attribute) {
+      if (attribute.checked == 0) {
+        this.attributeIds.push(attribute.id);
+      }
+    },
+    filterByAttributes: function filterByAttributes() {
+      if (this.attributeIds.length != 0) {
+        this.filteredProducts = [];
+
+        for (var i = 0; i < this.data.length; i++) {
+          for (var j = 0; j < this.data[i]['attribute_ids'].length; j++) {
+            for (var k = 0; k < this.attributeIds.length; k++) {
+              if (this.data[i]['attribute_ids'][j] == this.attributeIds[k]) {
+                this.filteredProducts.push(this.data[i]);
+              }
+            }
+          }
+        }
+
+        this.data = this.getUniqueArray(this.filteredProducts);
+      }
+    },
+    cancelFilters: function cancelFilters() {
+      for (var i = 0; i < this.data.length; i++) {
+        this.data[i]['checked'] = 0;
+      }
+
+      this.data = this.initialData;
+    },
+    getUniqueArray: function getUniqueArray() {
+      var arr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var compareProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+      var modifiedArray = [];
+      if (compareProps.length === 0 && arr.length > 0) compareProps.push.apply(compareProps, _toConsumableArray(Object.keys(arr[0])));
+      arr.map(function (item) {
+        if (modifiedArray.length === 0) {
+          modifiedArray.push(item);
+        } else {
+          if (!modifiedArray.some(function (item2) {
+            return compareProps.every(function (eachProps) {
+              return item2[eachProps] === item[eachProps];
+            });
+          })) {
+            modifiedArray.push(item);
+          }
+        }
+      });
+      return modifiedArray;
     }
   },
   mounted: function mounted() {
-    console.log(this.products, this.filters, this.category);
+    this.data = this.products;
+    this.initialData = this.products;
   }
 });
 
@@ -932,11 +755,9 @@ var render = function() {
           _vm._m(1),
           _vm._v(" "),
           _c(
-            "form",
+            "div",
             { staticClass: "content", attrs: { id: "filterContent" } },
             [
-              _c("span", [_vm._v("Selected Ids: " + _vm._s(_vm.filterIds))]),
-              _vm._v(" "),
               _vm._l(_vm.filters, function(filter, index) {
                 return _c("div", { key: index, staticClass: "styles" }, [
                   _c("h4", [_vm._v(_vm._s(filter.title))]),
@@ -968,7 +789,7 @@ var render = function() {
                           },
                           on: {
                             click: function($event) {
-                              return _vm.checkedFilters(attribute)
+                              return _vm.selectAttribute(attribute)
                             },
                             change: function($event) {
                               var $$a = attribute.checked,
@@ -1013,14 +834,110 @@ var render = function() {
                 ])
               }),
               _vm._v(" "),
-              _vm._m(2)
+              _c(
+                "div",
+                {
+                  staticClass: "collections-filter__btns bedrooms-filter__btns"
+                },
+                [
+                  _c(
+                    "button",
+                    {
+                      attrs: { id: "reset" },
+                      on: {
+                        click: function($event) {
+                          return _vm.cancelFilters()
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\r\n                        Сбросить фильтры\r\n                    "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      attrs: { id: "accept" },
+                      on: {
+                        click: function($event) {
+                          return _vm.filterByAttributes()
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\r\n                        ПРИМЕНИТЬ\r\n                    "
+                      )
+                    ]
+                  )
+                ]
+              )
             ],
             2
           )
         ]
       ),
       _vm._v(" "),
-      _vm._m(3)
+      _c("div", { staticClass: "collections-cards col-xl-9 col-lg-12" }, [
+        _c(
+          "div",
+          { staticClass: "cards-row w-100 p-0 m-0 contents" },
+          _vm._l(_vm.data, function(product, index) {
+            return _c(
+              "div",
+              {
+                key: index,
+                staticClass:
+                  "blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6"
+              },
+              [
+                _c("div", { staticClass: "card" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: {
+                        href: "singleBed/" + _vm.category.id + "/" + product.id
+                      }
+                    },
+                    [
+                      _c("p", { staticClass: "title" }, [
+                        _vm._v(_vm._s(product.title))
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(2, true)
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "details" }, [
+                    _c("div", { staticClass: "price" }, [
+                      _c("div", [
+                        _vm._v(
+                          "от " +
+                            _vm._s(product.price) +
+                            " сум\r\n                                    "
+                        ),
+                        _vm._m(3, true)
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "old-price" }, [
+                        _vm._v("30 345 000 сум")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(4, true)
+                  ])
+                ])
+              ]
+            )
+          }),
+          0
+        ),
+        _vm._v(" "),
+        _vm._m(5)
+      ])
     ])
   ])
 }
@@ -1053,587 +970,53 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "collections-filter__btns bedrooms-filter__btns" },
-      [
-        _c("button", { attrs: { type: "reset", id: "reset" } }, [
-          _vm._v(
-            "\r\n                        Сбросить фильтры\r\n                    "
-          )
-        ]),
-        _vm._v(" "),
-        _c("button", { attrs: { type: "submit", id: "accept" } }, [
-          _vm._v(
-            "\r\n                        ПРИМЕНИТЬ\r\n                    "
-          )
-        ])
-      ]
-    )
+    return _c("div", { staticClass: "img" }, [
+      _c("img", {
+        attrs: {
+          src: "/assets/img/collections/beds/raminibosco/ramini-bosko.jpg",
+          alt: ""
+        }
+      })
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "collections-cards col-xl-9 col-lg-12" }, [
-      _c("div", { staticClass: "cards-row w-100 p-0 m-0 contents" }, [
-        _c(
-          "div",
-          {
-            staticClass: "blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6"
-          },
-          [
-            _c("div", { staticClass: "card" }, [
-              _c("a", { attrs: { href: "raminibosco.html" } }, [
-                _c("p", { staticClass: "title" }, [
-                  _vm._v("Спальни “Ramini Bosko”")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "img" }, [
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "/assets/img/collections/beds/raminibosco/ramini-bosko.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "details" }, [
-                _c("div", { staticClass: "price" }, [
-                  _c("div", [
-                    _vm._v(
-                      "от 21 356 000 сум\r\n                                    "
-                    ),
-                    _c("div", { staticClass: "more" }, [
-                      _vm._v("?"),
-                      _c("span", [
-                        _vm._v(
-                          "Данные в котором сказано что входит в стоимость. К\r\n                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик"
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "old-price" }, [
-                    _vm._v("30 345 000 сум")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "credit-price" }, [
-                  _c("div", [
-                    _c("span", [_vm._v("В кредит от")]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("300 345 сум/мес")])
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "raminibosco.html" } }, [
-                    _c("button", [_vm._v("ВЫБРАТЬ")])
-                  ])
-                ])
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6"
-          },
-          [
-            _c("div", { staticClass: "card" }, [
-              _c("a", { attrs: { href: "raminibosco.html" } }, [
-                _c("p", { staticClass: "title" }, [
-                  _vm._v("Спальни “Ramini Bosko”")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "img" }, [
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "/assets/img/collections/beds/raminibosco/ramini-bosko.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "details" }, [
-                _c("div", { staticClass: "price" }, [
-                  _c("div", [
-                    _vm._v(
-                      "от 21 356 000 сум\r\n                                    "
-                    ),
-                    _c("div", { staticClass: "more" }, [
-                      _vm._v("?"),
-                      _c("span", [
-                        _vm._v(
-                          "Данные в котором сказано что входит в стоимость. К\r\n                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик"
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "old-price" }, [
-                    _vm._v("30 345 000 сум")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "credit-price" }, [
-                  _c("div", [
-                    _c("span", [_vm._v("В кредит от")]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("300 345 сум/мес")])
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "raminibosco.html" } }, [
-                    _c("button", [_vm._v("ВЫБРАТЬ")])
-                  ])
-                ])
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6"
-          },
-          [
-            _c("div", { staticClass: "card" }, [
-              _c("a", { attrs: { href: "raminibosco.html" } }, [
-                _c("p", { staticClass: "title" }, [
-                  _vm._v("Спальни “Ramini Bosko”")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "img" }, [
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "/assets/img/collections/beds/raminibosco/ramini-bosko.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "details" }, [
-                _c("div", { staticClass: "price" }, [
-                  _c("div", [
-                    _vm._v(
-                      "от 21 356 000 сум\r\n                                    "
-                    ),
-                    _c("div", { staticClass: "more" }, [
-                      _vm._v("?"),
-                      _c("span", [
-                        _vm._v(
-                          "Данные в котором сказано что входит в стоимость. К\r\n                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик"
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "old-price" }, [
-                    _vm._v("30 345 000 сум")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "credit-price" }, [
-                  _c("div", [
-                    _c("span", [_vm._v("В кредит от")]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("300 345 сум/мес")])
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "raminibosco.html" } }, [
-                    _c("button", [_vm._v("ВЫБРАТЬ")])
-                  ])
-                ])
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6"
-          },
-          [
-            _c("div", { staticClass: "card" }, [
-              _c("a", { attrs: { href: "raminibosco.html" } }, [
-                _c("p", { staticClass: "title" }, [
-                  _vm._v("Спальни “Ramini Bosko”")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "img" }, [
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "/assets/img/collections/beds/raminibosco/ramini-bosko.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "details" }, [
-                _c("div", { staticClass: "price" }, [
-                  _c("div", [
-                    _vm._v(
-                      "от 21 356 000 сум\r\n                                    "
-                    ),
-                    _c("div", { staticClass: "more" }, [
-                      _vm._v("?"),
-                      _c("span", [
-                        _vm._v(
-                          "Данные в котором сказано что входит в стоимость. К\r\n                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик"
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "old-price" }, [
-                    _vm._v("30 345 000 сум")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "credit-price" }, [
-                  _c("div", [
-                    _c("span", [_vm._v("В кредит от")]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("300 345 сум/мес")])
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "raminibosco.html" } }, [
-                    _c("button", [_vm._v("ВЫБРАТЬ")])
-                  ])
-                ])
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "blogBox moreBox style-classic col-xl-6 col-lg-6 col-md-6 col-sm-6",
-            staticStyle: { display: "none" }
-          },
-          [
-            _c("div", { staticClass: "card" }, [
-              _c("a", { attrs: { href: "raminibosco.html" } }, [
-                _c("p", { staticClass: "title" }, [
-                  _vm._v("Спальни “Ramini Bosko”")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "img" }, [
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "/assets/img/collections/beds/raminibosco/ramini-bosko.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "details" }, [
-                _c("div", { staticClass: "price" }, [
-                  _c("div", [
-                    _vm._v(
-                      "от 21 356 000 сум\r\n                                    "
-                    ),
-                    _c("div", { staticClass: "more" }, [
-                      _vm._v("?"),
-                      _c("span", [
-                        _vm._v(
-                          "Данные в котором сказано что входит в стоимость. К\r\n                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик"
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "old-price" }, [
-                    _vm._v("30 345 000 сум")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "credit-price" }, [
-                  _c("div", [
-                    _c("span", [_vm._v("В кредит от")]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("300 345 сум/мес")])
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "raminibosco.html" } }, [
-                    _c("button", [_vm._v("ВЫБРАТЬ")])
-                  ])
-                ])
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "blogBox moreBox style-classic col-xl-6 col-lg-6 col-md-6 col-sm-6",
-            staticStyle: { display: "none" }
-          },
-          [
-            _c("div", { staticClass: "card" }, [
-              _c("a", { attrs: { href: "raminibosco.html" } }, [
-                _c("p", { staticClass: "title" }, [
-                  _vm._v("Спальни “Ramini Bosko”")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "img" }, [
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "/assets/img/collections/beds/raminibosco/ramini-bosko.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "details" }, [
-                _c("div", { staticClass: "price" }, [
-                  _c("div", [
-                    _vm._v(
-                      "от 21 356 000 сум\r\n                                    "
-                    ),
-                    _c("div", { staticClass: "more" }, [
-                      _vm._v("?"),
-                      _c("span", [
-                        _vm._v(
-                          "Данные в котором сказано что входит в стоимость. К\r\n                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик"
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "old-price" }, [
-                    _vm._v("30 345 000 сум")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "credit-price" }, [
-                  _c("div", [
-                    _c("span", [_vm._v("В кредит от")]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("300 345 сум/мес")])
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "raminibosco.html" } }, [
-                    _c("button", [_vm._v("ВЫБРАТЬ")])
-                  ])
-                ])
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "blogBox moreBox style-classic col-xl-6 col-lg-6 col-md-6 col-sm-6",
-            staticStyle: { display: "none" }
-          },
-          [
-            _c("div", { staticClass: "card" }, [
-              _c("a", { attrs: { href: "raminibosco.html" } }, [
-                _c("p", { staticClass: "title" }, [
-                  _vm._v("Спальни “Ramini Bosko”")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "img" }, [
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "/assets/img/collections/beds/raminibosco/ramini-bosko.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "details" }, [
-                _c("div", { staticClass: "price" }, [
-                  _c("div", [
-                    _vm._v(
-                      "от 21 356 000 сум\r\n                                    "
-                    ),
-                    _c("div", { staticClass: "more" }, [
-                      _vm._v("?"),
-                      _c("span", [
-                        _vm._v(
-                          "Данные в котором сказано что входит в стоимость. К\r\n                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик"
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "old-price" }, [
-                    _vm._v("30 345 000 сум")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "credit-price" }, [
-                  _c("div", [
-                    _c("span", [_vm._v("В кредит от")]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("300 345 сум/мес")])
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "raminibosco.html" } }, [
-                    _c("button", [_vm._v("ВЫБРАТЬ")])
-                  ])
-                ])
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "blogBox moreBox style-classic col-xl-6 col-lg-6 col-md-6 col-sm-6",
-            staticStyle: { display: "none" }
-          },
-          [
-            _c("div", { staticClass: "card" }, [
-              _c("a", { attrs: { href: "raminibosco.html" } }, [
-                _c("p", { staticClass: "title" }, [
-                  _vm._v("Спальни “Ramini Bosko”")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "img" }, [
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "/assets/img/collections/beds/raminibosco/ramini-bosko.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "details" }, [
-                _c("div", { staticClass: "price" }, [
-                  _c("div", [
-                    _vm._v(
-                      "от 21 356 000 сум\r\n                                    "
-                    ),
-                    _c("div", { staticClass: "more" }, [
-                      _vm._v("?"),
-                      _c("span", [
-                        _vm._v(
-                          "Данные в котором сказано что входит в стоимость. К\r\n                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик"
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "old-price" }, [
-                    _vm._v("30 345 000 сум")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "credit-price" }, [
-                  _c("div", [
-                    _c("span", [_vm._v("В кредит от")]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("300 345 сум/мес")])
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "raminibosco.html" } }, [
-                    _c("button", [_vm._v("ВЫБРАТЬ")])
-                  ])
-                ])
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "blogBox moreBox style-classic col-xl-6 col-lg-6 col-md-6 col-sm-6",
-            staticStyle: { display: "none" }
-          },
-          [
-            _c("div", { staticClass: "card" }, [
-              _c("a", { attrs: { href: "raminibosco.html" } }, [
-                _c("p", { staticClass: "title" }, [
-                  _vm._v("Спальни “Ramini Bosko”")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "img" }, [
-                  _c("img", {
-                    attrs: {
-                      src:
-                        "/assets/img/collections/beds/raminibosco/ramini-bosko.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "details" }, [
-                _c("div", { staticClass: "price" }, [
-                  _c("div", [
-                    _vm._v(
-                      "от 21 356 000 сум\r\n                                    "
-                    ),
-                    _c("div", { staticClass: "more" }, [
-                      _vm._v("?"),
-                      _c("span", [
-                        _vm._v(
-                          "Данные в котором сказано что входит в стоимость. К\r\n                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик"
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "old-price" }, [
-                    _vm._v("30 345 000 сум")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "credit-price" }, [
-                  _c("div", [
-                    _c("span", [_vm._v("В кредит от")]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v("300 345 сум/мес")])
-                  ]),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "raminibosco.html" } }, [
-                    _c("button", [_vm._v("ВЫБРАТЬ")])
-                  ])
-                ])
-              ])
-            ])
-          ]
+    return _c("div", { staticClass: "more" }, [
+      _vm._v("?"),
+      _c("span", [
+        _vm._v(
+          "Данные в котором сказано что входит в стоимость. К\r\n                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик"
         )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "credit-price" }, [
+      _c("div", [
+        _c("span", [_vm._v("В кредит от")]),
+        _vm._v(" "),
+        _c("p", [_vm._v("300 345 сум/мес")])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "more" }, [
-        _c("button", { attrs: { id: "loadMore" } }, [
-          _vm._v(
-            "\r\n                    ПОКАЗАТЬ ЕЩЕ ТОВАРЫ\r\n                "
-          )
-        ])
+      _c("a", { attrs: { href: "raminibosco.html" } }, [
+        _c("button", [_vm._v("ВЫБРАТЬ")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "more" }, [
+      _c("button", { attrs: { id: "loadMore" } }, [
+        _vm._v(
+          "\r\n                    ПОКАЗАТЬ ЕЩЕ ТОВАРЫ\r\n                "
+        )
       ])
     ])
   }
@@ -13796,7 +13179,6 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
  */
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-//Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
 Vue.component('product-component', __webpack_require__(/*! ./components/ProductComponent.vue */ "./resources/js/components/ProductComponent.vue")["default"]);
 /**

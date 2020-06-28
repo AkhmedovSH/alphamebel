@@ -40,6 +40,7 @@ Route::get('/wearechoosen', 'StaticPageController@wearechoosen');
 
 
 Route::get('/beds', 'ProductController@beds');
+Route::get('/singleBed/{category_id}/{product_id}', 'ProductController@singleBed');
 
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
@@ -50,4 +51,11 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::resource('/product','ProductController');
     Route::resource('/filter','FilterController');
     Route::resource('/attribute','AttributeController');
+});
+
+
+Route::group(['middleware' => 'web'], function () {
+    Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
+    Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
+    // list all lfm routes here...
 });

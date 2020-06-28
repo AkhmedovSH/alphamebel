@@ -10,7 +10,7 @@
 
             <!-- Default box -->
             <div class="box">
-                {!! Form::open(['route' => 'categories.store'], 'autocomplete' => 'off') !!}
+                {!! Form::open(['route' => 'categories.store']) !!}
                 <div class="box-header with-border">
                     <h3 class="box-title">Добавляем категорию</h3>
                     @include('admin.errors')
@@ -19,7 +19,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Название</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="Название">
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="Название" autocomplete="off">
                         </div>
                     </div>
                 </div>

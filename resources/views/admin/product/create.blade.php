@@ -23,6 +23,10 @@
                             <label for="exampleInputEmail1">Заголовок</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="title" value="{{old('title')}}">
                         </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Цена</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="price" value="{{old('price')}}">
+                        </div>
 
                         <div class="form-group">
                             <label for="exampleInputFile">Лицевая картинка jpeg jpg png (300x300)</label>
@@ -40,6 +44,14 @@
                                 ['class' => 'form-control select2'])
                             }}
                         </div>
+                        <div class="form-group">
+                            <label>Свойства</label>
+                            {{Form::select('attribute_ids[]',
+                                $attributes,
+                                null,
+                                ['class' => 'form-control select2', 'multiple'])
+                            }}
+                        </div>
                         {{-- <div class="form-group">
                             <label>Теги</label>
                             {{Form::select('tags[]',
@@ -53,7 +65,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Полный текст</label>
-                            <textarea name="content" id="my-editor" cols="30" rows="10" class="form-control">{{ old('content') }}</textarea>
+                            <textarea name="description" id="my-editor" cols="30" rows="10" class="form-control">{{ old('content') }}</textarea>
                         </div>
                     </div>
                 </div>

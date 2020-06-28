@@ -16,15 +16,14 @@
                 <h3>Подбор по параметрам:</h3>
                 <img src="/assets/img/elements/filter-icon.svg" alt="">
             </div>
-            <form id="filterContent" class="content">
-                <span>Selected Ids: {{ filterIds }}</span>
+            <div id="filterContent" class="content">
                 <div class="styles" v-for="(filter, index) in filters" :key="index">
                     <h4>{{ filter.title }}</h4>
                     <ul>
                         <li v-for="(attribute, index) in filter.attributes" :key="index" >
                             <input class="filter-items" :id="'classic' + attribute.id" type="checkbox"
                             v-model="attribute.checked"
-                            @click="checkedFilters(attribute)"
+                            @click="selectAttribute(attribute)"
                             :true-value="1"
                             :false-value="0"
                             />
@@ -33,265 +32,28 @@
                     </ul>
                 </div>
                 <div class="collections-filter__btns bedrooms-filter__btns">
-                    <button type="reset" id="reset">
+                    <button @click="cancelFilters()" id="reset">
                         Сбросить фильтры
                     </button>
-                    <button type="submit" id="accept">
+                    <button @click="filterByAttributes()" id="accept">
                         ПРИМЕНИТЬ
                     </button>
                 </div>
-            </form>
+            </div>
         </div>
         <div class="collections-cards col-xl-9 col-lg-12">
             <div class="cards-row w-100 p-0 m-0 contents">
-                <div class="blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                <div class="blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6" v-for="(product, index) in data" :key="index">
                     <div class="card">
-                        <a href="raminibosco.html">
-                            <p class="title">Спальни “Ramini Bosko”</p>
+                        <a :href="'singleBed/' + category.id + '/' + product.id">
+                            <p class="title">{{ product.title }}</p>
                             <div class="img">
                                 <img src="/assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt="">
                             </div>
                         </a>
                         <div class="details">
                             <div class="price">
-                                <div>от 21 356 000 сум
-                                    <div class="more">?<span>Данные в котором сказано что входит в стоимость. К
-                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик</span>
-                                    </div>
-                                </div>
-                                <span class="old-price">30 345 000 сум</span>
-                            </div>
-                            <div class="credit-price">
-                                <div>
-                                    <span>В кредит от</span>
-                                    <p>300 345 сум/мес</p>
-                                </div>
-                                <a href="raminibosco.html">
-                                    <button>ВЫБРАТЬ</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                    <div class="card">
-                        <a href="raminibosco.html">
-                            <p class="title">Спальни “Ramini Bosko”</p>
-                            <div class="img">
-                                <img src="/assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="details">
-                            <div class="price">
-                                <div>от 21 356 000 сум
-                                    <div class="more">?<span>Данные в котором сказано что входит в стоимость. К
-                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик</span>
-                                    </div>
-                                </div>
-                                <span class="old-price">30 345 000 сум</span>
-                            </div>
-                            <div class="credit-price">
-                                <div>
-                                    <span>В кредит от</span>
-                                    <p>300 345 сум/мес</p>
-                                </div>
-                                <a href="raminibosco.html">
-                                    <button>ВЫБРАТЬ</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                    <div class="card">
-                        <a href="raminibosco.html">
-                            <p class="title">Спальни “Ramini Bosko”</p>
-                            <div class="img">
-                                <img src="/assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="details">
-                            <div class="price">
-                                <div>от 21 356 000 сум
-                                    <div class="more">?<span>Данные в котором сказано что входит в стоимость. К
-                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик</span>
-                                    </div>
-                                </div>
-                                <span class="old-price">30 345 000 сум</span>
-                            </div>
-                            <div class="credit-price">
-                                <div>
-                                    <span>В кредит от</span>
-                                    <p>300 345 сум/мес</p>
-                                </div>
-                                <a href="raminibosco.html">
-                                    <button>ВЫБРАТЬ</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                    <div class="card">
-                        <a href="raminibosco.html">
-                            <p class="title">Спальни “Ramini Bosko”</p>
-                            <div class="img">
-                                <img src="/assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="details">
-                            <div class="price">
-                                <div>от 21 356 000 сум
-                                    <div class="more">?<span>Данные в котором сказано что входит в стоимость. К
-                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик</span>
-                                    </div>
-                                </div>
-                                <span class="old-price">30 345 000 сум</span>
-                            </div>
-                            <div class="credit-price">
-                                <div>
-                                    <span>В кредит от</span>
-                                    <p>300 345 сум/мес</p>
-                                </div>
-                                <a href="raminibosco.html">
-                                    <button>ВЫБРАТЬ</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: none;"
-                    class="blogBox moreBox style-classic col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                    <div class="card">
-                        <a href="raminibosco.html">
-                            <p class="title">Спальни “Ramini Bosko”</p>
-                            <div class="img">
-                                <img src="/assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="details">
-                            <div class="price">
-                                <div>от 21 356 000 сум
-                                    <div class="more">?<span>Данные в котором сказано что входит в стоимость. К
-                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик</span>
-                                    </div>
-                                </div>
-                                <span class="old-price">30 345 000 сум</span>
-                            </div>
-                            <div class="credit-price">
-                                <div>
-                                    <span>В кредит от</span>
-                                    <p>300 345 сум/мес</p>
-                                </div>
-                                <a href="raminibosco.html">
-                                    <button>ВЫБРАТЬ</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: none;"
-                    class="blogBox moreBox style-classic col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                    <div class="card">
-                        <a href="raminibosco.html">
-                            <p class="title">Спальни “Ramini Bosko”</p>
-                            <div class="img">
-                                <img src="/assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="details">
-                            <div class="price">
-                                <div>от 21 356 000 сум
-                                    <div class="more">?<span>Данные в котором сказано что входит в стоимость. К
-                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик</span>
-                                    </div>
-                                </div>
-                                <span class="old-price">30 345 000 сум</span>
-                            </div>
-                            <div class="credit-price">
-                                <div>
-                                    <span>В кредит от</span>
-                                    <p>300 345 сум/мес</p>
-                                </div>
-                                <a href="raminibosco.html">
-                                    <button>ВЫБРАТЬ</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: none;"
-                    class="blogBox moreBox style-classic col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                    <div class="card">
-                        <a href="raminibosco.html">
-                            <p class="title">Спальни “Ramini Bosko”</p>
-                            <div class="img">
-                                <img src="/assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="details">
-                            <div class="price">
-                                <div>от 21 356 000 сум
-                                    <div class="more">?<span>Данные в котором сказано что входит в стоимость. К
-                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик</span>
-                                    </div>
-                                </div>
-                                <span class="old-price">30 345 000 сум</span>
-                            </div>
-                            <div class="credit-price">
-                                <div>
-                                    <span>В кредит от</span>
-                                    <p>300 345 сум/мес</p>
-                                </div>
-                                <a href="raminibosco.html">
-                                    <button>ВЫБРАТЬ</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: none;"
-                    class="blogBox moreBox style-classic col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                    <div class="card">
-                        <a href="raminibosco.html">
-                            <p class="title">Спальни “Ramini Bosko”</p>
-                            <div class="img">
-                                <img src="/assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="details">
-                            <div class="price">
-                                <div>от 21 356 000 сум
-                                    <div class="more">?<span>Данные в котором сказано что входит в стоимость. К
-                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик</span>
-                                    </div>
-                                </div>
-                                <span class="old-price">30 345 000 сум</span>
-                            </div>
-                            <div class="credit-price">
-                                <div>
-                                    <span>В кредит от</span>
-                                    <p>300 345 сум/мес</p>
-                                </div>
-                                <a href="raminibosco.html">
-                                    <button>ВЫБРАТЬ</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="display: none;"
-                    class="blogBox moreBox style-classic col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                    <div class="card">
-                        <a href="raminibosco.html">
-                            <p class="title">Спальни “Ramini Bosko”</p>
-                            <div class="img">
-                                <img src="/assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt="">
-                            </div>
-                        </a>
-                        <div class="details">
-                            <div class="price">
-                                <div>от 21 356 000 сум
+                                <div>от {{ product.price }} сум
                                     <div class="more">?<span>Данные в котором сказано что входит в стоимость. К
                                             примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик</span>
                                     </div>
@@ -326,17 +88,62 @@
         props:['products', 'filters', 'category'],
          data() {
             return {
-                data: {},
-                filterIds: []
+                initialData: [],
+                attributeIds: [],
+                data: [],
+                filteredProducts: []
             };
         },
         methods: {
-            checkedFilters(attribute){
-                console.log(this.filters[0]['attributes'][0]);
+            selectAttribute(attribute) {
+                if(attribute.checked == 0) {
+                    this.attributeIds.push(attribute.id)
+                }
+            },
+            filterByAttributes() {
+                if(this.attributeIds.length != 0){
+                    this.filteredProducts = []
+                    for (let i = 0; i < this.data.length; i++) {
+                        for (let j = 0; j < this.data[i]['attribute_ids'].length; j++) {
+                            for (let k = 0; k < this.attributeIds.length; k++) {
+                                if(this.data[i]['attribute_ids'][j] == this.attributeIds[k]){
+                                    this.filteredProducts.push(this.data[i])
+                                }
+                            }
+                        }
+                    }
+
+                    
+                    this.data = this.getUniqueArray(this.filteredProducts)
+                }
+                
+                
+            },
+            cancelFilters() {
+                for (let i = 0; i < this.data.length; i++) {
+                    this.data[i]['checked'] = 0
+                }
+                this.data = this.initialData
+            },
+            getUniqueArray(arr=[], compareProps=[]) {
+                let modifiedArray= [];
+                if(compareProps.length === 0 && arr.length > 0)
+                compareProps.push(...Object.keys(arr[0]));
+                    arr.map(item=> {
+                if(modifiedArray.length === 0){
+                modifiedArray.push(item);
+                }else {
+                if(!modifiedArray.some(item2=> 
+                compareProps.every(eachProps=> item2[eachProps] === item[eachProps])
+                )){modifiedArray.push(item);}
+                }
+                });
+                return modifiedArray;
             }
         },
         mounted() {
-            console.log(this.products, this.filters, this.category)
+            this.data = this.products
+            this.initialData = this.products
         }
     }
 </script>

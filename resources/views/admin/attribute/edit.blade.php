@@ -21,7 +21,7 @@
                             <input type="text" name="title" class="form-control" id="exampleInputEmail1" value="{{ $data->title }}">
                         </div>
                         <div class="form-group">
-                            <label>Категория</label>
+                            <label>Фильтр</label>
                             {{Form::select('filter_id',
                              $filters,
                              $data->filter_id,

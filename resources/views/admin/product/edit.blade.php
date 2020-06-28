@@ -27,18 +27,34 @@
                             <input type="text" class="form-control" id="exampleInputEmail1" name="title" value="{{$data->title}}">
                         </div>
                         <div class="form-group">
-                            <img src="{{$post->getImage()}}" alt="" class="img-responsive" width="200">
+                            <label for="exampleInputEmail1">Цена</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="price" value="{{$data->price}}">
+                        </div>
+                        <div class="form-group">
+                            <img src="{{$data->getImage()}}" alt="" class="img-responsive" width="200">
                             <label for="exampleInputFile">Лицевая картинка</label>
                             <input type="file" id="exampleInputFile" name="image">
 
                             <p class="help-block">Какое-нибудь уведомление о форматах..</p>
                         </div>
                         <div class="form-group">
+                            <label for="exampleInputFile">Выбор нескольких картинок (зажимая Ctrl) (300x300)</label>
+                            <input type="file" id="exampleInputFile" name="images[]" multiple>
+                        </div>
+                        <div class="form-group">
                             <label>Категория</label>
                             {{Form::select('category_id',
-                             $categories,
-                             $post->getCategoryID(),
-                             ['class' => 'form-control select2'])}}
+                                $categories,
+                                $data->category_id,
+                                ['class' => 'form-control select2'])
+                            }}
+                        </div>
+                        <div class="form-group">
+                            <label>Свойства</label>
+                            {{Form::select('attribute_ids[]',
+                             $attributes,
+                             null,
+                             ['class' => 'form-control select2', 'multiple'])}}
                         </div>
                         {{-- <div class="form-group">
                             <label>Теги</label>
@@ -56,7 +72,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Полный текст </label>
-                            <textarea name="content" id="my-editor" cols="30" rows="10" class="form-control">{{$data->content}}</textarea>
+                            <textarea name="description" id="my-editor" cols="30" rows="10" class="form-control">{{$data->description}}</textarea>
                         </div>
                     </div>
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Product;
+use App\Category;
+use App\Attribute;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -22,27 +24,33 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.product.create');
+        $attributes = Attribute::pluck('title', 'id')->all();
+        $categories = Category::pluck('title', 'id')->all();
+        return view('admin.product.create', compact('attributes', 'categories'));
     }
 
     public function store(Request $request)
     {
+        //dd($request->all());
         $this->validate($request, [
             'title' => 'required',
-            'image' => 'nullable|image'
+            'category_id' => 'required',
+            'image' => 'nullable|image',
         ]);
 
         $data = Product::add($request->all());
         $data->uploadImage($request->file('image'));
-        $product->uploadMultipleImages($request->file('images'));
+        $data->uploadMultipleImages($request->file('images'));
         return redirect()->route('product.index');
     }
 
     public function edit($id)
     {
         $data = Product::find($id);
+        $attributes = Attribute::pluck('title', 'id')->all();
+        $categories = Category::pluck('title', 'id')->all();
         $images = json_decode($data->images);
-        return view('admin.product.edit', compact('data', 'images'));
+        return view('admin.product.edit', compact('data', 'images', 'attributes', 'categories'));
     }
 
     /**
@@ -54,15 +62,17 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //dd($request->all());
         $this->validate($request, [
             'title' => 'required',
+            'category_id' => 'required',
             'image' => 'nullable|image'
         ]);
 
         $data = Product::find($id);
         $data->edit($request->all());
         $data->uploadImage($request->file('image'));
-        return redirect()->route('posts.index');
+        return redirect()->route('product.index');
     }
 
     /**

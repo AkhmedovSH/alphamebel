@@ -8,6 +8,31 @@ use Illuminate\Support\Facades\Storage;
 class Product extends Model
 {
 
+    protected $fillable = ['title', 'description', 'attribute_ids', 'category_id', 'price'];
+
+    protected $casts = [
+        'attribute_ids' => 'array',
+    ];
+
+    public static function add($fields)
+    {
+        
+        $data = new static;
+        
+        $data->fill($fields);
+        $data->attribute_ids = json_encode($fields['attribute_ids']);
+        $data->save();
+        
+        return $data;
+    }
+
+    public function edit($fields)
+    {
+        //dd($fields);
+        $this->fill($fields);
+        $this->save();
+    }
+
     public function getImage(){
         if ($this->image == null){
             return '/img/no-image.png';
@@ -37,7 +62,7 @@ class Product extends Model
         $incI = 0;
         foreach($images as $image)
         {
-            $filename = str_random(10). '.' . $image->extension();
+            $filename = rand(1000, 1000000000). '.' . $image->extension();
             $image->storeAs('uploads/products/', $filename);
             //array_push($names, $filename);  
             $names[$incI]['image'] = $filename;
