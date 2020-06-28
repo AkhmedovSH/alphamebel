@@ -65,8 +65,23 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
 });
 
 
-Route::group(['middleware' => 'web'], function () {
-    Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
-    Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
-    // list all lfm routes here...
+Route::get('cache_clear', function () {
+
+    \Artisan::call('cache:clear');
+
+    dd("cache_clear");
+
 });
+Route::get('config_clear', function () {
+
+    \Artisan::call('config:clear');
+
+    dd("config_clear ");
+
+});
+
+// Route::group(['middleware' => 'web'], function () {
+//     Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');
+//     Route::post('/laravel-filemanager/upload', '\UniSharp\LaravelFilemanager\Controllers\UploadController@upload');
+//     // list all lfm routes here...
+// });

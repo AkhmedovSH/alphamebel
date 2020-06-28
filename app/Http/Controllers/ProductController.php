@@ -23,7 +23,11 @@ class ProductController extends Controller
         $product = Product::where('id', $product_id)->first();
         $category = Category::where('id', $category_id)->first();
         $attributes = Attribute::whereIn('id', $product->attribute_ids)->with('filter')->get();
-        $images = json_decode($product->images);
+        if($product->images != null) {
+            $images = json_decode($product->images);
+        }else{
+            $images = [];
+        }
         //dd($images[0]->image);
         return view('collections/beds/raminibosco', compact('product', 'attributes', 'category', 'images'));
     }

@@ -1,6 +1,6 @@
 <header class="main-header">
     <div class="alpha-navigation container">
-        <div class="alpha-navigation__list col-xl-7">
+        <div class="alpha-navigation__list col-xl-7 d-flex">
             <ul>
                 <li class="alpha-navigation__list-item"><a href="{{ url('/about') }}">О компании</a></li>
                 <li class="alpha-navigation__list-item"><a href="{{ url('/ourBrands') }}">Наши бренды</a></li>
