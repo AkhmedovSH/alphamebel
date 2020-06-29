@@ -56,6 +56,11 @@
                              null,
                              ['class' => 'form-control select2', 'multiple'])}}
                         </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Примечание</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="note" value="{{$data->note}}">
+                        </div>
                         {{-- <div class="form-group">
                             <label>Теги</label>
 

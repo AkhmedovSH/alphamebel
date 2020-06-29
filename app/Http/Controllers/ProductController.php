@@ -23,12 +23,53 @@ class ProductController extends Controller
         $product = Product::where('id', $product_id)->first();
         $category = Category::where('id', $category_id)->first();
         $attributes = Attribute::whereIn('id', $product->attribute_ids)->with('filter')->get();
-        if($product->images != null) {
-            $images = json_decode($product->images);
-        }else{
-            $images = [];
-        }
+        $images = $this->parseImages($product->images);
         //dd($images[0]->image);
         return view('collections/beds/raminibosco', compact('product', 'attributes', 'category', 'images'));
+    }
+
+    public function livingRooms($category_id)
+    {
+        $category = Category::where('id', $category_id)->first();
+        $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
+        $products = Product::where('category_id', $category->id)->get();
+        return view('collections/beds/beds', compact('products', 'filters', 'category'));
+    }
+
+    public function nursery($category_id)
+    {
+        $category = Category::where('id', $category_id)->first();
+        $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
+        $products = Product::where('category_id', $category->id)->get();
+        return view('collections/beds/beds', compact('products', 'filters', 'category'));
+    }
+
+    public function halls($category_id)
+    {
+        $category = Category::where('id', $category_id)->first();
+        $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
+        $products = Product::where('category_id', $category->id)->get();
+        return view('collections/beds/beds', compact('products', 'filters', 'category'));
+    }
+
+    public function offices($category_id)
+    {
+        $category = Category::where('id', $category_id)->first();
+        $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
+        $products = Product::where('category_id', $category->id)->get();
+        return view('collections/beds/beds', compact('products', 'filters', 'category'));
+    }
+
+    
+
+
+
+    public function parseImages($product_images){
+        if($product_images != null) {
+            $images = json_decode($product_images);
+             return $images;
+        } else {
+            return $images = [];
+        }
     }
 }

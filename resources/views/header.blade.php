@@ -71,19 +71,19 @@
             <a class="product-navigation__list-item" href="{{ url('beds/' .  10) }}">
                 <li>Спальни</li>
             </a>
-            <a class="product-navigation__list-item" href="collections/livingrooms/livingrooms.html">
+            <a class="product-navigation__list-item" href="{{ url('livingRooms/' .  11) }}">
                 <li>гостиные</li>
             </a>
-            <a class="product-navigation__list-item" href="collections/nursery/nursery.html">
+            <a class="product-navigation__list-item" href="{{ url('nursery/' .  12) }}">
                 <li>детские</li>
             </a>
-            <a class="product-navigation__list-item" href="collections/halls/halls.html">
+            <a class="product-navigation__list-item" href="{{ url('halls/' .  13) }}">
                 <li>прихожие</li>
             </a>
-            <a class="product-navigation__list-item" href="collections/offices/offices.html">
+            <a class="product-navigation__list-item" href="{{ url('offices/' .  14) }}">
                 <li>офисы и гостиницы</li>
             </a>
-            <a class="product-navigation__list-item" href="collections/kitchens/kitchens.html">
+            <a class="product-navigation__list-item" href="/">
                 <li>кухни</li>
             </a>
             {{-- <li class="products-for-mobile">предметы мебели</li> --}}

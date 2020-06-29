@@ -52,6 +52,11 @@
                                 ['class' => 'form-control select2', 'multiple'])
                             }}
                         </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Примечание</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="note" value="{{old('price')}}">
+                        </div>
                         {{-- <div class="form-group">
                             <label>Теги</label>
                             {{Form::select('tags[]',
@@ -63,6 +68,7 @@
                     </div>
 
                     <div class="col-md-12">
+                        
                         <div class="form-group">
                             <label for="exampleInputEmail1">Полный текст</label>
                             <textarea name="description" id="my-editor" cols="30" rows="10" class="form-control">{{ old('content') }}</textarea>

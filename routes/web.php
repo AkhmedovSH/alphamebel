@@ -47,11 +47,14 @@ Route::get('/singleBed/{category_id}/{product_id}', 'ProductController@singleBed
 Route::get('/livingRooms/{category_id}', 'ProductController@livingRooms');
 Route::get('/singleLivingRoom/{category_id}/{product_id}', 'ProductController@singleLivingRoom');
 
-Route::get('/nursery/{category_id}', 'ProductController@/nursery');
+Route::get('/nursery/{category_id}', 'ProductController@nursery');
 Route::get('/singleNursery/{category_id}/{product_id}', 'ProductController@singleNursery');
 
 Route::get('/halls/{category_id}', 'ProductController@halls');
 Route::get('/singleHalls/{category_id}/{product_id}', 'ProductController@singleHalls');
+
+Route::get('/offices/{category_id}', 'ProductController@offices');
+Route::get('/singleOffice/{category_id}/{product_id}', 'ProductController@singleOffice');
 /************************** CATEGORIES **************************/
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
