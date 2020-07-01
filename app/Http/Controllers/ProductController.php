@@ -52,17 +52,35 @@ class ProductController extends Controller
         return view('collections/beds/beds', compact('products', 'filters', 'category'));
     }
 
-    public function offices($category_id)
+    public function offices()
+    {
+        return view('collections/offices/offices');
+    }
+
+    public function officesCollection($category_id)
     {
         $category = Category::where('id', $category_id)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
         $products = Product::where('category_id', $category->id)->get();
+
         return view('collections/beds/beds', compact('products', 'filters', 'category'));
     }
 
+    public function kitchens()
+    {
+        return view('collections/kitchens/kitchens');
+    }
+
+    public function sofas($category_id)
+    {
+        $category = Category::where('id', $category_id)->first();
+        $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
+        $products = Product::where('category_id', $category->id)->get();
+
+        return view('goods/sofa/sofas', compact('products', 'filters', 'category'));
+    }
+
     
-
-
 
     public function parseImages($product_images){
         if($product_images != null) {

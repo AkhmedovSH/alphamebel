@@ -38,8 +38,6 @@ Route::get('/suppliers', 'StaticPageController@suppliers');
 Route::get('/vacancy', 'StaticPageController@vacancy');
 Route::get('/wearechoosen', 'StaticPageController@wearechoosen');
 
-
-
 /************************** CATEGORIES **************************/
 Route::get('/beds/{category_id}', 'ProductController@beds');
 Route::get('/singleBed/{category_id}/{product_id}', 'ProductController@singleBed');
@@ -53,8 +51,12 @@ Route::get('/singleNursery/{category_id}/{product_id}', 'ProductController@singl
 Route::get('/halls/{category_id}', 'ProductController@halls');
 Route::get('/singleHalls/{category_id}/{product_id}', 'ProductController@singleHalls');
 
-Route::get('/offices/{category_id}', 'ProductController@offices');
+Route::get('/offices', 'ProductController@offices');
+Route::get('/offices-collection/{category_id}', 'ProductController@officesCollection');
 Route::get('/singleOffice/{category_id}/{product_id}', 'ProductController@singleOffice');
+
+Route::get('/kitchens', 'ProductController@kitchens');
+Route::get('/sofas/{category_id}', 'ProductController@sofas');
 /************************** CATEGORIES **************************/
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {

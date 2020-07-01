@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="/assets/style/installment.css">
     <link rel="stylesheet" href="/assets/style/managers.css">
     <link rel="stylesheet" href="/assets/style/ourBrands.css">
-    <link rel="stylesheet" href="/assets/style/our__shops.css">
     <link rel="stylesheet" href="/assets/style/payment.css">
     <link rel="stylesheet" href="/assets/style/question.css">
     <link rel="stylesheet" href="/assets/style/sertificates.css">
@@ -25,6 +24,8 @@
     <link rel="stylesheet" href="/assets/style/stocks.css">
     <link rel="stylesheet" href="/assets/style/collection.css">
     <link rel="stylesheet" href="/assets/style/main.css">
+    <link rel="stylesheet" href="/assets/style/goods.css">
+    @stack('styles')
     <title>Alpha Mebel</title>
 </head>
 <body>
@@ -46,6 +47,7 @@
 <script src="/assets/script/owl.carousel.min.js"></script>
 <script src="/assets/script/carousel.js"></script>
 <script src="/assets/script/common.js"></script>
+<script src="/assets/script/tabs.js"></script>
 
 <script>
     $(document).ready(function () {

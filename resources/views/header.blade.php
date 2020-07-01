@@ -80,15 +80,15 @@
             <a class="product-navigation__list-item" href="{{ url('halls/' .  13) }}">
                 <li>прихожие</li>
             </a>
-            <a class="product-navigation__list-item" href="{{ url('offices/' .  14) }}">
+            <a class="product-navigation__list-item" href="{{ url('offices') }}">
                 <li>офисы и гостиницы</li>
             </a>
-            <a class="product-navigation__list-item" href="/">
+            <a class="product-navigation__list-item" href="/kitchens">
                 <li>кухни</li>
             </a>
             {{-- <li class="products-for-mobile">предметы мебели</li> --}}
 
-            <a class="product-navigation__list-item light-bg" href="goods/sofa/singlesofas.html">
+            <a class="product-navigation__list-item light-bg" href="{{ url('sofas/' .  16) }}">
                 <li>мягкая мебель</li>
             </a>
             <a class="product-navigation__list-item light-bg" href="goods/wardrobes/singlewardrobes.html">

@@ -1,6 +1,10 @@
 @extends('layout')
 
 
+@push('styles')
+    <link rel="stylesheet" href="/assets/style/our__shops.css">
+@endpush
+
 @section('content')
 <main class="oushops container">
     <h1>Фирменные салоны</h1>
