@@ -41,32 +41,32 @@
             <h2>Коллекции</h2>
             <p>Мебель в одном стиле, цвете и фактуре</p>
             <div class="products__collection-row">
-                <a href="collections/beds/beds.html" class="products__collection-row-item">
+                <a href="{{ url('beds/' .  10) }}" class="products__collection-row-item">
                     <img src="assets/img/product-elements/bedroom.svg">
                     <img class="hover" src="assets/img/product-elements/bedroom-hover.svg">
                     <p>спальни</p>
                 </a>
-                <a href="collections/livingrooms/livingrooms.html" class="products__collection-row-item">
+                <a href="{{ url('livingRooms/' .  11) }}" class="products__collection-row-item">
                     <img src="assets/img/product-elements/guest-hall.svg">
                     <img class="hover" src="assets/img/product-elements/guest-hall-hover.svg">
                     <p>гостиные</p>
                 </a>
-                <a href="collections/nursery/nursery.html" class="products__collection-row-item">
+                <a href="{{ url('nursery/' .  12) }}" class="products__collection-row-item">
                     <img src="assets/img/product-elements/kids-room.svg">
                     <img class="hover" src="assets/img/product-elements/kids-room-hover.svg">
                     <p>детские</p>
                 </a>
-                <a href="collections/halls/halls.html" class="products__collection-row-item">
+                <a href="{{ url('halls/' .  13) }}" class="products__collection-row-item">
                     <img src="assets/img/product-elements/hall.svg">
                     <img class="hover" src="assets/img/product-elements/hall-hover.svg">
                     <p>прихожие</p>
                 </a>
-                <a href="collections/offices/offices.html" class="products__collection-row-item">
+                <a href="{{ url('offices') }}" class="products__collection-row-item">
                     <img src="assets/img/product-elements/office.svg">
                     <img class="hover" src="assets/img/product-elements/office-hover.svg">
                     <p>офисы и гостиницы</p>
                 </a>
-                <a href="collections/kitchens/kitchens.html" class="products__collection-row-item">
+                <a href="/kitchens" class="products__collection-row-item">
                     <img src="assets/img/product-elements/kitchen.svg">
                     <img class="hover" src="assets/img/product-elements/kitchen-hover.svg">
                     <p>кухни</p>
@@ -97,7 +97,7 @@
                     <img class="hover" src="assets/img/product-elements/chair-hover.svg">
                     <p>СТОЛЫ И СТУЛЬЯ</p>
                 </a>
-                <a href="goods/sofa/singlesofas.html" class="products__single-row-item">
+                <a href="{{ url('sofas/' .  16) }}" class="products__single-row-item">
                     <img src="assets/img/product-elements/sofa.svg">
                     <img class="hover" src="assets/img/product-elements/sofa-hover.svg">
                     <p>МЯГКАЯ МЕБЕЛЬ</p>

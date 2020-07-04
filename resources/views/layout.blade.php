@@ -27,13 +27,14 @@
     <link rel="stylesheet" href="/assets/style/goods.css">
     @stack('styles')
     <title>Alpha Mebel</title>
+
 </head>
 <body>
     <div id="app">
 
         @include('header')
 
-        @yield('content')
+        @yield('content', $credit)
     
         @include('footer')
 

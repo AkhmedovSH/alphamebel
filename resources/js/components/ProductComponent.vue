@@ -53,7 +53,7 @@
                         </a>
                         <div class="details">
                             <div class="price">
-                                <div>от {{ product.sale != 0 ? (product.price/100)*product.sale : product.price }} сум
+                                <div>от {{ product.sale != 0 ? (product.price / 100) * product.sale : product.price }} сум
                                     <div class="more">?<span>{{ product.note }}</span>
                                     </div>
                                 </div>
@@ -62,7 +62,7 @@
                             <div class="credit-price">
                                 <div>
                                     <span>В кредит от</span>
-                                    <p>300 345 сум/мес</p>
+                                    <p>{{ calculate(product) }} сум/мес</p>
                                 </div>
                                 <a :href="'/singleBed/' + category.id + '/' + product.id">
                                     <button>ВЫБРАТЬ</button>
@@ -72,11 +72,11 @@
                     </div>
                 </div>
             </div>
-            <div class="more">
+            <!-- <div class="more">
                 <button id="loadMore">
                     ПОКАЗАТЬ ЕЩЕ ТОВАРЫ
                 </button>
-            </div>
+            </div> -->
         </div>
     </div>
 </main>
@@ -84,7 +84,7 @@
 
 <script>
     export default {
-        props:['products', 'filters', 'category', 'attributes'],
+        props:['products', 'filters', 'category', 'attributes', 'credit'],
          data() {
             return {
                 initialData: [],
@@ -100,6 +100,21 @@
                 }else{
                     const key = this.attributeIds.indexOf(attribute.id);
                     this.attributeIds.splice(key, 1)
+                }
+            },
+            calculate(product) {
+                var newPrice = 0
+                if(product.sale != 0) {
+                    var sale = (((product.price / 100) * product.sale) / 100) * this.credit.credit
+                    var productPrice = (product.price / 100) * product.sale
+                    newPrice = (productPrice * (sale/productPrice)) / this.credit.month
+                   
+                    return newPrice.toFixed(2)
+                } else {
+                    sale = (product.price / 100) * this.credit.credit
+                    
+                    newPrice = (product.price * (sale/product.price)) / this.credit.month
+                    return newPrice.toFixed(2)
                 }
             },
             filterByAttributes() {

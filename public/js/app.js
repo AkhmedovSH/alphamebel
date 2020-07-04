@@ -192,7 +192,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['products', 'filters', 'category', 'attributes'],
+  props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
     return {
       initialData: [],
@@ -208,6 +208,20 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       } else {
         var key = this.attributeIds.indexOf(attribute.id);
         this.attributeIds.splice(key, 1);
+      }
+    },
+    calculate: function calculate(product) {
+      var newPrice = 0;
+
+      if (product.sale != 0) {
+        var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
+        var productPrice = product.price / 100 * product.sale;
+        newPrice = productPrice * (sale / productPrice) / this.credit.month;
+        return newPrice.toFixed(2);
+      } else {
+        sale = product.price / 100 * this.credit.credit;
+        newPrice = product.price * (sale / product.price) / this.credit.month;
+        return newPrice.toFixed(2);
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -951,7 +965,13 @@ var render = function() {
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "credit-price" }, [
-                      _vm._m(2, true),
+                      _c("div", [
+                        _c("span", [_vm._v("В кредит от")]),
+                        _vm._v(" "),
+                        _c("p", [
+                          _vm._v(_vm._s(_vm.calculate(product)) + " сум/мес")
+                        ])
+                      ]),
                       _vm._v(" "),
                       _c(
                         "a",
@@ -970,9 +990,7 @@ var render = function() {
             )
           }),
           0
-        ),
-        _vm._v(" "),
-        _vm._m(3)
+        )
       ])
     ])
   ])
@@ -1000,28 +1018,6 @@ var staticRenderFns = [
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
       })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("span", [_vm._v("В кредит от")]),
-      _vm._v(" "),
-      _c("p", [_vm._v("300 345 сум/мес")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "more" }, [
-      _c("button", { attrs: { id: "loadMore" } }, [
-        _vm._v(
-          "\r\n                    ПОКАЗАТЬ ЕЩЕ ТОВАРЫ\r\n                "
-        )
-      ])
     ])
   }
 ]

@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('layout', function ($view) {
+        view()->composer('*', function ($view) {
             $view->with('credit', Credit::where('id', 1)->first());
         });
     }
