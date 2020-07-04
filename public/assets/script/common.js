@@ -3,7 +3,12 @@ $(document).ready(function () {
     $('#ourBranches').click(function () {
         $('.branches').toggleClass('active');
     });
+
+    if(localStorage.getItem('callmake') == 'false') {
+        $( ".callmake" ).css("display","none");
+    }
 });
+
 $(document).ready(function () {
     $('#catalogueMobile').click(function () {
         $('.product-navigation__list').toggleClass('active');
@@ -11,6 +16,7 @@ $(document).ready(function () {
         $(".alpha-navigation__list").toggleClass('catalogue-clicked');
     });
 });
+
 $(document).ready(function () {
     $('.mobile-menu-open-button').click(function () {
         $('.alpha-navigation').css("display", "flex");
@@ -110,6 +116,49 @@ if (windowwidth > 768) {
 }
 
 
+$('.sub-img img').map((index, item) => {
+    $(item).on('click', x => {
+        let src = $(item).attr('src');
+        $(item).parent().parent().prev('.card_main').children('img').attr('src', src);
+    })
+});
+
+$('.mainslider-sub-img img').map((index, item) => {
+    $(item).on('click', x => {
+        let src = $(item).attr('src');
+        $('.mainslider-card_main').children('img').attr('src', src);
+    })
+});
+
+$(document).ready(function () {
+    $(".collectioncarousel").owlCarousel({
+        items: 4,
+        dots: false,
+        loop: false,
+        autoplay: false,
+        smartSpeed: 1000,
+        nav: true,
+        mouseDrag: false,
+        responsive: {
+            250: {
+                items: 3,
+            },
+            600: {
+                items: 4,
+            }
+        }
+    });
+});
+
+$(document).ready(function () {
+    $('.mainslider-card_main').click(function () {
+        $(this).parent('.img').toggleClass("active");
+    });
+    $('.close').click(function () {
+        $(this).parent('.img').removeClass("active");
+    });
+});
+
 
 /*--------------- GOODS FILTER -----------------*/
 
@@ -156,5 +205,11 @@ $(document).ready(function () {
     $('.nonstandart-title').click(function () {
         $('.nonstandart-content').toggleClass('active');
     });
+
+    $(".callmake-close").click(function(){
+        localStorage.setItem('callmake', false)
+    });
 });
+
+
 

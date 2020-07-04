@@ -9,7 +9,8 @@
         <section class="content">
         {{Form::open([
            'route' =>'product.store',
-           'files' => true
+           'files' => true,
+           'autocomplete' => "off"
         ])}}
             <!-- Default box -->
             <div class="box">

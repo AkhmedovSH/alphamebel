@@ -29,9 +29,11 @@
                        
                     <div class="img_markers collectioncarousel owl-carousel">
                         @if($product->images != null)
-                           @foreach (json_decode($product['images']) as $item)
-                           <img src="{{ asset('uploads/products/'). '/'. $item->image }}" class="img_item1">
-                           @endforeach
+                            @foreach (json_decode($product['images']) as $item)
+                            <div class="mainslider-sub-img">
+                                <img src="{{ asset('uploads/products/'). '/'. $item->image }}" class="img_item1">
+                            </div>
+                            @endforeach
                         @endif
                     </div>
                     
@@ -403,54 +405,3 @@
 
 </main>
 @endsection
-
-
-<script src="/assets/script/jquery-3.4.1.min.js"></script>
-<script src="/assets/script/bootstrap.min.js"></script>
-<script src="/assets/script/owl.carousel.min.js"></script>
-<script src="/assets/script/carousel.js"></script>
-
-<script>
-    $('.sub-img img').map((index, item) => {
-        $(item).on('click', x => {
-            let src = $(item).attr('src');
-            $(item).parent().parent().prev('.card_main').children('img').attr('src', src);
-        })
-    });
-
-    $('.mainslider-sub-img img').map((index, item) => {
-        $(item).on('click', x => {
-            let src = $(item).attr('src');
-            $('.mainslider-card_main').children('img').attr('src', src);
-        })
-    });
-
-    $(document).ready(function () {
-        $(".collectioncarousel").owlCarousel({
-            items: 4,
-            dots: false,
-            loop: false,
-            autoplay: false,
-            smartSpeed: 1000,
-            nav: true,
-            mouseDrag: false,
-            responsive: {
-                250: {
-                    items: 3,
-                },
-                600: {
-                    items: 4,
-                }
-            }
-        });
-    });
-    
-    $(document).ready(function () {
-        $('.mainslider-card_main').click(function () {
-            $(this).parent('.img').toggleClass("active");
-        });
-        $('.close').click(function () {
-            $(this).parent('.img').removeClass("active");
-        });
-    });
-</script>

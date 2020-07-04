@@ -21,7 +21,7 @@ class Product extends Model
         $data = new static;
         
         $data->fill($fields);
-        $data->attribute_ids = json_encode($fields['attribute_ids']);
+        $data->attribute_ids = $fields['attribute_ids'];
         $data->save();
         
         return $data;
@@ -34,6 +34,13 @@ class Product extends Model
         $this->save();
     }
 
+    public function remove() {
+       
+        $this->removeImage();
+        $this->removeSliderImages();
+        $this->delete();
+    }
+
     public function getImage(){
         if ($this->image == null){
             return '/img/no-image.png';
@@ -42,8 +49,17 @@ class Product extends Model
     }
 
     public function removeImage(){
-        if ($this->image != null){
-            Storage::delete('uploads/products/'. $this->image);
+        if ($this->image != null) {
+            unlink('uploads/products/'. $this->image);
+        }
+    }
+
+    public function removeSliderImages(){
+        if ($this->images != null) {
+            $images = json_decode($this->images, true);
+            foreach($images as $item) {
+                unlink('uploads/products/'. $item['image']);
+            }
         }
     }
 

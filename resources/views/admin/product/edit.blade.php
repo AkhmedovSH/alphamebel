@@ -11,7 +11,8 @@
         {{Form::open([
             'route' => ['product.update', $data->id],
             'files' => true,
-            'method' => 'put'
+            'method' => 'put',
+            'autocomplete' => "off"
         ])}}
 
             <!-- Default box -->
@@ -27,8 +28,8 @@
                             <input type="text" class="form-control" id="exampleInputEmail1" name="title" value="{{$data->title}}">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Цена</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" name="price" value="{{$data->price}}">
+                            <label for="exampleInputEmail1">Цена</label>    
+                            <input type="number" class="form-control" id="exampleInputEmail1" name="price" value="{{$data->price}}">
                         </div>
                         <div class="form-group">
                             <img src="{{$data->getImage()}}" alt="" class="img-responsive" width="200">

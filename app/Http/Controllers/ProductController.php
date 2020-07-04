@@ -13,10 +13,13 @@ class ProductController extends Controller
     public function beds($category_id)
     {
         $category = Category::where('id', $category_id)->first();
-        $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
         $products = Product::where('category_id', $category->id)->get();
-        return view('collections/beds/beds', compact('products', 'filters', 'category'));
+        $filters = Filter::whereIn('id', json_decode($category->filter_ids))->get();
+        $attributes = Attribute::whereIn('id', json_decode($category->attribute_ids))->get();
+        
+        return view('collections/beds/beds', compact('products', 'filters', 'category', 'attributes'));
     }
+
 
     public function singleBed($category_id, $product_id)
     {
@@ -33,7 +36,8 @@ class ProductController extends Controller
         $category = Category::where('id', $category_id)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
         $products = Product::where('category_id', $category->id)->get();
-        return view('collections/beds/beds', compact('products', 'filters', 'category'));
+        $attributes = Attribute::whereIn('id', json_decode($category->attribute_ids))->get();
+        return view('collections/beds/beds', compact('products', 'filters', 'category', 'attributes'));
     }
 
     public function nursery($category_id)
@@ -41,7 +45,8 @@ class ProductController extends Controller
         $category = Category::where('id', $category_id)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
         $products = Product::where('category_id', $category->id)->get();
-        return view('collections/beds/beds', compact('products', 'filters', 'category'));
+        $attributes = Attribute::whereIn('id', json_decode($category->attribute_ids))->get();
+        return view('collections/beds/beds', compact('products', 'filters', 'category', 'attributes'));
     }
 
     public function halls($category_id)
@@ -49,7 +54,8 @@ class ProductController extends Controller
         $category = Category::where('id', $category_id)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
         $products = Product::where('category_id', $category->id)->get();
-        return view('collections/beds/beds', compact('products', 'filters', 'category'));
+        $attributes = Attribute::whereIn('id', json_decode($category->attribute_ids))->get();
+        return view('collections/beds/beds', compact('products', 'filters', 'category', 'attributes'));
     }
 
     public function offices()
@@ -62,8 +68,9 @@ class ProductController extends Controller
         $category = Category::where('id', $category_id)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
         $products = Product::where('category_id', $category->id)->get();
+        $attributes = Attribute::whereIn('id', json_decode($category->attribute_ids))->get();
 
-        return view('collections/beds/beds', compact('products', 'filters', 'category'));
+        return view('collections/beds/beds', compact('products', 'filters', 'category', 'attributes'));
     }
 
     public function kitchens()
@@ -76,8 +83,9 @@ class ProductController extends Controller
         $category = Category::where('id', $category_id)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
         $products = Product::where('category_id', $category->id)->get();
+        $attributes = Attribute::whereIn('id', json_decode($category->attribute_ids))->get();
 
-        return view('goods/sofa/sofas', compact('products', 'filters', 'category'));
+        return view('goods/sofa/sofas', compact('products', 'filters', 'category', 'attributes'));
     }
 
     

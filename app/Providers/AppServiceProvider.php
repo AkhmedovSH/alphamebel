@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Category;
+use App\Credit;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,8 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // view()->composer('layout', function ($view) {
-        //     $view->with('categories', Category::all());
-        // });
+        view()->composer('layout', function ($view) {
+            $view->with('credit', Credit::where('id', 1)->first());
+        });
     }
 }

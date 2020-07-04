@@ -3,7 +3,7 @@
 
 @section('content')
 
-<product-component :products="{{ $products }}" :filters="{{ $filters }}" :category="{{ $category }}"></product-component>
+<product-component :products="{{ $products }}" :filters="{{ $filters }}" :category="{{ $category }}" :attributes="{{ $attributes }}"></product-component>
 {{-- <main>
     <div class="crumbs container">
         <ul>

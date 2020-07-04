@@ -38,6 +38,12 @@ Route::get('/suppliers', 'StaticPageController@suppliers');
 Route::get('/vacancy', 'StaticPageController@vacancy');
 Route::get('/wearechoosen', 'StaticPageController@wearechoosen');
 
+//Route::get('empty', function (){Cart::destroy();});
+Route::get('/cart', 'CartController@index')->name('cart');
+Route::post('/cart', 'CartController@store')->name('cart.store');
+Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
+Route::patch('/cart/update', 'CartController@update')->name('cart.update');
+
 /************************** CATEGORIES **************************/
 Route::get('/beds/{category_id}', 'ProductController@beds');
 Route::get('/singleBed/{category_id}/{product_id}', 'ProductController@singleBed');
@@ -59,31 +65,19 @@ Route::get('/kitchens', 'ProductController@kitchens');
 Route::get('/sofas/{category_id}', 'ProductController@sofas');
 /************************** CATEGORIES **************************/
 
+
+
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
-    Route::get('/', 'DashboardController@index');
+    Route::get('/', 'DashboardController@index')->name('dashboard');
     Route::resource('/categories','CategoriesController');
     Route::resource('/posts','PostController');
     Route::resource('/slider','SliderController');
     Route::resource('/product','ProductController');
     Route::resource('/filter','FilterController');
     Route::resource('/attribute','AttributeController');
+    Route::resource('/credit','CreditController');
 });
 
-
-Route::get('cache_clear', function () {
-
-    \Artisan::call('cache:clear');
-
-    dd("cache_clear");
-
-});
-Route::get('config_clear', function () {
-
-    \Artisan::call('config:clear');
-
-    dd("config_clear ");
-
-});
 
 // Route::group(['middleware' => 'web'], function () {
 //     Route::get('/laravel-filemanager', '\UniSharp\LaravelFilemanager\Controllers\LfmController@show');

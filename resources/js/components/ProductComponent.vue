@@ -53,19 +53,18 @@
                         </a>
                         <div class="details">
                             <div class="price">
-                                <div>от {{ product.price }} сум
-                                    <div class="more">?<span>Данные в котором сказано что входит в стоимость. К
-                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик</span>
+                                <div>от {{ product.sale != 0 ? (product.price/100)*product.sale : product.price }} сум
+                                    <div class="more">?<span>{{ product.note }}</span>
                                     </div>
                                 </div>
-                                <span class="old-price">30 345 000 сум</span>
+                                <span class="old-price">{{ product.price }} сум</span>
                             </div>
                             <div class="credit-price">
                                 <div>
                                     <span>В кредит от</span>
                                     <p>300 345 сум/мес</p>
                                 </div>
-                                <a href="raminibosco.html">
+                                <a :href="'/singleBed/' + category.id + '/' + product.id">
                                     <button>ВЫБРАТЬ</button>
                                 </a>
                             </div>
@@ -85,35 +84,36 @@
 
 <script>
     export default {
-        props:['products', 'filters', 'category'],
+        props:['products', 'filters', 'category', 'attributes'],
          data() {
             return {
                 initialData: [],
                 attributeIds: [],
                 data: [],
-                filteredProducts: []
+                filteredProducts: [],
             };
         },
         methods: {
             selectAttribute(attribute) {
                 if(attribute.checked == 0) {
                     this.attributeIds.push(attribute.id)
+                }else{
+                    const key = this.attributeIds.indexOf(attribute.id);
+                    this.attributeIds.splice(key, 1)
                 }
             },
             filterByAttributes() {
                 if(this.attributeIds.length != 0){
                     this.filteredProducts = []
-                    for (let i = 0; i < this.data.length; i++) {
-                        for (let j = 0; j < this.data[i]['attribute_ids'].length; j++) {
+                    for (let i = 0; i < this.initialData.length; i++) {
+                        for (let j = 0; j < this.initialData[i]['attribute_ids'].length; j++) {
                             for (let k = 0; k < this.attributeIds.length; k++) {
-                                if(this.data[i]['attribute_ids'][j] == this.attributeIds[k]){
-                                    this.filteredProducts.push(this.data[i])
+                                if(this.initialData[i]['attribute_ids'][j] == this.attributeIds[k]){
+                                    this.filteredProducts.push(this.initialData[i])
                                 }
                             }
                         }
                     }
-
-                    
                     this.data = this.getUniqueArray(this.filteredProducts)
                 }
                 
@@ -142,6 +142,15 @@
             }
         },
         mounted() {
+            for (let i = 0; i < this.filters.length; i++) {
+                this.filters[i]['attributes'] = []
+                for (let j = 0; j < this.attributes.length; j++) {
+                    if(this.filters[i]['id'] == this.attributes[j]['filter_id']) {
+                        this.filters[i]['attributes'].push(this.attributes[j])
+                    }
+                }
+            }
+            
             this.data = this.products
             this.initialData = this.products
         }

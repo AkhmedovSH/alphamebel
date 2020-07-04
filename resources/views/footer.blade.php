@@ -2,7 +2,7 @@
 <div class="callmake">
     <div class="container">
         <form action="" method="">
-            <div class="recall ">
+            <div class="recall">
                 <img src="/assets/img/elements/phone-yellow.svg  " alt="">
                 <p>Перезвонить вам?</p>
             </div>
