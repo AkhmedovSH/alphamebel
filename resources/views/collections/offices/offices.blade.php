@@ -6,7 +6,7 @@
         <h1>корпоративные решения</h1>
         <div class="corporate-row">
             <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
-                <a href="{{ url('offices-collection/' .  22) }}">
+                <a href="{{ url('products/' .  22) }}">
                     <h2>Гостиничная мебель</h2>
                     <div class="img">
                         <img src="/assets/img/collections/offices/corporate/corporate1.jpg" alt="">
@@ -14,7 +14,7 @@
                 </a>
             </div>
             <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
-                <a href="{{ url('offices-collection/' .  23) }}">
+                <a href="{{ url('products/' .  23) }}">
                     <h2>Кабинеты</h2>
                     <div class="img">
                         <img src="/assets/img/collections/offices/corporate/corporate2.jpg" alt="">
@@ -22,7 +22,7 @@
                 </a>
             </div>
             <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
-                <a href="{{ url('offices-collection/' .  24) }}">
+                <a href="{{ url('products/' .  24) }}">
                     <h2>Мебель для офиса</h2>
                     <div class="img">
                         <img src="/assets/img/collections/offices/corporate/corporate3.jpg" alt="">
@@ -30,7 +30,7 @@
                 </a>
             </div>
             <div class="card col-xl-6 col-lg-6 col-md-6 col-sm-8 col-12">
-                <a href="{{ url('offices-collection/' .  25) }}">
+                <a href="{{ url('products/' .  25) }}">
                     <h2>Оперативная офисная мебель</h2>
                     <div class="img">
                         <img src="/assets/img/collections/offices/corporate/corporate4.jpg" alt="">

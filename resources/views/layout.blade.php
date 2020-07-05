@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="/assets/style/collection.css">
     <link rel="stylesheet" href="/assets/style/main.css">
     <link rel="stylesheet" href="/assets/style/goods.css">
+    <link rel="stylesheet" href="/assets/style/basket.css">
     @stack('styles')
     <title>Alpha Mebel</title>
 

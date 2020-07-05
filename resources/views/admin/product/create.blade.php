@@ -22,11 +22,11 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Заголовок</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="title" value="{{old('title')}}">
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="title" value="{{old('title')}}" required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Цена</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" name="price" value="{{old('price')}}">
+                            <input type="number" class="form-control" id="exampleInputEmail1" name="price" value="{{old('price')}}" required>
                         </div>
 
                         <div class="form-group">
@@ -55,17 +55,24 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Примечание</label>
+                            <label for="exampleInputEmail1">Примечание (Не обязательно)</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" name="note" value="{{old('price')}}">
                         </div>
-                        {{-- <div class="form-group">
-                            <label>Теги</label>
-                            {{Form::select('tags[]',
-                                $tags,
-                                null,
-                                ['class' => 'form-control select2', 'multiple'=>'multiple','data-placeholder'=>'Выберите теги'])
-                            }}
-                        </div> --}}
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Ширина (Не обязательно)</label>
+                            <input type="number" class="form-control" name="width" value="{{old('width')}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Высота (Не обязательно)</label>
+                            <input type="number" class="form-control" name="height" value="{{old('height')}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Длина (Не обязательно)</label>
+                            <input type="number" class="form-control" name="length" value="{{old('length')}}">
+                        </div>
                     </div>
 
                     <div class="col-md-12">

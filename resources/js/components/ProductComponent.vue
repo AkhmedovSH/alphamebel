@@ -45,7 +45,7 @@
             <div class="cards-row w-100 p-0 m-0 contents">
                 <div class="blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6" v-for="(product, index) in data" :key="index">
                     <div class="card">
-                        <a :href="'/singleBed/' + category.id + '/' + product.id">
+                        <a :href="'/singleProduct/' + category.id + '/' + product.id">
                             <p class="title">{{ product.title }}</p>
                             <div class="img">
                                 <img :src="'/uploads/products/' + product.image">
@@ -64,7 +64,7 @@
                                     <span>В кредит от</span>
                                     <p>{{ calculate(product) }} сум/мес</p>
                                 </div>
-                                <a :href="'/singleBed/' + category.id + '/' + product.id">
+                                <a :href="'/singleProduct/' + category.id + '/' + product.id">
                                     <button>ВЫБРАТЬ</button>
                                 </a>
                             </div>

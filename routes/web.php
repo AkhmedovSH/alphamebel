@@ -45,24 +45,15 @@ Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy')
 Route::patch('/cart/update', 'CartController@update')->name('cart.update');
 
 /************************** CATEGORIES **************************/
-Route::get('/beds/{category_id}', 'ProductController@beds');
-Route::get('/singleBed/{category_id}/{product_id}', 'ProductController@singleBed');
-
-Route::get('/livingRooms/{category_id}', 'ProductController@livingRooms');
-Route::get('/singleLivingRoom/{category_id}/{product_id}', 'ProductController@singleLivingRoom');
-
-Route::get('/nursery/{category_id}', 'ProductController@nursery');
-Route::get('/singleNursery/{category_id}/{product_id}', 'ProductController@singleNursery');
-
-Route::get('/halls/{category_id}', 'ProductController@halls');
-Route::get('/singleHalls/{category_id}/{product_id}', 'ProductController@singleHalls');
+Route::get('/products/{category_id}', 'ProductController@products');
+Route::get('/singleProduct/{category_id}/{product_id}', 'ProductController@singleProduct');
 
 Route::get('/offices', 'ProductController@offices');
-Route::get('/offices-collection/{category_id}', 'ProductController@officesCollection');
-Route::get('/singleOffice/{category_id}/{product_id}', 'ProductController@singleOffice');
 
 Route::get('/kitchens', 'ProductController@kitchens');
 Route::get('/sofas/{category_id}', 'ProductController@sofas');
+Route::get('/wcb/{category_id}', 'ProductController@wcb');
+Route::get('/single-right-product/{category_id}/{product_id}', 'ProductController@singleRightProduct');
 /************************** CATEGORIES **************************/
 
 

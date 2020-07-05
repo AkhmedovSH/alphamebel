@@ -53,11 +53,11 @@
         <div class="brand-navigation__basket col-xl-3 col-lg-4 col-md-4 col-sm-3 col-3">
             <a href="basket.html">
                 <div class="basket-price">
-                    <p>21 000 000 <span>сум</span></p>
+                    <p>{{ str_replace(',', '.', Cart::subtotal()) }} <span>сум</span></p> 
                 </div>
                 <div class="basket-logo">
                     <img src="/assets/img/elements/basket.svg" alt="">
-                    <span class="basket-items">0</span>
+                    <span class="basket-items">{{ Cart::count() }} </span>
                 </div>
             </a>
         </div>
@@ -68,16 +68,16 @@
         </div>
         <ul class="product-navigation__list">
             {{-- <li class="products-for-mobile">коллекции</li> --}}
-            <a class="product-navigation__list-item" href="{{ url('beds/' .  10) }}">
+            <a class="product-navigation__list-item" href="{{ url('products/' .  10) }}">
                 <li>Спальни</li>
             </a>
-            <a class="product-navigation__list-item" href="{{ url('livingRooms/' .  11) }}">
+            <a class="product-navigation__list-item" href="{{ url('products/' .  11) }}">
                 <li>гостиные</li>
             </a>
-            <a class="product-navigation__list-item" href="{{ url('nursery/' .  12) }}">
+            <a class="product-navigation__list-item" href="{{ url('products/' .  12) }}">
                 <li>детские</li>
             </a>
-            <a class="product-navigation__list-item" href="{{ url('halls/' .  13) }}">
+            <a class="product-navigation__list-item" href="{{ url('products/' .  13) }}">
                 <li>прихожие</li>
             </a>
             <a class="product-navigation__list-item" href="{{ url('offices') }}">
@@ -91,16 +91,16 @@
             <a class="product-navigation__list-item light-bg" href="{{ url('sofas/' .  16) }}">
                 <li>мягкая мебель</li>
             </a>
-            <a class="product-navigation__list-item light-bg" href="goods/wardrobes/singlewardrobes.html">
+            <a class="product-navigation__list-item light-bg" href="{{ url('wcb/' .  17) }}">
                 <li>шкафы</li>
             </a>
-            <a class="product-navigation__list-item light-bg" href="goods/comods/singlecomods.html">
+            <a class="product-navigation__list-item light-bg" href="{{ url('wcb/' .  18) }}">
                 <li>комоды</li>
             </a>
             <a class="product-navigation__list-item light-bg" href="goods/chairs/singlechairs.html">
                 <li>столы и стулья</li>
             </a>
-            <a class="product-navigation__list-item light-bg" href="goods/beds/singlebeds.html">
+            <a class="product-navigation__list-item light-bg" href="{{ url('wcb/' .  20) }}">
                 <li>кровати</li>
             </a>
             <a class="product-navigation__list-item light-bg" href="goods/mattrasses/singlemattress.html">

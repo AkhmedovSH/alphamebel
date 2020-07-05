@@ -3,11 +3,11 @@
 
 @section('content')
 
-<product-component 
+<product-right-wcb-component 
 :products="{{ $products }}" 
 :filters="{{ $filters }}" 
 :category="{{ $category }}" 
 :attributes="{{ $attributes }}"
 :credit="{{ $credit }}"
-></product-component>
+></product-right-wcb-component>
 @endsection

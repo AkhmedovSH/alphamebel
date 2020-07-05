@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CartController extends Controller
 {
@@ -23,10 +23,9 @@ class CartController extends Controller
         $sale = $request->sale;
        
         if($price == null){ $price = 0; }
-        if($sale != null){ $price = $price - ($price * $sale / 100); }
-       
-        Cart::add($id, $title, 1, $price)->associate('App\Product');
-        return view('cart');
+        if($sale != 0){ $price = $price - ($price * $sale / 100); }
+        //Cart::add($id, $title, 1, $price)->associate('App\Product');
+        return view('basket');
     }
 
 

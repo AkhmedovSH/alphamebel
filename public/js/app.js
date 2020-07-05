@@ -287,6 +287,2861 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductRightComponent.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ProductRightComponent.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['products', 'filters', 'category', 'attributes', 'credit'],
+  data: function data() {
+    return {
+      initialData: [],
+      attributeIds: [],
+      data: [],
+      filteredProducts: []
+    };
+  },
+  methods: {
+    selectAttribute: function selectAttribute(attribute) {
+      if (attribute.checked == 0) {
+        this.attributeIds.push(attribute.id);
+      } else {
+        var key = this.attributeIds.indexOf(attribute.id);
+        this.attributeIds.splice(key, 1);
+      }
+    },
+    calculate: function calculate(product) {
+      var newPrice = 0;
+
+      if (product.sale != 0) {
+        var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
+        var productPrice = product.price / 100 * product.sale;
+        newPrice = productPrice * (sale / productPrice) / this.credit.month;
+        return newPrice.toFixed(2);
+      } else {
+        sale = product.price / 100 * this.credit.credit;
+        newPrice = product.price * (sale / product.price) / this.credit.month;
+        return newPrice.toFixed(2);
+      }
+    },
+    filterByAttributes: function filterByAttributes() {
+      if (this.attributeIds.length != 0) {
+        this.filteredProducts = [];
+
+        for (var i = 0; i < this.initialData.length; i++) {
+          for (var j = 0; j < this.initialData[i]['attribute_ids'].length; j++) {
+            for (var k = 0; k < this.attributeIds.length; k++) {
+              if (this.initialData[i]['attribute_ids'][j] == this.attributeIds[k]) {
+                this.filteredProducts.push(this.initialData[i]);
+              }
+            }
+          }
+        }
+
+        this.data = this.getUniqueArray(this.filteredProducts);
+      }
+    },
+    cancelFilters: function cancelFilters() {
+      for (var i = 0; i < this.data.length; i++) {
+        this.data[i]['checked'] = 0;
+      }
+
+      this.data = this.initialData;
+    },
+    getUniqueArray: function getUniqueArray() {
+      var arr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var compareProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+      var modifiedArray = [];
+      if (compareProps.length === 0 && arr.length > 0) compareProps.push.apply(compareProps, _toConsumableArray(Object.keys(arr[0])));
+      arr.map(function (item) {
+        if (modifiedArray.length === 0) {
+          modifiedArray.push(item);
+        } else {
+          if (!modifiedArray.some(function (item2) {
+            return compareProps.every(function (eachProps) {
+              return item2[eachProps] === item[eachProps];
+            });
+          })) {
+            modifiedArray.push(item);
+          }
+        }
+      });
+      return modifiedArray;
+    }
+  },
+  mounted: function mounted() {
+    for (var i = 0; i < this.filters.length; i++) {
+      this.filters[i]['attributes'] = [];
+
+      for (var j = 0; j < this.attributes.length; j++) {
+        if (this.filters[i]['id'] == this.attributes[j]['filter_id']) {
+          this.filters[i]['attributes'].push(this.attributes[j]);
+        }
+      }
+    }
+
+    this.data = this.products;
+    this.initialData = this.products;
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductRightWcbComponent.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ProductRightWcbComponent.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['products', 'filters', 'category', 'attributes', 'credit'],
+  data: function data() {
+    return {
+      initialData: [],
+      attributeIds: [],
+      data: [],
+      filteredProducts: []
+    };
+  },
+  methods: {
+    selectAttribute: function selectAttribute(attribute) {
+      if (attribute.checked == 0) {
+        this.attributeIds.push(attribute.id);
+      } else {
+        var key = this.attributeIds.indexOf(attribute.id);
+        this.attributeIds.splice(key, 1);
+      }
+    },
+    calculate: function calculate(product) {
+      var newPrice = 0;
+
+      if (product.sale != 0) {
+        var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
+        var productPrice = product.price / 100 * product.sale;
+        newPrice = productPrice * (sale / productPrice) / this.credit.month;
+        return newPrice.toFixed(2);
+      } else {
+        sale = product.price / 100 * this.credit.credit;
+        newPrice = product.price * (sale / product.price) / this.credit.month;
+        return newPrice.toFixed(2);
+      }
+    },
+    filterByAttributes: function filterByAttributes() {
+      if (this.attributeIds.length != 0) {
+        this.filteredProducts = [];
+
+        for (var i = 0; i < this.initialData.length; i++) {
+          for (var j = 0; j < this.initialData[i]['attribute_ids'].length; j++) {
+            for (var k = 0; k < this.attributeIds.length; k++) {
+              if (this.initialData[i]['attribute_ids'][j] == this.attributeIds[k]) {
+                this.filteredProducts.push(this.initialData[i]);
+              }
+            }
+          }
+        }
+
+        this.data = this.getUniqueArray(this.filteredProducts);
+      }
+    },
+    cancelFilters: function cancelFilters() {
+      for (var i = 0; i < this.data.length; i++) {
+        this.data[i]['checked'] = 0;
+      }
+
+      this.data = this.initialData;
+    },
+    getUniqueArray: function getUniqueArray() {
+      var arr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+      var compareProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+      var modifiedArray = [];
+      if (compareProps.length === 0 && arr.length > 0) compareProps.push.apply(compareProps, _toConsumableArray(Object.keys(arr[0])));
+      arr.map(function (item) {
+        if (modifiedArray.length === 0) {
+          modifiedArray.push(item);
+        } else {
+          if (!modifiedArray.some(function (item2) {
+            return compareProps.every(function (eachProps) {
+              return item2[eachProps] === item[eachProps];
+            });
+          })) {
+            modifiedArray.push(item);
+          }
+        }
+      });
+      return modifiedArray;
+    }
+  },
+  mounted: function mounted() {
+    for (var i = 0; i < this.filters.length; i++) {
+      this.filters[i]['attributes'] = [];
+
+      for (var j = 0; j < this.attributes.length; j++) {
+        if (this.filters[i]['id'] == this.attributes[j]['filter_id']) {
+          this.filters[i]['attributes'].push(this.attributes[j]);
+        }
+      }
+    }
+
+    this.data = this.products;
+    this.initialData = this.products;
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/process/browser.js":
 /*!*****************************************!*\
   !*** ./node_modules/process/browser.js ***!
@@ -925,7 +3780,8 @@ var render = function() {
                     "a",
                     {
                       attrs: {
-                        href: "/singleBed/" + _vm.category.id + "/" + product.id
+                        href:
+                          "/singleProduct/" + _vm.category.id + "/" + product.id
                       }
                     },
                     [
@@ -978,7 +3834,10 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleBed/" + _vm.category.id + "/" + product.id
+                              "/singleProduct/" +
+                              _vm.category.id +
+                              "/" +
+                              product.id
                           }
                         },
                         [_c("button", [_vm._v("ВЫБРАТЬ")])]
@@ -1018,6 +3877,6159 @@ var staticRenderFns = [
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
       })
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductRightComponent.vue?vue&type=template&id=27fd9bb5&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ProductRightComponent.vue?vue&type=template&id=27fd9bb5& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("main", [
+      _c("div", { staticClass: "crumbs container" }, [
+        _c("ul", [
+          _c("a", { attrs: { href: "/" } }, [_c("li", [_vm._v("Главная / ")])]),
+          _vm._v(" "),
+          _c("a", [_c("li", [_vm._v("Мягкая мебель")])])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "tabs single-fliter" }, [
+        _c("h1", { staticClass: "sales-single-filter-open" }, [
+          _vm._v("Предметы мебели")
+        ]),
+        _vm._v(" "),
+        _c(
+          "ul",
+          { staticClass: "tabs__caption single-filter-list container" },
+          [
+            _c("li", { staticClass: "active tables col-xl-2" }, [
+              _vm._v("\r\n                диваны\r\n            ")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "chairs col-xl-2" }, [
+              _vm._v("\r\n                кресла\r\n            ")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "bankets col-xl-2" }, [
+              _vm._v("\r\n                банкетки\r\n            ")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "poofs col-xl-2" }, [
+              _vm._v("\r\n                пуфы\r\n            ")
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "tabs__content active" }, [
+          _c("div", { staticClass: "single-goods sofas container" }, [
+            _c("form", { staticClass: "filter marginhas col-xl-3 col-lg-3" }, [
+              _c("div", { staticClass: "filterOpen title" }, [
+                _c("h3", [_vm._v("Подбор по параметрам:")]),
+                _vm._v(" "),
+                _c("img", {
+                  attrs: {
+                    src: "/assets/img/elements/filter-icon.svg",
+                    alt: ""
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "content", attrs: { id: "filterContent" } },
+                [
+                  _c("div", { staticClass: "styles" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle style-title-closed" },
+                      [_vm._v("Cтиль")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list style-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "classic", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "classic" } }, [
+                          _vm._v("Классика")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "neoclassic", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "neoclassic" } }, [
+                          _vm._v("Неоклассика")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "modern", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "modern" } }, [
+                          _vm._v("Современный")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "goodtype" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle goodtype-title-closed" },
+                      [_vm._v("Тип:")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list goodtype-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "kitchensofa", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "kitchensofa" } }, [
+                          _vm._v("Диван кухонный")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "modulesofa", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "modulesofa" } }, [
+                          _vm._v("Диван модульный")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "straightsofa", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "straightsofa" } }, [
+                          _vm._v("Диван прямой")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "cornersofa", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "cornersofa" } }, [
+                          _vm._v("Диван угловой")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "colors" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle colors-title-closed" },
+                      [_vm._v("Цвет обивки")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list colors-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "beige", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "beige" } }, [
+                          _vm._v("Бежевый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "white", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "white" } }, [
+                          _vm._v("Белый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "blue", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "blue" } }, [
+                          _vm._v("Голубой")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "yellow", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "yellow" } }, [
+                          _vm._v("Желтый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "green", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "green" } }, [
+                          _vm._v("Зеленый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "brown", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "brown" } }, [
+                          _vm._v("Коричневый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "red", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "red" } }, [
+                          _vm._v("Красный")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "orange", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "orange" } }, [
+                          _vm._v("Оранжевый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "pattern", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "pattern" } }, [
+                          _vm._v("Рисунок")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "grey", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "grey" } }, [
+                          _vm._v("Серый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "lightblue", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "lightblue" } }, [
+                          _vm._v("Синий")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "violet", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "violet" } }, [
+                          _vm._v("Фиолетовый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "black", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "black" } }, [
+                          _vm._v("Черный")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mechanism" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle mechanism-title-closed" },
+                      [_vm._v("Механизм")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list mechanism-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "accordion", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "accordion" } }, [
+                          _vm._v("Аккордеон")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "no-mechanism", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "no-mechanism" } }, [
+                          _vm._v("Без механизма")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "rollout", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "rollout" } }, [
+                          _vm._v("Выкатной")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "dolphin", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "dolphin" } }, [
+                          _vm._v("Дельфин")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "eurobook", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "eurobook" } }, [
+                          _vm._v("Еврокнижка")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "book", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "book" } }, [
+                          _vm._v("Книжка")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "pantograph", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "pantograph" } }, [
+                          _vm._v("Пантограф")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "tik-tak", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "tik-tak" } }, [
+                          _vm._v("Тик-так")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "corner" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle corner-title-closed" },
+                      [_vm._v("Расположение угла")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list corner-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "left", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "left" } }, [
+                          _vm._v("Левое")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "p-shape", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "p-shape" } }, [
+                          _vm._v("П - образное")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "right", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "right" } }, [
+                          _vm._v("Правое")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "universal", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "universal" } }, [
+                          _vm._v("Универсальное")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "frame" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle frame-title-closed" },
+                      [_vm._v("Каркас")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list frame-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "ldsp", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "ldsp" } }, [
+                          _vm._v("ЛДСП")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "steel", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "steel" } }, [
+                          _vm._v("Металл")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "wood", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "wood" } }, [
+                          _vm._v("Фанера")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "box" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle box-title-closed" },
+                      [_vm._v("Бельевой ящик")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list box-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "yes", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "yes" } }, [_vm._v("Да")])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "no", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "no" } }, [_vm._v("Нет")])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "armrest" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle armrest-title-closed" },
+                      [_vm._v("Подлокотники")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list armrest-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armrestno", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armrestno" } }, [
+                          _vm._v("Нет")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armrestldsp", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armrestldsp" } }, [
+                          _vm._v("ЛДСП")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armrestsoft", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armrestsoft" } }, [
+                          _vm._v("Мягкие")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cloth" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle cloth-title-closed" },
+                      [_vm._v("Тип ткани")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list cloth-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "velur", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "velur" } }, [
+                          _vm._v("Велюр")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "jacard", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "jacard" } }, [
+                          _vm._v("Жаккард")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "korfu", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "korfu" } }, [
+                          _vm._v("Корфу")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "microvelt", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "microvelt" } }, [
+                          _vm._v("Микровельвет")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "rogoje", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "rogoje" } }, [
+                          _vm._v("Рогожка")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "shenill", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "shenill" } }, [
+                          _vm._v("Шенилл")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "ecoskin", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "ecoskin" } }, [
+                          _vm._v("Экокожа")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "containing" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass: "filteropentitle containing-title-closed"
+                      },
+                      [_vm._v("Наполнение")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list containing-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "spring", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "spring" } }, [
+                          _vm._v("Пружинный блок")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "penoliuretan", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "penoliuretan" } }, [
+                          _vm._v("Пенолиуретан")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "snakespring", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "snakespring" } }, [
+                          _vm._v("Пружинная змейка")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "bonnel", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "bonnel" } }, [
+                          _vm._v("Пружинный блок “Боннель”")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "btns" }, [
+                    _c("button", { attrs: { id: "reset1", type: "reset" } }, [
+                      _vm._v(
+                        "\r\n                                Сбросить фильтры\r\n                            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("button", { attrs: { id: "accept1", type: "submit" } }, [
+                      _vm._v(
+                        "\r\n                                ПРИМЕНИТЬ\r\n                            "
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12",
+                attrs: { id: "goodswrapper" }
+              },
+              [
+                _c("div", { staticClass: "cards contents" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/sofas.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/sofas.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/sofas.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/sofas.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/sofas.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/sofas.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/sofas.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/sofas.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/sofas.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/sofas.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/sofas.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/sofas.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12",
+                      staticStyle: { display: "none" }
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/sofas.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/sofas.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12",
+                      staticStyle: { display: "none" }
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/sofas.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/sofas.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12",
+                      staticStyle: { display: "none" }
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/sofas.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/sofas.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "more" }, [
+                  _c("button", { staticClass: "loadMore" }, [
+                    _vm._v(
+                      "\r\n                            ПОКАЗАТЬ ЕЩЕ ТОВАРЫ\r\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "tabs__content" }, [
+          _c("div", { staticClass: "single-goods armchairs container" }, [
+            _c("form", { staticClass: "filter marginhas col-xl-3 col-lg-3" }, [
+              _c("div", { staticClass: "filterOpen title" }, [
+                _c("h3", [_vm._v("Подбор по параметрам:")]),
+                _vm._v(" "),
+                _c("img", {
+                  attrs: {
+                    src: "/assets/img/elements/filter-icon.svg",
+                    alt: ""
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "content", attrs: { id: "filterContent" } },
+                [
+                  _c("div", { staticClass: "styles" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle style-title-closed" },
+                      [_vm._v("Cтиль")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list style-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-classic", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-classic" } }, [
+                          _vm._v("Классика")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-neoclassic", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-neoclassic" } }, [
+                          _vm._v("Неоклассика")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-modern", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-modern" } }, [
+                          _vm._v("Современный")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "type" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle type-title-closed" },
+                      [_vm._v("Типы:")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list type-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-modulesofa", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-modulesofa" } }, [
+                          _vm._v("Диван модульный")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-soft", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-soft" } }, [
+                          _vm._v("Кресло мягкое")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-bag", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-bag" } }, [
+                          _vm._v("Кресло - мешок")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "direction" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle direction-title-closed" },
+                      [_vm._v("Направление")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list direction-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-office", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-office" } }, [
+                          _vm._v("Мебель для офиса")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-softfurnit", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-softfurnit" } }, [
+                          _vm._v("Мягкая мебель")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mechanism" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle mechanism-title-closed" },
+                      [_vm._v("Механизм")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list mechanism-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-accordion", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-accordion" } }, [
+                          _vm._v("Аккордеон")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: {
+                            id: "armchair-no-mechanism",
+                            type: "checkbox"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "label",
+                          { attrs: { for: "armchair-no-mechanism" } },
+                          [_vm._v("Без трансформации")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-rollout", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-rollout" } }, [
+                          _vm._v("Выкатной")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-eurobook", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-eurobook" } }, [
+                          _vm._v("Еврокнижка")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "colors" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle colors-title-closed" },
+                      [_vm._v("Цвет обивки")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list colors-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-beige", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-beige" } }, [
+                          _vm._v("Бежевый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-white", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-white" } }, [
+                          _vm._v("Белый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-blue", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-blue" } }, [
+                          _vm._v("Голубой")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-yellow", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-yellow" } }, [
+                          _vm._v("Желтый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-green", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-green" } }, [
+                          _vm._v("Зеленый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-brown", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-brown" } }, [
+                          _vm._v("Коричневый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-red", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-red" } }, [
+                          _vm._v("Красный")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-orange", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-orange" } }, [
+                          _vm._v("Оранжевый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-pattern", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-pattern" } }, [
+                          _vm._v("Рисунок")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-grey", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-grey" } }, [
+                          _vm._v("Серый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-lightblue", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-lightblue" } }, [
+                          _vm._v("Синий")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-violet", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-violet" } }, [
+                          _vm._v("Фиолетовый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-black", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-black" } }, [
+                          _vm._v("Черный")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cloth" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle cloth-title-closed" },
+                      [_vm._v("Тип ткани")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list cloth-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-velur", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-velur" } }, [
+                          _vm._v("Велюр")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-jacard", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-jacard" } }, [
+                          _vm._v("Жаккард")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-korfu", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-korfu" } }, [
+                          _vm._v("Корфу")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-microvelt", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-microvelt" } }, [
+                          _vm._v("Микровельвет")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-rogoje", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-rogoje" } }, [
+                          _vm._v("Рогожка")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-shenill", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-shenill" } }, [
+                          _vm._v("Шенилл")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-ecoskin", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-ecoskin" } }, [
+                          _vm._v("Экокожа")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "frame" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle frame-title-closed" },
+                      [_vm._v("Каркас")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list frame-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-ldsp", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-ldsp" } }, [
+                          _vm._v("ЛДСП")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-steel", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-steel" } }, [
+                          _vm._v("Металл")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-wood", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-wood" } }, [
+                          _vm._v("Фанера")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "box" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle box-title-closed" },
+                      [_vm._v("Бельевой ящик")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list box-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-yes", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-yes" } }, [
+                          _vm._v("Да")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-no", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-no" } }, [
+                          _vm._v("Нет")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "armrest" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle armrest-title-closed" },
+                      [_vm._v("Подлокотники")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list armrest-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-armrestno", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-armrestno" } }, [
+                          _vm._v("Нет")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: {
+                            id: "armchair-armrestldsp",
+                            type: "checkbox"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "label",
+                          { attrs: { for: "armchair-armrestldsp" } },
+                          [_vm._v("ЛДСП")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: {
+                            id: "armchair-armrestsoft",
+                            type: "checkbox"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "label",
+                          { attrs: { for: "armchair-armrestsoft" } },
+                          [_vm._v("Мягкие")]
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "containing" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass: "filteropentitle containing-title-closed"
+                      },
+                      [_vm._v("Наполнение")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list containing-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-spring", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-spring" } }, [
+                          _vm._v("Пружинный блок")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: {
+                            id: "armchair-penoliuretan",
+                            type: "checkbox"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "label",
+                          { attrs: { for: "armchair-penoliuretan" } },
+                          [_vm._v("Пенолиуретан")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: {
+                            id: "armchair-snakespring",
+                            type: "checkbox"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "label",
+                          { attrs: { for: "armchair-snakespring" } },
+                          [_vm._v("Пружинная змейка")]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "armchair-bonnel", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "armchair-bonnel" } }, [
+                          _vm._v("Пружинный блок “Боннель”")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "btns" }, [
+                    _c("button", { attrs: { id: "reset2", type: "reset" } }, [
+                      _vm._v(
+                        "\r\n                                Сбросить фильтры\r\n                            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("button", { attrs: { id: "accept2", type: "submit" } }, [
+                      _vm._v(
+                        "\r\n                                ПРИМЕНИТЬ\r\n                            "
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12" },
+              [
+                _c("div", { staticClass: "cards contents" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/armchairs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/armchairs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/armchairs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/armchairs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/armchairs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/armchairs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/armchairs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/armchairs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/armchairs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/armchairs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/armchairs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/armchairs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12",
+                      staticStyle: { display: "none" }
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/armchairs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/armchairs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12",
+                      staticStyle: { display: "none" }
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/armchairs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/armchairs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12",
+                      staticStyle: { display: "none" }
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/armchairs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/armchairs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "more" }, [
+                  _c("button", { staticClass: "loadMore" }, [
+                    _vm._v(
+                      "\r\n                            ПОКАЗАТЬ ЕЩЕ ТОВАРЫ\r\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "tabs__content" }, [
+          _c("div", { staticClass: "single-goods bankets container" }, [
+            _c("form", { staticClass: "filter marginhas col-xl-3 col-lg-3" }, [
+              _c("div", { staticClass: "filterOpen title" }, [
+                _c("h3", [_vm._v("Подбор по параметрам:")]),
+                _vm._v(" "),
+                _c("img", {
+                  attrs: {
+                    src: "/assets/img/elements/filter-icon.svg",
+                    alt: ""
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "content", attrs: { id: "filterContent" } },
+                [
+                  _c("div", { staticClass: "styles" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle style-title-closed" },
+                      [_vm._v("Cтиль")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list style-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-classic", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-classic" } }, [
+                          _vm._v("Классика")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-neoclassic", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-neoclassic" } }, [
+                          _vm._v("Неоклассика")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-modern", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-modern" } }, [
+                          _vm._v("Современный")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "type" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle type-title-closed" },
+                      [_vm._v("Тип")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list type-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket" } }, [
+                          _vm._v("Банкетка")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-noback", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-noback" } }, [
+                          _vm._v("Банкетки без спинки")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "direction" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle direction-title-closed" },
+                      [_vm._v("Направление")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list direction-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-office", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-office" } }, [
+                          _vm._v("Спальни")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-softfurnit", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-softfurnit" } }, [
+                          _vm._v("Мягкая мебель")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-interior", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-interior" } }, [
+                          _vm._v("Предметы интерьера")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-other", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-other" } }, [
+                          _vm._v("Сторонняя продукция")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mechanism" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle mechanism-title-closed" },
+                      [_vm._v("Механизм")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list mechanism-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-no-mechanism", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-no-mechanism" } }, [
+                          _vm._v("Без механизма")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "colors" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle colors-title-closed" },
+                      [_vm._v("Цвет обивки")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list colors-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-beige", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-beige" } }, [
+                          _vm._v("Бежевый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-white", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-white" } }, [
+                          _vm._v("Белый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-blue", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-blue" } }, [
+                          _vm._v("Голубой")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-yellow", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-yellow" } }, [
+                          _vm._v("Желтый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-green", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-green" } }, [
+                          _vm._v("Зеленый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-brown", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-brown" } }, [
+                          _vm._v("Коричневый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-red", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-red" } }, [
+                          _vm._v("Красный")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-orange", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-orange" } }, [
+                          _vm._v("Оранжевый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-pattern", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-pattern" } }, [
+                          _vm._v("Рисунок")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-grey", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-grey" } }, [
+                          _vm._v("Серый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-lightblue", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-lightblue" } }, [
+                          _vm._v("Синий")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-violet", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-violet" } }, [
+                          _vm._v("Фиолетовый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-black", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-black" } }, [
+                          _vm._v("Черный")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cloth" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle cloth-title-closed" },
+                      [_vm._v("Тип ткани")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list cloth-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-velur", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-velur" } }, [
+                          _vm._v("Велюр")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-jacard", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-jacard" } }, [
+                          _vm._v("Жаккард")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-korfu", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-korfu" } }, [
+                          _vm._v("Корфу")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-microvelt", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-microvelt" } }, [
+                          _vm._v("Микровельвет")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-rogoje", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-rogoje" } }, [
+                          _vm._v("Рогожка")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-shenill", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-shenill" } }, [
+                          _vm._v("Шенилл")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-ecoskin", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-ecoskin" } }, [
+                          _vm._v("Экокожа")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "containing" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass: "filteropentitle containing-title-closed"
+                      },
+                      [_vm._v("Наполнение")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list containing-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-penoliuretan", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-penoliuretan" } }, [
+                          _vm._v("Пенолиуретан")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "frame" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle frame-title-closed" },
+                      [_vm._v("Каркас")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list frame-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-ldsp", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-ldsp" } }, [
+                          _vm._v("ЛДСП")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "box" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle box-title-closed" },
+                      [_vm._v("Бельевой ящик")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list box-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-yes", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-yes" } }, [
+                          _vm._v("Да")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-no", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-no" } }, [
+                          _vm._v("Нет")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "armrest" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle armrest-title-closed" },
+                      [_vm._v("Подлокотники")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list armrest-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-armrestno", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-armrestno" } }, [
+                          _vm._v("Нет")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-armrestldsp", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-armrestldsp" } }, [
+                          _vm._v("ЛДСП")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "banket-armrestsoft", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "banket-armrestsoft" } }, [
+                          _vm._v("Мягкие")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "btns" }, [
+                    _c("button", { attrs: { id: "reset3", type: "reset" } }, [
+                      _vm._v(
+                        "\r\n                                Сбросить фильтры\r\n                            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("button", { attrs: { id: "accept3", type: "submit" } }, [
+                      _vm._v(
+                        "\r\n                                ПРИМЕНИТЬ\r\n                            "
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12",
+                attrs: { id: "goodswrapper" }
+              },
+              [
+                _c("div", { staticClass: "cards contents" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/bankets.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/bankets.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/bankets.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/bankets.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/bankets.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/bankets.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/bankets.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/bankets.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/bankets.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/bankets.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/bankets.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/bankets.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12",
+                      staticStyle: { display: "none" }
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/bankets.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/bankets.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12",
+                      staticStyle: { display: "none" }
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/bankets.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/bankets.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12",
+                      staticStyle: { display: "none" }
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/bankets.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/bankets.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "more" }, [
+                  _c("button", { staticClass: "loadMore" }, [
+                    _vm._v(
+                      "\r\n                            ПОКАЗАТЬ ЕЩЕ ТОВАРЫ\r\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "tabs__content" }, [
+          _c("div", { staticClass: "single-goods poofs container" }, [
+            _c("form", { staticClass: "filter marginhas col-xl-3 col-lg-3" }, [
+              _c("div", { staticClass: "filterOpen title" }, [
+                _c("h3", [_vm._v("Подбор по параметрам:")]),
+                _vm._v(" "),
+                _c("img", {
+                  attrs: {
+                    src: "/assets/img/elements/filter-icon.svg",
+                    alt: ""
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "content", attrs: { id: "filterContent" } },
+                [
+                  _c("div", { staticClass: "styles" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle style-title-closed" },
+                      [_vm._v("Cтиль")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list style-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-classic", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-classic" } }, [
+                          _vm._v("Классика")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-neoclassic", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-neoclassic" } }, [
+                          _vm._v("Неоклассика")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-modern", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-modern" } }, [
+                          _vm._v("Современный")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "direction" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle direction-title-closed" },
+                      [_vm._v("Направление")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list direction-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-softfurnit", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-softfurnit" } }, [
+                          _vm._v("Мягкая мебель")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-other", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-other" } }, [
+                          _vm._v("Сторонняя продукция")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mechanism" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle mechanism-title-closed" },
+                      [_vm._v("Механизм")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list mechanism-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-no-mechanism", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-no-mechanism" } }, [
+                          _vm._v("Без трансформации")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "colors" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle colors-title-closed" },
+                      [_vm._v("Цвет обивки")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list colors-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-beige", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-beige" } }, [
+                          _vm._v("Бежевый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-white", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-white" } }, [
+                          _vm._v("Белый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-blue", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-blue" } }, [
+                          _vm._v("Голубой")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-yellow", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-yellow" } }, [
+                          _vm._v("Желтый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-green", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-green" } }, [
+                          _vm._v("Зеленый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-brown", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-brown" } }, [
+                          _vm._v("Коричневый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-red", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-red" } }, [
+                          _vm._v("Красный")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-orange", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-orange" } }, [
+                          _vm._v("Оранжевый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-pattern", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-pattern" } }, [
+                          _vm._v("Рисунок")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-grey", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-grey" } }, [
+                          _vm._v("Серый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-lightblue", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-lightblue" } }, [
+                          _vm._v("Синий")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-violet", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-violet" } }, [
+                          _vm._v("Фиолетовый")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-black", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-black" } }, [
+                          _vm._v("Черный")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cloth" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle cloth-title-closed" },
+                      [_vm._v("Тип ткани")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list cloth-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-shenill", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-shenill" } }, [
+                          _vm._v("Шенилл")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-microvelt", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-microvelt" } }, [
+                          _vm._v("Микровельвет")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-rogoje", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-rogoje" } }, [
+                          _vm._v("Рогожка")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-ecoskin", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-ecoskin" } }, [
+                          _vm._v("Экокожа")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "containing" }, [
+                    _c(
+                      "h4",
+                      {
+                        staticClass: "filteropentitle containing-title-closed"
+                      },
+                      [_vm._v("Наполнение")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list containing-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-penoliuretan", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-penoliuretan" } }, [
+                          _vm._v("Пенолиуретан")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "frame" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle frame-title-closed" },
+                      [_vm._v("Каркас")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list frame-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-ldsp", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-ldsp" } }, [
+                          _vm._v("ЛДСП")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "box" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle box-title-closed" },
+                      [_vm._v("Бельевой ящик")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list box-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-yes", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-yes" } }, [
+                          _vm._v("Да")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-no", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-no" } }, [
+                          _vm._v("Нет")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "armrest" }, [
+                    _c(
+                      "h4",
+                      { staticClass: "filteropentitle armrest-title-closed" },
+                      [_vm._v("Подлокотники")]
+                    ),
+                    _vm._v(" "),
+                    _c("ul", { staticClass: "list armrest-list" }, [
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-armrestno", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-armrestno" } }, [
+                          _vm._v("Нет")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-armrestldsp", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-armrestldsp" } }, [
+                          _vm._v("ЛДСП")
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c("input", {
+                          staticClass: "filter-items",
+                          attrs: { id: "poofs-armrestsoft", type: "checkbox" }
+                        }),
+                        _vm._v(" "),
+                        _c("label", { attrs: { for: "poofs-armrestsoft" } }, [
+                          _vm._v("Мягкие")
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "btns" }, [
+                    _c("button", { attrs: { id: "reset4", type: "reset" } }, [
+                      _vm._v(
+                        "\r\n                                Сбросить фильтры\r\n                            "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("button", { attrs: { id: "accept4", type: "submit" } }, [
+                      _vm._v(
+                        "\r\n                                ПРИМЕНИТЬ\r\n                            "
+                      )
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12",
+                attrs: { id: "goodswrapper" }
+              },
+              [
+                _c("div", { staticClass: "cards contents" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/poofs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/poofs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/poofs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/poofs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/poofs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/poofs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/poofs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/poofs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/poofs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/poofs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/poofs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/poofs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12",
+                      staticStyle: { display: "none" }
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/poofs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/poofs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12",
+                      staticStyle: { display: "none" }
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/poofs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/poofs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12",
+                      staticStyle: { display: "none" }
+                    },
+                    [
+                      _c("div", { staticClass: "goodscard content" }, [
+                        _c("div", { staticClass: "img" }, [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "goodsimg-main card_main",
+                              attrs: { href: "../beds/bed1.html" }
+                            },
+                            [
+                              _c("img", {
+                                staticClass: "main_img",
+                                attrs: {
+                                  src: "/assets/img/goods/sofa/poofs.jpg",
+                                  alt: ""
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "img_markers" }, [
+                            _c("img", {
+                              staticClass: "img_item1",
+                              attrs: {
+                                src: "/assets/img/goods/sofa/poofs.jpg",
+                                alt: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              staticClass: "img_item2",
+                              attrs: {
+                                src: "/assets/img/goods/beds/item (3).jpg",
+                                alt: ""
+                              }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "stock" }, [
+                            _c("span", [_vm._v("-10%")]),
+                            _vm._v(" "),
+                            _c("p", [_vm._v("Распродажа")])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "desc" }, [
+                          _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                            _c("p", { staticClass: "title" }, [
+                              _vm._v("Кровать 2 сп. 1600 мм. изг. прямоуг")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "code" }, [
+                              _vm._v("Код: 484700")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", { staticClass: "gooddesc" }, [
+                              _vm._v(
+                                "Кровать 2-спальная, цвет темный из коллекции\r\n                                            Флоренция, Bogema,\r\n                                            Кровать\r\n                                            2-спальная, цвет темный из коллекции "
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "size" }, [
+                              _c("p", [_vm._v("Ш: 1987")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("Д: 2087")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("В: 6505")])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "order" }, [
+                            _c("div", { staticClass: "price" }, [
+                              _c("p", [_vm._v("21 356 000 сум")]),
+                              _vm._v(" "),
+                              _c("p", [_vm._v("30 345 000 сум")])
+                            ]),
+                            _vm._v(" "),
+                            _c("button", { staticClass: "add" }, [
+                              _vm._v("КУПИТЬ")
+                            ])
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "more" }, [
+                  _c("button", { staticClass: "loadMore" }, [
+                    _vm._v(
+                      "\r\n                            ПОКАЗАТЬ ЕЩЕ ТОВАРЫ\r\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductRightWcbComponent.vue?vue&type=template&id=2fbaea02&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ProductRightWcbComponent.vue?vue&type=template&id=2fbaea02& ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("main", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "single-goods container" }, [
+      _c("form", { staticClass: "filter col-xl-3 col-lg-3" }, [
+        _vm._m(1),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "content", attrs: { id: "filterContent" } },
+          [
+            _vm._l(_vm.filters, function(filter, index) {
+              return _c("div", { key: index, staticClass: "styles" }, [
+                _c(
+                  "h4",
+                  { staticClass: "filteropentitle style-title-closed" },
+                  [_vm._v(_vm._s(filter.title))]
+                ),
+                _vm._v(" "),
+                _c(
+                  "ul",
+                  { staticClass: "list style-list" },
+                  _vm._l(filter.attributes, function(attribute, index) {
+                    return _c("li", { key: index }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: attribute.checked,
+                            expression: "attribute.checked"
+                          }
+                        ],
+                        staticClass: "filter-items",
+                        attrs: {
+                          id: "classic" + attribute.id,
+                          type: "checkbox",
+                          "true-value": 1,
+                          "false-value": 0
+                        },
+                        domProps: {
+                          checked: Array.isArray(attribute.checked)
+                            ? _vm._i(attribute.checked, null) > -1
+                            : _vm._q(attribute.checked, 1)
+                        },
+                        on: {
+                          click: function($event) {
+                            return _vm.selectAttribute(attribute)
+                          },
+                          change: function($event) {
+                            var $$a = attribute.checked,
+                              $$el = $event.target,
+                              $$c = $$el.checked ? 1 : 0
+                            if (Array.isArray($$a)) {
+                              var $$v = null,
+                                $$i = _vm._i($$a, $$v)
+                              if ($$el.checked) {
+                                $$i < 0 &&
+                                  _vm.$set(
+                                    attribute,
+                                    "checked",
+                                    $$a.concat([$$v])
+                                  )
+                              } else {
+                                $$i > -1 &&
+                                  _vm.$set(
+                                    attribute,
+                                    "checked",
+                                    $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                                  )
+                              }
+                            } else {
+                              _vm.$set(attribute, "checked", $$c)
+                            }
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "label",
+                        { attrs: { for: "classic" + attribute.id } },
+                        [_vm._v(_vm._s(attribute.title))]
+                      )
+                    ])
+                  }),
+                  0
+                )
+              ])
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "btns" }, [
+              _c(
+                "button",
+                {
+                  attrs: { id: "reset", type: "reset" },
+                  on: {
+                    click: function($event) {
+                      return _vm.cancelFilters()
+                    }
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n                        Сбросить фильтры\n                    "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  attrs: { id: "accept", type: "submit" },
+                  on: {
+                    click: function($event) {
+                      return _vm.filterByAttributes()
+                    }
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n                        ПРИМЕНИТЬ\n                    "
+                  )
+                ]
+              )
+            ])
+          ],
+          2
+        )
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12",
+          attrs: { id: "goodswrapper" }
+        },
+        [
+          _c(
+            "div",
+            { staticClass: "cards contents" },
+            _vm._l(_vm.data, function(product, index) {
+              return _c(
+                "div",
+                {
+                  key: index,
+                  staticClass:
+                    "blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12"
+                },
+                [
+                  _c("div", { staticClass: "goodscard content" }, [
+                    _c("div", { staticClass: "img" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "goodsimg-main card_main",
+                          attrs: {
+                            href:
+                              "/single-right-product/" +
+                              _vm.category.id +
+                              "/" +
+                              product.id
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "main_img",
+                            attrs: {
+                              src: "/assets/img/goods/wardrobes/wardrobes.jpg",
+                              alt: ""
+                            }
+                          })
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _vm._m(2, true),
+                      _vm._v(" "),
+                      _vm._m(3, true)
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "desc" }, [
+                      _c("a", { attrs: { href: "../beds/bed1.html" } }, [
+                        _c("p", { staticClass: "title" }, [
+                          _vm._v(_vm._s(product.title))
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "code" }, [
+                          _vm._v("Код: 484700")
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "gooddesc" }, [
+                          _vm._v(
+                            "Кровать 2-спальная, цвет темный из коллекции Флоренция, Bogema,\n                                    Кровать\n                                    2-спальная, цвет темный из коллекции "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(4, true)
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(5, true)
+                    ])
+                  ])
+                ]
+              )
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _vm._m(6)
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _vm._m(7)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "crumbs container" }, [
+      _c("ul", [
+        _c("a", { attrs: { href: "/index.html" } }, [
+          _c("li", [_vm._v("Главная / ")])
+        ]),
+        _vm._v(" "),
+        _c("a", [_c("li", [_vm._v("Шкафы")])])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "title", attrs: { id: "filterOpen" } }, [
+      _c("h3", [_vm._v("Подбор по параметрам:")]),
+      _vm._v(" "),
+      _c("img", {
+        attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "img_markers" }, [
+      _c("img", {
+        staticClass: "img_item1",
+        attrs: { src: "/assets/img/goods/wardrobes/wardrobes.jpg", alt: "" }
+      }),
+      _vm._v(" "),
+      _c("img", {
+        staticClass: "img_item2",
+        attrs: { src: "/assets/img/goods/beds/item (3).jpg", alt: "" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "stock" }, [
+      _c("span", [_vm._v("-10%")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("Распродажа")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "size" }, [
+      _c("p", [_vm._v("Ш: 1987")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("Д: 2087")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("В: 6505")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "order" }, [
+      _c("div", { staticClass: "price" }, [
+        _c("p", [_vm._v("21 356 000 сум")]),
+        _vm._v(" "),
+        _c("p", [_vm._v("30 345 000 сум")])
+      ]),
+      _vm._v(" "),
+      _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "more" }, [
+      _c("button", { attrs: { id: "loadMore" } }, [
+        _vm._v("\n                    ПОКАЗАТЬ ЕЩЕ ТОВАРЫ\n                ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { attrs: { id: "addedToBasket" } }, [
+      _c("p", [_vm._v("Товар добавлен в корзину")]),
+      _vm._v(" "),
+      _c("div", { attrs: { id: "addedItemClose" } }, [
+        _c("img", {
+          attrs: { src: "/assets/img/elements/menu-close-white.svg", alt: "" }
+        })
+      ])
     ])
   }
 ]
@@ -13181,6 +22193,8 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('product-component', __webpack_require__(/*! ./components/ProductComponent.vue */ "./resources/js/components/ProductComponent.vue")["default"]);
+Vue.component('product-right-component', __webpack_require__(/*! ./components/ProductRightComponent.vue */ "./resources/js/components/ProductRightComponent.vue")["default"]);
+Vue.component('product-right-wcb-component', __webpack_require__(/*! ./components/ProductRightWcbComponent.vue */ "./resources/js/components/ProductRightWcbComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -13257,6 +22271,144 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductComponent_vue_vue_type_template_id_9e91ef8e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductComponent_vue_vue_type_template_id_9e91ef8e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/ProductRightComponent.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/ProductRightComponent.vue ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ProductRightComponent_vue_vue_type_template_id_27fd9bb5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductRightComponent.vue?vue&type=template&id=27fd9bb5& */ "./resources/js/components/ProductRightComponent.vue?vue&type=template&id=27fd9bb5&");
+/* harmony import */ var _ProductRightComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductRightComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/ProductRightComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ProductRightComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ProductRightComponent_vue_vue_type_template_id_27fd9bb5___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ProductRightComponent_vue_vue_type_template_id_27fd9bb5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/ProductRightComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/ProductRightComponent.vue?vue&type=script&lang=js&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/ProductRightComponent.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductRightComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ProductRightComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductRightComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductRightComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/ProductRightComponent.vue?vue&type=template&id=27fd9bb5&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/ProductRightComponent.vue?vue&type=template&id=27fd9bb5& ***!
+  \******************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductRightComponent_vue_vue_type_template_id_27fd9bb5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ProductRightComponent.vue?vue&type=template&id=27fd9bb5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductRightComponent.vue?vue&type=template&id=27fd9bb5&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductRightComponent_vue_vue_type_template_id_27fd9bb5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductRightComponent_vue_vue_type_template_id_27fd9bb5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/ProductRightWcbComponent.vue":
+/*!**************************************************************!*\
+  !*** ./resources/js/components/ProductRightWcbComponent.vue ***!
+  \**************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ProductRightWcbComponent_vue_vue_type_template_id_2fbaea02___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ProductRightWcbComponent.vue?vue&type=template&id=2fbaea02& */ "./resources/js/components/ProductRightWcbComponent.vue?vue&type=template&id=2fbaea02&");
+/* harmony import */ var _ProductRightWcbComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ProductRightWcbComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/ProductRightWcbComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ProductRightWcbComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ProductRightWcbComponent_vue_vue_type_template_id_2fbaea02___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ProductRightWcbComponent_vue_vue_type_template_id_2fbaea02___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/ProductRightWcbComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/ProductRightWcbComponent.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/ProductRightWcbComponent.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductRightWcbComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ProductRightWcbComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductRightWcbComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductRightWcbComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/ProductRightWcbComponent.vue?vue&type=template&id=2fbaea02&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/ProductRightWcbComponent.vue?vue&type=template&id=2fbaea02& ***!
+  \*********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductRightWcbComponent_vue_vue_type_template_id_2fbaea02___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ProductRightWcbComponent.vue?vue&type=template&id=2fbaea02& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ProductRightWcbComponent.vue?vue&type=template&id=2fbaea02&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductRightWcbComponent_vue_vue_type_template_id_2fbaea02___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ProductRightWcbComponent_vue_vue_type_template_id_2fbaea02___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

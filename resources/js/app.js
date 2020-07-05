@@ -21,6 +21,8 @@ window.Vue = require('vue');
 
 
 Vue.component('product-component', require('./components/ProductComponent.vue').default);
+Vue.component('product-right-component', require('./components/ProductRightComponent.vue').default);
+Vue.component('product-right-wcb-component', require('./components/ProductRightWcbComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

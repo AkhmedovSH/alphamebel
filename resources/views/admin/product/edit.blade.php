@@ -62,19 +62,23 @@
                             <label for="exampleInputEmail1">Примечание</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" name="note" value="{{$data->note}}">
                         </div>
-                        {{-- <div class="form-group">
-                            <label>Теги</label>
-
-                            {{Form::select('tags[]',
-                            $tags,
-                            $selectedTags,
-                            ['class' => 'form-control select2', 'multiple'=>'multiple', 'data-placeholder' =>'Выберите теги'])
-                            }}
-                        </div> --}}
-        
-
-                        <!-- checkbox -->
                     </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Ширина (Не обязательно)</label>
+                            <input type="number" class="form-control" name="width" value="{{$data->width}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Высота (Не обязательно)</label>
+                            <input type="number" class="form-control" name="height" value="{{$data->height}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Длина (Не обязательно)</label>
+                            <input type="number" class="form-control" name="length" value="{{$data->length}}">
+                        </div>
+                    </div>
+
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Полный текст </label>

@@ -8,7 +8,7 @@
         @foreach ($sliders as $item)
         <div class="headercarouselslide">
             <img src="{{ asset('uploads/slider/') . '/' . $item->image}}" class="d-block w-100" alt="...">
-            <a class="morelink" href="collections/beds/raminibosco.html">Подробнее</a>
+            <a class="morelink" href="{{ $item->url }}">Подробнее</a>
         </div>
         @endforeach
     </div>

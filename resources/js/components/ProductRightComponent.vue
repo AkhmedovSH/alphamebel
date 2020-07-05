@@ -1,19 +1,8 @@
-@extends('layout')
-
-
-
-@section('content')
-<product-right-component
-:products="{{ $products }}" 
-:filters="{{ $filters }}" 
-:category="{{ $category }}" 
-:attributes="{{ $attributes }}"
-:credit="{{ $credit }}"
-></product-right-component>
-{{-- <main>
+<template>
+<main>
     <div class="crumbs container">
         <ul>
-            <a href="../../index.html">
+            <a href="/">
                 <li>Главная / </li>
             </a>
             <a>
@@ -42,7 +31,7 @@
                 <form class="filter marginhas col-xl-3 col-lg-3">
                     <div class="filterOpen title">
                         <h3>Подбор по параметрам:</h3>
-                        <img src="../../assets/img/elements/filter-icon.svg" alt="">
+                        <img src="/assets/img/elements/filter-icon.svg" alt="">
                     </div>
                     <div id="filterContent" class="content">
                         <div class="styles">
@@ -300,10 +289,10 @@
                             </ul>
                         </div>
                         <div class="btns">
-                            <button id="reset" type="reset">
+                            <button id="reset1" type="reset">
                                 Сбросить фильтры
                             </button>
-                            <button id="accept" type="submit">
+                            <button id="accept1" type="submit">
                                 ПРИМЕНИТЬ
                             </button>
                         </div>
@@ -315,13 +304,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -357,13 +346,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -399,13 +388,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -441,13 +430,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -483,13 +472,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -525,13 +514,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -568,13 +557,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -611,13 +600,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -654,13 +643,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/sofas.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/sofas.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -706,7 +695,7 @@
                 <form class="filter marginhas col-xl-3 col-lg-3">
                     <div class="filterOpen title">
                         <h3>Подбор по параметрам:</h3>
-                        <img src="../../assets/img/elements/filter-icon.svg" alt="">
+                        <img src="/assets/img/elements/filter-icon.svg" alt="">
                     </div>
 
                     <div id="filterContent" class="content">
@@ -937,10 +926,10 @@
                             </ul>
                         </div>
                         <div class="btns">
-                            <button id="reset" type="reset">
+                            <button id="reset2" type="reset">
                                 Сбросить фильтры
                             </button>
-                            <button id="accept" type="submit">
+                            <button id="accept2" type="submit">
                                 ПРИМЕНИТЬ
                             </button>
                         </div>
@@ -952,13 +941,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -994,13 +983,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1036,13 +1025,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1078,13 +1067,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1120,13 +1109,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1162,13 +1151,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1205,13 +1194,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1248,13 +1237,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1291,13 +1280,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/armchairs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/armchairs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1343,7 +1332,7 @@
                 <form class="filter marginhas col-xl-3 col-lg-3">
                     <div class="filterOpen title">
                         <h3>Подбор по параметрам:</h3>
-                        <img src="../../assets/img/elements/filter-icon.svg" alt="">
+                        <img src="/assets/img/elements/filter-icon.svg" alt="">
                     </div>
 
                     <div id="filterContent" class="content">
@@ -1547,10 +1536,10 @@
                         </div>
 
                         <div class="btns">
-                            <button id="reset" type="reset">
+                            <button id="reset3" type="reset">
                                 Сбросить фильтры
                             </button>
-                            <button id="accept" type="submit">
+                            <button id="accept3" type="submit">
                                 ПРИМЕНИТЬ
                             </button>
                         </div>
@@ -1562,13 +1551,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1604,13 +1593,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1646,13 +1635,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1688,13 +1677,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1730,13 +1719,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1772,13 +1761,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1815,13 +1804,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1858,13 +1847,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1901,13 +1890,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/bankets.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/bankets.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -1953,7 +1942,7 @@
                 <form class="filter marginhas col-xl-3 col-lg-3">
                     <div class="filterOpen title">
                         <h3>Подбор по параметрам:</h3>
-                        <img src="../../assets/img/elements/filter-icon.svg" alt="">
+                        <img src="/assets/img/elements/filter-icon.svg" alt="">
                     </div>
 
                     <div id="filterContent" class="content">
@@ -2124,10 +2113,10 @@
                         </div>
 
                         <div class="btns">
-                            <button id="reset" type="reset">
+                            <button id="reset4" type="reset">
                                 Сбросить фильтры
                             </button>
-                            <button id="accept" type="submit">
+                            <button id="accept4" type="submit">
                                 ПРИМЕНИТЬ
                             </button>
                         </div>
@@ -2139,13 +2128,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -2181,13 +2170,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -2223,13 +2212,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -2265,13 +2254,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -2307,13 +2296,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -2349,13 +2338,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -2392,13 +2381,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -2435,13 +2424,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -2478,13 +2467,13 @@
                             <div class="goodscard content">
                                 <div class="img">
                                     <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="main_img">
                                     </a>
                                     <div class="img_markers">
-                                        <img src="../../assets/img/goods/sofa/poofs.jpg" alt=""
+                                        <img src="/assets/img/goods/sofa/poofs.jpg" alt=""
                                             class="img_item1">
-                                        <img src="../../assets/img/goods/beds/item (3).jpg" alt=""
+                                        <img src="/assets/img/goods/beds/item (3).jpg" alt=""
                                             class="img_item2">
                                     </div>
                                     <div class="stock">
@@ -2526,12 +2515,95 @@
             </div>
         </div>
     </div>
+</main>
+</template>
 
-    <div id="addedToBasket">
-        <p>Товар добавлен в корзину</p>
-        <div id="addedItemClose">
-            <img src="../../assets/img/elements/menu-close-white.svg" alt="">
-        </div>
-    </div>
-</main> --}}
-@endsection
+<script>
+    export default {
+        props:['products', 'filters', 'category', 'attributes', 'credit'],
+         data() {
+            return {
+                initialData: [],
+                attributeIds: [],
+                data: [],
+                filteredProducts: [],
+            };
+        },
+        methods: {
+            selectAttribute(attribute) {
+                if(attribute.checked == 0) {
+                    this.attributeIds.push(attribute.id)
+                }else{
+                    const key = this.attributeIds.indexOf(attribute.id);
+                    this.attributeIds.splice(key, 1)
+                }
+            },
+            calculate(product) {
+                var newPrice = 0
+                if(product.sale != 0) {
+                    var sale = (((product.price / 100) * product.sale) / 100) * this.credit.credit
+                    var productPrice = (product.price / 100) * product.sale
+                    newPrice = (productPrice * (sale/productPrice)) / this.credit.month
+                   
+                    return newPrice.toFixed(2)
+                } else {
+                    sale = (product.price / 100) * this.credit.credit
+                    
+                    newPrice = (product.price * (sale/product.price)) / this.credit.month
+                    return newPrice.toFixed(2)
+                }
+            },
+            filterByAttributes() {
+                if(this.attributeIds.length != 0){
+                    this.filteredProducts = []
+                    for (let i = 0; i < this.initialData.length; i++) {
+                        for (let j = 0; j < this.initialData[i]['attribute_ids'].length; j++) {
+                            for (let k = 0; k < this.attributeIds.length; k++) {
+                                if(this.initialData[i]['attribute_ids'][j] == this.attributeIds[k]){
+                                    this.filteredProducts.push(this.initialData[i])
+                                }
+                            }
+                        }
+                    }
+                    this.data = this.getUniqueArray(this.filteredProducts)
+                }
+                
+                
+            },
+            cancelFilters() {
+                for (let i = 0; i < this.data.length; i++) {
+                    this.data[i]['checked'] = 0
+                }
+                this.data = this.initialData
+            },
+            getUniqueArray(arr=[], compareProps=[]) {
+                let modifiedArray= [];
+                if(compareProps.length === 0 && arr.length > 0)
+                compareProps.push(...Object.keys(arr[0]));
+                    arr.map(item=> {
+                if(modifiedArray.length === 0){
+                modifiedArray.push(item);
+                }else {
+                if(!modifiedArray.some(item2=> 
+                compareProps.every(eachProps=> item2[eachProps] === item[eachProps])
+                )){modifiedArray.push(item);}
+                }
+                });
+                return modifiedArray;
+            }
+        },
+        mounted() {
+            for (let i = 0; i < this.filters.length; i++) {
+                this.filters[i]['attributes'] = []
+                for (let j = 0; j < this.attributes.length; j++) {
+                    if(this.filters[i]['id'] == this.attributes[j]['filter_id']) {
+                        this.filters[i]['attributes'].push(this.attributes[j])
+                    }
+                }
+            }
+            
+            this.data = this.products
+            this.initialData = this.products
+        }
+    }
+</script>
