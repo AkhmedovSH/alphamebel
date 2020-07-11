@@ -51,8 +51,17 @@ Route::get('/singleProduct/{category_id}/{product_id}', 'ProductController@singl
 Route::get('/offices', 'ProductController@offices');
 
 Route::get('/kitchens', 'ProductController@kitchens');
+
 Route::get('/sofas/{category_id}', 'ProductController@sofas');
-Route::get('/wcb/{category_id}', 'ProductController@wcb');
+Route::get('/beds/{category_id}', 'ProductController@beds');
+
+Route::get('/wardobes/{category_id}', 'ProductController@wardobes');
+Route::get('/comods/{category_id}', 'ProductController@comods');
+Route::get('/chairs/{category_id}', 'ProductController@chairs');
+Route::get('/mattress/{category_id}', 'ProductController@mattress');
+
+
+
 Route::get('/single-right-product/{category_id}/{product_id}', 'ProductController@singleRightProduct');
 /************************** CATEGORIES **************************/
 

@@ -21,8 +21,16 @@ window.Vue = require('vue');
 
 
 Vue.component('product-component', require('./components/ProductComponent.vue').default);
-Vue.component('product-right-component', require('./components/ProductRightComponent.vue').default);
-Vue.component('product-right-wcb-component', require('./components/ProductRightWcbComponent.vue').default);
+
+
+Vue.component('product-sofas-component', require('./components/ProductSofasComponent.vue').default);
+Vue.component('product-chairs-component', require('./components/ProductChairsComponent.vue').default);
+Vue.component('product-mattress-component', require('./components/ProductMattressComponent.vue').default);
+
+
+Vue.component('product-wardobes-component', require('./components/ProductWardobesComponent.vue').default);
+Vue.component('product-comods-component', require('./components/ProductComodsComponent.vue').default);
+Vue.component('product-beds-component', require('./components/ProductBedsComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

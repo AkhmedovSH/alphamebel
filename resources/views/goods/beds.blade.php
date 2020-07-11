@@ -1,13 +1,13 @@
 @extends('layout')
 
 
-@section('content')
 
-<product-right-wcb-component 
+@section('content')
+<product-beds-component
 :products="{{ $products }}" 
 :filters="{{ $filters }}" 
 :category="{{ $category }}" 
 :attributes="{{ $attributes }}"
 :credit="{{ $credit }}"
-></product-right-wcb-component>
+></product-beds-component>
 @endsection

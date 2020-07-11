@@ -91,19 +91,19 @@
             <a class="product-navigation__list-item light-bg" href="{{ url('sofas/' .  16) }}">
                 <li>мягкая мебель</li>
             </a>
-            <a class="product-navigation__list-item light-bg" href="{{ url('wcb/' .  17) }}">
+            <a class="product-navigation__list-item light-bg" href="{{ url('wardobes/' .  17) }}">
                 <li>шкафы</li>
             </a>
-            <a class="product-navigation__list-item light-bg" href="{{ url('wcb/' .  18) }}">
+            <a class="product-navigation__list-item light-bg" href="{{ url('comods/' .  18) }}">
                 <li>комоды</li>
             </a>
-            <a class="product-navigation__list-item light-bg" href="goods/chairs/singlechairs.html">
+            <a class="product-navigation__list-item light-bg" href="{{ url('chairs/' .  19) }}">
                 <li>столы и стулья</li>
             </a>
-            <a class="product-navigation__list-item light-bg" href="{{ url('wcb/' .  20) }}">
+            <a class="product-navigation__list-item light-bg" href="{{ url('beds/' .  20) }}">
                 <li>кровати</li>
             </a>
-            <a class="product-navigation__list-item light-bg" href="goods/mattrasses/singlemattress.html">
+            <a class="product-navigation__list-item light-bg" href="{{ url('mattress/' .  21) }}">
                 <li>матрасы</li>
             </a>
         </ul>
