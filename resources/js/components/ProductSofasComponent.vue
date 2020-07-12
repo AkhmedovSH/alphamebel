@@ -27,16 +27,36 @@
             </li>
         </ul>
         <div class="tabs__content active">
-            <Sofas></Sofas>
+            <Sofas
+                :products="products"
+                :filters="filters"
+                :category="category"
+                :attributes="attributes"
+            ></Sofas>
         </div>
         <div class="tabs__content">
-           <Armchairs></Armchairs>
+            <Armchairs 
+                :products="products2"
+                :filters="filters2"
+                :category="category2"
+                :attributes="attributes2"
+            ></Armchairs>
         </div>
         <div class="tabs__content">
-            <Banquets></Banquets>
+            <Banquets
+                :products="products3"
+                :filters="filters3"
+                :category="category3"
+                :attributes="attributes3"
+            ></Banquets>
         </div>
         <div class="tabs__content">
-            <Puffs></Puffs>
+            <Puffs
+                :products="products4"
+                :filters="filters4"
+                :category="category4"
+                :attributes="attributes4"
+            ></Puffs>
         </div>
     </div>
 </main>
@@ -49,7 +69,12 @@ import Banquets from './sofas/BanquetsComponent'
 import Puffs from './sofas/PuffsComponent'
 export default {
     components: { Sofas, Armchairs, Banquets, Puffs },
-    props:['products', 'filters', 'category', 'attributes', 'credit'],
+    props:[
+        'products', 'filters', 'category', 'attributes',
+        'products2', 'filters2', 'category2', 'attributes2',
+        'products3', 'filters3', 'category3', 'attributes3',
+        'products4', 'filters4', 'category4', 'attributes4',
+        'credit'],
         data() {
         return {
             initialData: [],

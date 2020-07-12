@@ -1,522 +1,83 @@
 <template>
 <main>
- <div class="single-goods container">
-    <form class="filter marginhas col-xl-3 col-lg-3">
-        <div class="filterOpen title">
-            <h3>Подбор по параметрам:</h3>
-            <img src="/assets/img/elements/filter-icon.svg" alt="">
-        </div>
-        <div id="filterContent" class="content">
-
-            <div class="type">
-                <h4 class="filteropentitle type-title-closed">Типы:</h4>
-                <ul class="list type-list">
-                    <li>
-                        <input class="filter-items" id="chairs" type="checkbox" />
-                        <label for="chairs">Стулья</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-armchair" type="checkbox" />
-                        <label for="chairs-armchair">Кресла</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-hardsit" type="checkbox" />
-                        <label for="chairs-hardsit">С жестким сиденьем </label>
-                    </li>
-                </ul>
-            </div>
-            <div class="styles">
-                <h4 class="filteropentitle style-title-closed">Cтиль</h4>
-                <ul class="list style-list">
-                    <li>
-                        <input class="filter-items" id="chairs-classic" type="checkbox" />
-                        <label for="chairs-classic">Классика</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-neoclassic" type="checkbox" />
-                        <label for="chairs-neoclassic">Неоклассика</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-modern" type="checkbox" />
-                        <label for="chairs-modern">Современный</label>
-                    </li>
-                </ul>
-            </div>
-            <div class="colors">
-                <h4 class="filteropentitle colors-title-closed">Цвет обивки</h4>
-                <ul class="list colors-list">
-                    <li>
-                        <input class="filter-items" id="chairs-beige" type="checkbox" />
-                        <label for="chairs-beige">Бежевый</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-white" type="checkbox" />
-                        <label for="chairs-white">Белый</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-blue" type="checkbox" />
-                        <label for="chairs-blue">Голубой</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-yellow" type="checkbox" />
-                        <label for="chairs-yellow">Желтый</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-green" type="checkbox" />
-                        <label for="chairs-green">Зеленый</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-brown" type="checkbox" />
-                        <label for="chairs-brown">Коричневый</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-red" type="checkbox" />
-                        <label for="chairs-red">Красный</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-orange" type="checkbox" />
-                        <label for="chairs-orange">Оранжевый</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-pattern" type="checkbox" />
-                        <label for="chairs-pattern">Рисунок</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-grey" type="checkbox" />
-                        <label for="chairs-grey">Серый</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-lightblue" type="checkbox" />
-                        <label for="chairs-lightblue">Синий</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-violet" type="checkbox" />
-                        <label for="chairs-violet">Фиолетовый</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-black" type="checkbox" />
-                        <label for="chairs-black">Черный</label>
-                    </li>
-                </ul>
-            </div>
-            <div class="cloth">
-                <h4 class="filteropentitle cloth-title-closed">Тип ткани</h4>
-                <ul class="list cloth-list">
-                    <li>
-                        <input class="filter-items" id="chairs-velur" type="checkbox" />
-                        <label for="chairs-velur">Велюр</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-jacard" type="checkbox" />
-                        <label for="chairs-jacard">Жаккард</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-rogoje" type="checkbox" />
-                        <label for="chairs-rogoje">Рогожка</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-folk" type="checkbox" />
-                        <label for="chairs-folk">Фолк</label>
-                    </li>
-                    <li>
-                        <input class="filter-items" id="chairs-ecoskin" type="checkbox" />
-                        <label for="chairs-ecoskin">Экокожа</label>
-                    </li>
-                </ul>
+    <div class="single-goods armchairs container">
+        <form class="filter marginhas col-xl-3 col-lg-3">
+            <div class="filterOpen title">
+                <h3>Подбор по параметрам:</h3>
+                <img src="/assets/img/elements/filter-icon.svg" alt="">
             </div>
 
-            <div class="btns">
-                <button id="reset" type="reset">
-                    Сбросить фильтры
+            <div id="filterContent" class="content">
+                <div class="styles" v-for="(filter, index) in filters" :key="index">
+                    <h4 class="filteropentitle style-title-closed">{{ filter.title }}</h4>
+                    <ul class="list style-list">
+                        <li v-for="(attribute, index) in filter.attributes" :key="index" >
+                            <input class="filter-items" :id="'classic' + attribute.id" type="checkbox"
+                            v-model="attribute.checked"
+                            @click="selectAttribute(attribute)"
+                            :true-value="1"
+                            :false-value="0"
+                            />
+                            <label :for="'classic' + attribute.id">{{ attribute.title }}</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btns">
+                    <button type="button" @click="cancelFilters()" id="reset">
+                        Сбросить фильтры
+                    </button>
+                    <button type="button" @click="filterByAttributes()" id="accept">
+                        ПРИМЕНИТЬ
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div id="goodswrapper" class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div class="cards contents">
+                <div class="blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12" v-for="(product, index) in data" :key="index">
+                    <div class="goodscard content">
+                        <div class="img">
+                            <a :href="'/singleProduct/' + category.id + '/' + product.id" class="goodsimg-main card_main">
+                                <img :src="'/uploads/products/' + product.image"  class="main_img">
+                            </a>
+                            <div class="img_markers">
+                                <img src="/assets/img/goods/sofa/sofas.jpg" class="img_item1">
+                                <img src="/assets/img/goods/beds/item (3).jpg" class="img_item2">
+                            </div>
+                            <div class="stock">
+                                <span v-if="product.sale != 0">-10%</span>
+                                <p v-if="product.sale != 0">Распродажа</p>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <a :href="'/singleProduct/' + category.id + '/' + product.id">
+                                <p class="title">{{ product.title }}</p>
+                                <p class="code">Код: {{ product.code }}</p>
+                                <p class="gooddesc" v-html="product.description"></p>
+                                <div class="size">
+                                    <p>Ш: {{ product.width }}</p>
+                                    <p>Д: {{ product.length }}</p>
+                                    <p>В: {{ product.height }}</p>
+                                </div>
+                            </a>
+                            <div class="order">
+                                <div class="price">
+                                    <p>{{ product.sale != 0 ? (product.price / 100) * product.sale : product.price }} сум</p>
+                                    <p>{{ product.price }} сум</p>
+                                </div>
+                                <button class="add">КУПИТЬ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="more">
+                <button class="loadMore">
+                    ПОКАЗАТЬ ЕЩЕ ТОВАРЫ
                 </button>
-                <button id="accept" type="submit">
-                    ПРИМЕНИТЬ
-                </button>
             </div>
-        </div>
-    </form>
-    <div id="goodswrapper" class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
-        <div class="cards contents">
-            <div class="blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="goodscard content">
-                    <div class="img">
-                        <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt="" class="main_img">
-                        </a>
-                        <div class="img_markers">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt=""
-                                class="img_item1">
-                            <img src="/assets/img/goods/beds/item (3).jpg" alt=""
-                                class="img_item2">
-                        </div>
-                        <div class="stock">
-                            <span>-10%</span>
-                            <p>Распродажа</p>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <a href="../beds/bed1.html">
-                            <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
-                            <p class="code">Код: 484700</p>
-                            <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция,
-                                Bogema,
-                                Кровать
-                                2-спальная, цвет темный из коллекции </p>
-                            <div class="size">
-                                <p>Ш: 1987</p>
-                                <p>Д: 2087</p>
-                                <p>В: 6505</p>
-                            </div>
-                        </a>
-                        <div class="order">
-                            <div class="price">
-                                <p>21 356 000 сум</p>
-                                <p>30 345 000 сум</p>
-                            </div>
-                            <button class="add">КУПИТЬ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="goodscard content">
-                    <div class="img">
-                        <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt="" class="main_img">
-                        </a>
-                        <div class="img_markers">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt=""
-                                class="img_item1">
-                            <img src="/assets/img/goods/beds/item (3).jpg" alt=""
-                                class="img_item2">
-                        </div>
-                        <div class="stock">
-                            <span>-10%</span>
-                            <p>Распродажа</p>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <a href="../beds/bed1.html">
-                            <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
-                            <p class="code">Код: 484700</p>
-                            <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция,
-                                Bogema,
-                                Кровать
-                                2-спальная, цвет темный из коллекции </p>
-                            <div class="size">
-                                <p>Ш: 1987</p>
-                                <p>Д: 2087</p>
-                                <p>В: 6505</p>
-                            </div>
-                        </a>
-                        <div class="order">
-                            <div class="price">
-                                <p>21 356 000 сум</p>
-                                <p>30 345 000 сум</p>
-                            </div>
-                            <button class="add">КУПИТЬ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="goodscard content">
-                    <div class="img">
-                        <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt="" class="main_img">
-                        </a>
-                        <div class="img_markers">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt=""
-                                class="img_item1">
-                            <img src="/assets/img/goods/beds/item (3).jpg" alt=""
-                                class="img_item2">
-                        </div>
-                        <div class="stock">
-                            <span>-10%</span>
-                            <p>Распродажа</p>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <a href="../beds/bed1.html">
-                            <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
-                            <p class="code">Код: 484700</p>
-                            <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция,
-                                Bogema,
-                                Кровать
-                                2-спальная, цвет темный из коллекции </p>
-                            <div class="size">
-                                <p>Ш: 1987</p>
-                                <p>Д: 2087</p>
-                                <p>В: 6505</p>
-                            </div>
-                        </a>
-                        <div class="order">
-                            <div class="price">
-                                <p>21 356 000 сум</p>
-                                <p>30 345 000 сум</p>
-                            </div>
-                            <button class="add">КУПИТЬ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="goodscard content">
-                    <div class="img">
-                        <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt="" class="main_img">
-                        </a>
-                        <div class="img_markers">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt=""
-                                class="img_item1">
-                            <img src="/assets/img/goods/beds/item (3).jpg" alt=""
-                                class="img_item2">
-                        </div>
-                        <div class="stock">
-                            <span>-10%</span>
-                            <p>Распродажа</p>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <a href="../beds/bed1.html">
-                            <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
-                            <p class="code">Код: 484700</p>
-                            <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция,
-                                Bogema,
-                                Кровать
-                                2-спальная, цвет темный из коллекции </p>
-                            <div class="size">
-                                <p>Ш: 1987</p>
-                                <p>Д: 2087</p>
-                                <p>В: 6505</p>
-                            </div>
-                        </a>
-                        <div class="order">
-                            <div class="price">
-                                <p>21 356 000 сум</p>
-                                <p>30 345 000 сум</p>
-                            </div>
-                            <button class="add">КУПИТЬ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="goodscard content">
-                    <div class="img">
-                        <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt="" class="main_img">
-                        </a>
-                        <div class="img_markers">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt=""
-                                class="img_item1">
-                            <img src="/assets/img/goods/beds/item (3).jpg" alt=""
-                                class="img_item2">
-                        </div>
-                        <div class="stock">
-                            <span>-10%</span>
-                            <p>Распродажа</p>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <a href="../beds/bed1.html">
-                            <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
-                            <p class="code">Код: 484700</p>
-                            <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция,
-                                Bogema,
-                                Кровать
-                                2-спальная, цвет темный из коллекции </p>
-                            <div class="size">
-                                <p>Ш: 1987</p>
-                                <p>Д: 2087</p>
-                                <p>В: 6505</p>
-                            </div>
-                        </a>
-                        <div class="order">
-                            <div class="price">
-                                <p>21 356 000 сум</p>
-                                <p>30 345 000 сум</p>
-                            </div>
-                            <button class="add">КУПИТЬ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="goodscard content">
-                    <div class="img">
-                        <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt="" class="main_img">
-                        </a>
-                        <div class="img_markers">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt=""
-                                class="img_item1">
-                            <img src="/assets/img/goods/beds/item (3).jpg" alt=""
-                                class="img_item2">
-                        </div>
-                        <div class="stock">
-                            <span>-10%</span>
-                            <p>Распродажа</p>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <a href="../beds/bed1.html">
-                            <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
-                            <p class="code">Код: 484700</p>
-                            <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция,
-                                Bogema,
-                                Кровать
-                                2-спальная, цвет темный из коллекции </p>
-                            <div class="size">
-                                <p>Ш: 1987</p>
-                                <p>Д: 2087</p>
-                                <p>В: 6505</p>
-                            </div>
-                        </a>
-                        <div class="order">
-                            <div class="price">
-                                <p>21 356 000 сум</p>
-                                <p>30 345 000 сум</p>
-                            </div>
-                            <button class="add">КУПИТЬ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="display: none;"
-                class="blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="goodscard content">
-                    <div class="img">
-                        <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt="" class="main_img">
-                        </a>
-                        <div class="img_markers">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt=""
-                                class="img_item1">
-                            <img src="/assets/img/goods/beds/item (3).jpg" alt=""
-                                class="img_item2">
-                        </div>
-                        <div class="stock">
-                            <span>-10%</span>
-                            <p>Распродажа</p>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <a href="../beds/bed1.html">
-                            <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
-                            <p class="code">Код: 484700</p>
-                            <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция,
-                                Bogema,
-                                Кровать
-                                2-спальная, цвет темный из коллекции </p>
-                            <div class="size">
-                                <p>Ш: 1987</p>
-                                <p>Д: 2087</p>
-                                <p>В: 6505</p>
-                            </div>
-                        </a>
-                        <div class="order">
-                            <div class="price">
-                                <p>21 356 000 сум</p>
-                                <p>30 345 000 сум</p>
-                            </div>
-                            <button class="add">КУПИТЬ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="display: none;"
-                class="blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="goodscard content">
-                    <div class="img">
-                        <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt="" class="main_img">
-                        </a>
-                        <div class="img_markers">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt=""
-                                class="img_item1">
-                            <img src="/assets/img/goods/beds/item (3).jpg" alt=""
-                                class="img_item2">
-                        </div>
-                        <div class="stock">
-                            <span>-10%</span>
-                            <p>Распродажа</p>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <a href="../beds/bed1.html">
-                            <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
-                            <p class="code">Код: 484700</p>
-                            <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция,
-                                Bogema,
-                                Кровать
-                                2-спальная, цвет темный из коллекции </p>
-                            <div class="size">
-                                <p>Ш: 1987</p>
-                                <p>Д: 2087</p>
-                                <p>В: 6505</p>
-                            </div>
-                        </a>
-                        <div class="order">
-                            <div class="price">
-                                <p>21 356 000 сум</p>
-                                <p>30 345 000 сум</p>
-                            </div>
-                            <button class="add">КУПИТЬ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="display: none;"
-                class="blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12">
-                <div class="goodscard content">
-                    <div class="img">
-                        <a href="../beds/bed1.html" class="goodsimg-main card_main">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt="" class="main_img">
-                        </a>
-                        <div class="img_markers">
-                            <img src="/assets/img/goods/chairs/chairs.jpg" alt=""
-                                class="img_item1">
-                            <img src="/assets/img/goods/beds/item (3).jpg" alt=""
-                                class="img_item2">
-                        </div>
-                        <div class="stock">
-                            <span>-10%</span>
-                            <p>Распродажа</p>
-                        </div>
-                    </div>
-                    <div class="desc">
-                        <a href="../beds/bed1.html">
-                            <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
-                            <p class="code">Код: 484700</p>
-                            <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция,
-                                Bogema,
-                                Кровать
-                                2-спальная, цвет темный из коллекции </p>
-                            <div class="size">
-                                <p>Ш: 1987</p>
-                                <p>Д: 2087</p>
-                                <p>В: 6505</p>
-                            </div>
-                        </a>
-                        <div class="order">
-                            <div class="price">
-                                <p>21 356 000 сум</p>
-                                <p>30 345 000 сум</p>
-                            </div>
-                            <button class="add">КУПИТЬ</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="more">
-            <button class="loadMore">
-                ПОКАЗАТЬ ЕЩЕ ТОВАРЫ
-            </button>
         </div>
     </div>
-</div>
 </main>
 </template>
 

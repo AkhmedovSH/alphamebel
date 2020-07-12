@@ -140,6 +140,36 @@
   line-height: 15px;
   color: #828282;
 }
+.single-goods .filter .content .btns #reset2 {
+  background: none;
+  border: none;
+  font-size: 12px;
+  line-height: 15px;
+  color: #828282;
+}
+.single-goods .filter .content .btns #reset3 {
+  background: none;
+  border: none;
+  font-size: 12px;
+  line-height: 15px;
+  color: #828282;
+}
+.single-goods .filter .content .btns #reset4 {
+  background: none;
+  border: none;
+  font-size: 12px;
+  line-height: 15px;
+  color: #828282;
+}
+.single-goods .filter .content .btns #reset5 {
+  background: none;
+  border: none;
+  font-size: 12px;
+  line-height: 15px;
+  color: #828282;
+}
+
+
 .single-goods .filter .content .btns #accept {
   background: none;
   border: 1px solid #4B4B4B;
@@ -147,10 +177,72 @@
   margin-left: 20px;
   font-size: 11px;
 }
+
+.single-goods .filter .content .btns #accept {
+  background: none;
+  border: 1px solid #4B4B4B;
+  padding: 12px 13px;
+  margin-left: 20px;
+  font-size: 11px;
+}
+
+.single-goods .filter .content .btns #accept2 {
+  background: none;
+  border: 1px solid #4B4B4B;
+  padding: 12px 13px;
+  margin-left: 20px;
+  font-size: 11px;
+}
+
+.single-goods .filter .content .btns #accept3 {
+  background: none;
+  border: 1px solid #4B4B4B;
+  padding: 12px 13px;
+  margin-left: 20px;
+  font-size: 11px;
+}
+
+.single-goods .filter .content .btns #accept4 {
+  background: none;
+  border: 1px solid #4B4B4B;
+  padding: 12px 13px;
+  margin-left: 20px;
+  font-size: 11px;
+}
+
+.single-goods .filter .content .btns #accept5 {
+  background: none;
+  border: 1px solid #4B4B4B;
+  padding: 12px 13px;
+  margin-left: 20px;
+  font-size: 11px;
+}
+
 .single-goods .filter .content .btns #accept:hover {
   border: 1px solid #F7D917;
   background: #F7D917;
 }
+
+.single-goods .filter .content .btns #accept2:hover {
+  border: 1px solid #F7D917;
+  background: #F7D917;
+}
+
+.single-goods .filter .content .btns #accept3:hover {
+  border: 1px solid #F7D917;
+  background: #F7D917;
+}
+
+.single-goods .filter .content .btns #accept4:hover {
+  border: 1px solid #F7D917;
+  background: #F7D917;
+}
+
+.single-goods .filter .content .btns #accept5:hover {
+  border: 1px solid #F7D917;
+  background: #F7D917;
+}
+
 .single-goods .cards {
   border: none;
   border-radius: 0;

@@ -10,8 +10,7 @@ class CartController extends Controller
 
     public function index()
     {
-        //dd(Cart::content());
-        return view('cart');
+        return view('basket');
     }
 
     public function store(Request $request)

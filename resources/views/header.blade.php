@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="brand-navigation__basket col-xl-3 col-lg-4 col-md-4 col-sm-3 col-3">
-            <a href="basket.html">
+            <a href="/cart">
                 <div class="basket-price">
                     <p>{{ str_replace(',', '.', Cart::subtotal()) }} <span>сум</span></p> 
                 </div>

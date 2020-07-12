@@ -21,10 +21,20 @@
             </li>
         </ul>
         <div class="tabs__content active">
-            <Tables></Tables>
+            <Tables
+                :products="products"
+                :filters="filters"
+                :category="category"
+                :attributes="attributes"
+            ></Tables>
         </div>
         <div class="tabs__content">
-           <Chairs></Chairs>
+           <Chairs
+                :products="products2"
+                :filters="filters2"
+                :category="category2"
+                :attributes="attributes2"
+            ></Chairs>
         </div>
     </div>
 </main>
@@ -35,7 +45,9 @@ import Tables from './chairs/TablesComponent'
 import Chairs from './chairs/ChairsComponent'
 export default {
     components: { Chairs, Tables},
-    props:['products', 'filters', 'category', 'attributes', 'credit'],
+    props: ['products', 'filters', 'category', 'attributes',
+            'products2', 'filters2', 'category2', 'attributes2',
+            'credit'],
         data() {
         return {
             initialData: [],

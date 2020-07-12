@@ -30,19 +30,44 @@
             </li>
         </ul>
         <div class="tabs__content active">
-            <Mattress></Mattress>
+            <Mattress
+                :products="products"
+                :filters="filters"
+                :category="category"
+                :attributes="attributes"
+            ></Mattress>
         </div>
         <div class="tabs__content">
-           <Covers></Covers>
+           <Covers
+                :products="products2"
+                :filters="filters2"
+                :category="category2"
+                :attributes="attributes2"
+           ></Covers>
         </div>
         <div class="tabs__content">
-            <MattressCovers></MattressCovers>
+            <MattressCovers
+                :products="products3"
+                :filters="filters3"
+                :category="category3"
+                :attributes="attributes3"
+            ></MattressCovers>
         </div>
         <div class="tabs__content">
-            <Coverlet></Coverlet>
+            <Coverlet
+                :products="products4"
+                :filters="filters4"
+                :category="category4"
+                :attributes="attributes4"
+            ></Coverlet>
         </div>
         <div class="tabs__content">
-            <Pillows></Pillows>
+            <Pillows
+                :products="products5"
+                :filters="filters5"
+                :category="category5"
+                :attributes="attributes5"
+            ></Pillows>
         </div>
     </div>
 </main>
@@ -56,7 +81,12 @@ import MattressCovers from './mattress/MattressCoversComponent'
 import Pillows from './mattress/PillowsComponent'
 export default {
     components: { Mattress, Covers, Coverlet, MattressCovers, Pillows },
-    props:['products', 'filters', 'category', 'attributes', 'credit'],
+    props: ['products', 'filters', 'category', 'attributes',
+            'products2', 'filters2', 'category2', 'attributes2',
+            'products3', 'filters3', 'category3', 'attributes3',
+            'products4', 'filters4', 'category4', 'attributes4',
+            'products5', 'filters5', 'category5', 'attributes5',
+            'credit'],
         data() {
         return {
             initialData: [],
