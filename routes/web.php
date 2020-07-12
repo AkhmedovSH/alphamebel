@@ -53,12 +53,14 @@ Route::get('/offices', 'ProductController@offices');
 Route::get('/kitchens', 'ProductController@kitchens');
 
 Route::get('/sofas/{category_id}', 'ProductController@sofas');
-Route::get('/beds/{category_id}', 'ProductController@beds');
-
-Route::get('/wardobes/{category_id}', 'ProductController@wardobes');
-Route::get('/comods/{category_id}', 'ProductController@comods');
 Route::get('/chairs/{category_id}', 'ProductController@chairs');
 Route::get('/mattress/{category_id}', 'ProductController@mattress');
+
+
+Route::get('/wardobes/{category_id}', 'ProductController@wardobesBedsComods');
+Route::get('/beds/{category_id}', 'ProductController@wardobesBedsComods');
+Route::get('/comods/{category_id}', 'ProductController@wardobesBedsComods');
+
 
 
 

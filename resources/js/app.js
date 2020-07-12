@@ -28,9 +28,7 @@ Vue.component('product-chairs-component', require('./components/ProductChairsCom
 Vue.component('product-mattress-component', require('./components/ProductMattressComponent.vue').default);
 
 
-Vue.component('product-wardobes-component', require('./components/ProductWardobesComponent.vue').default);
-Vue.component('product-comods-component', require('./components/ProductComodsComponent.vue').default);
-Vue.component('product-beds-component', require('./components/ProductBedsComponent.vue').default);
+Vue.component('product-wardobes-beds-comads-component', require('./components/ProductWardobesBedsComadsComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
