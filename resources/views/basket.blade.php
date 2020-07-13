@@ -70,7 +70,7 @@
                 </div>
                 <div class="price col-xl-4">
                     <p id="totalPrice">Общая сумма заказа:
-                        <span id="">5 402 961 сум</span>
+                        <span>{{ Cart::subtotal() }} сум</span>
                     </p>
                 </div>
             </div>

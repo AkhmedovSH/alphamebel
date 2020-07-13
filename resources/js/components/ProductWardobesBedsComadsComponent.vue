@@ -6,7 +6,7 @@
                     <li>Главная / </li>
                 </a>
                 <a>
-                    <li>Шкафы</li>
+                    <li>{{ category.title }}</li>
                 </a>
             </ul>
         </div>
@@ -74,7 +74,7 @@
                                         <p>{{ product.sale != 0 ? (product.price / 100) * product.sale : product.price }} сум</p>
                                         <p>{{ product.price }} сум</p>
                                     </div>
-                                    <button class="add">КУПИТЬ</button>
+                                    <a :href="'/singleProduct/' + category.id + '/' + product.id" class="add">КУПИТЬ</a>
                                 </div>
                             </div>
                         </div>

@@ -3840,7 +3840,13 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("main", [
-    _vm._m(0),
+    _c("div", { staticClass: "crumbs container" }, [
+      _c("ul", [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("a", [_c("li", [_vm._v(_vm._s(_vm.category.title))])])
+      ])
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "collections berooms-content container" }, [
       _c(
@@ -4073,13 +4079,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "crumbs container" }, [
-      _c("ul", [
-        _c("a", { attrs: { href: "/" } }, [_c("li", [_vm._v("Главная / ")])]),
-        _vm._v(" "),
-        _c("a", [_c("li", [_vm._v("Спальни")])])
-      ])
-    ])
+    return _c("a", { attrs: { href: "/" } }, [_c("li", [_vm._v("Главная / ")])])
   },
   function() {
     var _vm = this
@@ -4410,7 +4410,13 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("main", [
-    _vm._m(0),
+    _c("div", { staticClass: "crumbs container" }, [
+      _c("ul", [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("a", [_c("li", [_vm._v(_vm._s(_vm.category.title))])])
+      ])
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "single-goods container" }, [
       _c("form", { staticClass: "filter col-xl-3 col-lg-3" }, [
@@ -4644,7 +4650,20 @@ var render = function() {
                           _c("p", [_vm._v(_vm._s(product.price) + " сум")])
                         ]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "add",
+                            attrs: {
+                              href:
+                                "/singleProduct/" +
+                                _vm.category.id +
+                                "/" +
+                                product.id
+                            }
+                          },
+                          [_vm._v("КУПИТЬ")]
+                        )
                       ])
                     ])
                   ])
@@ -4667,13 +4686,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "crumbs container" }, [
-      _c("ul", [
-        _c("a", { attrs: { href: "/" } }, [_c("li", [_vm._v("Главная / ")])]),
-        _vm._v(" "),
-        _c("a", [_c("li", [_vm._v("Шкафы")])])
-      ])
-    ])
+    return _c("a", { attrs: { href: "/" } }, [_c("li", [_vm._v("Главная / ")])])
   },
   function() {
     var _vm = this
@@ -4982,7 +4995,20 @@ var render = function() {
                           _c("p", [_vm._v(_vm._s(product.price) + " сум")])
                         ]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "add",
+                            attrs: {
+                              href:
+                                "/singleProduct/" +
+                                _vm.category.id +
+                                "/" +
+                                product.id
+                            }
+                          },
+                          [_vm._v("КУПИТЬ")]
+                        )
                       ])
                     ])
                   ])
@@ -5294,7 +5320,20 @@ var render = function() {
                           _c("p", [_vm._v(_vm._s(product.price) + " сум")])
                         ]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "add",
+                            attrs: {
+                              href:
+                                "/singleProduct/" +
+                                _vm.category.id +
+                                "/" +
+                                product.id
+                            }
+                          },
+                          [_vm._v("КУПИТЬ")]
+                        )
                       ])
                     ])
                   ])
@@ -5606,7 +5645,20 @@ var render = function() {
                           _c("p", [_vm._v(_vm._s(product.price) + " сум")])
                         ]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "add",
+                            attrs: {
+                              href:
+                                "/singleProduct/" +
+                                _vm.category.id +
+                                "/" +
+                                product.id
+                            }
+                          },
+                          [_vm._v("КУПИТЬ")]
+                        )
                       ])
                     ])
                   ])
@@ -5918,7 +5970,20 @@ var render = function() {
                           _c("p", [_vm._v(_vm._s(product.price) + " сум")])
                         ]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "add",
+                            attrs: {
+                              href:
+                                "/singleProduct/" +
+                                _vm.category.id +
+                                "/" +
+                                product.id
+                            }
+                          },
+                          [_vm._v("КУПИТЬ")]
+                        )
                       ])
                     ])
                   ])
@@ -6230,7 +6295,20 @@ var render = function() {
                           _c("p", [_vm._v(_vm._s(product.price) + " сум")])
                         ]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "add",
+                            attrs: {
+                              href:
+                                "/singleProduct/" +
+                                _vm.category.id +
+                                "/" +
+                                product.id
+                            }
+                          },
+                          [_vm._v("КУПИТЬ")]
+                        )
                       ])
                     ])
                   ])
@@ -6542,7 +6620,20 @@ var render = function() {
                           _c("p", [_vm._v(_vm._s(product.price) + " сум")])
                         ]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "add",
+                            attrs: {
+                              href:
+                                "/singleProduct/" +
+                                _vm.category.id +
+                                "/" +
+                                product.id
+                            }
+                          },
+                          [_vm._v("КУПИТЬ")]
+                        )
                       ])
                     ])
                   ])
@@ -6854,7 +6945,20 @@ var render = function() {
                           _c("p", [_vm._v(_vm._s(product.price) + " сум")])
                         ]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "add",
+                            attrs: {
+                              href:
+                                "/singleProduct/" +
+                                _vm.category.id +
+                                "/" +
+                                product.id
+                            }
+                          },
+                          [_vm._v("КУПИТЬ")]
+                        )
                       ])
                     ])
                   ])
@@ -7166,7 +7270,20 @@ var render = function() {
                           _c("p", [_vm._v(_vm._s(product.price) + " сум")])
                         ]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "add",
+                            attrs: {
+                              href:
+                                "/singleProduct/" +
+                                _vm.category.id +
+                                "/" +
+                                product.id
+                            }
+                          },
+                          [_vm._v("КУПИТЬ")]
+                        )
                       ])
                     ])
                   ])
@@ -7478,7 +7595,20 @@ var render = function() {
                           _c("p", [_vm._v(_vm._s(product.price) + " сум")])
                         ]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "add",
+                            attrs: {
+                              href:
+                                "/singleProduct/" +
+                                _vm.category.id +
+                                "/" +
+                                product.id
+                            }
+                          },
+                          [_vm._v("КУПИТЬ")]
+                        )
                       ])
                     ])
                   ])
@@ -7788,7 +7918,20 @@ var render = function() {
                           _c("p", [_vm._v(_vm._s(product.price) + " сум")])
                         ]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "add",
+                            attrs: {
+                              href:
+                                "/singleProduct/" +
+                                _vm.category.id +
+                                "/" +
+                                product.id
+                            }
+                          },
+                          [_vm._v("КУПИТЬ")]
+                        )
                       ])
                     ])
                   ])
@@ -8098,7 +8241,20 @@ var render = function() {
                           _c("p", [_vm._v(_vm._s(product.price) + " сум")])
                         ]),
                         _vm._v(" "),
-                        _c("button", { staticClass: "add" }, [_vm._v("КУПИТЬ")])
+                        _c(
+                          "a",
+                          {
+                            staticClass: "add",
+                            attrs: {
+                              href:
+                                "/singleProduct/" +
+                                _vm.category.id +
+                                "/" +
+                                product.id
+                            }
+                          },
+                          [_vm._v("КУПИТЬ")]
+                        )
                       ])
                     ])
                   ])

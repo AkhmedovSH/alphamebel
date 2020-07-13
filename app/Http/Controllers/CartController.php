@@ -23,7 +23,7 @@ class CartController extends Controller
        
         if($price == null){ $price = 0; }
         if($sale != 0){ $price = $price - ($price * $sale / 100); }
-        //Cart::add($id, $title, 1, $price)->associate('App\Product');
+        Cart::add($id, $title, 1, $price)->associate('App\Product');
         return view('basket');
     }
 

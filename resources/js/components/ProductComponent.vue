@@ -6,7 +6,7 @@
                 <li>Главная / </li>
             </a>
             <a>
-                <li>Спальни</li>
+                <li>{{ category.title }}</li>
             </a>
         </ul>
     </div>
