@@ -86,6 +86,8 @@ $(document).ready(function () {
 
 
 
+
+
 /*--------------- GOODS ADD TO BASKET-----------------*/
 
 
@@ -145,6 +147,36 @@ $(document).ready(function () {
             },
             600: {
                 items: 4,
+            }
+        }
+    });
+});
+$(document).ready(function () {
+    $(".owl-carousel").owlCarousel({
+        items: 1,
+        nav: true,
+    });
+});
+
+$(document).ready(function () {
+    $(".goodinnercarousel").owlCarousel({
+        items: 2,
+        dots: false,
+        loop: true,
+        autoplay: false,
+        smartSpeed: 1000,
+        nav: true,
+        mouseDrag: true,
+        responsive: {
+            200: {
+                items: 1,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                loop: true
+            },
+            700: {
+                items: 2,
             }
         }
     });

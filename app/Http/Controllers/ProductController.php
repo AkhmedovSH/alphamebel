@@ -17,17 +17,29 @@ class ProductController extends Controller
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->get();
         $attributes = Attribute::whereIn('id', json_decode($category->attribute_ids))->get();
         
-        return view('collections/beds/beds', compact('products', 'filters', 'category', 'attributes'));
+        return view('collections/singleProduct/beds', compact('products', 'filters', 'category', 'attributes'));
     }
 
-    public function singleProduct($category_id, $product_id)
+    public function singleProductLeft($category_id, $product_id)
     {
         $product = Product::where('id', $product_id)->first();
         $category = Category::where('id', $category_id)->first();
         $attributes = Attribute::whereIn('id', $product->attribute_ids)->with('filter')->get();
         $images = $this->parseImages($product->images);
         $similarProducts = Product::where('category_id', $product->category_id)->where('id', '!=', $product->id)->limit(8)->get();
-        return view('collections/beds/raminibosco', compact('product', 'attributes', 'category', 'images', 'similarProducts'));
+        return view('collections/singleProduct/singleProductLeft', compact('product', 'attributes', 'category', 'images', 'similarProducts'));
+    }
+
+    public function singleProductRight($category_id, $product_id)
+    {
+        $product = Product::where('id', $product_id)->first();
+        $category = Category::where('id', $category_id)->first();
+        $attributes = Attribute::whereIn('id', $product->attribute_ids)->with('filter')->get();
+        $images = $this->parseImages($product->images);
+        $similarProducts = Product::where('category_id', $product->category_id)->where('id', '!=', $product->id)->limit(8)->get();
+
+        $collectionItem = Product::where('category_id', 10)->get()->random(1)->first();
+        return view('collections/singleProduct/singleProductRight', compact('product', 'attributes', 'category', 'images', 'similarProducts', 'collectionItem'));
     }
 
     public function offices()

@@ -43,7 +43,7 @@
                         @endforeach
                         </tfoot>
                     </table>
-                    {{$data->links()}}
+                    {{-- {{$data->links()}} --}}
                 </div>
                 <!-- /.box-body -->
             </div>

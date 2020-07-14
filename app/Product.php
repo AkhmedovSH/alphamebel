@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Credit;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
@@ -89,5 +90,22 @@ class Product extends Model
         }
         $this->images = json_encode($names);
         $this->save();
+    }
+
+    public function calculate() {
+        $credit = Credit::where('id', 1)->first();
+        $newPrice = 0;
+        if($this->sale != 0) {
+            $sale = ((($this->price / 100) * $this->sale) / 100) * $credit->credit;
+            $productPrice = ($this->price / 100) * $this->sale;
+            $newPrice = ($productPrice * ($sale/$productPrice)) / $credit->month;
+            
+            return number_format($newPrice, 2);
+        } else {
+            $sale = ($this->price / 100) * $credit->credit;
+            
+            $newPrice = ($this->price * ($sale/$this->price)) / $credit->month;
+            return number_format($newPrice, 2);
+        }
     }
 }

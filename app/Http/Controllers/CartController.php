@@ -40,4 +40,29 @@ class CartController extends Controller
             Cart::remove($id);
             return back()->with('success_message', 'Item has been removed');
     }
+
+    public function orderSendTelegram(Request $request)
+    {
+        dd( $request->all() );
+        /* https://api.telegram.org/botXXXXXXXXXXXXXXXXXXXXXXX/getUpdates,
+        где, XXXXXXXXXXXXXXXXXXXXXXX - токен вашего бота, полученный ранее */
+        $token = "1195077988:AAGYUpfLUgHDNIBjWXNH8dYCCc2XSXizq7k";
+        $chat_id = "-426892560";
+       
+        
+        foreach ($orders as $order) {
+            $arr = [
+                'Фойдаланувчи: ' => 'test',
+                'Заказ раками: ' => 'test',
+                'Номи: ' => 'test',
+                'Манзил: ' => 'test',
+            ];
+            $txt = "";
+            foreach ($arr as $key => $value) {
+                $txt .= "<b>" . $key . "</b> " . $value . "%0A";
+            };
+           
+            fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt}", "r");
+        };
+    }
 }

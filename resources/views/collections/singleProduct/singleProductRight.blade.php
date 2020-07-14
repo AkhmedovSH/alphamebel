@@ -9,7 +9,7 @@
                 <li>Главная / </li>
             </a>
             <a>
-                <li>Спальни / </li>
+                <li>{{ $category->title }} / </li>
             </a>
             <a>
                 <li>{{ $product->title }}</li>
@@ -38,22 +38,22 @@
                 </div>
             </div>
             <div class="desc col-xl-5">
-                <h2>Кровать 2 спальная (1600мм)</h2>
+                <h2>{{ $product->title }}</h2>
                 <div class="size">
                     <p>Габариты:</p>
-                    <p>Ш: 1987</p>
-                    <p>Д: 2087</p>
-                    <p>В: 6505</p>
+                    <p>Ш: {{ $product->width }}</p>
+                    <p>Д: {{ $product->length }}</p>
+                    <p>В: {{ $product->height }}</p>
                 </div>
-                <p class="code">Код: 484700</p>
+                <p class="code">Код: {{ $product->code }}</p>
                 <div class="additem">
                     <div class="price">
-                        <p>21 356 000 сум</p>
-                        <p>30 345 000 сум</p>
+                        <p>{{ $product->sale != 0 ? number_format($product->price - (($product->price / 100) * $product->sale), 0) : $product->price }} сум</p>
+                        <p>{{ number_format($product->price) }} сум</p>
                     </div>
                     <div class="installment">
                         <span>В кредит от</span>
-                        <p>300 345 сум/мес</p>
+                        <p>{{ $product->calculate() }} сум/мес</p>
                     </div>
                     <form action="/cart" method="post">
                         @csrf
@@ -76,7 +76,6 @@
                             <a class="nav-link" id="pills-desc-tab" data-toggle="pill" href="#pills-desc" role="tab"
                                 aria-controls="pills-desc" aria-selected="false">описание</a>
                         </li>
-
                     </ul>
                     <div class="tab-content" id="pills-tabContent">
                         <div class="tab-pane fade show active" id="pills-properties" role="tabpanel"
@@ -90,6 +89,24 @@
                                     </li>
                                     @endforeach
                                 </ul>
+                                <div class="advantages">
+                                    <div class="item">
+                                        <img src="/assets/img/goods/innergoodselements/eco.svg" alt="">
+                                        <p>Экологически чистые материалы</p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="/assets/img/goods/innergoodselements/shipped.svg" alt="">
+                                        <p>Удобная доставка в ваш город</p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="/assets/img/goods/innergoodselements/review.svg" alt="">
+                                        <p>Честные отзывы о товаре</p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="/assets/img/goods/innergoodselements/credit-card.svg" alt="">
+                                        <p>Возможность оплаты картой</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="pills-desc" role="tabpanel" aria-labelledby="pills-desc-tab">
@@ -108,6 +125,8 @@
                 </div>
             </div>
         </div>
+
+
         <div class="from-collection">
             <div class="title">
                 <h3>Коллекция</h3>
@@ -116,17 +135,16 @@
             <div class="desc">
                 <div class="collection-card col-xl-4">
                     <div class="card">
-                        <a href="/collections/beds/raminibosco.html">
-                            <p class="title">Спальни “Ramini Bosko”</p>
+                        <a href="{{ url("/singleProductLeft/10/{$collectionItem->id}") }}">
+                            <p class="title">{{ $collectionItem->title }}</p>
                             <div class="img">
-                                <img src="/assets/img/collections/beds/raminibosco/ramini-bosko.jpg" alt="">
+                                <img src="{{asset('uploads/products/'). '/'. $collectionItem->image }}">
                             </div>
                         </a>
                         <div class="details">
                             <div class="price">
-                                <div>от 21 356 000 сум
-                                    <div class="more">?<span>Данные в котором сказано что входит в стоимость. К
-                                            примему кровать, 2шкафа, 6столов, 12стульев, 2комода и один пуфик</span>
+                                <div>от {{ $collectionItem->sale != 0 ? ($collectionItem->price / 100) * $collectionItem->sale : $collectionItem->price }} сум
+                                    <div class="more">?<span>{{ $collectionItem->note }}</span>
                                     </div>
                                 </div>
                             </div>
@@ -135,11 +153,12 @@
                 </div>
                 <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
                     <div class="goodinnercarousel owl-carousel">
+                        @foreach ($similarProducts as $item)
                         <div class="sub-content col-xl-12 col-12">
                             <div class="goodscard">
                                 <div class="img">
-                                    <a href="bed1.html" class="goodsimg-main">
-                                        <img src="/assets/img/goods/beds/item (2).jpg" alt="" class="main_img">
+                                    <a href="{{ url("/singleProductRight/{$category->id}/{$item->id}") }}" class="goodsimg-main">
+                                        <img src="{{asset('uploads/products/'). '/'. $item->image }}" class="main_img">
                                         <div class="img_markers">
                                             <img src="/assets/img/goods/beds/item (2).jpg" alt=""
                                                 class="img_item1">
@@ -147,34 +166,43 @@
                                                 class="img_item2">
                                         </div>
                                         <div class="stock">
-                                            <span>-10%</span>
-                                            <p>Распродажа</p>
+                                            @if ($item->sale !=0)
+                                                <span>-{{ $item->sale }}%</span>
+                                            @endif
+                                            @if ($item->sale !=0)
+                                                <p>Распродажа</p>
+                                            @endif
                                         </div>
                                 </div>
                                 <div class="desc">
-                                    <a href="bed1.html">
-                                        <p class="title">Кровать 2 сп. 1600 мм. изг. прямоуг</p>
-                                        <p class="code">Код: 484700</p>
-                                        <p class="gooddesc">Кровать 2-спальная, цвет темный из коллекции Флоренция,
-                                            Bogema,
-                                            Кровать
-                                            2-спальная, цвет темный из коллекции </p>
+                                    <a href="{{ url("/singleProductRight/{$category->id}/{$item->id}") }}">
+                                        <p class="title">{{ $item->title }}</p>
+                                        <p class="code">Код: {{ $item->code }}</p>
+                                        <p class="gooddesc">{!! $item->description !!}и </p>
                                         <div class="size">
-                                            <p>Ш: 1987</p>
-                                            <p>Д: 2087</p>
-                                            <p>В: 6505</p>
+                                            <p>Ш: {{ $item->width }}</p>
+                                            <p>Д: {{ $item->length }}</p>
+                                            <p>В: {{ $item->height }}</p>
                                         </div>
                                     </a>
                                     <div class="order">
                                         <div class="price">
-                                            <p>21 356 000 сум</p>
-                                            <p>30 345 000 сум</p>
+                                            <p>{{ $item->sale != 0 ? ($item->price / 100) * $item->sale : $item->price }} сум</p>
+                                            <p>{{ $item->price }} сум</p>
                                         </div>
-                                        <button class="add">КУПИТЬ</button>
+                                        <form action="/cart" method="post">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{ $product->id }}">
+                                            <input type="hidden" name="title" value="{{ $product->title }}">
+                                            <input type="hidden" name="price" value="{{ $product->price }}">
+                                            <input type="hidden" name="sale" value="{{ $product->sale }}">
+                                            <button type="submit" class="add">Купить</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

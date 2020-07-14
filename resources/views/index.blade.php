@@ -116,7 +116,7 @@
             <div class="desc col-xl-7 col-lg-7 col-md-7">
                 <h2>Дизайн - проекты типовых квартир</h2>
                 <p>Мы предлагаем интересные готовые решения для ваших квартир.</p>
-                <a href="projectsFlat.html">ГОТОВЫЕ РЕШЕНИЯ</a>
+                <a href="/projectsFlat">ГОТОВЫЕ РЕШЕНИЯ</a>
             </div>
         </div>
     </div>
@@ -125,7 +125,7 @@
             <div class="desc col-xl-7 col-lg-7 col-md-6">
                 <h2>Виртуальный дизайнер онлайн</h2>
                 <p>Загрузи рисунок комнаты от руки и получи бесплатный 3D-проект от дизайнера!</p>
-                <a href="virtual_design.html">ОТПРАВИТЬ РИСУНОК</a>
+                <a href="/virtualDesign">ОТПРАВИТЬ РИСУНОК</a>
             </div>
             <img class="col-xl-4 col-lg-4 col-md-4" src="assets/img/main/virtual.png">
         </div>

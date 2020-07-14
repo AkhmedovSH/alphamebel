@@ -19,6 +19,7 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/test', 'HomeController@test')->name('test');
 Route::get('/stock_inner/{slug}', 'HomeController@stock_inner')->name('stock_inner');
+Route::post('/makeOrder', 'CartController@orderSendTelegram')->name('orderSendTelegram');
 
 Route::get('/about', 'StaticPageController@about');
 Route::get('/dealers', 'StaticPageController@dealers');
@@ -37,6 +38,13 @@ Route::get('/socialMedia', 'StaticPageController@socialMedia');
 Route::get('/suppliers', 'StaticPageController@suppliers');
 Route::get('/vacancy', 'StaticPageController@vacancy');
 Route::get('/wearechoosen', 'StaticPageController@wearechoosen');
+Route::get('/public_offer', 'StaticPageController@public_offer');
+Route::get('/catalogs', 'StaticPageController@catalogs');
+Route::get('/ideas', 'StaticPageController@ideas');
+Route::get('/ideasInner', 'StaticPageController@ideasInner');
+Route::get('/ideasInnerBlock', 'StaticPageController@ideasInnerBlock');
+Route::get('/projectsFlat', 'StaticPageController@projectsFlat');
+Route::get('/virtualDesign', 'StaticPageController@virtualDesign');
 
 //Route::get('empty', function (){Cart::destroy();});
 Route::get('/cart', 'CartController@index')->name('cart');
@@ -46,7 +54,8 @@ Route::patch('/cart/update', 'CartController@update')->name('cart.update');
 
 /************************** CATEGORIES **************************/
 Route::get('/products/{category_id}', 'ProductController@products');
-Route::get('/singleProduct/{category_id}/{product_id}', 'ProductController@singleProduct');
+Route::get('/singleProductLeft/{category_id}/{product_id}', 'ProductController@singleProductLeft');
+Route::get('/singleProductRight/{category_id}/{product_id}', 'ProductController@singleProductRight');
 
 Route::get('/offices', 'ProductController@offices');
 
@@ -60,9 +69,6 @@ Route::get('/mattress/{category_id}', 'ProductController@mattress');
 Route::get('/wardobes/{category_id}', 'ProductController@wardobesBedsComods');
 Route::get('/beds/{category_id}', 'ProductController@wardobesBedsComods');
 Route::get('/comods/{category_id}', 'ProductController@wardobesBedsComods');
-
-
-
 
 Route::get('/single-right-product/{category_id}/{product_id}', 'ProductController@singleRightProduct');
 /************************** CATEGORIES **************************/

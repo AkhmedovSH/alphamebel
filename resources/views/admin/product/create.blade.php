@@ -30,6 +30,11 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="exampleInputEmail1">Скидка (Не обязательно)</label>
+                            <input type="number" class="form-control" id="exampleInputEmail1" name="sale" value="{{old('sale')}}">
+                        </div>
+
+                        <div class="form-group">
                             <label for="exampleInputFile">Лицевая картинка jpeg jpg png (300x300)</label>
                             <input type="file" id="exampleInputFile" name="image">
                         </div>
@@ -61,6 +66,10 @@
                     </div>
 
                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Код продукта (Не обязательно)</label>
+                            <input type="number" class="form-control" name="code" value="{{old('code')}}">
+                        </div>
                         <div class="form-group">
                             <label>Ширина (Не обязательно)</label>
                             <input type="number" class="form-control" name="width" value="{{old('width')}}">

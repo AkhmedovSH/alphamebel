@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $data = Product::orderBy('id', 'DESC')->paginate(10);
+        $data = Product::orderBy('id', 'DESC')->get();
 
         return view('admin.product.index', compact('data'));
     }
@@ -48,9 +48,10 @@ class ProductController extends Controller
     {
         $data = Product::find($id);
         $attributes = Attribute::pluck('title', 'id')->all();
+        $selectedAttributes = Attribute::whereIn('id', $data->attribute_ids)->pluck('id')->all();
         $categories = Category::pluck('title', 'id')->all();
-        //$images = json_decode($data->images);
-        return view('admin.product.edit', compact('data', 'attributes', 'categories'));
+        //dd($attributes, $selectedAttributes);
+        return view('admin.product.edit', compact('data', 'attributes', 'categories', 'selectedAttributes'));
     }
 
     /**

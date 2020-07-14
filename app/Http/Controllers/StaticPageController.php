@@ -74,4 +74,32 @@ class StaticPageController extends Controller
         return view('static_pages/wearechoosen');
     }
 
+    public function public_offer() {
+        return view('static_pages/publicOffer');
+    }
+
+    public function catalogs() {
+        return view('static_pages/catalogs');
+    }
+
+    public function ideas() {
+        return view('static_pages/ideas');
+    }
+
+    public function ideasInner() {
+        return view('static_pages/ideasInner');
+    }
+
+    public function ideasInnerBlock() {
+        return view('static_pages/ideasInnerBlock');
+    }
+
+    public function projectsFlat() {
+        return view('static_pages/projectsFlat');
+    }
+
+    public function virtualDesign() {
+        return view('static_pages/virtualDesign');
+    }
+
 }

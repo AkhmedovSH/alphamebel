@@ -4001,7 +4001,10 @@ var render = function() {
                     {
                       attrs: {
                         href:
-                          "/singleProduct/" + _vm.category.id + "/" + product.id
+                          "/singleProductLeft/" +
+                          _vm.category.id +
+                          "/" +
+                          product.id
                       }
                     },
                     [
@@ -4054,7 +4057,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -4572,7 +4575,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -4605,7 +4608,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -4656,7 +4659,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProduct/" +
+                                "/singleProductRight/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id
@@ -4917,7 +4920,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -4950,7 +4953,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -5001,7 +5004,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProduct/" +
+                                "/singleProductRight/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id
@@ -5242,7 +5245,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -5275,7 +5278,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -5326,7 +5329,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProduct/" +
+                                "/singleProductRight/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id
@@ -5567,7 +5570,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -5600,7 +5603,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -5651,7 +5654,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProduct/" +
+                                "/singleProductRight/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id
@@ -5892,7 +5895,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -5925,7 +5928,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -5976,7 +5979,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProduct/" +
+                                "/singleProductRight/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id
@@ -6217,7 +6220,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -6250,7 +6253,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -6301,7 +6304,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProduct/" +
+                                "/singleProductRight/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id
@@ -6542,7 +6545,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -6575,7 +6578,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -6626,7 +6629,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProduct/" +
+                                "/singleProductRight/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id
@@ -6867,7 +6870,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -6900,7 +6903,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -6951,7 +6954,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProduct/" +
+                                "/singleProductRight/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id
@@ -7192,7 +7195,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -7225,7 +7228,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -7276,7 +7279,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProduct/" +
+                                "/singleProductRight/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id
@@ -7517,7 +7520,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -7550,7 +7553,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -7601,7 +7604,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProduct/" +
+                                "/singleProductRight/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id
@@ -7840,7 +7843,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -7873,7 +7876,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -7924,7 +7927,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProduct/" +
+                                "/singleProductRight/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id
@@ -8163,7 +8166,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -8196,7 +8199,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProduct/" +
+                              "/singleProductRight/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -8247,7 +8250,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProduct/" +
+                                "/singleProductRight/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id

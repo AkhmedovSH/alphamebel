@@ -32,13 +32,22 @@
                             <input type="number" class="form-control" id="exampleInputEmail1" name="price" value="{{$data->price}}">
                         </div>
                         <div class="form-group">
+                            <label for="exampleInputEmail1">Скидка (Не обязательно)</label>
+                            <input type="number" class="form-control" id="exampleInputEmail1" name="sale" value="{{$data->sale}}">
+                        </div>
+                        <div class="form-group">
                             <img src="{{$data->getImage()}}" alt="" class="img-responsive" width="200">
                             <label for="exampleInputFile">Лицевая картинка</label>
                             <input type="file" id="exampleInputFile" name="image">
-
-                            <p class="help-block">Какое-нибудь уведомление о форматах..</p>
                         </div>
                         <div class="form-group">
+                            @if($data->images != null)
+                                <div style="display: flex; overflow: auto">
+                                    @foreach (json_decode($data['images']) as $item)
+                                        <img src="{{ asset('uploads/products/'). '/'. $item->image }}" class="img-responsive" width="100">
+                                    @endforeach
+                                </div>
+                            @endif
                             <label for="exampleInputFile">Выбор нескольких картинок (зажимая Ctrl) (300x300)</label>
                             <input type="file" id="exampleInputFile" name="images[]" multiple>
                         </div>
@@ -54,7 +63,7 @@
                             <label>Свойства</label>
                             {{Form::select('attribute_ids[]',
                              $attributes,
-                             null,
+                             $selectedAttributes,
                              ['class' => 'form-control select2', 'multiple'])}}
                         </div>
 
@@ -65,6 +74,10 @@
                     </div>
 
                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Код продукта (Не обязательно)</label>
+                            <input type="number" class="form-control" name="code" value="{{$data->code}}">
+                        </div>
                         <div class="form-group">
                             <label>Ширина (Не обязательно)</label>
                             <input type="number" class="form-control" name="width" value="{{$data->width}}">
