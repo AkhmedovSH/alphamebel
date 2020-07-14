@@ -39,12 +39,11 @@
                         <a :href="'/singleProductRight/' + category.id + '/' + product.id" class="goodsimg-main card_main">
                              <img :src="'/uploads/products/' + product.image"  class="main_img">
                         </a>
-                        <div class="img_markers">
-                            <img src="/assets/img/goods/sofa/sofas.jpg" class="img_item1">
-                            <img src="/assets/img/goods/beds/item (3).jpg" class="img_item2">
+                        <div class="img_markers" v-if="product.two_images != null">
+                            <img :src="'/uploads/products/' + item.image" class="img_item1" v-for="(item, index) in JSON.parse(product.two_images)" :key="index">
                         </div>
                         <div class="stock">
-                            <span v-if="product.sale != 0">-10%</span>
+                            <span v-if="product.sale != 0">-{{ product.sale }}%</span>
                             <p v-if="product.sale != 0">Распродажа</p>
                         </div>
                     </div>

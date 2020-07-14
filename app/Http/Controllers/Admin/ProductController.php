@@ -41,6 +41,7 @@ class ProductController extends Controller
         $data = Product::add($request->all());
         $data->uploadImage($request->file('image'));
         $data->uploadMultipleImages($request->file('images'));
+        $data->uploadTwoImages($request->file('two_images'));
         return redirect()->route('product.index');
     }
 
@@ -74,6 +75,7 @@ class ProductController extends Controller
         $data->edit($request->all());
         $data->uploadImage($request->file('image'));
         $data->uploadMultipleImages($request->file('images'));
+        $data->uploadTwoImages($request->file('two_images'));
         return redirect()->route('product.index');
     }
 

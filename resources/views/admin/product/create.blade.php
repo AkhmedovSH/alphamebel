@@ -35,11 +35,11 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleInputFile">Лицевая картинка jpeg jpg png (300x300)</label>
+                            <label for="exampleInputFile">Лицевая картинка jpeg jpg png</label>
                             <input type="file" id="exampleInputFile" name="image">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputFile">Выбор нескольких картинок (зажимая Ctrl) (300x300)</label>
+                            <label for="exampleInputFile">Выбор нескольких картинок (зажимая Ctrl)</label>
                             <input type="file" id="exampleInputFile" name="images[]" multiple>
                         </div>
                         <div class="form-group">
@@ -81,6 +81,10 @@
                         <div class="form-group">
                             <label>Длина (Не обязательно)</label>
                             <input type="number" class="form-control" name="length" value="{{old('length')}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputFile">Выбор 2 картинок (зажимая Ctrl)</label>
+                            <input type="file" id="exampleInputFile" name="two_images[]" multiple>
                         </div>
                     </div>
 

@@ -1176,7 +1176,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -1293,7 +1292,6 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-//
 //
 //
 //
@@ -1574,7 +1572,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -1691,7 +1688,6 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-//
 //
 //
 //
@@ -1972,7 +1968,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -2089,7 +2084,6 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-//
 //
 //
 //
@@ -2370,7 +2364,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -2487,7 +2480,6 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-//
 //
 //
 //
@@ -2767,7 +2759,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes'],
   data: function data() {
@@ -2965,7 +2956,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -3082,7 +3072,6 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-//
 //
 //
 //
@@ -4934,11 +4923,31 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(1, true),
+                      product.two_images != null
+                        ? _c(
+                            "div",
+                            { staticClass: "img_markers" },
+                            _vm._l(JSON.parse(product.two_images), function(
+                              item,
+                              index
+                            ) {
+                              return _c("img", {
+                                key: index,
+                                staticClass: "img_item1",
+                                attrs: {
+                                  src: "/uploads/products/" + item.image
+                                }
+                              })
+                            }),
+                            0
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "stock" }, [
                         product.sale != 0
-                          ? _c("span", [_vm._v("-10%")])
+                          ? _c("span", [
+                              _vm._v("-" + _vm._s(product.sale) + "%")
+                            ])
                           : _vm._e(),
                         _vm._v(" "),
                         product.sale != 0
@@ -5021,7 +5030,7 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ]
       )
     ])
@@ -5037,22 +5046,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img_markers" }, [
-      _c("img", {
-        staticClass: "img_item1",
-        attrs: { src: "/assets/img/goods/sofa/sofas.jpg" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img_item2",
-        attrs: { src: "/assets/img/goods/beds/item (3).jpg" }
       })
     ])
   },
@@ -5259,11 +5252,31 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(1, true),
+                      product.two_images != null
+                        ? _c(
+                            "div",
+                            { staticClass: "img_markers" },
+                            _vm._l(JSON.parse(product.two_images), function(
+                              item,
+                              index
+                            ) {
+                              return _c("img", {
+                                key: index,
+                                staticClass: "img_item1",
+                                attrs: {
+                                  src: "/uploads/products/" + item.image
+                                }
+                              })
+                            }),
+                            0
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "stock" }, [
                         product.sale != 0
-                          ? _c("span", [_vm._v("-10%")])
+                          ? _c("span", [
+                              _vm._v("-" + _vm._s(product.sale) + "%")
+                            ])
                           : _vm._e(),
                         _vm._v(" "),
                         product.sale != 0
@@ -5346,7 +5359,7 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ]
       )
     ])
@@ -5362,22 +5375,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img_markers" }, [
-      _c("img", {
-        staticClass: "img_item1",
-        attrs: { src: "/assets/img/goods/sofa/sofas.jpg" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img_item2",
-        attrs: { src: "/assets/img/goods/beds/item (3).jpg" }
       })
     ])
   },
@@ -5584,11 +5581,31 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(1, true),
+                      product.two_images != null
+                        ? _c(
+                            "div",
+                            { staticClass: "img_markers" },
+                            _vm._l(JSON.parse(product.two_images), function(
+                              item,
+                              index
+                            ) {
+                              return _c("img", {
+                                key: index,
+                                staticClass: "img_item1",
+                                attrs: {
+                                  src: "/uploads/products/" + item.image
+                                }
+                              })
+                            }),
+                            0
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "stock" }, [
                         product.sale != 0
-                          ? _c("span", [_vm._v("-10%")])
+                          ? _c("span", [
+                              _vm._v("-" + _vm._s(product.sale) + "%")
+                            ])
                           : _vm._e(),
                         _vm._v(" "),
                         product.sale != 0
@@ -5671,7 +5688,7 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ]
       )
     ])
@@ -5687,22 +5704,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img_markers" }, [
-      _c("img", {
-        staticClass: "img_item1",
-        attrs: { src: "/assets/img/goods/sofa/sofas.jpg" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img_item2",
-        attrs: { src: "/assets/img/goods/beds/item (3).jpg" }
       })
     ])
   },
@@ -5909,11 +5910,31 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(1, true),
+                      product.two_images != null
+                        ? _c(
+                            "div",
+                            { staticClass: "img_markers" },
+                            _vm._l(JSON.parse(product.two_images), function(
+                              item,
+                              index
+                            ) {
+                              return _c("img", {
+                                key: index,
+                                staticClass: "img_item1",
+                                attrs: {
+                                  src: "/uploads/products/" + item.image
+                                }
+                              })
+                            }),
+                            0
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "stock" }, [
                         product.sale != 0
-                          ? _c("span", [_vm._v("-10%")])
+                          ? _c("span", [
+                              _vm._v("-" + _vm._s(product.sale) + "%")
+                            ])
                           : _vm._e(),
                         _vm._v(" "),
                         product.sale != 0
@@ -5996,7 +6017,7 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ]
       )
     ])
@@ -6012,22 +6033,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img_markers" }, [
-      _c("img", {
-        staticClass: "img_item1",
-        attrs: { src: "/assets/img/goods/sofa/sofas.jpg" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img_item2",
-        attrs: { src: "/assets/img/goods/beds/item (3).jpg" }
       })
     ])
   },
@@ -6234,11 +6239,31 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(1, true),
+                      product.two_images != null
+                        ? _c(
+                            "div",
+                            { staticClass: "img_markers" },
+                            _vm._l(JSON.parse(product.two_images), function(
+                              item,
+                              index
+                            ) {
+                              return _c("img", {
+                                key: index,
+                                staticClass: "img_item1",
+                                attrs: {
+                                  src: "/uploads/products/" + item.image
+                                }
+                              })
+                            }),
+                            0
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "stock" }, [
                         product.sale != 0
-                          ? _c("span", [_vm._v("-10%")])
+                          ? _c("span", [
+                              _vm._v("-" + _vm._s(product.sale) + "%")
+                            ])
                           : _vm._e(),
                         _vm._v(" "),
                         product.sale != 0
@@ -6321,7 +6346,7 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ]
       )
     ])
@@ -6337,22 +6362,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img_markers" }, [
-      _c("img", {
-        staticClass: "img_item1",
-        attrs: { src: "/assets/img/goods/sofa/sofas.jpg" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img_item2",
-        attrs: { src: "/assets/img/goods/beds/item (3).jpg" }
       })
     ])
   },
@@ -6559,11 +6568,31 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(1, true),
+                      product.two_images != null
+                        ? _c(
+                            "div",
+                            { staticClass: "img_markers" },
+                            _vm._l(JSON.parse(product.two_images), function(
+                              item,
+                              index
+                            ) {
+                              return _c("img", {
+                                key: index,
+                                staticClass: "img_item1",
+                                attrs: {
+                                  src: "/uploads/products/" + item.image
+                                }
+                              })
+                            }),
+                            0
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "stock" }, [
                         product.sale != 0
-                          ? _c("span", [_vm._v("-10%")])
+                          ? _c("span", [
+                              _vm._v("-" + _vm._s(product.sale) + "%")
+                            ])
                           : _vm._e(),
                         _vm._v(" "),
                         product.sale != 0
@@ -6646,7 +6675,7 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ]
       )
     ])
@@ -6662,22 +6691,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img_markers" }, [
-      _c("img", {
-        staticClass: "img_item1",
-        attrs: { src: "/assets/img/goods/sofa/sofas.jpg" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img_item2",
-        attrs: { src: "/assets/img/goods/beds/item (3).jpg" }
       })
     ])
   },
@@ -6884,11 +6897,31 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(1, true),
+                      product.two_images != null
+                        ? _c(
+                            "div",
+                            { staticClass: "img_markers" },
+                            _vm._l(JSON.parse(product.two_images), function(
+                              item,
+                              index
+                            ) {
+                              return _c("img", {
+                                key: index,
+                                staticClass: "img_item1",
+                                attrs: {
+                                  src: "/uploads/products/" + item.image
+                                }
+                              })
+                            }),
+                            0
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "stock" }, [
                         product.sale != 0
-                          ? _c("span", [_vm._v("-10%")])
+                          ? _c("span", [
+                              _vm._v("-" + _vm._s(product.sale) + "%")
+                            ])
                           : _vm._e(),
                         _vm._v(" "),
                         product.sale != 0
@@ -6971,7 +7004,7 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ]
       )
     ])
@@ -6987,22 +7020,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img_markers" }, [
-      _c("img", {
-        staticClass: "img_item1",
-        attrs: { src: "/assets/img/goods/sofa/sofas.jpg" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img_item2",
-        attrs: { src: "/assets/img/goods/beds/item (3).jpg" }
       })
     ])
   },
@@ -7209,11 +7226,31 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(1, true),
+                      product.two_images != null
+                        ? _c(
+                            "div",
+                            { staticClass: "img_markers" },
+                            _vm._l(JSON.parse(product.two_images), function(
+                              item,
+                              index
+                            ) {
+                              return _c("img", {
+                                key: index,
+                                staticClass: "img_item1",
+                                attrs: {
+                                  src: "/uploads/products/" + item.image
+                                }
+                              })
+                            }),
+                            0
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "stock" }, [
                         product.sale != 0
-                          ? _c("span", [_vm._v("-10%")])
+                          ? _c("span", [
+                              _vm._v("-" + _vm._s(product.sale) + "%")
+                            ])
                           : _vm._e(),
                         _vm._v(" "),
                         product.sale != 0
@@ -7296,7 +7333,7 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ]
       )
     ])
@@ -7312,22 +7349,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img_markers" }, [
-      _c("img", {
-        staticClass: "img_item1",
-        attrs: { src: "/assets/img/goods/sofa/sofas.jpg" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img_item2",
-        attrs: { src: "/assets/img/goods/beds/item (3).jpg" }
       })
     ])
   },
@@ -7534,11 +7555,31 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(1, true),
+                      product.two_images != null
+                        ? _c(
+                            "div",
+                            { staticClass: "img_markers" },
+                            _vm._l(JSON.parse(product.two_images), function(
+                              item,
+                              index
+                            ) {
+                              return _c("img", {
+                                key: index,
+                                staticClass: "img_item1",
+                                attrs: {
+                                  src: "/uploads/products/" + item.image
+                                }
+                              })
+                            }),
+                            0
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "stock" }, [
                         product.sale != 0
-                          ? _c("span", [_vm._v("-10%")])
+                          ? _c("span", [
+                              _vm._v("-" + _vm._s(product.sale) + "%")
+                            ])
                           : _vm._e(),
                         _vm._v(" "),
                         product.sale != 0
@@ -7621,7 +7662,7 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ]
       )
     ])
@@ -7637,22 +7678,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img_markers" }, [
-      _c("img", {
-        staticClass: "img_item1",
-        attrs: { src: "/assets/img/goods/sofa/sofas.jpg" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img_item2",
-        attrs: { src: "/assets/img/goods/beds/item (3).jpg" }
       })
     ])
   },
@@ -7857,11 +7882,31 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(1, true),
+                      product.two_images != null
+                        ? _c(
+                            "div",
+                            { staticClass: "img_markers" },
+                            _vm._l(JSON.parse(product.two_images), function(
+                              item,
+                              index
+                            ) {
+                              return _c("img", {
+                                key: index,
+                                staticClass: "img_item1",
+                                attrs: {
+                                  src: "/uploads/products/" + item.image
+                                }
+                              })
+                            }),
+                            0
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "stock" }, [
                         product.sale != 0
-                          ? _c("span", [_vm._v("-10%")])
+                          ? _c("span", [
+                              _vm._v("-" + _vm._s(product.sale) + "%")
+                            ])
                           : _vm._e(),
                         _vm._v(" "),
                         product.sale != 0
@@ -7944,7 +7989,7 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ]
       )
     ])
@@ -7960,22 +8005,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img_markers" }, [
-      _c("img", {
-        staticClass: "img_item1",
-        attrs: { src: "/assets/img/goods/sofa/sofas.jpg" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img_item2",
-        attrs: { src: "/assets/img/goods/beds/item (3).jpg" }
       })
     ])
   },
@@ -8180,11 +8209,31 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(1, true),
+                      product.two_images != null
+                        ? _c(
+                            "div",
+                            { staticClass: "img_markers" },
+                            _vm._l(JSON.parse(product.two_images), function(
+                              item,
+                              index
+                            ) {
+                              return _c("img", {
+                                key: index,
+                                staticClass: "img_item1",
+                                attrs: {
+                                  src: "/uploads/products/" + item.image
+                                }
+                              })
+                            }),
+                            0
+                          )
+                        : _vm._e(),
                       _vm._v(" "),
                       _c("div", { staticClass: "stock" }, [
                         product.sale != 0
-                          ? _c("span", [_vm._v("-10%")])
+                          ? _c("span", [
+                              _vm._v("-" + _vm._s(product.sale) + "%")
+                            ])
                           : _vm._e(),
                         _vm._v(" "),
                         product.sale != 0
@@ -8267,7 +8316,7 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ]
       )
     ])
@@ -8283,22 +8332,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img_markers" }, [
-      _c("img", {
-        staticClass: "img_item1",
-        attrs: { src: "/assets/img/goods/sofa/sofas.jpg" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img_item2",
-        attrs: { src: "/assets/img/goods/beds/item (3).jpg" }
       })
     ])
   },

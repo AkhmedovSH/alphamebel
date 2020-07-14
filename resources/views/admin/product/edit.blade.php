@@ -90,6 +90,17 @@
                             <label>Длина (Не обязательно)</label>
                             <input type="number" class="form-control" name="length" value="{{$data->length}}">
                         </div>
+                        <div class="form-group">
+                            @if($data->two_images != null)
+                                <div style="display: flex; overflow: auto">
+                                    @foreach (json_decode($data['two_images']) as $item)
+                                        <img src="{{ asset('uploads/products/'). '/'. $item->image }}" class="img-responsive" width="100">
+                                    @endforeach
+                                </div>
+                            @endif
+                            <label for="exampleInputFile">Выбор 2 картинок (зажимая Ctrl)</label>
+                            <input type="file" id="exampleInputFile" name="two_images[]" multiple>
+                        </div>
                     </div>
 
                     <div class="col-md-12">

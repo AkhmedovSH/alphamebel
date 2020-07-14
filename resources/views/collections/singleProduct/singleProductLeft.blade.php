@@ -94,8 +94,11 @@
                                 <img src="{{asset('uploads/products/'). '/'. $product->image }}" class="main_img">
                             </a>
                             <div class="img_markers">
-                                <img src="/assets/img/goods/beds/item (2).jpg" alt="" class="img_item1">
-                                <img src="/assets/img/goods/beds/item (3).jpg" alt="" class="img_item2">
+                                @if($item->two_images != null)
+                                    @foreach (json_decode($item['two_images']) as $item)
+                                    <img src="{{ asset('uploads/products/'). '/'. $item->image }}" class="img_item1">
+                                    @endforeach
+                                @endif
                             </div>
                             <div class="stock">
                                 @if ($item->sale !=0)

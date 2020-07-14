@@ -9,12 +9,15 @@ use Illuminate\Support\Facades\Storage;
 class Product extends Model
 {
 
-    protected $fillable = ['title', 'description', 'attribute_ids',
-     'category_id', 'price', 'note', 'code', 'sale', 'width', 'height', 'length'];
+    protected $fillable = [
+    'title', 'description', 'attribute_ids',
+    'category_id', 'price', 'note', 'code', 'sale', 'width', 'height', 'length'
+    ];
 
     protected $casts = [
         'attribute_ids' => 'array',
         'images' => 'array',
+        'two_images' => 'array',
     ];
 
     public static function add($fields)
@@ -65,6 +68,15 @@ class Product extends Model
         }
     }
 
+    public function removeTwoImages(){
+        if ($this->two_images != null) {
+            $images = json_decode($this->two_images, true);
+            foreach($images as $item) {
+                unlink('uploads/products/'. $item['image']);
+            }
+        }
+    }
+
     function uploadImage($image){
         if ($image == null) { return; }
         $this->removeImage();
@@ -83,12 +95,27 @@ class Product extends Model
         {
             $filename = rand(1000, 1000000000). '.' . $image->extension();
             $image->move('uploads/products/', $filename);
-            //array_push($names, $filename);  
             $names[$incI]['image'] = $filename;
             $incI++;
             
         }
         $this->images = json_encode($names);
+        $this->save();
+    }
+
+    public function uploadTwoImages($images) {
+        if ($images == null) { return; }
+        $names = array();
+        $incI = 0;
+        foreach($images as $image)
+        {
+            $filename = rand(1000, 1000000000). 123123 . '.' . $image->extension();
+            $image->move('uploads/products/', $filename);
+            $names[$incI]['image'] = $filename;
+            $incI++;
+            
+        }
+        $this->two_images = json_encode($names);
         $this->save();
     }
 

@@ -1,6 +1,8 @@
 @extends('layout')
 
-
+@push('styles')
+    <link rel="stylesheet" href="/assets/style/projects.css">
+@endpush
 @section('content')
 <main>
     <div class="projectsFlat container">
