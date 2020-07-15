@@ -61,7 +61,7 @@
                             </a>
                             <div class="order">
                                 <div class="price">
-                                    <p>{{ product.sale != 0 ? (product.price / 100) * product.sale : product.price }} сум</p>
+                                    <p>{{ product.sale != 0 ? (product.price - (product.price / 100) * product.sale).toFixed(0)  : product.price }} сум</p>
                                     <p>{{ product.price }} сум</p>
                                 </div>
                                 <a :href="'/singleProductRight/' + category.id + '/' + product.id" class="add">КУПИТЬ</a>

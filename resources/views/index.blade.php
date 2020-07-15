@@ -282,10 +282,11 @@
     <div class="leaveapp">
         <div class="container">
             <h2>ОСТАВИТЬ ЗАЯВКУ</h2>
-            <form action="" method="" class="col-xl-8">
-                <input type="text" placeholder="Имя" required>
-                <input type="number" placeholder="Номер телефона" required>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Комментарий"></textarea>
+            <form action="/sendRequest" method="POST" class="col-xl-8">
+                @csrf
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="number" name="phone" placeholder="Номер телефона" required>
+                <textarea name="comment" id="" cols="30" rows="10" placeholder="Комментарий"></textarea>
                 <button type="submit">Отправить</button>
             </form>
         </div>

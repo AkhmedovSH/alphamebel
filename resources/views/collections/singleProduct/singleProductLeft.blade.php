@@ -86,7 +86,7 @@
         </div>
         <div class="single-products col-xl-12">
             <div class="cards contents">
-                @foreach ($similarProducts as $item)
+                @foreach ($similarProducts as $key => $item)
                 <div class="sub-content col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="goodscard content">
                         <div class="img">
@@ -96,41 +96,41 @@
                             <div class="img_markers">
                                 @if($item->two_images != null)
                                     @foreach (json_decode($item['two_images']) as $item)
-                                    <img src="{{ asset('uploads/products/'). '/'. $item->image }}" class="img_item1">
+                                        <img src="{{ asset('uploads/products/'). '/'. $item->image }}" class="img_item1">
                                     @endforeach
                                 @endif
                             </div>
                             <div class="stock">
-                                @if ($item->sale !=0)
-                                    <span>-{{ $item->sale }}%</span>
+                                @if ($similarProducts[$key]['sale'] != 0)
+                                    <span>-{{ $similarProducts[$key]['sale'] }}%</span>
                                 @endif
-                                @if ($item->sale !=0)
+                                @if ($similarProducts[$key]['sale'] != 0)
                                     <p>Распродажа</p>
-                                @endif
+                                @endif  
                             </div>
                         </div>
                         <div class="desc">
-                            <a href="{{ url("/singleProductLeft/{$category->id}/{$item->id}") }}">
-                                <p class="title">{{ $item->title }}</p>
-                                <p class="code">Код: {{ $item->code }}</p>
-                                <p class="gooddesc">{!! $item->description !!}</p>
+                            <a href="{{ url("/singleProductLeft/{$category->id}/{$similarProducts[$key]['id']}") }}">
+                                <p class="title">{{ $similarProducts[$key]['title'] }}</p>
+                                <p class="code">Код: {{ $similarProducts[$key]['code'] }}</p>
+                                <p class="gooddesc">{!! $similarProducts[$key]['description'] !!}</p>
                                 <div class="size">
-                                    <p>Ш: {{ $item->width }}</p>
-                                    <p>Д: {{ $item->length }}</p>
-                                    <p>В: {{ $item->height }}</p>
+                                    <p>Ш: {{ $similarProducts[$key]['width'] }}</p>
+                                    <p>Д: {{ $similarProducts[$key]['length'] }}</p>
+                                    <p>В: {{ $similarProducts[$key]['height'] }}</p>
                                 </div>
                             </a>
                             <div class="order">
                                 <div class="price">
-                                    <p>{{ $item->sale != 0 ? number_format($item->price - (($item->price / 100) * $item->sale), 0) : $item->price }} сум</p>
-                                    <p>{{ number_format($item->price) }} сум</p>
+                                    <p>{{ $similarProducts[$key]['sale'] != 0 ? number_format($similarProducts[$key]['price'] - (($similarProducts[$key]['price'] / 100) * $similarProducts[$key]['sale']), 0) : $similarProducts[$key]['price'] }} сум</p>
+                                    <p>{{ number_format($similarProducts[$key]['price']) }} сум</p>
                                 </div>
                                 <form action="/cart" method="post">
                                     @csrf
-                                    <input type="hidden" name="id" value="{{ $item->id }}">
-                                    <input type="hidden" name="title" value="{{ $item->title }}">
-                                    <input type="hidden" name="price" value="{{ $item->price }}">
-                                    <input type="hidden" name="sale" value="{{ $item->sale }}">
+                                    <input type="hidden" name="id" value="{{ $similarProducts[$key]['id'] }}">
+                                    <input type="hidden" name="title" value="{{ $similarProducts[$key]['title'] }}">
+                                    <input type="hidden" name="price" value="{{ $similarProducts[$key]['price'] }}">
+                                    <input type="hidden" name="sale" value="{{ $similarProducts[$key]['sale'] }}">
                                     <button type="submit" class="add">Купить</button>
                                 </form>
                             </div>

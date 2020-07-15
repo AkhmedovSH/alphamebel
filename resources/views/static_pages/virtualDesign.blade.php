@@ -2,7 +2,8 @@
 
 
 @section('content')
-<form action="/" method="POST" id="form">
+<form action="/virtualDesign" method="POST" id="form">
+    @csrf
     <div class="virtual_design container">
         <div class="owl-carousel">
             <div><img src="/assets/img/virtual_design/slide_01.jpg" alt=""></div>
@@ -13,8 +14,8 @@
                 <img src="/assets/img/virtual_design/for_slide_04.png" alt="">
                 <h2 class="title">ОСТАВЬТЕ СВОЙ НОМЕР ТЕЛЕФОНА</h2>
                 <h2><span>И Я СВЯЖУСЬ С ВАМИ В ТЕЧЕНИЕ 2Х ЧАСОВ</span></h2>
-                <input type="text" placeholder="Имя" name="user_name" required>
-                <input type="number" name="user_phone" id="" placeholder="Номер телефона" required>
+                <input type="text" placeholder="Имя" name="name" required>
+                <input type="number" name="phone" id="" placeholder="Номер телефона" required>
                 <select id="" name="user_connection">
                     <option value="" disabled selected>Как с вами связаться</option>
                     <option value="Позвонить">Позвонить</option>
@@ -30,7 +31,7 @@
                     <h2><span>И я свяжусь с вами в течение 2х часов</span></h2>
                     <span>Если есть пожелания, расскажите о них здесь:</span>
                     <div class="commentholder">
-                        <textarea placeholder="" name="user_text"></textarea>
+                        <textarea placeholder="" name="comment"></textarea>
                         <input type="submit" value="Далее">
                     </div>
                 </div>

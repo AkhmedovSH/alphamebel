@@ -53,7 +53,7 @@
                         </a>
                         <div class="details">
                             <div class="price">
-                                <div>от {{ product.sale != 0 ? (product.price / 100) * product.sale : product.price }} сум
+                                <div>от {{ product.sale != 0 ? product.price - ((product.price / 100) * product.sale) : product.price }} сум
                                     <div class="more">?<span>{{ product.note }}</span>
                                     </div>
                                 </div>

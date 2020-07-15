@@ -4016,7 +4016,8 @@ var render = function() {
                           "от " +
                             _vm._s(
                               product.sale != 0
-                                ? (product.price / 100) * product.sale
+                                ? product.price -
+                                    (product.price / 100) * product.sale
                                 : product.price
                             ) +
                             " сум\r\n                                    "
@@ -4998,7 +4999,10 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (product.price / 100) * product.sale
+                                  ? (
+                                      product.price -
+                                      (product.price / 100) * product.sale
+                                    ).toFixed(0)
                                   : product.price
                               ) + " сум"
                             )
@@ -5327,7 +5331,10 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (product.price / 100) * product.sale
+                                  ? (
+                                      product.price -
+                                      (product.price / 100) * product.sale
+                                    ).toFixed(0)
                                   : product.price
                               ) + " сум"
                             )
@@ -5656,7 +5663,10 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (product.price / 100) * product.sale
+                                  ? (
+                                      product.price -
+                                      (product.price / 100) * product.sale
+                                    ).toFixed(0)
                                   : product.price
                               ) + " сум"
                             )
@@ -5985,7 +5995,10 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (product.price / 100) * product.sale
+                                  ? (
+                                      product.price -
+                                      (product.price / 100) * product.sale
+                                    ).toFixed(0)
                                   : product.price
                               ) + " сум"
                             )
@@ -6314,7 +6327,10 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (product.price / 100) * product.sale
+                                  ? (
+                                      product.price -
+                                      (product.price / 100) * product.sale
+                                    ).toFixed(0)
                                   : product.price
                               ) + " сум"
                             )
@@ -6643,7 +6659,10 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (product.price / 100) * product.sale
+                                  ? (
+                                      product.price -
+                                      (product.price / 100) * product.sale
+                                    ).toFixed(0)
                                   : product.price
                               ) + " сум"
                             )
@@ -6972,7 +6991,10 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (product.price / 100) * product.sale
+                                  ? (
+                                      product.price -
+                                      (product.price / 100) * product.sale
+                                    ).toFixed(0)
                                   : product.price
                               ) + " сум"
                             )
@@ -7301,7 +7323,10 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (product.price / 100) * product.sale
+                                  ? (
+                                      product.price -
+                                      (product.price / 100) * product.sale
+                                    ).toFixed(0)
                                   : product.price
                               ) + " сум"
                             )
@@ -7630,7 +7655,10 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (product.price / 100) * product.sale
+                                  ? (
+                                      product.price -
+                                      (product.price / 100) * product.sale
+                                    ).toFixed(0)
                                   : product.price
                               ) + " сум"
                             )
@@ -7957,7 +7985,10 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (product.price / 100) * product.sale
+                                  ? (
+                                      product.price -
+                                      (product.price / 100) * product.sale
+                                    ).toFixed(0)
                                   : product.price
                               ) + " сум"
                             )
@@ -8284,7 +8315,10 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (product.price / 100) * product.sale
+                                  ? (
+                                      product.price -
+                                      (product.price / 100) * product.sale
+                                    ).toFixed(0)
                                   : product.price
                               ) + " сум"
                             )

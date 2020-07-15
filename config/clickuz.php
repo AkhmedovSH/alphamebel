@@ -3,10 +3,10 @@ return [
     'provider' => [
         'endpoint' => 'https://api.click.uz/v2/merchant/',
         'click' => [
-            'merchant_id' => 9111,
-            'service_id' => 13457,
-            'user_id' => 12396,
-            'secret_key' => '0NQINrwuGYgK'
+            'merchant_id' => 11309,
+            'service_id' => 15788,
+            'user_id' => 16169,
+            'secret_key' => 'QjS2FvBvuEF6Ix'
         ]
     ],
 ];

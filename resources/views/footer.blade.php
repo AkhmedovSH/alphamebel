@@ -1,13 +1,14 @@
 <a href="#" id="to-top"></a>
 <div class="callmake">
     <div class="container">
-        <form action="" method="">
+        <form action="/recall" method="POST">
+            @csrf
             <div class="recall">
                 <img src="/assets/img/elements/phone-yellow.svg  " alt="">
                 <p>Перезвонить вам?</p>
             </div>
             <div id="callmakeitem" class="phone">
-                <input type="number" required placeholder="Номер телефона">
+                <input type="number" name="phone" required placeholder="Номер телефона">
                 <input id="personaldataagreement" type="checkbox" required checked>
                 <label for="personaldataagreement">
                     <p>Cогласие на обработку персональных данных</p>

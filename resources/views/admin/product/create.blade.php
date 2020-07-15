@@ -31,7 +31,7 @@
 
                         <div class="form-group">
                             <label for="exampleInputEmail1">Скидка (Не обязательно)</label>
-                            <input type="number" class="form-control" id="exampleInputEmail1" name="sale" value="{{old('sale')}}">
+                            <input type="number" class="form-control" id="exampleInputEmail1" name="sale">
                         </div>
 
                         <div class="form-group">

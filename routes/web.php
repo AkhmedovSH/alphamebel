@@ -19,7 +19,14 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/test', 'HomeController@test')->name('test');
 Route::get('/stock_inner/{slug}', 'HomeController@stock_inner')->name('stock_inner');
-Route::post('/makeOrder', 'CartController@orderSendTelegram')->name('orderSendTelegram');
+
+
+/* REQUEST CONTROLLER */
+Route::post('/order', 'RequestController@order')->name('order');
+Route::post('/recall', 'RequestController@recall')->name('recall');
+Route::post('/virtualDesign', 'RequestController@virtualDesign')->name('virtualDesign');
+Route::post('/sendRequest', 'RequestController@sendRequest')->name('sendRequest');// Оставить заявку index
+/* REQUEST CONTROLLER */
 
 Route::get('/about', 'StaticPageController@about');
 Route::get('/dealers', 'StaticPageController@dealers');

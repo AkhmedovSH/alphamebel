@@ -22,11 +22,13 @@ class Product extends Model
 
     public static function add($fields)
     {
-        
         $data = new static;
         
         $data->fill($fields);
         $data->attribute_ids = $fields['attribute_ids'];
+        if($fields['sale'] == null){
+            $data->sale = 0;
+        }
         $data->save();
         
         return $data;
@@ -34,7 +36,9 @@ class Product extends Model
 
     public function edit($fields)
     {
-        //dd($fields);
+        if($fields['sale'] == null){
+            $this->sale = 0;
+        }
         $this->fill($fields);
         $this->save();
     }
@@ -43,6 +47,7 @@ class Product extends Model
        
         $this->removeImage();
         $this->removeSliderImages();
+        $this->removeTwoImages();
         $this->delete();
     }
 

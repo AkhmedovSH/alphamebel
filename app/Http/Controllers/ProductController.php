@@ -27,6 +27,7 @@ class ProductController extends Controller
         $attributes = Attribute::whereIn('id', $product->attribute_ids)->with('filter')->get();
         $images = $this->parseImages($product->images);
         $similarProducts = Product::where('category_id', $product->category_id)->where('id', '!=', $product->id)->limit(8)->get();
+        //dd($similarProducts);
         return view('collections/singleProduct/singleProductLeft', compact('product', 'attributes', 'category', 'images', 'similarProducts'));
     }
 
