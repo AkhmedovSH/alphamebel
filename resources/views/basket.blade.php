@@ -3,7 +3,6 @@
 @section('content')
 <main>
     <div class="basket container">
-        <form action="" method="">
             <h1 class="col-auto">корзина</h1>
             <p class="client-code col-auto">код клиента: 484700</p>
             <ul>
@@ -77,11 +76,14 @@
             <div class="order-form container">
                 <h2>укажите ваши данные</h2>
                 <div class="form">
-                <form action="https://checkout.paycom.uz/" method="POST"></form>
+                <form id="form1" action="https://my.click.uz/services/pay" method="GET">
                     @csrf
-                    <input type="hidden" name="merchant" value="5c860c0dd5d7060e1b219632" autocomplete="off">
-                    <input type="hidden" name="amount" autocomplete="off" value="{{ Cart::subtotal() }}">
-                    <input type="hidden" name="callback" value="http://shatura.uz/profile/payment" autocomplete="off">
+                    <input type="hidden" name="amount" value="{{ Cart::subtotal(0, 0, '') }}">
+                    <input type="hidden" name="merchant_id" value="11309">
+                    <input type="hidden" name="merchant_user_id" value="16169">
+                    <input type="hidden" name="service_id" value="15788">
+                    <input type="hidden" name="transaction_param" value="1">
+                    <input type="hidden" name="return_url" value="http://shatura.uz/">
 
                     <input required class="name" type="text" placeholder="Ф.И.О">
                     <input required class="tel" type="number" placeholder="Номер телефона">
@@ -112,17 +114,8 @@
                         же даете своё согласие на сбор и обработку персональных данных.</p>
                 </form>
                 </div>
-                {{-- <form action="https://my.click.uz/services/pay" id="click_form" class="form" method="get">
-                    <input type="hidden" name="amount" value="10000">
-                    <input type="hidden" name="merchant_id" value="9111">
-                    <input type="hidden" name="merchant_user_id" value="12396">
-                    <input type="hidden" name="service_id" value="13457">
-                    <input type="hidden" name="transaction_param" value="1">
-                    <input type="hidden" name="return_url" value="https://answers.uz/profile/payment">
-                    <button type="submit" class="btn btn-success">Click orqali to'lash</button>
-                </form> --}}
+                
             </div>
-        </form>
     </div>
 </main>
 @endsection

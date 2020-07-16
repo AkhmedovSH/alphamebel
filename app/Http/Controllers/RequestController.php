@@ -47,13 +47,14 @@ class RequestController extends Controller
             'Раздел: ' => 'Виртуальный дизайн',
             'Имя: ' => $request->name,
             'Номер телефона: ' => $request->phone,
-            'Комментарий: ' => $request->comment,
+            'Записка: ' => $request->comment,
+            'Свзяь: ' => $request->user_connection,
         ];
         $txt = "";
         foreach ($arr as $key => $value) {
             $txt .= "<b>" . $key . "</b> " . $value . "%0A";
         };
-
+       
         fopen("https://api.telegram.org/bot{$this->token}/sendMessage?chat_id={$this->chat_id}&parse_mode=html&text={$txt}", "r");
         return redirect()->back();
     }
