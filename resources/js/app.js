@@ -29,6 +29,7 @@ Vue.component('product-mattress-component', require('./components/ProductMattres
 
 
 Vue.component('product-wardobes-beds-comads-component', require('./components/ProductWardobesBedsComadsComponent.vue').default);
+Vue.component('basket-component', require('./components/BasketComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

@@ -76,7 +76,7 @@
             <div class="order-form container">
                 <h2>укажите ваши данные</h2>
                 <div class="form">
-                <form id="form1" action="https://my.click.uz/services/pay" method="GET">
+                <form id="form1" action="/makePayment" method="post">
                     @csrf
                     <input type="hidden" name="amount" value="{{ Cart::subtotal(0, 0, '') }}">
                     <input type="hidden" name="merchant_id" value="11309">
@@ -88,7 +88,7 @@
                     <input required class="name" type="text" placeholder="Ф.И.О">
                     <input required class="tel" type="number" placeholder="Номер телефона">
                     <input class="email" type="email" placeholder="E-mail">
-                    <select required class="paytype" name="payment-method">
+                    <select required class="paytype" name="paytype">
                         <option value disabled selected>Способ оплаты</option>
                         <option value="cash">Наличными или через терминал курьеру</option>
                         <option value="payme">PayMe</option>

@@ -21,6 +21,10 @@ Route::get('/test', 'HomeController@test')->name('test');
 Route::get('/stock_inner/{slug}', 'HomeController@stock_inner')->name('stock_inner');
 
 
+Route::post('/makePayment', 'RequestController@makePayment');
+
+
+
 /* REQUEST CONTROLLER */
 Route::post('/order', 'RequestController@order')->name('order');
 Route::post('/recall', 'RequestController@recall')->name('recall');

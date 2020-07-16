@@ -75,4 +75,15 @@ class RequestController extends Controller
         fopen("https://api.telegram.org/bot{$this->token}/sendMessage?chat_id={$this->chat_id}&parse_mode=html&text={$txt}", "r");
         return redirect()->back();
     }
+
+    public function makePayment(Request $request) {
+
+        if($request->paytype == 'click') {
+            $url = 'https://my.click.uz/services/pay?service_id='
+            . $request->service_id . '&merchant_id=' . $request->merchant_id . 
+            '&amount=' . $request->amount . '&transaction_param=' . $request->phone . '&return_url=http://shatura.uz/payment-success/' . $request->phone;
+        }
+        return redirect($url);
+       
+    }
 }
