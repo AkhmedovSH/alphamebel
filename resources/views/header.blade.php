@@ -11,16 +11,26 @@
             </ul>
         </div>
         <div class="alpha-navigation__sale col-xl-2">
-            <a href="sales.html">
+            <a href="/sales">
                 <img src="/assets/img/elements/sale.svg" alt="">
                 <p>Распродажа</p>
             </a>
         </div>
         <div class="alpha-navigation__search col-xl-3 ">
-            <input required type="text" placeholder="Поиск...">
-            <a href="#!">
-                <img src="/assets/img/elements/search-black.svg" alt="">
-            </a>
+            <form class="d-flex" action="/search" method="post">
+                @csrf
+                <input required type="text" name="text" placeholder="Поиск...">
+                <button type="submit" 
+                style="background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;">
+                    <img src="/assets/img/elements/search-black.svg" alt="">
+                </button>
+            </form>
         </div>
     </div>
     <div class="brand-navigation container">

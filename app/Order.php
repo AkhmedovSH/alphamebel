@@ -8,12 +8,16 @@ class Order extends Model
 {
     protected $fillable = ['phone', 'amount', 'payment_type', 'name', 'email', 'address', 'comment', 'status'];
 
-    public static function add($fields)
+    public static function add($fields, $product_ids)
     {
         $data = new static;
         $data->fill($fields);
-        $data->save();
 
+        if(isset($product_ids)){
+            $data->product_ids = json_encode($product_ids);
+        }
+
+        $data->save();
         return $data;
     }
 

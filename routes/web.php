@@ -19,10 +19,12 @@ Auth::routes();
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/test', 'HomeController@test')->name('test');
 Route::get('/stock_inner/{slug}', 'HomeController@stock_inner')->name('stock_inner');
+Route::get('/sales', 'HomeController@sales')->name('sales');
+Route::post('/search', 'HomeController@search')->name('search');
 
 
 Route::post('/makePayment', 'RequestController@makePayment');
-Route::post('/payment-success/{phone}', 'RequestController@paymentSuccess');
+Route::get('/payment-success/{phone}', 'RequestController@paymentSuccess');
 
 
 
