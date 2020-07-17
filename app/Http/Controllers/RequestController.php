@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Order;
 use Illuminate\Http\Request;
 
 class RequestController extends Controller
@@ -77,13 +78,29 @@ class RequestController extends Controller
     }
 
     public function makePayment(Request $request) {
-
-        if($request->paytype == 'click') {
+        $order = Order::add($request->all());
+        
+        if($request->payment_type == 'click' || $request->payment_type == 'payme') {
             $url = 'https://my.click.uz/services/pay?service_id='
             . $request->service_id . '&merchant_id=' . $request->merchant_id . 
             '&amount=' . $request->amount . '&transaction_param=' . $request->phone . '&return_url=http://shatura.uz/payment-success/' . $request->phone;
+
+            return redirect($url);
         }
-        return redirect($url);
+
+        if($request->payment_type == 'cash') {
+            $weRecallText = 'Ожидайте звонка наши менеджеры свяжуться с вами.';
+            return view('paymentSuccess', compact('weRecallText'));
+        }
+        
+       
+    }
+
+    public function paymentSuccess($phone) {
+        $order = Order::where('phone', $phone)->first();
+        $order->status = 1;
+        $order->save();
+        return view('paymentSuccess');
        
     }
 }

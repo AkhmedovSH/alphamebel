@@ -22,6 +22,7 @@ Route::get('/stock_inner/{slug}', 'HomeController@stock_inner')->name('stock_inn
 
 
 Route::post('/makePayment', 'RequestController@makePayment');
+Route::post('/payment-success/{phone}', 'RequestController@paymentSuccess');
 
 
 

@@ -82,13 +82,12 @@
                     <input type="hidden" name="merchant_id" value="11309">
                     <input type="hidden" name="merchant_user_id" value="16169">
                     <input type="hidden" name="service_id" value="15788">
-                    <input type="hidden" name="transaction_param" value="1">
                     <input type="hidden" name="return_url" value="http://shatura.uz/">
 
-                    <input required class="name" type="text" placeholder="Ф.И.О">
-                    <input required class="tel" type="number" placeholder="Номер телефона">
-                    <input class="email" type="email" placeholder="E-mail">
-                    <select required class="paytype" name="paytype">
+                    <input required class="name" type="text" name="name" placeholder="Ф.И.О">
+                    <input required class="tel" name="phone" type="number" placeholder="Номер телефона">
+                    <input class="email" type="email" name="email" placeholder="E-mail">
+                    <select required class="paytype" name="payment_type">
                         <option value disabled selected>Способ оплаты</option>
                         <option value="cash">Наличными или через терминал курьеру</option>
                         <option value="payme">PayMe</option>
