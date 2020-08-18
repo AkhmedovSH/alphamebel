@@ -86,6 +86,14 @@
                             <label for="exampleInputFile">Выбор 2 картинок (зажимая Ctrl)</label>
                             <input type="file" id="exampleInputFile" name="two_images[]" multiple>
                         </div>
+                        <div class="form-group">
+                            <label>Свойства</label>
+                            {{Form::select('collection_product_ids[]',
+                                $products,
+                                null,
+                                ['class' => 'form-control select2', 'multiple'])
+                            }}
+                        </div>
                     </div>
 
                     <div class="col-md-12">

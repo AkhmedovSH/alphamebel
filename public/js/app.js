@@ -4281,15 +4281,19 @@ var render = function() {
                             ) +
                             " сум\r\n                                    "
                         ),
-                        _c("div", { staticClass: "more" }, [
-                          _vm._v("?"),
-                          _c("span", [_vm._v(_vm._s(product.note))])
-                        ])
+                        product.note
+                          ? _c("div", { staticClass: "more" }, [
+                              _vm._v("?"),
+                              _c("span", [_vm._v(_vm._s(product.note))])
+                            ])
+                          : _vm._e()
                       ]),
                       _vm._v(" "),
-                      _c("span", { staticClass: "old-price" }, [
-                        _vm._v(_vm._s(product.price) + " сум")
-                      ])
+                      product.sale != 0
+                        ? _c("span", { staticClass: "old-price" }, [
+                            _vm._v(_vm._s(product.price) + " сум")
+                          ])
+                        : _vm._e()
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "credit-price" }, [
@@ -4306,7 +4310,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProductRight/" +
+                              "/singleProductLeft/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -4878,18 +4882,28 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "size" }, [
-                            _c("p", [_vm._v("Ш: " + _vm._s(product.width))]),
+                            product.width
+                              ? _c("p", [_vm._v("Ш: " + _vm._s(product.width))])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Д: " + _vm._s(product.length))]),
+                            product.length
+                              ? _c("p", [
+                                  _vm._v("Д: " + _vm._s(product.length))
+                                ])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("В: " + _vm._s(product.height))])
+                            product.height
+                              ? _c("p", [
+                                  _vm._v("В: " + _vm._s(product.height))
+                                ])
+                              : _vm._e()
                           ])
                         ]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("p", [
+                          _c("span", [
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
@@ -4899,7 +4913,9 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                          product.sale != 0
+                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                            : _vm._e()
                         ]),
                         _vm._v(" "),
                         _c(
@@ -5243,18 +5259,28 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "size" }, [
-                            _c("p", [_vm._v("Ш: " + _vm._s(product.width))]),
+                            product.width
+                              ? _c("p", [_vm._v("Ш: " + _vm._s(product.width))])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Д: " + _vm._s(product.length))]),
+                            product.length
+                              ? _c("p", [
+                                  _vm._v("Д: " + _vm._s(product.length))
+                                ])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("В: " + _vm._s(product.height))])
+                            product.height
+                              ? _c("p", [
+                                  _vm._v("В: " + _vm._s(product.height))
+                                ])
+                              : _vm._e()
                           ])
                         ]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("p", [
+                          _c("span", [
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
@@ -5267,7 +5293,9 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                          product.sale != 0
+                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                            : _vm._e()
                         ]),
                         _vm._v(" "),
                         _c(
@@ -5575,18 +5603,28 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "size" }, [
-                            _c("p", [_vm._v("Ш: " + _vm._s(product.width))]),
+                            product.width
+                              ? _c("p", [_vm._v("Ш: " + _vm._s(product.width))])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Д: " + _vm._s(product.length))]),
+                            product.length
+                              ? _c("p", [
+                                  _vm._v("Д: " + _vm._s(product.length))
+                                ])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("В: " + _vm._s(product.height))])
+                            product.height
+                              ? _c("p", [
+                                  _vm._v("В: " + _vm._s(product.height))
+                                ])
+                              : _vm._e()
                           ])
                         ]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("p", [
+                          _c("span", [
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
@@ -5599,7 +5637,9 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                          product.sale != 0
+                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                            : _vm._e()
                         ]),
                         _vm._v(" "),
                         _c(
@@ -5907,18 +5947,28 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "size" }, [
-                            _c("p", [_vm._v("Ш: " + _vm._s(product.width))]),
+                            product.width
+                              ? _c("p", [_vm._v("Ш: " + _vm._s(product.width))])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Д: " + _vm._s(product.length))]),
+                            product.length
+                              ? _c("p", [
+                                  _vm._v("Д: " + _vm._s(product.length))
+                                ])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("В: " + _vm._s(product.height))])
+                            product.height
+                              ? _c("p", [
+                                  _vm._v("В: " + _vm._s(product.height))
+                                ])
+                              : _vm._e()
                           ])
                         ]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("p", [
+                          _c("span", [
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
@@ -5931,7 +5981,9 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                          product.sale != 0
+                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                            : _vm._e()
                         ]),
                         _vm._v(" "),
                         _c(
@@ -6239,18 +6291,28 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "size" }, [
-                            _c("p", [_vm._v("Ш: " + _vm._s(product.width))]),
+                            product.width
+                              ? _c("p", [_vm._v("Ш: " + _vm._s(product.width))])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Д: " + _vm._s(product.length))]),
+                            product.length
+                              ? _c("p", [
+                                  _vm._v("Д: " + _vm._s(product.length))
+                                ])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("В: " + _vm._s(product.height))])
+                            product.height
+                              ? _c("p", [
+                                  _vm._v("В: " + _vm._s(product.height))
+                                ])
+                              : _vm._e()
                           ])
                         ]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("p", [
+                          _c("span", [
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
@@ -6263,7 +6325,9 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                          product.sale != 0
+                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                            : _vm._e()
                         ]),
                         _vm._v(" "),
                         _c(
@@ -6571,18 +6635,28 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "size" }, [
-                            _c("p", [_vm._v("Ш: " + _vm._s(product.width))]),
+                            product.width
+                              ? _c("p", [_vm._v("Ш: " + _vm._s(product.width))])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Д: " + _vm._s(product.length))]),
+                            product.length
+                              ? _c("p", [
+                                  _vm._v("Д: " + _vm._s(product.length))
+                                ])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("В: " + _vm._s(product.height))])
+                            product.height
+                              ? _c("p", [
+                                  _vm._v("В: " + _vm._s(product.height))
+                                ])
+                              : _vm._e()
                           ])
                         ]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("p", [
+                          _c("span", [
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
@@ -6595,7 +6669,9 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                          product.sale != 0
+                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                            : _vm._e()
                         ]),
                         _vm._v(" "),
                         _c(
@@ -6903,18 +6979,28 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "size" }, [
-                            _c("p", [_vm._v("Ш: " + _vm._s(product.width))]),
+                            product.width
+                              ? _c("p", [_vm._v("Ш: " + _vm._s(product.width))])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Д: " + _vm._s(product.length))]),
+                            product.length
+                              ? _c("p", [
+                                  _vm._v("Д: " + _vm._s(product.length))
+                                ])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("В: " + _vm._s(product.height))])
+                            product.height
+                              ? _c("p", [
+                                  _vm._v("В: " + _vm._s(product.height))
+                                ])
+                              : _vm._e()
                           ])
                         ]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("p", [
+                          _c("span", [
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
@@ -6927,7 +7013,9 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                          product.sale != 0
+                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                            : _vm._e()
                         ]),
                         _vm._v(" "),
                         _c(
@@ -7235,18 +7323,28 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "size" }, [
-                            _c("p", [_vm._v("Ш: " + _vm._s(product.width))]),
+                            product.width
+                              ? _c("p", [_vm._v("Ш: " + _vm._s(product.width))])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Д: " + _vm._s(product.length))]),
+                            product.length
+                              ? _c("p", [
+                                  _vm._v("Д: " + _vm._s(product.length))
+                                ])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("В: " + _vm._s(product.height))])
+                            product.height
+                              ? _c("p", [
+                                  _vm._v("В: " + _vm._s(product.height))
+                                ])
+                              : _vm._e()
                           ])
                         ]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("p", [
+                          _c("span", [
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
@@ -7259,7 +7357,9 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                          product.sale != 0
+                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                            : _vm._e()
                         ]),
                         _vm._v(" "),
                         _c(
@@ -7567,18 +7667,28 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "size" }, [
-                            _c("p", [_vm._v("Ш: " + _vm._s(product.width))]),
+                            product.width
+                              ? _c("p", [_vm._v("Ш: " + _vm._s(product.width))])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Д: " + _vm._s(product.length))]),
+                            product.length
+                              ? _c("p", [
+                                  _vm._v("Д: " + _vm._s(product.length))
+                                ])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("В: " + _vm._s(product.height))])
+                            product.height
+                              ? _c("p", [
+                                  _vm._v("В: " + _vm._s(product.height))
+                                ])
+                              : _vm._e()
                           ])
                         ]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("p", [
+                          _c("span", [
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
@@ -7591,7 +7701,9 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                          product.sale != 0
+                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                            : _vm._e()
                         ]),
                         _vm._v(" "),
                         _c(
@@ -7899,18 +8011,28 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "size" }, [
-                            _c("p", [_vm._v("Ш: " + _vm._s(product.width))]),
+                            product.width
+                              ? _c("p", [_vm._v("Ш: " + _vm._s(product.width))])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Д: " + _vm._s(product.length))]),
+                            product.length
+                              ? _c("p", [
+                                  _vm._v("Д: " + _vm._s(product.length))
+                                ])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("В: " + _vm._s(product.height))])
+                            product.height
+                              ? _c("p", [
+                                  _vm._v("В: " + _vm._s(product.height))
+                                ])
+                              : _vm._e()
                           ])
                         ]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("p", [
+                          _c("span", [
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
@@ -7923,7 +8045,9 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                          product.sale != 0
+                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                            : _vm._e()
                         ]),
                         _vm._v(" "),
                         _c(
@@ -8229,18 +8353,28 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "size" }, [
-                            _c("p", [_vm._v("Ш: " + _vm._s(product.width))]),
+                            product.width
+                              ? _c("p", [_vm._v("Ш: " + _vm._s(product.width))])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Д: " + _vm._s(product.length))]),
+                            product.length
+                              ? _c("p", [
+                                  _vm._v("Д: " + _vm._s(product.length))
+                                ])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("В: " + _vm._s(product.height))])
+                            product.height
+                              ? _c("p", [
+                                  _vm._v("В: " + _vm._s(product.height))
+                                ])
+                              : _vm._e()
                           ])
                         ]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("p", [
+                          _c("span", [
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
@@ -8253,7 +8387,9 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                          product.sale != 0
+                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                            : _vm._e()
                         ]),
                         _vm._v(" "),
                         _c(
@@ -8559,18 +8695,28 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "size" }, [
-                            _c("p", [_vm._v("Ш: " + _vm._s(product.width))]),
+                            product.width
+                              ? _c("p", [_vm._v("Ш: " + _vm._s(product.width))])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("Д: " + _vm._s(product.length))]),
+                            product.length
+                              ? _c("p", [
+                                  _vm._v("Д: " + _vm._s(product.length))
+                                ])
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("p", [_vm._v("В: " + _vm._s(product.height))])
+                            product.height
+                              ? _c("p", [
+                                  _vm._v("В: " + _vm._s(product.height))
+                                ])
+                              : _vm._e()
                           ])
                         ]
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("p", [
+                          _c("span", [
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
@@ -8583,7 +8729,9 @@ var render = function() {
                             )
                           ]),
                           _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                          product.sale != 0
+                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
+                            : _vm._e()
                         ]),
                         _vm._v(" "),
                         _c(
@@ -20820,15 +20968,14 @@ var app = new Vue({
 /*!*****************************************************!*\
   !*** ./resources/js/components/BasketComponent.vue ***!
   \*****************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _BasketComponent_vue_vue_type_template_id_68bf2a88___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BasketComponent.vue?vue&type=template&id=68bf2a88& */ "./resources/js/components/BasketComponent.vue?vue&type=template&id=68bf2a88&");
 /* harmony import */ var _BasketComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BasketComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/BasketComponent.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _BasketComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _BasketComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -20858,7 +21005,7 @@ component.options.__file = "resources/js/components/BasketComponent.vue"
 /*!******************************************************************************!*\
   !*** ./resources/js/components/BasketComponent.vue?vue&type=script&lang=js& ***!
   \******************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -26,7 +26,8 @@ class ProductController extends Controller
     {
         $attributes = Attribute::pluck('title', 'id')->all();
         $categories = Category::pluck('title', 'id')->all();
-        return view('admin.product.create', compact('attributes', 'categories'));
+        $products = Product::pluck('title', 'id')->all();
+        return view('admin.product.create', compact('attributes', 'categories', 'products'));
     }
 
     public function store(Request $request)
@@ -51,8 +52,14 @@ class ProductController extends Controller
         $attributes = Attribute::pluck('title', 'id')->all();
         $selectedAttributes = Attribute::whereIn('id', $data->attribute_ids)->pluck('id')->all();
         $categories = Category::pluck('title', 'id')->all();
+        $products = Product::pluck('title', 'id')->all();
+        if($data->collection_product_ids != null) {
+            $selectedProducts = Product::whereIn('id', $data->collection_product_ids)->pluck('id')->all();
+        }else {
+            $selectedProducts = [];
+        }
         //dd($attributes, $selectedAttributes);
-        return view('admin.product.edit', compact('data', 'attributes', 'categories', 'selectedAttributes'));
+        return view('admin.product.edit', compact('data', 'attributes', 'categories', 'selectedAttributes', 'products', 'selectedProducts'));
     }
 
     /**

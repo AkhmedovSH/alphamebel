@@ -54,15 +54,15 @@
                                 <p class="code">Код: {{ product.code }}</p>
                                 <p class="gooddesc" v-html="product.description"></p>
                                 <div class="size">
-                                    <p>Ш: {{ product.width }}</p>
-                                    <p>Д: {{ product.length }}</p>
-                                    <p>В: {{ product.height }}</p>
+                                    <p v-if="product.width">Ш: {{ product.width }}</p>
+                                    <p v-if="product.length">Д: {{ product.length }}</p>
+                                    <p v-if="product.height">В: {{ product.height }}</p>
                                 </div>
                             </a>
                             <div class="order">
                                 <div class="price">
-                                    <p>{{ product.sale != 0 ? (product.price - (product.price / 100) * product.sale).toFixed(0)  : product.price }} сум</p>
-                                    <p>{{ product.price }} сум</p>
+                                    <span>{{ product.sale != 0 ? (product.price - (product.price / 100) * product.sale).toFixed(0)  : product.price }} сум</span>
+                                    <p v-if="product.sale != 0">{{ product.price }} сум</p>
                                 </div>
                                 <a :href="'/singleProductRight/' + category.id + '/' + product.id" class="add">КУПИТЬ</a>
                             </div>

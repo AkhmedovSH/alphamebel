@@ -72,13 +72,13 @@
                             <p>
                                 {!! $product->description !!}
                             </p>
-                            <h3>текстуры</h3>
+                            {{-- <h3>текстуры</h3>
                             <div class="texture">
                                 <img src="/assets/img/collections/beds/raminibosco/texture.png" alt="">
                             </div>
                             <p class="front">
                                 Корпус и фасад: Ясень Aveiro Esche декапе
-                            </p>
+                            </p> --}}
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                 <div class="sub-content col-xl-3 col-lg-6 col-md-6 col-sm-12">
                     <div class="goodscard content">
                         <div class="img">
-                            <a href="{{ url("/singleProductLeft/{$category->id}/{$item->id}") }}" class="goodsimg-main card_main">
+                            <a href="{{ url("/singleProductRight/{$category->id}/{$item->id}") }}" class="goodsimg-main card_main">
                                 <img src="{{asset('uploads/products/'). '/'. $product->image }}" class="main_img">
                             </a>
                             <div class="img_markers">
@@ -110,20 +110,30 @@
                             </div>
                         </div>
                         <div class="desc">
-                            <a href="{{ url("/singleProductLeft/{$category->id}/{$similarProducts[$key]['id']}") }}">
+                            <a href="{{ url("/singleProductRight/{$category->id}/{$similarProducts[$key]['id']}") }}">
                                 <p class="title">{{ $similarProducts[$key]['title'] }}</p>
+                                @if ($similarProducts[$key]['code'] != null)
                                 <p class="code">Код: {{ $similarProducts[$key]['code'] }}</p>
-                                <p class="gooddesc">{!! $similarProducts[$key]['description'] !!}</p>
+                                @endif
+                                <p class="gooddesc">{!! mb_strimwidth($similarProducts[$key]['description'], 0, 150, "...");  !!}</p>
                                 <div class="size">
-                                    <p>Ш: {{ $similarProducts[$key]['width'] }}</p>
-                                    <p>Д: {{ $similarProducts[$key]['length'] }}</p>
-                                    <p>В: {{ $similarProducts[$key]['height'] }}</p>
+                                    @if ($similarProducts[$key]['width'] != null)
+                                        <p>Ш: {{ $similarProducts[$key]['width'] }}</p>
+                                    @endif
+                                    @if ($similarProducts[$key]['length'] != null)
+                                        <p>Д: {{ $similarProducts[$key]['length'] }}</p>
+                                    @endif
+                                    @if ($similarProducts[$key]['height'] != null)
+                                        <p>В: {{ $similarProducts[$key]['height'] }}</p>
+                                    @endif
                                 </div>
                             </a>
                             <div class="order">
                                 <div class="price">
-                                    <p>{{ $similarProducts[$key]['sale'] != 0 ? number_format($similarProducts[$key]['price'] - (($similarProducts[$key]['price'] / 100) * $similarProducts[$key]['sale']), 0) : $similarProducts[$key]['price'] }} сум</p>
-                                    <p>{{ number_format($similarProducts[$key]['price']) }} сум</p>
+                                    <span>{{ $similarProducts[$key]['sale'] != 0 ? number_format($similarProducts[$key]['price'] - (($similarProducts[$key]['price'] / 100) * $similarProducts[$key]['sale']), 0) : $similarProducts[$key]['price'] }} сум</span>
+                                    @if ($similarProducts[$key]['sale'] != 0)
+                                        <p>{{ number_format($similarProducts[$key]['price']) }} сум</p>
+                                    @endif
                                 </div>
                                 <form action="/cart" method="post">
                                     @csrf

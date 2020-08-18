@@ -10,12 +10,13 @@ class Product extends Model
 {
 
     protected $fillable = [
-    'title', 'description', 'attribute_ids',
+    'title', 'description', 'attribute_ids', 'isCollection', 'collection_product_ids',
     'category_id', 'price', 'note', 'code', 'sale', 'width', 'height', 'length'
     ];
 
     protected $casts = [
         'attribute_ids' => 'array',
+        'collection_product_ids' => 'array',
         'images' => 'array',
         'two_images' => 'array',
     ];
@@ -26,6 +27,13 @@ class Product extends Model
         
         $data->fill($fields);
         $data->attribute_ids = $fields['attribute_ids'];
+        if($fields['collection_product_ids']) {
+            $data->isCollection = 1;
+            $data->collection_product_ids = $fields['collection_product_ids'];
+        }else{
+            $data->isCollection = 0;
+            $data->collection_product_ids = null;
+        }
         if($fields['sale'] == null){
             $data->sale = 0;
         }
@@ -38,6 +46,13 @@ class Product extends Model
     {
         if($fields['sale'] == null){
             $this->sale = 0;
+        }
+        if(isset($fields['collection_product_ids'])) {
+            $this->isCollection = 1;
+            $this->collection_product_ids = $fields['collection_product_ids'];
+        }else{
+            $this->isCollection = 0;
+            $this->collection_product_ids = null;
         }
         $this->fill($fields);
         $this->save();

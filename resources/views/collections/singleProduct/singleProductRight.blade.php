@@ -41,15 +41,23 @@
                 <h2>{{ $product->title }}</h2>
                 <div class="size">
                     <p>Габариты:</p>
-                    <p>Ш: {{ $product->width }}</p>
-                    <p>Д: {{ $product->length }}</p>
-                    <p>В: {{ $product->height }}</p>
+                    @if ($product->width != null)
+                        <p>Ш: {{ $product->width }}</p>
+                    @endif
+                    @if ($product->length != null)
+                        <p>Д: {{ $product->length }}</p>
+                    @endif
+                    @if ($product->height != null)
+                        <p>В: {{ $product->height }}</p>
+                    @endif
                 </div>
                 <p class="code">Код: {{ $product->code }}</p>
                 <div class="additem">
                     <div class="price">
-                        <p>{{ $product->sale != 0 ? number_format($product->price - (($product->price / 100) * $product->sale), 0) : $product->price }} сум</p>
-                        <p>{{ number_format($product->price) }} сум</p>
+                        <span>{{ $product->sale != 0 ? number_format($product->price - (($product->price / 100) * $product->sale), 0) : $product->price }} сум</span>
+                        @if ($product->sale != 0)
+                            <p>{{ number_format($product->price) }} сум</p>
+                        @endif
                     </div>
                     <div class="installment">
                         <span>В кредит от</span>
@@ -113,13 +121,13 @@
                             <p>
                                 {!! $product->description !!}
                             </p>
-                            <h3>текстуры</h3>
+                            {{-- <h3>текстуры</h3>
                             <div class="texture">
                                 <img src="/assets/img/collections/beds/raminibosco/texture.png" >
                             </div>
                             <p class="front">
                                 Корпус и фасад: Ясень Aveiro Esche декапе
-                            </p>
+                            </p> --}}
                         </div>
                     </div>
                 </div>
@@ -144,8 +152,9 @@
                         <div class="details">
                             <div class="price">
                                 <div>от {{ $collectionItem->sale != 0 ? ($collectionItem->price / 100) * $collectionItem->sale : $collectionItem->price }} сум
-                                    <div class="more">?<span>{{ $collectionItem->note }}</span>
-                                    </div>
+                                    @if ($collectionItem->note != null)
+                                    <div class="more">?<span>{{ $collectionItem->note }}</span></div>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -180,15 +189,23 @@
                                         <p class="code">Код: {{ $item->code }}</p>
                                         <p class="gooddesc">{!! $item->description !!}и </p>
                                         <div class="size">
-                                            <p>Ш: {{ $item->width }}</p>
-                                            <p>Д: {{ $item->length }}</p>
-                                            <p>В: {{ $item->height }}</p>
+                                            @if ($item->width != null)
+                                                <p>Ш: {{ $item->width }}</p>
+                                            @endif
+                                            @if ($item->length != null)
+                                                <p>Д: {{ $item->length }}</p>
+                                            @endif
+                                            @if ($item->height != null)
+                                                <p>В: {{ $item->height }}</p>
+                                            @endif
                                         </div>
                                     </a>
                                     <div class="order">
                                         <div class="price">
-                                            <p>{{ $item->sale != 0 ? ($item->price / 100) * $item->sale : $item->price }} сум</p>
-                                            <p>{{ $item->price }} сум</p>
+                                            <span>{{ $item->sale != 0 ? ($item->price / 100) * $item->sale : $item->price }} сум</span>
+                                            @if ($item->sale != 0)
+                                                <p>{{ $item->price }} сум</p>
+                                            @endif
                                         </div>
                                         <form action="/cart" method="post">
                                             @csrf

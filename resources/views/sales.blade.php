@@ -69,9 +69,15 @@
                                             <p class="code">Код: {{ $product->code }}</p>
                                             <p class="gooddesc">{!! $product->description !!}</p>
                                             <div class="size">
-                                                <p>Ш: {{ $product->width }}</p>
-                                                <p>Д: {{ $product->length }}</p>
-                                                <p>В: {{ $product->height }}</p>
+                                                @if ($product->width != null)
+                                                    <p>Ш: {{ $product->width }}</p>
+                                                @endif
+                                                @if ($product->length != null)
+                                                    <p>Д: {{ $product->length }}</p>
+                                                @endif
+                                                @if ($product->height != null)
+                                                    <p>В: {{ $product->height }}</p>
+                                                @endif
                                             </div>
                                         </a>
                                         <div class="order">

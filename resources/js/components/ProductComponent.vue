@@ -54,17 +54,17 @@
                         <div class="details">
                             <div class="price">
                                 <div>от {{ product.sale != 0 ? product.price - ((product.price / 100) * product.sale) : product.price }} сум
-                                    <div class="more">?<span>{{ product.note }}</span>
+                                    <div class="more" v-if="product.note">?<span>{{ product.note }}</span>
                                     </div>
                                 </div>
-                                <span class="old-price">{{ product.price }} сум</span>
+                                <span class="old-price" v-if="product.sale != 0">{{ product.price }} сум</span>
                             </div>
                             <div class="credit-price">
                                 <div>
                                     <span>В кредит от</span>
                                     <p>{{ calculate(product) }} сум/мес</p>
                                 </div>
-                                <a :href="'/singleProductRight/' + category.id + '/' + product.id">
+                                <a :href="'/singleProductLeft/' + category.id + '/' + product.id">
                                     <button>ВЫБРАТЬ</button>
                                 </a>
                             </div>

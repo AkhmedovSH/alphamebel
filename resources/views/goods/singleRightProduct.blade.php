@@ -164,13 +164,13 @@
                                 комфортным и
                                 позволяет снимать излишнее напряжение после тяжелого дня.
                             </p>
-                            <h3>текстуры</h3>
+                            {{-- <h3>текстуры</h3>
                             <div class="texture">
                                 <img src="/assets/img/collections/beds/raminibosco/texture.png" alt="">
                             </div>
                             <p class="front">
                                 Корпус и фасад: Ясень Aveiro Esche декапе
-                            </p>
+                            </p> --}}
                         </div>
                     </div>
                 </div>
