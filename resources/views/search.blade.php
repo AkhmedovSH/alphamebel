@@ -21,7 +21,13 @@
     @if (count($data) > 0)
     <div class="single-products col-xl-12">
         @foreach ($data as $product)
-            <a class="col-xl-3 col-lg-4 col-md-6 col-sm-12" href="goods/beds/bed1.html">
+            <a class="col-xl-3 col-lg-4 col-md-6 col-sm-12" 
+            @if ($product->isCollection != 0)
+                href="{{route('singleProductLeft', ['category_id' => $product->category_id, 'product_id' => $product->id ])}}"
+                @else
+                href="{{route('singleProductRight', ['category_id' => $product->category_id, 'product_id' => $product->id ])}}"
+            @endif
+            >
                 <div class="card">
                     <div class="img">
                         <img src="{{asset('uploads/products/'). '/'. $product->image }}">
@@ -54,14 +60,19 @@
                                 <p>{{ number_format($product->price) }} сум</p>
                             @endif
                         </div>
-                        <form action="/cart" method="post">
-                            @csrf
-                            <input type="hidden" name="id" value="{{ $product->id }}">
-                            <input type="hidden" name="title" value="{{ $product->title }}">
-                            <input type="hidden" name="price" value="{{ $product->price }}">
-                            <input type="hidden" name="sale" value="{{ $product->sale }}">
-                            <button type="submit" class="add">КУПИТЬ</button>
-                        </form>
+                        @if ($product->isCollection != 1)
+                            <form action="/cart" method="post">
+                                @csrf
+                                <input type="hidden" name="id" value="{{ $product->id }}">
+                                <input type="hidden" name="title" value="{{ $product->title }}">
+                                <input type="hidden" name="price" value="{{ $product->price }}">
+                                <input type="hidden" name="sale" value="{{ $product->sale }}">
+                                <button type="submit" class="add">КУПИТЬ</button>
+                            </form>
+                        @else
+                            <button type="submit" class="add">Выбрать</button>
+                        @endif
+                        
                     </div>
                 </div>
             </a>

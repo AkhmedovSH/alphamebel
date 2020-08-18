@@ -51,7 +51,10 @@
                         <p>В: {{ $product->height }}</p>
                     @endif
                 </div>
-                <p class="code">Код: {{ $product->code }}</p>
+                @if ($product->code != null)
+                    <p class="code">Код: {{ $product->code }}</p>
+                @endif
+                
                 <div class="additem">
                     <div class="price">
                         <span>{{ $product->sale != 0 ? number_format($product->price - (($product->price / 100) * $product->sale), 0) : $product->price }} сум</span>
@@ -186,7 +189,9 @@
                                 <div class="desc">
                                     <a href="{{ url("/singleProductRight/{$category->id}/{$item->id}") }}">
                                         <p class="title">{{ $item->title }}</p>
-                                        <p class="code">Код: {{ $item->code }}</p>
+                                        @if ($item->code != null)
+                                            <p class="code">Код: {{ $item->code }}</p>
+                                        @endif
                                         <p class="gooddesc">{!! $item->description !!}и </p>
                                         <div class="size">
                                             @if ($item->width != null)

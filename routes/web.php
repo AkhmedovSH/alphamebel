@@ -68,9 +68,8 @@ Route::patch('/cart/update', 'CartController@update')->name('cart.update');
 
 /************************** CATEGORIES **************************/
 Route::get('/products/{category_id}', 'ProductController@products');
-Route::get('/singleProductLeft/{category_id}/{product_id}', 'ProductController@singleProductLeft');
-Route::get('/singleProductRight/{category_id}/{product_id}', 'ProductController@singleProductRight');
-
+Route::get('/singleProductLeft/{category_id}/{product_id}', 'ProductController@singleProductLeft')->name('singleProductLeft');
+Route::get('/singleProductRight/{category_id}/{product_id}', 'ProductController@singleProductRight')->name('singleProductRight');
 Route::get('/offices', 'ProductController@offices');
 
 Route::get('/kitchens', 'ProductController@kitchens');
