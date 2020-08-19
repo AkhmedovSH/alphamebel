@@ -32,7 +32,7 @@ class CartController extends Controller
     {
         $cart = Cart::update($request->prodid, $request->quantity);
         //session()->flash('success_message', 'Quantity was updated succesfully!');
-        return response()->json(['success' => 'aaa']);
+        return response()->json(['success' => 'success']);
     }
 
     public function destroy($id)

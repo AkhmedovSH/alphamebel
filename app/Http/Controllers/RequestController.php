@@ -96,25 +96,40 @@ class RequestController extends Controller
 
         if($request->payment_type == 'cash') {
             $order = Order::where('phone', $request->phone)->first();
-            //$orders = Product::whereIn('id', json_decode($order->product_ids))->get();
+            $orders = Product::whereIn('id', json_decode($order->product_ids))->get();
+
             $order->status = 1;
             $order->save();
+            $arr = [
+                'Раздел: ' => 'Корзина',
+                'Имя: ' => $order->name,
+                'Номер телефона: ' => $request->phone,
+                'Комментарий: ' => $order->comment,
+            ];
+            $txt = "";
+            foreach ($arr as $key => $value) {
+                $txt .= "<b>" . $key . "</b> " . $value . "\n";
+            };
+            foreach (Cart::content() as $key => $value) {
+                $txt .= "<b>" .  $value->name . "</b> " . $value->model->price . 'сум | ' . $value->qty . ' шт' . "\n";
+            }
     
-            // $arr = [
-            //     'Раздел: ' => 'Корзина',
-            //     'Имя: ' => $order->name,
-            //     'Номер телефона: ' => $request->phone,
-            //     'Комментарий: ' => $order->phone,
-            // ];
-            // $txt = "";
-            // foreach ($arr as $key => $value) {
-            //     $txt .= "<b>" . $key . "</b> " . $value . "%0A";
-            // };
-            // foreach ($orders as $key => $value) {
-            //     $txt .= "<b>" . $key  . "</b> " . $value->title . "%0A";
-            // };
-
-            // fopen("https://api.telegram.org/bot{$this->token}/sendMessage?chat_id={$this->chat_id}&parse_mode=html&text={$txt}", "r");
+            $website="https://api.telegram.org/bot".$this->token;
+            $chatId = $this->chat_id;
+            $params=[
+                'chat_id'=>$chatId, 
+                'text'=> $txt,
+                'parse_mode' => 'html'
+            ];
+            $ch = curl_init($website . '/sendMessage');
+            curl_setopt($ch, CURLOPT_HEADER, false);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, ($params));
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            $result = curl_exec($ch);
+            dd($result);
+            curl_close($ch);
             $weRecallText = 'Ожидайте звонка наши менеджеры свяжуться с вами.';
             return view('paymentSuccess', compact('weRecallText'));
         }
@@ -124,25 +139,41 @@ class RequestController extends Controller
 
     public function paymentSuccess($phone) {
         $order = Order::where('phone', $phone)->first();
-        //$orders = Order::whereIn('product_ids', json_decode($order->product_ids))->get();
-        $order->status = 1;
-        $order->save();
-
-        // $arr = [
-        //     'Раздел: ' => 'Корзина',
-        //     'Имя: ' => $order->name,
-        //     'Номер телефона: ' => $request->phone,
-        //     'Комментарий: ' => $order->phone,
-        // ];
-        // $txt = "";
-        // foreach ($arr as $key => $value) {
-        //     $txt .= "<b>" . $key . "</b> " . $value . "%0A";
-        // };
-        // foreach ($orders as $key => $value) {
-        //     $txt .= "<b>" . $key + 1 . "</b> " . $value->title . "%0A";
-        // };
-       
-        // fopen("https://api.telegram.org/bot{$this->token}/sendMessage?chat_id={$this->chat_id}&parse_mode=html&text={$txt}", "r");
+        $orders = Order::whereIn('product_ids', json_decode($order->product_ids))->get();
+        if(isset($order)) {
+            $order->status = 1;
+            $order->save();
+            $arr = [
+                'Раздел: ' => 'Корзина',
+                'Имя: ' => $order->name,
+                'Номер телефона: ' => $request->phone,
+                'Комментарий: ' => $order->comment,
+            ];
+            $txt = "";
+            foreach ($arr as $key => $value) {
+                $txt .= "<b>" . $key . "</br> " . $value . "\n";
+            };
+            foreach ($orders as $key => $value) {
+                $txt .= "<b>" . $key + 1 . "</b> " . $value->title . "\n";
+                $txt .= "<b>" .  $value->title . "</b> " . $value->price . 'сум' . "\n";
+            };
+            $website="https://api.telegram.org/bot".$this->token;
+            $chatId = $this->chat_id;
+            $params=[
+                'chat_id'=>$chatId, 
+                'text'=> $txt,
+                'parse_mode' => 'html'
+            ];
+            $ch = curl_init($website . '/sendMessage');
+            curl_setopt($ch, CURLOPT_HEADER, false);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, ($params));
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            $result = curl_exec($ch);
+            curl_close($ch);
+        }
+        
         return view('paymentSuccess');
        
     }

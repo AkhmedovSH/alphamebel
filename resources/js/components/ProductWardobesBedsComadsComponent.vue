@@ -74,7 +74,11 @@
                                         <span>{{ product.sale != 0 ? (product.price / 100) * product.sale : product.price }} сум</span>
                                         <p v-if="product.sale != 0">{{ product.price }} сум</p>
                                     </div>
-                                    <a :href="'/singleProductRight/' + category.id + '/' + product.id" class="add">КУПИТЬ</a>
+                                    <a :href="'/singleProductRight/' + category.id + '/' + product.id" style="padding: 12px 15px;
+                                    font-size: 11px;
+                                    background: none;
+                                    border: 1px solid #4B4B4B;
+                                    outline: none;">КУПИТЬ</a>
                                 </div>
                             </div>
                         </div>

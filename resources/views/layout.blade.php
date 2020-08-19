@@ -69,6 +69,25 @@
             touchDrag: true
         });
     });
+    (function(){
+        const  classname = document.querySelectorAll('.quantity')
+        Array.from(classname).forEach(function(element){
+            element.addEventListener('change', function(){
+                const id = element.getAttribute('data-id')
+                
+                console.log(this.value, id, 1);
+                axios.patch('/cart/update', {
+                    quantity: this.value,
+                    prodid: id,
+                }).then(function (response) {
+                    //console.log(success);
+                    window.location.href = '{{route('cart')}}'
+                }).catch(function (error) {
+                    console.log(error);
+                });
+            })
+        })
+    })();
 </script>
 </body>
 

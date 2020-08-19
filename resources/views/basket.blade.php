@@ -31,22 +31,28 @@
                         </div>
                         <div class="name">
                             <p>{{ $item->model->title}}</p>
+                            @if ($item->model->code != null)
                             <span>Код: {{$item->model->code}}</span>
+                            @endif
                         </div>
                     </div>
                     <div class="price col-xl-6 col-lg-7 col-md-7 col-sm-12 col-12">
                         <div class="priceinner">
-                            <p>{{ number_format($item->model->sale != 0 ? $item->model->price - (($item->model->price / 100) * $item->model->sale) : $item->model->price, 2) }}
+                            <span>{{ number_format($item->model->sale != 0 ? $item->model->price - (($item->model->price / 100) * $item->model->sale) : $item->model->price, 2) }}
                                 <span>сум</span>
-                            </p>
-                            <p class="old-orice">{{ number_format($item->model->price, 2) }} сум</p>
+                            </span>
+                            @if ($item->model->sale != 0)
+                                <p class="old-orice">{{ number_format($item->model->price, 2) }} сум</p>
+                            @endif
                         </div>
-                        <div class="quantity">
-                            <button class="remove">-</button>
-                            <input type="number" value="{{ $item->qty }}" id="" min="1" max="15" required>
-                            <button class="add">+</button>
-
-                        </div>
+                        <select  class="select--ys show-qty quantity" data-id="{{$item->rowId}}">
+                            <option {{ $item->qty == 1 ? 'selected' : ''}}>1</option>
+                            <option {{ $item->qty == 2 ? 'selected' : ''}}>2</option>
+                            <option {{ $item->qty == 3 ? 'selected' : ''}}>3</option>
+                            <option {{ $item->qty == 4 ? 'selected' : ''}}>4</option>
+                            <option {{ $item->qty == 5 ? 'selected' : ''}}>5</option>
+                            <option {{ $item->qty == 10 ? 'selected' : ''}}>10</option>
+                        </select>
                         <div class="common-price">
                             <p>{{ number_format(($item->model->sale != 0 ? $item->model->price - (($item->model->price / 100) * $item->model->sale) : $item->model->price) * $item->qty, 2) }}
                                 <span>сум</span>
@@ -54,9 +60,19 @@
                         </div>
                     </div>
                     <div class="remove col-xl-2 col-lg-1 col-sm-1 col-2">
-                        <a href="#!">
-                            <img src="/assets/img/elements/menu-close.svg">
-                        </a>
+                        <form action="{{route('cart.destroy',$item->rowId)}}" method="post">
+                            {{csrf_field()}}
+                            {{method_field('DELETE')}}
+                            <button type="submit" style="background: none;
+                            color: inherit;
+                            border: none;
+                            padding: 0;
+                            font: inherit;
+                            cursor: pointer;
+                            outline: inherit;">
+                                <img src="/assets/img/elements/menu-close.svg">
+                            </button>
+                        </form>
                     </div>
                 </li>
                 @endforeach
