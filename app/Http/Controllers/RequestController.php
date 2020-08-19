@@ -173,8 +173,8 @@ class RequestController extends Controller
             $result = curl_exec($ch);
             curl_close($ch);
         }
-        
-        return view('paymentSuccess');
+        $weRecallText = 'Ожидайте звонка наши менеджеры свяжуться с вами.';
+        return view('paymentSuccess', compact('weRecallText'));
        
     }
 }
