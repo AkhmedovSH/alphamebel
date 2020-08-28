@@ -60,6 +60,7 @@ Route::get('/projectsFlat', 'StaticPageController@projectsFlat');
 Route::get('/virtualDesign', 'StaticPageController@virtualDesign');
 
 Route::get('/ideasInner/{name?}', 'StaticPageController@ideasInner');
+Route::get('/ideasInnerOfInner/{name?}', 'StaticPageController@ideasInnerOfInner');
 
 //Route::get('empty', function (){Cart::destroy();});
 Route::get('/cart', 'CartController@index')->name('cart');

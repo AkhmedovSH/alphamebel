@@ -102,4 +102,8 @@ class StaticPageController extends Controller
         return view('static_pages/ideasInner/' . $name);
     }
 
+    public function ideasInnerOfInner($name) {
+        return view('static_pages/ideasInnerOfInner/' . $name);
+    }
+
 }
