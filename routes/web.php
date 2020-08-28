@@ -55,10 +55,11 @@ Route::get('/wearechoosen', 'StaticPageController@wearechoosen');
 Route::get('/public_offer', 'StaticPageController@public_offer');
 Route::get('/catalogs', 'StaticPageController@catalogs');
 Route::get('/ideas', 'StaticPageController@ideas');
-Route::get('/ideasInner', 'StaticPageController@ideasInner');
 Route::get('/ideasInnerBlock', 'StaticPageController@ideasInnerBlock');
 Route::get('/projectsFlat', 'StaticPageController@projectsFlat');
 Route::get('/virtualDesign', 'StaticPageController@virtualDesign');
+
+Route::get('/ideasInner/{name?}', 'StaticPageController@ideasInner');
 
 //Route::get('empty', function (){Cart::destroy();});
 Route::get('/cart', 'CartController@index')->name('cart');

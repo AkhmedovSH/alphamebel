@@ -21,22 +21,30 @@ class Product extends Model
         'two_images' => 'array',
     ];
 
-    public static function add($fields)
-    {
+    public static function add($fields){
+        
         $data = new static;
         
         $data->fill($fields);
-        $data->attribute_ids = $fields['attribute_ids'];
-        if($fields['collection_product_ids']) {
+
+        if(isset($fields['attribute_ids'])) {
+            $data->attribute_ids = $fields['attribute_ids'];
+        }else{
+            $data->attribute_ids = null;
+        }
+       
+        if(isset($fields['collection_product_ids'])) {
             $data->isCollection = 1;
             $data->collection_product_ids = $fields['collection_product_ids'];
         }else{
             $data->isCollection = 0;
             $data->collection_product_ids = null;
         }
+
         if($fields['sale'] == null){
             $data->sale = 0;
         }
+        
         $data->save();
         
         return $data;
@@ -44,9 +52,18 @@ class Product extends Model
 
     public function edit($fields)
     {
+        $this->fill($fields);
+
         if($fields['sale'] == null){
             $this->sale = 0;
         }
+
+        if(isset($fields['attribute_ids'])) {
+            $this->attribute_ids = $fields['attribute_ids'];
+        }else {
+            $this->attribute_ids = null;
+        }
+
         if(isset($fields['collection_product_ids'])) {
             $this->isCollection = 1;
             $this->collection_product_ids = $fields['collection_product_ids'];
@@ -54,7 +71,7 @@ class Product extends Model
             $this->isCollection = 0;
             $this->collection_product_ids = null;
         }
-        $this->fill($fields);
+       
         $this->save();
     }
 

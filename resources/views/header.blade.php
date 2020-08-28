@@ -40,7 +40,7 @@
             </a>
         </div>
         <div class="brand-navigation__branches col-xl-3">
-            <a href="ourShops.html">
+            <a href="{{ url('/ourShops') }}">
                 <p>Наши магазины: <a id="ourBranches" href="#!">Ташкент
                         <img src="/assets/img/elements/arrow-down.svg" alt=""></a>
                 </p>

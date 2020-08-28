@@ -91,7 +91,7 @@
                     <div class="goodscard content">
                         <div class="img">
                             <a href="{{ url("/singleProductRight/{$category->id}/{$item->id}") }}" class="goodsimg-main card_main">
-                                <img src="{{asset('uploads/products/'). '/'. $product->image }}" class="main_img">
+                                <img src="{{asset('uploads/products/'). '/'. $item->image }}" class="main_img">
                             </a>
                             <div class="img_markers">
                                 @if($item->two_images != null)

@@ -82,14 +82,6 @@ class StaticPageController extends Controller
         return view('static_pages/catalogs');
     }
 
-    public function ideas() {
-        return view('static_pages/ideas');
-    }
-
-    public function ideasInner() {
-        return view('static_pages/ideasInner');
-    }
-
     public function ideasInnerBlock() {
         return view('static_pages/ideasInnerBlock');
     }
@@ -100,6 +92,14 @@ class StaticPageController extends Controller
 
     public function virtualDesign() {
         return view('static_pages/virtualDesign');
+    }
+
+    public function ideas() {
+        return view('static_pages/ideas');
+    }
+
+    public function ideasInner($name) {
+        return view('static_pages/ideasInner/' . $name);
     }
 
 }

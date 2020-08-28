@@ -50,7 +50,13 @@ class ProductController extends Controller
     {
         $data = Product::find($id);
         $attributes = Attribute::pluck('title', 'id')->all();
-        $selectedAttributes = Attribute::whereIn('id', $data->attribute_ids)->pluck('id')->all();
+       
+        if($data->attribute_ids != null) {
+            $selectedAttributes = Attribute::whereIn('id', $data->attribute_ids)->pluck('id')->all();
+        }else {
+            $selectedAttributes = [];
+        }
+
         $categories = Category::pluck('title', 'id')->all();
         $products = Product::pluck('title', 'id')->all();
         if($data->collection_product_ids != null) {
