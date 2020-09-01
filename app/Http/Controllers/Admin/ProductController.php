@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Product;
 use App\Category;
 use App\Attribute;
+use App\ProductLengthType;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -27,7 +28,8 @@ class ProductController extends Controller
         $attributes = Attribute::pluck('title', 'id')->all();
         $categories = Category::pluck('title', 'id')->all();
         $products = Product::pluck('title', 'id')->all();
-        return view('admin.product.create', compact('attributes', 'categories', 'products'));
+        $products_length_types = ProductLengthType::pluck('title', 'id')->all();
+        return view('admin.product.create', compact('attributes', 'categories', 'products', 'products_length_types'));
     }
 
     public function store(Request $request)
@@ -64,8 +66,10 @@ class ProductController extends Controller
         }else {
             $selectedProducts = [];
         }
+
+        $products_length_types = ProductLengthType::pluck('title', 'id')->all();
         //dd($attributes, $selectedAttributes);
-        return view('admin.product.edit', compact('data', 'attributes', 'categories', 'selectedAttributes', 'products', 'selectedProducts'));
+        return view('admin.product.edit', compact('data', 'attributes', 'categories', 'selectedAttributes', 'products', 'selectedProducts', 'products_length_types'));
     }
 
     /**

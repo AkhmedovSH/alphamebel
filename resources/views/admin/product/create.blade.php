@@ -94,6 +94,15 @@
                                 ['class' => 'form-control select2', 'multiple'])
                             }}
                         </div>
+
+                        <div class="form-group">
+                            <label>Если тип матраса то выбрать длину к которой она относиться</label>
+                            {{Form::select('length_type_id',
+                                array(null => 'Не обязательно') + $products_length_types,
+                                null,
+                                ['class' => 'form-control select2'])
+                            }}
+                        </div>
                     </div>
 
                     <div class="col-md-12">

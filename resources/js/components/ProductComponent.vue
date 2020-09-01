@@ -46,7 +46,7 @@
                 <div class="blogBox moreBox col-xl-6 col-lg-6 col-md-6 col-sm-6" v-for="(product, index) in data" :key="index">
                     <div class="card">
                         <a :href="'/singleProductLeft/' + category.id + '/' + product.id">
-                            <p class="title">{{ product.title }}</p>
+                            <p class="title">{{ product.title }}</p>    
                             <div class="img">
                                 <img :src="'/uploads/products/' + product.image">
                             </div>

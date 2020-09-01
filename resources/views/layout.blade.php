@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="/assets/style/virtual_design.css">
     <link rel="stylesheet" href="/assets/style/sales.css">
     <link rel="stylesheet" href="/assets/style/search.css">
+    <link rel="stylesheet" href="/assets/style/mattrasses.css">
     @stack('styles')
     <title>Alpha Mebel</title>
 

@@ -11,3 +11,7 @@
 
 Cart::count()
 Cart::subtotal();
+
+
+
+mattress_width

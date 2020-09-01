@@ -37,7 +37,7 @@
                 <div class="blogBox moreBox sub-content col-xl-4 col-lg-6 col-md-6 col-sm-12" v-for="(product, index) in data" :key="index">
                     <div class="goodscard content">
                         <div class="img">
-                            <a :href="'/singleProductRight/' + category.id + '/' + product.id" class="goodsimg-main card_main">
+                            <a :href="'/singleProductAnotherType/' + category.id + '/' + product.id" class="goodsimg-main card_main">
                                 <img :src="'/uploads/products/' + product.image"  class="main_img">
                             </a>
                             <div class="img_markers" v-if="product.two_images != null">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="desc">
-                            <a :href="'/singleProductRight/' + category.id + '/' + product.id">
+                            <a :href="'/singleProductAnotherType/' + category.id + '/' + product.id">
                                 <p class="title">{{ product.title }}</p>
                                 <p class="code">Код: {{ product.code }}</p>
                                 <p class="gooddesc" v-html="product.description"></p>
@@ -64,7 +64,7 @@
                                     <span>{{ product.sale != 0 ? (product.price - (product.price / 100) * product.sale).toFixed(0) : product.price }} сум</span>
                                     <p v-if="product.sale != 0">{{ product.price }} сум</p>
                                 </div>
-                                <a :href="'/singleProductRight/' + category.id + '/' + product.id" class="add">КУПИТЬ</a>
+                                <a :href="'/singleProductAnotherType/' + category.id + '/' + product.id" class="add">КУПИТЬ</a>
                             </div>
                         </div>
                     </div>

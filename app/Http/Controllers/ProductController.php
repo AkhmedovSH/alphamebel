@@ -24,6 +24,9 @@ class ProductController extends Controller
     {
         $product = Product::where('id', $product_id)->first();
         $category = Category::where('id', $category_id)->first();
+        if($product->attribute_ids == null) {
+            $product->attribute_ids = [];
+        }
         $attributes = Attribute::whereIn('id', $product->attribute_ids)->with('filter')->get();
         $images = $this->parseImages($product->images);
         if($product->collection_product_ids != null) {
@@ -40,6 +43,9 @@ class ProductController extends Controller
     {
         $product = Product::where('id', $product_id)->first();
         $category = Category::where('id', $category_id)->first();
+        if($product->attribute_ids == null) {
+            $product->attribute_ids = [];
+        }
         $attributes = Attribute::whereIn('id', $product->attribute_ids)->with('filter')->get();
         $images = $this->parseImages($product->images);
         $similarProducts = Product::where('category_id', $product->category_id)->where('id', '!=', $product->id)->limit(8)->get();
@@ -121,7 +127,7 @@ class ProductController extends Controller
     {
         $category = Category::where('id', 21)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
-        $products = Product::where('category_id', $category->id)->get();
+        $products = Product::where('category_id', $category->id)->where('length_type_id', '!=', null)->get();
         $attributes = Attribute::whereIn('id', json_decode($category->attribute_ids))->get();
        
         $category2 = Category::where('id', 32)->first();
@@ -151,6 +157,26 @@ class ProductController extends Controller
             'products4', 'filters4', 'category4', 'attributes4',
             'products5', 'filters5', 'category5', 'attributes5',
         ));
+    }
+
+    public function singleProductAnotherType($category_id, $product_id) {
+        $product = Product::where('id', $product_id)->first();
+        $category = Category::where('id', $category_id)->first();
+        if($product->attribute_ids == null) {
+            $product->attribute_ids = [];
+        }
+        $attributes = Attribute::whereIn('id', $product->attribute_ids)->with('filter')->get();
+        $images = $this->parseImages($product->images);
+        $similarProducts = Product::where('category_id', $product->category_id)->where('id', '!=', $product->id)->limit(8)->get();
+
+        $collectionItem = Product::where('category_id', 10)->get()->random(1)->first();
+
+        if($product->collection_product_ids != null) {
+            $sames = Product::whereIn('id', $product->collection_product_ids)->get();
+        }else {
+            $sames = [];
+        }
+        return view('collections/singleProductAnotherType', compact('product', 'attributes', 'category', 'images', 'similarProducts', 'collectionItem', 'sames'));
     }
 
 

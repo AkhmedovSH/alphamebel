@@ -8384,7 +8384,7 @@ var render = function() {
                           staticClass: "goodsimg-main card_main",
                           attrs: {
                             href:
-                              "/singleProductRight/" +
+                              "/singleProductAnotherType/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -8437,7 +8437,7 @@ var render = function() {
                         {
                           attrs: {
                             href:
-                              "/singleProductRight/" +
+                              "/singleProductAnotherType/" +
                               _vm.category.id +
                               "/" +
                               product.id
@@ -8503,7 +8503,7 @@ var render = function() {
                             staticClass: "add",
                             attrs: {
                               href:
-                                "/singleProductRight/" +
+                                "/singleProductAnotherType/" +
                                 _vm.category.id +
                                 "/" +
                                 product.id
