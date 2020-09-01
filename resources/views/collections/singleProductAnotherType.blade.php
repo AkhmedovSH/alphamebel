@@ -78,7 +78,7 @@
 
                 <div class="mattrasses__prices">
                     <div class="items">
-                        <h4>Длина 190 см</h4>
+                        <h4>Длина 1900 мм</h4>
                         <div class="items__title">
                             <p>Ширина</p><span class="line"> </span>
                         </div>
@@ -102,7 +102,7 @@
                         @endforeach
                     </div>
                     <div class="items">
-                        <h4>Длина 195 см</h4>
+                        <h4>Длина 1950 мм</h4>
                         <div class="items__title">
                             <p>Ширина</p><span class="line"> </span>
                         </div>
@@ -126,7 +126,7 @@
                         @endforeach
                     </div>
                     <div class="items">
-                        <h4>Длина 200 см</h4>
+                        <h4>Длина 2000 мм</h4>
                         <div class="items__title">
                             <p>Ширина</p><span class="line"> </span>
                         </div>

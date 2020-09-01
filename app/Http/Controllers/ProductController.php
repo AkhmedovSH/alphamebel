@@ -127,7 +127,7 @@ class ProductController extends Controller
     {
         $category = Category::where('id', 21)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
-        $products = Product::where('category_id', $category->id)->where('length_type_id', '!=', null)->get();
+        $products = Product::where('category_id', $category->id)->where('collection_product_ids', '!=', null)->get();
         $attributes = Attribute::whereIn('id', json_decode($category->attribute_ids))->get();
        
         $category2 = Category::where('id', 32)->first();
