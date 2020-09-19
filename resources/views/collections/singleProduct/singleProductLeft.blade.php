@@ -27,6 +27,9 @@
                         <img src="{{asset('uploads/products/'). '/'. $product->image }}" class="main_img">
                     </div>
                     <div class="img_markers collectioncarousel owl-carousel">
+                        <div class="mainslider-sub-img">
+                            <img src="{{asset('uploads/products/'). '/'. $product->image }}" class="img_item1">
+                        </div>
                         @if($product->images != null)
                             @foreach (json_decode($product['images']) as $item)
                             <div class="mainslider-sub-img">
@@ -115,7 +118,6 @@
                                 @if ($similarProducts[$key]['code'] != null)
                                 <p class="code">Код: {{ $similarProducts[$key]['code'] }}</p>
                                 @endif
-                                <p class="gooddesc">{!! mb_strimwidth($similarProducts[$key]['description'], 0, 150, "...");  !!}</p>
                                 <div class="size">
                                     @if ($similarProducts[$key]['width'] != null)
                                         <p>Ш: {{ $similarProducts[$key]['width'] }}</p>
@@ -130,7 +132,7 @@
                             </a>
                             <div class="order">
                                 <div class="price">
-                                    <span>{{ $similarProducts[$key]['sale'] != 0 ? number_format($similarProducts[$key]['price'] - (($similarProducts[$key]['price'] / 100) * $similarProducts[$key]['sale']), 0) : $similarProducts[$key]['price'] }} сум</span>
+                                    <span>{{ $similarProducts[$key]['sale'] != 0 ? number_format($similarProducts[$key]['price'] - (($similarProducts[$key]['price'] / 100) * $similarProducts[$key]['sale']), 0,","," ") : $similarProducts[$key]['price'] }} сум</span>
                                     @if ($similarProducts[$key]['sale'] != 0)
                                         <p>{{ number_format($similarProducts[$key]['price']) }} сум</p>
                                     @endif

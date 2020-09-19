@@ -25,6 +25,9 @@
                         <img src="{{asset('uploads/products/'). '/'. $product->image }}" class="main_img">
                     </div>
                     <div class="img_markers collectioncarousel owl-carousel">
+                        <div class="mainslider-sub-img">
+                            <img src="{{asset('uploads/products/'). '/'. $product->image }}" class="img_item1">
+                        </div>
                         @if($product->images != null)
                             @foreach (json_decode($product['images']) as $item)
                             <div class="mainslider-sub-img">
@@ -57,9 +60,10 @@
                 
                 <div class="additem">
                     <div class="price">
-                        <span>{{ $product->sale != 0 ? number_format($product->price - (($product->price / 100) * $product->sale), 0) : $product->price }} сум</span>
-                        @if ($product->sale != 0)
-                            <p>{{ number_format($product->price) }} сум</p>
+                        @if ($product->sale == 0)
+                            <span>{{ number_format($product->price - (($product->price / 100) * $product->sale), 0,","," ") }}</span>
+                        @else
+                            <p>{{ number_format($product->price, 0,","," ") }} сум</p>
                         @endif
                     </div>
                     <div class="installment">
@@ -76,7 +80,6 @@
                     </form>
                 </div>
                 <div class="tabs">
-                    <h2>{{ $product->title }}</h2>
                     <ul class="nav nav-pills" id="pills-tab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="pills-properties-tab" data-toggle="pill"
@@ -154,7 +157,13 @@
                         </a>
                         <div class="details">
                             <div class="price">
-                                <div>от {{ $collectionItem->sale != 0 ? ($collectionItem->price / 100) * $collectionItem->sale : $collectionItem->price }} сум
+                                <div>от 
+                                    @if ($collectionItem->sale == 0)
+                                        <span>{{ number_format($collectionItem->price - (($collectionItem->price / 100) * $collectionItem->sale), 0,","," ") }} сум</span>
+                                    @else
+                                        <p>{{ number_format($collectionItem->price, 0,","," ") }} сум</p>
+                                    @endif
+
                                     @if ($collectionItem->note != null)
                                     <div class="more">?<span>{{ $collectionItem->note }}</span></div>
                                     @endif
@@ -192,7 +201,6 @@
                                         @if ($item->code != null)
                                             <p class="code">Код: {{ $item->code }}</p>
                                         @endif
-                                        <p class="gooddesc">{!! $item->description !!}и </p>
                                         <div class="size">
                                             @if ($item->width != null)
                                                 <p>Ш: {{ $item->width }}</p>
@@ -207,17 +215,18 @@
                                     </a>
                                     <div class="order">
                                         <div class="price">
-                                            <span>{{ $item->sale != 0 ? ($item->price / 100) * $item->sale : $item->price }} сум</span>
-                                            @if ($item->sale != 0)
-                                                <p>{{ $item->price }} сум</p>
+                                            @if ($item->sale == 0)
+                                                <span>{{ number_format($item->price - (($item->price / 100) * $item->sale), 0,","," ") }} сум</span>
+                                            @else
+                                                <p>{{ number_format($item->price, 0,","," ") }} сум</p>
                                             @endif
                                         </div>
                                         <form action="/cart" method="post">
                                             @csrf
-                                            <input type="hidden" name="id" value="{{ $product->id }}">
-                                            <input type="hidden" name="title" value="{{ $product->title }}">
-                                            <input type="hidden" name="price" value="{{ $product->price }}">
-                                            <input type="hidden" name="sale" value="{{ $product->sale }}">
+                                            <input type="hidden" name="id" value="{{ $item->id }}">
+                                            <input type="hidden" name="title" value="{{ $item->title }}">
+                                            <input type="hidden" name="price" value="{{ $item->price }}">
+                                            <input type="hidden" name="sale" value="{{ $item->sale }}">
                                             <button type="submit" class="add">Купить</button>
                                         </form>
                                     </div>

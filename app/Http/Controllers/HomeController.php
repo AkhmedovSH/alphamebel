@@ -18,6 +18,12 @@ class HomeController extends Controller
         return view('index', compact('sliders', 'posts'));
     }
 
+    public function stocks()
+    {
+        $posts = Post::all();
+        return view('stocks/stocks', compact('posts'));
+    }
+
     public function stock_inner($slug)
     {
         $post = Post::where('slug', $slug)->first();

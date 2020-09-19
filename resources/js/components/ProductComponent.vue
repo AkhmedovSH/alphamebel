@@ -53,11 +53,11 @@
                         </a>
                         <div class="details">
                             <div class="price">
-                                <div>от {{ product.sale != 0 ? product.price - ((product.price / 100) * product.sale) : product.price }} сум
+                                <div>от {{ product.sale != 0 ? $helper.formatMoney(product.price - ((product.price / 100) * product.sale)) : $helper.formatMoney(product.price) }} сум
                                     <div class="more" v-if="product.note">?<span>{{ product.note }}</span>
                                     </div>
                                 </div>
-                                <span class="old-price" v-if="product.sale != 0">{{ product.price }} сум</span>
+                                <span class="old-price" v-if="product.sale != 0">{{ product.price.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ') }} сум</span>
                             </div>
                             <div class="credit-price">
                                 <div>
@@ -109,12 +109,12 @@
                     var productPrice = (product.price / 100) * product.sale
                     newPrice = (productPrice * (sale/productPrice)) / this.credit.month
                    
-                    return newPrice.toFixed(2)
+                    return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
                 } else {
                     sale = (product.price / 100) * this.credit.credit
                     
                     newPrice = (product.price * (sale/product.price)) / this.credit.month
-                    return newPrice.toFixed(2)
+                    return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
                 }
             },
             filterByAttributes() {

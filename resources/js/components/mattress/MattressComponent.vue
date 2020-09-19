@@ -61,8 +61,8 @@
                             </a>
                             <div class="order">
                                 <div class="price">
-                                    <span>{{ product.sale != 0 ? (product.price - (product.price / 100) * product.sale).toFixed(0) : product.price }} сум</span>
-                                    <p v-if="product.sale != 0">{{ product.price }} сум</p>
+                                    {{ product.sale != 0 ? $helper.formatMoney(product.price - ((product.price / 100) * product.sale)) : $helper.formatMoney(product.price) }}
+                                    
                                 </div>
                                 <a :href="'/singleProductAnotherType/' + category.id + '/' + product.id" class="add">КУПИТЬ</a>
                             </div>
@@ -107,12 +107,12 @@ export default {
                 var productPrice = (product.price / 100) * product.sale
                 newPrice = (productPrice * (sale/productPrice)) / this.credit.month
                 
-                return newPrice.toFixed(2)
+                return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
             } else {
                 sale = (product.price / 100) * this.credit.credit
                 
                 newPrice = (product.price * (sale/product.price)) / this.credit.month
-                return newPrice.toFixed(2)
+                return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
             }
         },
         filterByAttributes() {

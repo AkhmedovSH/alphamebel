@@ -164,12 +164,13 @@ class Product extends Model
             $productPrice = ($this->price / 100) * $this->sale;
             $newPrice = ($productPrice * ($sale/$productPrice)) / $credit->month;
             
-            return number_format($newPrice, 2);
+            return number_format($newPrice, 0,","," ");
         } else {
             $sale = ($this->price / 100) * $credit->credit;
             
             $newPrice = ($this->price * ($sale/$this->price)) / $credit->month;
-            return number_format($newPrice, 2);
+            return number_format($newPrice, 0,","," ");
         }
     }
+
 }

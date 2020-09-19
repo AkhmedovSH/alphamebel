@@ -153,7 +153,6 @@
 
 
                 <div class="tabs">
-                    <h2>{{ $product->title }}</h2>
                     <ul class="nav nav-pills" id="pills-tab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="pills-properties-tab" data-toggle="pill"

@@ -1,3 +1,26 @@
+$(document).ready(function () {
+    $(".goodinnercarousel").owlCarousel({
+        items: 2,
+        dots: false,
+        loop: true,
+        autoplay: false,
+        smartSpeed: 1000,
+        nav: true,
+        mouseDrag: true,
+        responsive: {
+            200: {
+                items: 1,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                loop: true
+            },
+            700: {
+                items: 2,
+            }
+        }
+    });
+});
 
 $(document).ready(function () {
     $('#ourBranches').click(function () {
@@ -158,29 +181,7 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function () {
-    $(".goodinnercarousel").owlCarousel({
-        items: 2,
-        dots: false,
-        loop: true,
-        autoplay: false,
-        smartSpeed: 1000,
-        nav: true,
-        mouseDrag: true,
-        responsive: {
-            200: {
-                items: 1,
-                nav: false,
-                autoplay: true,
-                autoplayTimeout: 2000,
-                loop: true
-            },
-            700: {
-                items: 2,
-            }
-        }
-    });
-});
+
 
 $(document).ready(function () {
     $('.mainslider-card_main').click(function () {
@@ -242,6 +243,4 @@ $(document).ready(function () {
         localStorage.setItem('callmake', false)
     });
 });
-
-
 

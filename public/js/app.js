@@ -2074,11 +2074,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -2275,11 +2275,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -2484,11 +2484,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -2679,11 +2679,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -2898,11 +2898,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -3097,11 +3097,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -3295,11 +3295,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -3466,7 +3466,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -3493,11 +3492,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -3664,7 +3663,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -3691,11 +3689,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -3889,11 +3887,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -4087,11 +4085,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -4285,11 +4283,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -4483,11 +4481,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -4680,11 +4678,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -4877,11 +4875,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -5074,11 +5072,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
         var productPrice = product.price / 100 * product.sale;
         newPrice = productPrice * (sale / productPrice) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
         sale = product.price / 100 * this.credit.credit;
         newPrice = product.price * (sale / product.price) / this.credit.month;
-        return newPrice.toFixed(2);
+        return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
     filterByAttributes: function filterByAttributes() {
@@ -6092,9 +6090,11 @@ var render = function() {
                           "от " +
                             _vm._s(
                               product.sale != 0
-                                ? product.price -
-                                    (product.price / 100) * product.sale
-                                : product.price
+                                ? _vm.$helper.formatMoney(
+                                    product.price -
+                                      (product.price / 100) * product.sale
+                                  )
+                                : _vm.$helper.formatMoney(product.price)
                             ) +
                             " сум\r\n                                    "
                         ),
@@ -6108,7 +6108,13 @@ var render = function() {
                       _vm._v(" "),
                       product.sale != 0
                         ? _c("span", { staticClass: "old-price" }, [
-                            _vm._v(_vm._s(product.price) + " сум")
+                            _vm._v(
+                              _vm._s(
+                                product.price
+                                  .toFixed(0)
+                                  .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1 ")
+                              ) + " сум"
+                            )
                           ])
                         : _vm._e()
                     ]),
@@ -6724,15 +6730,14 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (product.price / 100) * product.sale
-                                  : product.price
+                                  ? _vm.$helper.formatMoney(
+                                      product.price -
+                                        (product.price / 100) * product.sale
+                                    )
+                                  : _vm.$helper.formatMoney(product.price)
                               ) + " сум"
                             )
-                          ]),
-                          _vm._v(" "),
-                          product.sale != 0
-                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
-                            : _vm._e()
+                          ])
                         ]),
                         _vm._v(" "),
                         _c(
@@ -7103,22 +7108,18 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("span", [
-                            _vm._v(
+                          _vm._v(
+                            "\r\n                                    " +
                               _vm._s(
                                 product.sale != 0
-                                  ? (
+                                  ? _vm.$helper.formatMoney(
                                       product.price -
-                                      (product.price / 100) * product.sale
-                                    ).toFixed(0)
-                                  : product.price
-                              ) + " сум"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          product.sale != 0
-                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
-                            : _vm._e()
+                                        (product.price / 100) * product.sale
+                                    )
+                                  : _vm.$helper.formatMoney(product.price)
+                              ) +
+                              "\r\n                                    \r\n                                "
+                          )
                         ]),
                         _vm._v(" "),
                         _c(
@@ -7447,22 +7448,18 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("span", [
-                            _vm._v(
+                          _vm._v(
+                            "\r\n                                    " +
                               _vm._s(
                                 product.sale != 0
-                                  ? (
+                                  ? _vm.$helper.formatMoney(
                                       product.price -
-                                      (product.price / 100) * product.sale
-                                    ).toFixed(0)
-                                  : product.price
-                              ) + " сум"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          product.sale != 0
-                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
-                            : _vm._e()
+                                        (product.price / 100) * product.sale
+                                    )
+                                  : _vm.$helper.formatMoney(product.price)
+                              ) +
+                              "\r\n                                    \r\n                                "
+                          )
                         ]),
                         _vm._v(" "),
                         _c(
@@ -7795,18 +7792,14 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (
+                                  ? _vm.$helper.formatMoney(
                                       product.price -
-                                      (product.price / 100) * product.sale
-                                    ).toFixed(0)
-                                  : product.price
+                                        (product.price / 100) * product.sale
+                                    )
+                                  : _vm.$helper.formatMoney(product.price)
                               ) + " сум"
                             )
-                          ]),
-                          _vm._v(" "),
-                          product.sale != 0
-                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
-                            : _vm._e()
+                          ])
                         ]),
                         _vm._v(" "),
                         _c(
@@ -8139,18 +8132,14 @@ var render = function() {
                             _vm._v(
                               _vm._s(
                                 product.sale != 0
-                                  ? (
+                                  ? _vm.$helper.formatMoney(
                                       product.price -
-                                      (product.price / 100) * product.sale
-                                    ).toFixed(0)
-                                  : product.price
+                                        (product.price / 100) * product.sale
+                                    )
+                                  : _vm.$helper.formatMoney(product.price)
                               ) + " сум"
                             )
-                          ]),
-                          _vm._v(" "),
-                          product.sale != 0
-                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
-                            : _vm._e()
+                          ])
                         ]),
                         _vm._v(" "),
                         _c(
@@ -8479,22 +8468,18 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("span", [
-                            _vm._v(
+                          _vm._v(
+                            "\r\n                                    " +
                               _vm._s(
                                 product.sale != 0
-                                  ? (
+                                  ? _vm.$helper.formatMoney(
                                       product.price -
-                                      (product.price / 100) * product.sale
-                                    ).toFixed(0)
-                                  : product.price
-                              ) + " сум"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          product.sale != 0
-                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
-                            : _vm._e()
+                                        (product.price / 100) * product.sale
+                                    )
+                                  : _vm.$helper.formatMoney(product.price)
+                              ) +
+                              "\r\n                                    \r\n                                "
+                          )
                         ]),
                         _vm._v(" "),
                         _c(
@@ -8823,22 +8808,18 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("span", [
-                            _vm._v(
+                          _vm._v(
+                            "\r\n                                    " +
                               _vm._s(
                                 product.sale != 0
-                                  ? (
+                                  ? _vm.$helper.formatMoney(
                                       product.price -
-                                      (product.price / 100) * product.sale
-                                    ).toFixed(0)
-                                  : product.price
-                              ) + " сум"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          product.sale != 0
-                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
-                            : _vm._e()
+                                        (product.price / 100) * product.sale
+                                    )
+                                  : _vm.$helper.formatMoney(product.price)
+                              ) +
+                              "\r\n                                    \r\n                                "
+                          )
                         ]),
                         _vm._v(" "),
                         _c(
@@ -9167,22 +9148,18 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("span", [
-                            _vm._v(
+                          _vm._v(
+                            "\r\n                                    " +
                               _vm._s(
                                 product.sale != 0
-                                  ? (
+                                  ? _vm.$helper.formatMoney(
                                       product.price -
-                                      (product.price / 100) * product.sale
-                                    ).toFixed(0)
-                                  : product.price
-                              ) + " сум"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          product.sale != 0
-                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
-                            : _vm._e()
+                                        (product.price / 100) * product.sale
+                                    )
+                                  : _vm.$helper.formatMoney(product.price)
+                              ) +
+                              "\r\n                                    \r\n                                "
+                          )
                         ]),
                         _vm._v(" "),
                         _c(
@@ -9511,22 +9488,18 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("span", [
-                            _vm._v(
+                          _vm._v(
+                            "\r\n                                    " +
                               _vm._s(
                                 product.sale != 0
-                                  ? (
+                                  ? _vm.$helper.formatMoney(
                                       product.price -
-                                      (product.price / 100) * product.sale
-                                    ).toFixed(0)
-                                  : product.price
-                              ) + " сум"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          product.sale != 0
-                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
-                            : _vm._e()
+                                        (product.price / 100) * product.sale
+                                    )
+                                  : _vm.$helper.formatMoney(product.price)
+                              ) +
+                              "\r\n                                    \r\n                                "
+                          )
                         ]),
                         _vm._v(" "),
                         _c(
@@ -9855,22 +9828,18 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("span", [
-                            _vm._v(
+                          _vm._v(
+                            "\r\n                                " +
                               _vm._s(
                                 product.sale != 0
-                                  ? (
+                                  ? _vm.$helper.formatMoney(
                                       product.price -
-                                      (product.price / 100) * product.sale
-                                    ).toFixed(0)
-                                  : product.price
-                              ) + " сум"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          product.sale != 0
-                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
-                            : _vm._e()
+                                        (product.price / 100) * product.sale
+                                    )
+                                  : _vm.$helper.formatMoney(product.price)
+                              ) +
+                              "\r\n                                \r\n                            "
+                          )
                         ]),
                         _vm._v(" "),
                         _c(
@@ -10197,22 +10166,18 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("span", [
-                            _vm._v(
+                          _vm._v(
+                            "\r\n                                " +
                               _vm._s(
                                 product.sale != 0
-                                  ? (
+                                  ? _vm.$helper.formatMoney(
                                       product.price -
-                                      (product.price / 100) * product.sale
-                                    ).toFixed(0)
-                                  : product.price
-                              ) + " сум"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          product.sale != 0
-                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
-                            : _vm._e()
+                                        (product.price / 100) * product.sale
+                                    )
+                                  : _vm.$helper.formatMoney(product.price)
+                              ) +
+                              "\r\n                                \r\n                            "
+                          )
                         ]),
                         _vm._v(" "),
                         _c(
@@ -10539,22 +10504,18 @@ var render = function() {
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
                         _c("div", { staticClass: "price" }, [
-                          _c("span", [
-                            _vm._v(
+                          _vm._v(
+                            "\r\n                                " +
                               _vm._s(
                                 product.sale != 0
-                                  ? (
+                                  ? _vm.$helper.formatMoney(
                                       product.price -
-                                      (product.price / 100) * product.sale
-                                    ).toFixed(0)
-                                  : product.price
-                              ) + " сум"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          product.sale != 0
-                            ? _c("p", [_vm._v(_vm._s(product.price) + " сум")])
-                            : _vm._e()
+                                        (product.price / 100) * product.sale
+                                    )
+                                  : _vm.$helper.formatMoney(product.price)
+                              ) +
+                              "\r\n                                \r\n                            "
+                          )
                         ]),
                         _vm._v(" "),
                         _c(
@@ -22749,9 +22710,12 @@ module.exports = g;
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! exports provided: helper */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "helper", function() { return helper; });
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -22782,6 +22746,13 @@ Vue.component('basket-component', __webpack_require__(/*! ./components/BasketCom
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+var helper = {
+  formatMoney: function formatMoney(money) {
+    money = parseInt(money);
+    return money.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
+  }
+};
+Vue.prototype.$helper = helper;
 var app = new Vue({
   el: '#app'
 });

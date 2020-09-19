@@ -15,3 +15,10 @@ Cart::subtotal();
 
 
 mattress_width
+
+
+@if ($product->sale == 0)
+    <span>{{ number_format($product->price - (($product->price / 100) * $product->sale), 0,","," ") }} сум</span>
+@else
+    <p>{{ number_format($product->price, 0,","," ") }} сум</p>
+@endif

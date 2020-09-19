@@ -7,7 +7,7 @@
     {!! $post->content !!}
 
     <div class="stock_photo">
-        <img src="/assets/img/header_bg.jpg" alt="">
+        <img src="{{asset('uploads/posts/'). '/'. $post->image }}">
     </div>
 </section>
 @endsection

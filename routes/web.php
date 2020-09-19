@@ -18,6 +18,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/test', 'HomeController@test')->name('test');
+Route::get('/stocks', 'HomeController@stocks')->name('stocks');
 Route::get('/stock_inner/{slug}', 'HomeController@stock_inner')->name('stock_inner');
 Route::get('/sales', 'HomeController@sales')->name('sales');
 Route::post('/search', 'HomeController@search')->name('search');

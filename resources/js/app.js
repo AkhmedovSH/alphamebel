@@ -37,6 +37,16 @@ Vue.component('basket-component', require('./components/BasketComponent.vue').de
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
+  
+export const helper = {
+    formatMoney: (money) => {
+        money = parseInt(money)
+        return money.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+    }
+};
+Vue.prototype.$helper = helper
+
 const app = new Vue({
     el: '#app',
 });
