@@ -41,22 +41,22 @@
             <h2>Коллекции</h2>
             <p>Мебель в одном стиле, цвете и фактуре</p>
             <div class="products__collection-row">
-                <a href="{{ url('beds/' .  10) }}" class="products__collection-row-item">
+                <a href="{{ url('products/' .  10) }}" class="products__collection-row-item">
                     <img src="assets/img/product-elements/bedroom.svg">
                     <img class="hover" src="assets/img/product-elements/bedroom-hover.svg">
                     <p>спальни</p>
                 </a>
-                <a href="{{ url('livingRooms/' .  11) }}" class="products__collection-row-item">
+                <a href="{{ url('products/' .  11) }}" class="products__collection-row-item">
                     <img src="assets/img/product-elements/guest-hall.svg">
                     <img class="hover" src="assets/img/product-elements/guest-hall-hover.svg">
                     <p>гостиные</p>
                 </a>
-                <a href="{{ url('nursery/' .  12) }}" class="products__collection-row-item">
+                <a href="{{ url('products/' .  12) }}" class="products__collection-row-item">
                     <img src="assets/img/product-elements/kids-room.svg">
                     <img class="hover" src="assets/img/product-elements/kids-room-hover.svg">
                     <p>детские</p>
                 </a>
-                <a href="{{ url('halls/' .  13) }}" class="products__collection-row-item">
+                <a href="{{ url('products/' .  13) }}" class="products__collection-row-item">
                     <img src="assets/img/product-elements/hall.svg">
                     <img class="hover" src="assets/img/product-elements/hall-hover.svg">
                     <p>прихожие</p>
@@ -97,7 +97,7 @@
                     <img class="hover" src="assets/img/product-elements/chair-hover.svg">
                     <p>СТОЛЫ И СТУЛЬЯ</p>
                 </a>
-                <a href="{{ url('beds/' .  20) }}" class="products__single-row-item">
+                <a href="{{ url('sofas/' .  16) }}" class="products__single-row-item">
                     <img src="assets/img/product-elements/sofa.svg">
                     <img class="hover" src="assets/img/product-elements/sofa-hover.svg">
                     <p>МЯГКАЯ МЕБЕЛЬ</p>

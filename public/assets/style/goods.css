@@ -755,7 +755,6 @@
 .goods-inner .goods .content .slider .img_markers .mainslider-sub-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 .goods-inner .goods .content .slider .img_markers .owl-nav {
   display: flex;

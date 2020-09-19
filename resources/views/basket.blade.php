@@ -38,11 +38,12 @@
                     </div>
                     <div class="price col-xl-6 col-lg-7 col-md-7 col-sm-12 col-12">
                         <div class="priceinner">
-                            <span>{{ number_format($item->model->sale != 0 ? $item->model->price - (($item->model->price / 100) * $item->model->sale) : $item->model->price, 2) }}
+                            <span>
+                                {{ number_format($item->model->sale != 0 ? $item->model->price - (($item->model->price / 100) * $item->model->sale) : $item->model->price, 0,","," ") }}
                                 <span>сум</span>
                             </span>
                             @if ($item->model->sale != 0)
-                                <p class="old-orice">{{ number_format($item->model->price, 2) }} сум</p>
+                                <p class="old-orice">{{ number_format($item->model->price, 0,","," ") }} сум</p>
                             @endif
                         </div>
                         <select  class="select--ys show-qty quantity" data-id="{{$item->rowId}}">
@@ -54,7 +55,7 @@
                             <option {{ $item->qty == 10 ? 'selected' : ''}}>10</option>
                         </select>
                         <div class="common-price">
-                            <p>{{ number_format(($item->model->sale != 0 ? $item->model->price - (($item->model->price / 100) * $item->model->sale) : $item->model->price) * $item->qty, 2) }}
+                            <p>{{ number_format(($item->model->sale != 0 ? $item->model->price - (($item->model->price / 100) * $item->model->sale) : $item->model->price) * $item->qty, 0,","," ") }}
                                 <span>сум</span>
                             </p>
                         </div>
@@ -85,7 +86,7 @@
                 </div>
                 <div class="price col-xl-4">
                     <p id="totalPrice">Общая сумма заказа:
-                        <span>{{ Cart::subtotal() }} сум</span>
+                        <span>{{ Cart::subtotal(0, 0, ' ') }} сум</span>
                     </p>
                 </div>
             </div>

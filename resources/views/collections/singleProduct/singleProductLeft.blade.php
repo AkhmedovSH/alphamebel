@@ -132,7 +132,10 @@
                             </a>
                             <div class="order">
                                 <div class="price">
-                                    <span>{{ $similarProducts[$key]['sale'] != 0 ? number_format($similarProducts[$key]['price'] - (($similarProducts[$key]['price'] / 100) * $similarProducts[$key]['sale']), 0,","," ") : $similarProducts[$key]['price'] }} сум</span>
+                                    <span><strong>
+                                        {{ $similarProducts[$key]['sale'] != 0 ? number_format($similarProducts[$key]['price'] - (($similarProducts[$key]['price'] / 100)
+                                     * $similarProducts[$key]['sale']), 0,","," ") : number_format($similarProducts[$key]['price'], 0,","," ") }} сум
+                                    </strong></span>
                                     @if ($similarProducts[$key]['sale'] != 0)
                                         <p>{{ number_format($similarProducts[$key]['price']) }} сум</p>
                                     @endif

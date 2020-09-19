@@ -159,9 +159,9 @@
                             <div class="price">
                                 <div>от 
                                     @if ($collectionItem->sale == 0)
-                                        <span>{{ number_format($collectionItem->price - (($collectionItem->price / 100) * $collectionItem->sale), 0,","," ") }} сум</span>
+                                        {{ number_format($collectionItem->price - (($collectionItem->price / 100) * $collectionItem->sale), 0,","," ") }} сум
                                     @else
-                                        <p>{{ number_format($collectionItem->price, 0,","," ") }} сум</p>
+                                        {{ number_format($collectionItem->price, 0,","," ") }} сум
                                     @endif
 
                                     @if ($collectionItem->note != null)
@@ -216,9 +216,9 @@
                                     <div class="order">
                                         <div class="price">
                                             @if ($item->sale == 0)
-                                                <span>{{ number_format($item->price - (($item->price / 100) * $item->sale), 0,","," ") }} сум</span>
+                                                <strong>{{ number_format($item->price - (($item->price / 100) * $item->sale), 0,","," ") }} сум</strong>
                                             @else
-                                                <p>{{ number_format($item->price, 0,","," ") }} сум</p>
+                                                <strong>{{ number_format($item->price, 0,","," ") }} сум</strong>
                                             @endif
                                         </div>
                                         <form action="/cart" method="post">

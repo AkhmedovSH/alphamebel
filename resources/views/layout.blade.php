@@ -33,7 +33,7 @@
     <link rel="stylesheet" href="/assets/style/search.css">
     <link rel="stylesheet" href="/assets/style/mattrasses.css">
     @stack('styles')
-    <title>Alpha Mebel</title>
+    <title>Шатура-мебель</title>
 
 </head>
 <body>
