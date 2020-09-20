@@ -25,7 +25,13 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $attributes = Attribute::pluck('title', 'id')->all();
+
+        $attributesData = Attribute::with('filter')->get();
+        $attributes = [];
+        foreach ($attributesData as $key => $value) {
+            $attributes[$key] = $value->id;
+            $attributes[$key] =  $value->filter->title . ': ' .$value->title;
+        }
         $categories = Category::pluck('title', 'id')->all();
         $products = Product::pluck('title', 'id')->all();
         $products_length_types = ProductLengthType::pluck('title', 'id')->all();
@@ -51,7 +57,13 @@ class ProductController extends Controller
     public function edit($id)
     {
         $data = Product::find($id);
-        $attributes = Attribute::pluck('title', 'id')->all();
+        
+        $attributesData = Attribute::with('filter')->get();
+        $attributes = [];
+        foreach ($attributesData as $key => $value) {
+            $attributes[$key] = $value->id;
+            $attributes[$key] =  $value->filter->title . ': ' .$value->title;
+        }
        
         if($data->attribute_ids != null) {
             $selectedAttributes = Attribute::whereIn('id', $data->attribute_ids)->pluck('id')->all();

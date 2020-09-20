@@ -63,7 +63,7 @@
         <div class="brand-navigation__basket col-xl-3 col-lg-4 col-md-4 col-sm-3 col-3">
             <a href="/cart">
                 <div class="basket-price">
-                    <p>{{ str_replace(',', '.', Cart::subtotal(0, 0)) }} <span>сум</span></p> 
+                    <p>{{ Cart::subtotal(0, 0, ' ') }} <span>сум</span></p> 
                 </div>
                 <div class="basket-logo">
                     <img src="/assets/img/elements/basket.svg" alt="">

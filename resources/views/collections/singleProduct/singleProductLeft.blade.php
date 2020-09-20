@@ -155,6 +155,10 @@
                 @endforeach
             </div>
         </div>
+
+        <div class="d-flex justify-content-end">
+            {{ $similarProducts->links() }}
+        </div>
     </div>
 
     <div id="addedToBasket">

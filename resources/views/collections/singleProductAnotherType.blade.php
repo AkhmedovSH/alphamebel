@@ -63,8 +63,8 @@
                         @endif
                     </div>
                     <div class="installment">
-                        <span>В кредит от</span>
-                        <p>{{ $product->calculate() }} сум/мес</p>
+                        <span>В рассрочку от </span>
+                        <a href="{{ url('/installment') }}"><p>« {{ $product->calculate() }} сум/мес »</p></a>
                     </div>
                     <form action="/cart" method="post">
                         @csrf

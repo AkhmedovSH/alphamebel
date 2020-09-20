@@ -2249,6 +2249,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -6121,10 +6124,16 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "credit-price" }, [
                       _c("div", [
-                        _c("span", [_vm._v("В кредит от")]),
+                        _c("span", [_vm._v("В рассрочку от ")]),
                         _vm._v(" "),
-                        _c("p", [
-                          _vm._v(_vm._s(_vm.calculate(product)) + " сум/мес")
+                        _c("a", { attrs: { href: "/installment" } }, [
+                          _c("p", [
+                            _vm._v(
+                              "« " +
+                                _vm._s(_vm.calculate(product)) +
+                                " сум/мес »"
+                            )
+                          ])
                         ])
                       ]),
                       _vm._v(" "),

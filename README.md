@@ -22,3 +22,5 @@ mattress_width
 @else
     <p>{{ number_format($product->price, 0,","," ") }} сум</p>
 @endif
+
+{{ $resources->links() }}

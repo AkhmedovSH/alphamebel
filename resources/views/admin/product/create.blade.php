@@ -29,9 +29,15 @@
                             <input type="number" class="form-control" id="exampleInputEmail1" name="price" value="{{old('price')}}" required>
                         </div>
 
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Скидка (Не обязательно)</label>
-                            <input type="number" class="form-control" id="exampleInputEmail1" name="sale">
+                        <div style="display: flex; justify-content: space-between;">
+                            <div class="form-group" style="width: 100%; margin-right: 15px">
+                                <label for="exampleInputEmail1">Скидка (Не обязательно)</label>
+                                <input type="number" class="form-control" id="exampleInputEmail1" name="sale">
+                            </div>
+                            <div class="form-group w-100" style="width: 100%">
+                                <label for="exampleInputEmail1">Позиция чем больше тем выше (Не обязательно)</label>
+                                <input type="number" class="form-control" id="exampleInputEmail1" name="position">
+                            </div>
                         </div>
 
                         <div class="form-group">

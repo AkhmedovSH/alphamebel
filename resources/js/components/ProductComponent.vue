@@ -61,8 +61,11 @@
                             </div>
                             <div class="credit-price">
                                 <div>
-                                    <span>В кредит от</span>
-                                    <p>{{ calculate(product) }} сум/мес</p>
+                                    <span>В рассрочку от </span>
+                                    <a :href="'/installment'">
+                                        <p>« {{ calculate(product) }} сум/мес »</p>
+                                    </a>
+                                   
                                 </div>
                                 <a :href="'/singleProductLeft/' + category.id + '/' + product.id">
                                     <button>ВЫБРАТЬ</button>

@@ -30,7 +30,7 @@ class ProductController extends Controller
         $attributes = Attribute::whereIn('id', $product->attribute_ids)->with('filter')->get();
         $images = $this->parseImages($product->images);
         if($product->collection_product_ids != null) {
-            $similarProducts = Product::whereIn('id', $product->collection_product_ids)->get();
+            $similarProducts = Product::whereIn('id', $product->collection_product_ids)->paginate(8);
         }else {
             $similarProducts = [];
         }
