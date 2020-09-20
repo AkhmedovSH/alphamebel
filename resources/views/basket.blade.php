@@ -4,7 +4,7 @@
 <main>
     <div class="basket container">
             <h1 class="col-auto">корзина</h1>
-            <p class="client-code col-auto">код клиента: 484700</p>
+            {{-- <p class="client-code col-auto">код клиента: 484700</p> --}}
             <ul>
                 <li>
                     <div class="col-xl-4 col-lg-4 col-md-4">

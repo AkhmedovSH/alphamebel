@@ -156,9 +156,11 @@
             </div>
         </div>
 
+        @if (count($similarProducts) > 0)
         <div class="d-flex justify-content-end">
             {{ $similarProducts->links() }}
         </div>
+        @endif
     </div>
 
     <div id="addedToBasket">

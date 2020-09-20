@@ -284,6 +284,7 @@
             <h2>ОСТАВИТЬ ЗАЯВКУ</h2>
             <form action="/sendRequest" method="POST" class="col-xl-8">
                 @csrf
+                <input type="hidden" name="section" value="submit_your_application">
                 <input type="text" name="name" placeholder="Имя" required>
                 <input type="number" name="phone" placeholder="Номер телефона" required>
                 <textarea name="comment" id="" cols="30" rows="10" placeholder="Комментарий"></textarea>

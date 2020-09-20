@@ -40,10 +40,12 @@
                 </div>
             </div>
         </div>
-        <form class="col-xl-7 col-lg-8 col-md-8 col-sm-12 col-12" action="" method="">
+        <form class="col-xl-7 col-lg-8 col-md-8 col-sm-12 col-12" action="/sendRequest" method="POST">
+            @csrf
             <h2>ХОЧУ ПРИСОЕДИНИТЬСЯ!</h2>
-            <input type="text" placeholder="Имя" required>
-            <input type="number" placeholder="Номер телефона" required>
+            <input type="hidden" name="section" value="dealers">
+            <input type="text" placeholder="Имя" name="name" required>
+            <input type="number" placeholder="Номер телефона" name="phone" required>
             <button type="submit">Отправить</button>
         </form>
     </div>

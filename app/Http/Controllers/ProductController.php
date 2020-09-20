@@ -7,13 +7,14 @@ use App\Product;
 use App\Category;
 use App\Attribute;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
 {
     public function products($category_id)
     {
         $category = Category::where('id', $category_id)->first();
-        $products = Product::where('category_id', $category->id)->get();
+        $products = Product::where('category_id', $category->id)->orderBy('position', 'DESC')->get();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->get();
         $attributes = Attribute::whereIn('id', json_decode($category->attribute_ids))->get();
         
@@ -42,6 +43,7 @@ class ProductController extends Controller
     public function singleProductRight($category_id, $product_id)
     {
         $product = Product::where('id', $product_id)->first();
+
         $category = Category::where('id', $category_id)->first();
         if($product->attribute_ids == null) {
             $product->attribute_ids = [];
@@ -50,8 +52,15 @@ class ProductController extends Controller
         $images = $this->parseImages($product->images);
         $similarProducts = Product::where('category_id', $product->category_id)->where('id', '!=', $product->id)->limit(8)->get();
 
-        $collectionItem = Product::where('category_id', 10)->get()->random(1)->first();
-        return view('collections/singleProduct/singleProductRight', compact('product', 'attributes', 'category', 'images', 'similarProducts', 'collectionItem'));
+        $haveCollection = false;
+        if($product->collection_product_ids != null && $product->collection_product_ids[0] != null){
+            $collectionItem = Product::where('id', $product->collection_product_ids[0])->first();
+            $haveCollection = true;
+        } else {
+            $collectionItem = Product::where('category_id', $category_id)->get()->random(1)->first();
+        }
+
+        return view('collections/singleProduct/singleProductRight', compact('product', 'attributes', 'category', 'images', 'similarProducts', 'collectionItem', 'haveCollection'));
     }
 
     public function offices()
@@ -94,8 +103,10 @@ class ProductController extends Controller
         ));
     }
 
-    public function wardobesBedsComods($category_id) //wardobes
+    public function wardobesBedsComods($category_id, Request $request) //wardobes
     {
+        
+        Session::put('show_all_url', $request->url());
         $category = Category::where('id', $category_id)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
         $products = Product::where('category_id', $category->id)->get();

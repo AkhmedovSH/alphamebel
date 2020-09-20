@@ -143,8 +143,13 @@
 
         <div class="from-collection">
             <div class="title">
-                <h3>Коллекция</h3>
-                <a href="#!">СМОТРЕТЬ ВСЕ</a>
+                @if (isset($haveCollection) && $haveCollection == true)
+                    <h3>Коллекция</h3>
+                @else
+                    <h3>Другие изделия</h3>
+                @endif
+                
+                <a href="{{ Session::get('show_all_url') }}">СМОТРЕТЬ ВСЕ</a>
             </div>
             <div class="desc">
                 <div class="collection-card col-xl-4">

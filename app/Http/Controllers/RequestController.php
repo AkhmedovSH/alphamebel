@@ -29,12 +29,22 @@ class RequestController extends Controller
     
     public function sendRequest(Request $request)
     {
-        $arr = [
-            'Раздел: ' => 'Оставить заявку',
-            'Имя: ' => $request->name,
-            'Номер телефона: ' => $request->phone,
-            'Комментарий: ' => $request->comment,
-        ];
+        if($request->section == 'submit_your_application')
+        {
+            $arr = [
+                'Раздел: ' => 'Оставить заявку',
+                'Имя: ' => $request->name,
+                'Номер телефона: ' => $request->phone,
+                'Комментарий: ' => $request->comment,
+            ];
+        }
+        if($request->section == 'dealers') {
+            $arr = [
+                'Раздел: ' => 'Хочу присоединиться',
+                'Имя: ' => $request->name,
+                'Номер телефона: ' => $request->phone,
+            ];
+        }
         $txt = "";
         foreach ($arr as $key => $value) {
             $txt .= "<b>" . $key . "</b> " . $value . "%0A";
@@ -156,6 +166,7 @@ class RequestController extends Controller
                 $txt .= "<b>" . $key + 1 . "</b> " . $value->title . "\n";
                 $txt .= "<b>" .  $value->title . "</b> " . $value->price . 'сум' . "\n";
             };
+
             $website="https://api.telegram.org/bot".$this->token;
             $chatId = $this->chat_id;
             $params=[
@@ -172,7 +183,7 @@ class RequestController extends Controller
             $result = curl_exec($ch);
             curl_close($ch);
         }
-        $weRecallText = 'Ожидайте звонка наши менеджеры свяжуться с вами.';
+        $weRecallText = '«Спасибо за заказ! Наши менеджеры свяжутся с вами»';
         return view('paymentSuccess', compact('weRecallText'));
        
     }
