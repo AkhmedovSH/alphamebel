@@ -38,7 +38,7 @@
                                 <input type="number" class="form-control" id="exampleInputEmail1" name="sale" value="{{$data->sale}}">
                             </div>
                             <div class="form-group w-100" style="width: 100%">
-                                <label for="exampleInputEmail1">Позиция (Не обязательно)</label>
+                                <label for="exampleInputEmail1">Позиция</label>
                                 <input type="number" class="form-control" id="exampleInputEmail1" name="position" value="{{$data->position}}">
                             </div>
                         </div>

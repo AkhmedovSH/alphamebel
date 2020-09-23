@@ -35,8 +35,8 @@
                                 <input type="number" class="form-control" id="exampleInputEmail1" name="sale">
                             </div>
                             <div class="form-group w-100" style="width: 100%">
-                                <label for="exampleInputEmail1">Позиция чем больше тем выше (Не обязательно)</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" name="position">
+                                <label for="exampleInputEmail1">Позиция</label>
+                                <input type="number" class="form-control" id="exampleInputEmail1" name="position" value="0">
                             </div>
                         </div>
 
