@@ -89,6 +89,8 @@
 @media (max-width: 576px) {
   .managers .row > div {
     justify-content: center;
+  }
+  .managers .row > div .desc {
     flex-grow: 1;
   }
   .managers .row .card .img {

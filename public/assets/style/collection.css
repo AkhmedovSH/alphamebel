@@ -318,7 +318,7 @@
 }
 .collections-inside .about-item .slider .img.active .mainslider-card_main {
   width: 50%;
-  height: 700px;
+  max-height: 700px;
 }
 .collections-inside .about-item .slider .img.active .img_markers {
   width: 40%;
