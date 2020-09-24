@@ -226,9 +226,8 @@
 }
 .collections-inside h1 {
   font-weight: 700;
-  font-size: 26px;
+  font-size: 32px;
   line-height: 120%;
-  margin-bottom: 30px;
 }
 .collections-inside .about-item {
   display: flex;
@@ -345,7 +344,7 @@
 }
 .collections-inside .about-item .tabs > h2 {
   font-weight: 500;
-  font-size: 26px;
+  font-size: 18px;
   margin-bottom: 40px;
 }
 .collections-inside .about-item .tabs .nav-item {
@@ -789,8 +788,6 @@
 }
 .corporate .contactmanager .managers .manager-card img {
   margin-right: 20px;
-  object-fit: contain;
-  width: 180px;
 }
 .corporate .contactmanager .managers .manager-card .desc {
   display: flex;

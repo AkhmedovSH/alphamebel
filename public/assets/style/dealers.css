@@ -99,6 +99,7 @@
   align-items: center;
 }
 .join-form form h2 {
+  width: 100%;
   font-weight: bold;
   font-size: 26px;
 }
