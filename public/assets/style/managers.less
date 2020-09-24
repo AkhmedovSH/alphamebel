@@ -1,10 +1,10 @@
-@dark-grey: #4B4B4B;
+@dark-grey: #4b4b4b;
 @middle-grey: #828282;
-@light-grey: #F3F3F3;
-@yellow: #F7D917;
-@yellow-hover: #F0D20E;
-@yellow-main: #EECF05;
-@sale-red: #F04949;
+@light-grey: #f3f3f3;
+@yellow: #f7d917;
+@yellow-hover: #f0d20e;
+@yellow-main: #eecf05;
+@sale-red: #f04949;
 
 .managers {
     padding: 30px 15px;
@@ -25,7 +25,7 @@
         margin: 20px 0 40px 0;
     }
 
-    .row>div {
+    .row > div {
         width: 100%;
         display: flex;
         flex-wrap: nowrap;
@@ -33,6 +33,7 @@
         margin-bottom: 15px;
 
         .img {
+            flex-shrink: 0;
             height: 100px;
             width: 100px;
 
@@ -56,7 +57,7 @@
                 font-weight: 400;
             }
 
-            p.tel{
+            p.tel {
                 display: flex;
                 height: 25px;
                 align-items: center;
@@ -67,8 +68,8 @@
                 overflow: hidden;
                 margin: 5px 0;
 
-                &::after{
-                    content: '';
+                &::after {
+                    content: "";
                     height: 20px;
                     width: 20px;
                     position: absolute;
@@ -76,9 +77,9 @@
                     background: white;
                     transform: rotate(45deg);
                 }
-                a{
+                a {
                     display: flex;
-                    img{
+                    img {
                         margin-left: 5px;
                     }
                 }
@@ -91,28 +92,28 @@
         }
     }
 
-    .row{
+    .row {
         margin-bottom: 40px;
     }
-
 }
 
-@media(max-width:1500px) {
+@media (max-width: 1500px) {
     .managers .row .card .img {
         height: 260px;
     }
 }
 
-@media(max-width:1200px) {
+@media (max-width: 1200px) {
     .managers .row .card .img {
         height: 210px;
     }
 }
 
-@media(max-width:576px) {
+@media (max-width: 576px) {
     .managers .row {
-        &>div {
+        & > div {
             justify-content: center;
+            flex-grow: 1;
         }
 
         .card .img {

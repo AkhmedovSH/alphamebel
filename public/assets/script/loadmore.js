@@ -3,11 +3,11 @@ $(document).ready(function () {
     if ($(".blogBox:hidden").length != 0) {
         $("#loadMore").show();
     }
-    $("#loadMore").on('click', function (e) {
+    $("#loadMore").on("click", function (e) {
         e.preventDefault();
         $(".moreBox:hidden").slice(0, 2).slideDown();
         if ($(".moreBox:hidden").length == 0) {
-            $("#loadMore").fadeOut('slow');
+            $("#loadMore").fadeOut("slow");
         }
     });
 });
@@ -17,11 +17,16 @@ $(document).ready(function () {
     if ($(".blogBox:hidden").length != 0) {
         $(".loadMore").show();
     }
-    $(".loadMore").on('click', function (e) {
+    $(".loadMore").on("click", function (e) {
         e.preventDefault();
-        $(this).parent().prev().children(".moreBox:hidden").slice(0, 2).slideDown();
+        $(this)
+            .parent()
+            .prev()
+            .children(".moreBox:hidden")
+            .slice(0, 2)
+            .slideDown();
         if ($(this).parent().prev().children(".moreBox:hidden").length == 0) {
-            $(this).fadeOut('slow');
+            $(this).fadeOut("slow");
         }
     });
 });

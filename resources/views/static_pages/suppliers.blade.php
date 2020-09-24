@@ -30,7 +30,9 @@
 
     <p>Предложение должно быть подготовлено в формате Excel с указанием наименования товаров, их характеристик,
 
-        уникальных кодов или артикулов, цен на условиях доставки на склад Мебельной Компании </p>
+        уникальных кодов или артикулов, цен в рублях без НДС на условиях доставки на склад Мебельной Компании по
+
+        адресу: Московская область, г. Шатура, Ботинский проезд д.37.</p>
 
     <p>Поставщику также необходимо предоставить краткую информацию о своей компании: сферы деятельности, сколько лет
 
@@ -46,6 +48,10 @@
 
         предложению, ответ может не предоставляться.</p>
 
+    <p style="font-weight: 700;">ПОСТАВЩИКАМ<br>
+        Приглашаем к сотрудничеству по дистрибуции мебели и сопутствующих товаров на территории Узбекистана. Если вы являетесь производителем, желающим выйти на рынок Узбекистана и быть представленным в крупной, динамично растущей сети, мы будем рады рассмотреть совместное сотрудничество.
+    </p>
+
 </section>
 
 <div class="join-form container">
@@ -56,19 +62,19 @@
 
         <div>
 
-            <img src="/assets/img/managers/Rectangle 103-7.jpg" alt="">
+            <img src="/assets/img/managers/Rectangle 103-2.jpg" alt="">
 
             <div class="about">
 
-                <p>Гуламов Шерзод</p>
+                <p>Рустам Маннанов</p>
 
-                <span>Коммерческий директор</span>
+                <span>Директор</span>
 
                 <p>
 
-                    <a href="tel:+998900324445">+99890 032 44 45</a>
+                    <a href="tel:+998901214445">+99890 121 44 45</a>
 
-                    <a href="https://t.me/alphamebel_sales">
+                    <a href="https://web.telegram.org/">
 
                         <img src="/assets/img/dealers/telegram_logo.svg" alt="">
 
@@ -82,15 +88,13 @@
 
     </div>
 
-    <form class="col-xl-7 col-lg-8 col-md-8 col-sm-12 col-12" action="/sendRequest" method="POST">
+    <form class="col-xl-7 col-lg-8 col-md-8 col-sm-12 col-12" action="" method="">
 
-        <h2>ХОЧУ ПРИСОЕДИНИТЬСЯ!</h2>
+        <h2>Стать партнёром</h2>
 
-        <input type="hidden" name="_token" value="XXNDbb0SwIjFQL2FATN4J5UiYKjQGeYNjzzY6fFc">
+        <input type="text" placeholder="Имя" required>
 
-        <input type="text" name="name" placeholder="Имя" required="required">
-
-        <input type="number" name="phone" placeholder="Номер телефона" required="required">
+        <input type="number" placeholder="Номер телефона" required>
 
         <button type="submit">Отправить</button>
 

@@ -35,12 +35,12 @@
   margin-bottom: 20px;
 }
 .collections-filter #filterContent > div h4::after {
-  content: '';
+  content: "";
   display: block;
   margin-top: 15px;
   height: 1px;
   width: 50%;
-  background: #4B4B4B;
+  background: #4b4b4b;
 }
 .collections-filter #filterContent > div li {
   font-size: 14px;
@@ -49,7 +49,7 @@
   margin-bottom: 15px;
   height: 20px;
 }
-.collections-filter #filterContent > div  input {
+.collections-filter #filterContent > div li input {
   visibility: hidden;
 }
 .collections-filter #filterContent > div li label {
@@ -58,7 +58,7 @@
   user-select: none;
 }
 .collections-filter #filterContent > div li label::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 15px;
   height: 20px;
@@ -67,11 +67,11 @@
   border: 1px solid #828282;
   transition: 0.2s;
 }
-.collections-filter #filterContent > div  input:checked + label::before {
+.collections-filter #filterContent > div li input:checked + label::before {
   width: 20px;
   height: 20px;
-  border: 1px solid #F7D917;
-  background: url(../img/elements/check.svg) no-repeat center center #F7D917;
+  border: 1px solid #f7d917;
+  background: url(../img/elements/check.svg) no-repeat center center #f7d917;
 }
 .collections-filter__btns {
   display: flex;
@@ -86,35 +86,36 @@
   color: #828282;
 }
 .collections-filter__btns #accept {
+  white-space: nowrap;
   background: none;
-  border: 1px solid #4B4B4B;
-  padding: 10px 10px;
-  margin-left: 5px;
+  border: 1px solid #4b4b4b;
+  padding: 12px 13px;
+  margin-left: 20px;
 }
 .collections-filter__btns #accept:hover {
-  border: 1px solid #F7D917;
-  background: #F7D917;
+  border: 1px solid #f7d917;
+  background: #f7d917;
 }
 .collections .cards-row {
   display: flex;
   flex-wrap: wrap;
 }
 .collections .cards-row .card {
-  background: #F9F9F9;
+  background: #f9f9f9;
   padding: 25px 0;
   margin-bottom: 25px;
   border: 0;
   border-radius: 0;
-  border: 1px solid #F9F9F9;
+  border: 1px solid #f9f9f9;
 }
 .collections .cards-row .card:hover {
-  border: 1px solid #BFBFBF;
+  border: 1px solid #bfbfbf;
 }
 .collections .cards-row .card p.title {
   font-weight: 500;
   font-size: 26px;
   line-height: 130%;
-  color: #4F4F4F;
+  color: #4f4f4f;
   text-align: center;
   margin-bottom: 25px;
 }
@@ -150,7 +151,7 @@
   right: -15px;
   width: 15px;
   height: 15px;
-  background: #F7D917;
+  background: #f7d917;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,7 +163,7 @@
   position: absolute;
   top: 0;
   left: 100%;
-  background: #F3F3F3;
+  background: #f3f3f3;
   height: auto;
   text-align: center;
   width: 250px;
@@ -186,7 +187,7 @@
 .collections .cards-row .card .details .credit-price span {
   font-size: 11px;
   line-height: 130%;
-  color: #F04949;
+  color: #f04949;
 }
 .collections .cards-row .card .details .credit-price p {
   font-size: 14px;
@@ -194,13 +195,13 @@
 }
 .collections .cards-row .card .details .credit-price button {
   padding: 15px 20px;
-  border: 1px solid #4B4B4B;
+  border: 1px solid #4b4b4b;
   background: none;
   outline: none;
 }
 .collections .cards-row .card .details .credit-price button:hover {
-  border: 1px solid #F7D917;
-  background: #F7D917;
+  border: 1px solid #f7d917;
+  background: #f7d917;
 }
 .collections .more {
   display: flex;
@@ -214,20 +215,20 @@
   font-weight: 700;
   background: none;
   outline: none;
-  border: 1px solid #4B4B4B;
+  border: 1px solid #4b4b4b;
 }
 .collections .more #loadMore:hover {
-  border: 1px solid #F7D917;
-  background: #F7D917;
+  border: 1px solid #f7d917;
+  background: #f7d917;
 }
 .collections-inside {
   font-weight: 400;
 }
 .collections-inside h1 {
   font-weight: 700;
-  font-size: 40px;
+  font-size: 26px;
   line-height: 120%;
-  margin-bottom: 5px;
+  margin-bottom: 30px;
 }
 .collections-inside .about-item {
   display: flex;
@@ -325,7 +326,7 @@
 .collections-inside .about-item .slider .img.active .close {
   height: 50px;
   width: 50px;
-  background: url(../img/elements/menu-close-white.svg) no-repeat center center #F7D917;
+  background: url(../img/elements/menu-close-white.svg) no-repeat center center #f7d917;
   position: fixed;
   z-index: 23;
   top: 20px;
@@ -355,12 +356,12 @@
   font-size: 14px;
   background: none;
   text-transform: uppercase;
-  color: #4B4B4B;
+  color: #4b4b4b;
   border-radius: 0;
   border-bottom: 0.5px solid #828282;
 }
 .collections-inside .about-item .tabs .nav-item a.active {
-  border-bottom: 3px solid #F7D917;
+  border-bottom: 3px solid #f7d917;
 }
 .collections-inside .about-item .tabs .tab-content {
   font-size: 16px;
@@ -399,7 +400,7 @@
 }
 .collections-inside .about-item .tabs .tab-content .tab-pane ul li {
   padding: 20px 0;
-  border-bottom: 0.5px solid #F3F3F3;
+  border-bottom: 0.5px solid #f3f3f3;
   display: flex;
   justify-content: space-between;
 }
@@ -408,7 +409,7 @@
   font-size: 14px;
   width: 100%;
   text-align: justify;
-  color: #4B4B4B;
+  color: #4b4b4b;
 }
 .collections-inside .about-item .tabs .tab-content .tab-pane ul li:last-child {
   border: none;
@@ -427,7 +428,7 @@
   justify-content: center;
 }
 .collections-inside .single-products .cards .card {
-  background: #F3F3F3;
+  background: #f3f3f3;
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -444,7 +445,7 @@
   font-size: 14px;
   line-height: 130%;
   padding: 6px 13px;
-  background: #F7D917;
+  background: #f7d917;
 }
 .collections-inside .single-products .cards .card .img .sale {
   position: absolute;
@@ -454,7 +455,7 @@
   line-height: 130%;
   padding: 12px 22px;
   color: white;
-  background: #F04949;
+  background: #f04949;
 }
 .collections-inside .single-products .cards .card .img img {
   height: 100%;
@@ -500,11 +501,11 @@
 }
 .collections-inside .single-products .cards .card .order button {
   padding: 12px 25px;
-  border: 0.5px solid #4B4B4B;
+  border: 0.5px solid #4b4b4b;
 }
 .collections-inside .single-products .cards .card .order button:hover {
-  background: #F7D917;
-  border: 0.5px solid #F7D917;
+  background: #f7d917;
+  border: 0.5px solid #f7d917;
 }
 .collections-inside .single-products .cards .card:hover .size {
   display: flex;
@@ -516,12 +517,12 @@
   margin-bottom: 40px;
 }
 .collections-inside .single-products .cards .sub-content .content {
-  border: 1px solid #F3F3F3;
+  border: 1px solid #f3f3f3;
 }
 .collections-inside .single-products .cards .sub-content .content .img {
   height: 250px;
   overflow: hidden;
-  background: #F9F9F9;
+  background: #f9f9f9;
   position: relative;
 }
 .collections-inside .single-products .cards .sub-content .content .img .goodsimg-main {
@@ -552,7 +553,7 @@
 }
 .collections-inside .single-products .cards .sub-content .content .img .stock span {
   padding: 5px 15px;
-  background: #F7D917;
+  background: #f7d917;
   font-size: 14px;
 }
 .collections-inside .single-products .cards .sub-content .content .img .stock p {
@@ -560,12 +561,12 @@
   font-size: 14px;
   text-transform: capitalize;
   padding: 8px 20px;
-  background: #F04949;
+  background: #f04949;
   font-weight: 700;
   color: white;
 }
 .collections-inside .single-products .cards .sub-content .content .desc {
-  background: #F9F9F9;
+  background: #f9f9f9;
   padding: 35px 20px;
 }
 .collections-inside .single-products .cards .sub-content .content .desc p.title {
@@ -604,7 +605,7 @@
 .collections-inside .single-products .cards .sub-content .content .desc .order .credit p {
   font-size: 11px;
   line-height: 130%;
-  color: #F04949;
+  color: #f04949;
 }
 .collections-inside .single-products .cards .sub-content .content .desc .order .credit p:last-child {
   font-size: 14px;
@@ -614,11 +615,11 @@
   padding: 12px 15px;
   font-size: 11px;
   background: none;
-  border: 1px solid #4B4B4B;
+  border: 1px solid #4b4b4b;
   outline: none;
 }
 .collections-inside .single-products .cards .sub-content .content .desc .order .add:hover {
-  background: #F0D20E;
+  background: #f0d20e;
 }
 .collections-inside .single-products .cards .sub-content .content.active {
   position: absolute;
@@ -627,7 +628,7 @@
   z-index: 10;
   height: auto;
   width: 400px;
-  background: #F9F9F9;
+  background: #f9f9f9;
   -webkit-box-shadow: 0px 0px 54px -37px rgba(0, 0, 0, 0.76);
   -moz-box-shadow: 0px 0px 54px -37px rgba(0, 0, 0, 0.76);
   box-shadow: 0px 0px 54px -37px rgba(0, 0, 0, 0.76);
@@ -652,7 +653,7 @@
   margin: 10px;
 }
 .collections-inside .single-products .cards .sub-content .content.active .desc {
-  background: #F9F9F9;
+  background: #f9f9f9;
 }
 .collections-inside .single-products .cards .sub-content .content.active .desc p.gooddesc {
   display: block;
@@ -700,7 +701,7 @@
   margin-bottom: 40px;
 }
 .corporate-row .card a {
-  background: #F3F3F3;
+  background: #f3f3f3;
   text-align: center;
   padding: 0;
 }
@@ -788,6 +789,8 @@
 }
 .corporate .contactmanager .managers .manager-card img {
   margin-right: 20px;
+  object-fit: contain;
+  width: 180px;
 }
 .corporate .contactmanager .managers .manager-card .desc {
   display: flex;
@@ -812,7 +815,7 @@
     top: 0;
     left: 0;
     z-index: 2;
-    background: #F3F3F3;
+    background: #f3f3f3;
     width: 300px;
     padding: 0;
   }
@@ -829,7 +832,7 @@
   }
   .collections-filter .main-title {
     padding: 10px 20px;
-    background: #F3F3F3;
+    background: #f3f3f3;
     height: 50px;
     display: flex;
     align-items: center;
@@ -1023,7 +1026,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #F9F9F9;
+    background: #f9f9f9;
   }
   .collections-inside .single-products .cards .sub-content .goodscard .img {
     height: auto;
@@ -1075,7 +1078,7 @@
     height: 40px;
     width: 40px;
     border: none;
-    background: url(../img/elements/basket-black.svg) center center no-repeat #F7D917;
+    background: url(../img/elements/basket-black.svg) center center no-repeat #f7d917;
   }
   .corporate h1 {
     font-size: 22px;

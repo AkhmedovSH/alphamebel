@@ -2,7 +2,7 @@
 
 
 @section('content')
-<form action="assets/form/kiranosend.php" method="POST" id="form">
+<form action="/assets/form/kiranosend.php" method="POST" id="form">
     <div class="virtual_design container">
         <div class="owl-carousel">
             <div><img src="assets/img/virtual_design/slide_01.jpg" alt=""></div>
@@ -38,4 +38,12 @@
         </div>
     </div>
 </form>
+<script>
+    $(document).ready(function() {
+        $(".owl-carousel").owlCarousel({
+            items: 1,
+            nav: true,
+        });
+    });
+</script>
 @endsection

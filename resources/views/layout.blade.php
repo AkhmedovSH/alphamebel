@@ -56,6 +56,7 @@
 <script src="/assets/script/carousel.js"></script>
 <script src="/assets/script/common.js"></script>
 <script src="/assets/script/tabs.js"></script>
+<script src="/assets/script/loadmore.js"></script>
 
 <script>
     $(document).ready(function () {

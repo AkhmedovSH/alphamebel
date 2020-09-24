@@ -77,7 +77,7 @@
             <h2>Предметы мебели</h2>
             <p>Подбор мебели по фильтрам</p>
             <div class="products__single-row">
-                <a href="{{ url('sofas/' .  16) }}" class="products__single-row-item">
+                <a href="{{ url('beds/' .  20) }}" class="products__single-row-item">
                     <img src="assets/img/product-elements/bed.svg">
                     <img class="hover" src="assets/img/product-elements/bed-hover.svg">
                     <p>кровати</p>
