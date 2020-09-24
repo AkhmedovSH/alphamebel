@@ -333,6 +333,9 @@
   line-height: 120%;
   font-weight: 700;
 }
+.single-goods .cards .sub-content .content .desc .order .price p span {
+  font-weight: 700;
+}
 .single-goods .cards .sub-content .content .desc .order .price p:last-child {
   font-size: 12px;
   font-weight: 400;
@@ -394,7 +397,7 @@
   background: #f9f9f9;
 }
 .single-goods .cards .sub-content .content.active .desc p.gooddesc {
-  display: block;
+  display: none;
   font-size: 12px;
   color: #828282;
   margin-bottom: 20px;
@@ -669,7 +672,7 @@
 .goods-inner .goods .content .slider .img_markers .mainslider-sub-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .goods-inner .goods .content .slider .img_markers .owl-nav {
   display: flex;
@@ -847,6 +850,9 @@
   justify-content: center;
   border: 1px solid #4b4b4b;
   margin: -0.5px;
+}
+.goods-inner .goods .content .desc .tabs .tab-content .tab-pane .advantages .item img {
+  width: 38px;
 }
 .goods-inner .goods .content .desc .tabs .tab-content .tab-pane .advantages .item p {
   font-size: 12px;
@@ -1382,10 +1388,11 @@
   .single-goods .cards .sub-content .goodscard {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background: #f9f9f9;
   }
   .single-goods .cards .sub-content .goodscard .img {
+    flex-shrink: 0;
     height: auto;
   }
   .single-goods .cards .sub-content .goodscard .img .goodsimg-main {
@@ -1413,6 +1420,7 @@
     text-align: left;
     padding: 10px;
     background: none;
+    flex-grow: 1;
   }
   .single-goods .cards .sub-content .goodscard .desc p.title,
   .single-goods .cards .sub-content .goodscard .desc p.code {
