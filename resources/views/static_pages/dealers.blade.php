@@ -26,8 +26,8 @@
 
             <p class="col-xl-9 col-lg-10 col-md-10 col-sm-10 col-12">Мы рады сотрудничать с компаниями, разделяющими
 
-                наши цели и приоритеты, готовыми обеспечить взаимовыгодное сотрудничество. 
-                
+                наши цели и приоритеты, готовыми обеспечить взаимовыгодное сотрудничество.
+
                 Если вы ищете надежных партнеров, то вы обратились по адресу.</p>
 
             <div class="manager col-auto">
@@ -64,7 +64,7 @@
 
                         <a href="https://t.me/alphamebel_sales">
 
-                            <img src="/assets/img/dealers/telegram_logo.svg"alt="">
+                            <img src="/assets/img/dealers/telegram_logo.svg" alt="">
 
                         </a>
 
@@ -78,13 +78,15 @@
 
         <form class="col-xl-7 col-lg-8 col-md-8 col-sm-12 col-12" action="/sendRequest" method="POST">
 
-            <h2>ХОЧУ ПРИСОЕДИНИТЬСЯ!</h2>
+            <h2>Стать партнёром</h2>
 
             <input type="hidden" name="_token" value="XXNDbb0SwIjFQL2FATN4J5UiYKjQGeYNjzzY6fFc">
 
             <input type="text" name="name" placeholder="Имя" required="required">
 
             <input type="number" name="phone" placeholder="Номер телефона" required="required">
+
+            <input type="text" name="text" placeholder="Сообщение">
 
             <button type="submit">Отправить</button>
 

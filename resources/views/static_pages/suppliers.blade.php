@@ -96,6 +96,8 @@
 
         <input type="number" placeholder="Номер телефона" required>
 
+        <input type="text" placeholder="Сообщение">
+
         <button type="submit">Отправить</button>
 
     </form>
