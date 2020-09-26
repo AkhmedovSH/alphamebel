@@ -1,10 +1,10 @@
-@dark-grey: #4B4B4B;
+@dark-grey: #4b4b4b;
 @middle-grey: #828282;
-@light-grey: #F3F3F3;
-@yellow: #F7D917;
-@yellow-hover: #F0D20E;
-@yellow-main: #EECF05;
-@sale-red: #F04949;
+@light-grey: #f3f3f3;
+@yellow: #f7d917;
+@yellow-hover: #f0d20e;
+@yellow-main: #eecf05;
+@sale-red: #f04949;
 
 .catalogs {
     h1 {
@@ -26,11 +26,11 @@
         flex-wrap: wrap;
         margin-bottom: 40px;
 
-        >div {
+        > div {
             margin: 15px 0;
 
             .catalog_card {
-                background: #F9F9F9;
+                background: #f9f9f9;
 
                 .catalog_preview {
                     height: 350px;
@@ -47,6 +47,7 @@
                     font-size: 14px;
                     padding: 20px;
                     margin-bottom: 0;
+                    height: 80px;
                 }
 
                 a {
@@ -58,12 +59,12 @@
 
                     span {
                         color: @middle-grey;
-
+                        margin: 0 5px;
                     }
 
                     &:hover {
                         span {
-                            color: @yellow-hover ;
+                            color: @yellow-hover;
                         }
                     }
                 }
@@ -72,7 +73,7 @@
     }
 }
 
-@media(max-width: 540px) {
+@media (max-width: 540px) {
     .catalogs {
         padding-right: 0;
         padding-left: 0;
@@ -83,15 +84,22 @@
             font-size: 16px;
             margin-bottom: 20px;
         }
-        h2{
+        h2 {
             text-align: center;
         }
 
         .catalog__block {
             justify-content: center;
 
-            >div {
+            > div {
                 .catalog_card {
+                    .catalog_preview {
+                        height: auto;
+                        img {
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
                     a {
                         padding: 0 0 10px 0;
                         display: flex;
@@ -99,6 +107,7 @@
                     }
 
                     h3 {
+                        height: auto;
                         padding: 10px;
                         text-align: center;
                     }
