@@ -472,7 +472,7 @@
 
                 <p>Вы можете ознакомиться с ассортиментом нашей мебели в любое удобное время, скачав презентацию</p>
 
-                <a class="btn" href="#!">Скачать</a>
+                <a class="btn" target="_blank" href="https://www.shatura.com/upload/files/ofice_2018_01_%D1%80%D0%B0%D0%B7%D0%B2%D0%BE%D1%80%D0%BE%D1%82%D0%B0%D0%BC%D0%B8.pdf">Скачать</a>
 
             </div>
 
