@@ -170,7 +170,7 @@
 
         <div id="feedbacks-carousel" class="owl-carousel feedbacks__row">
 
-            <div class="feedbacks__row-item">
+            <!-- <div class="feedbacks__row-item">
 
                 <a href="https://www.instagram.com/">
 
@@ -200,35 +200,13 @@
 
                 </a>
 
-            </div>
+            </div> -->
 
             <div class="feedbacks__row-item">
 
-                <a href="https://www.instagram.com/">
+                <a href="https://www.shatura.com/upload/images//gallery/feedback/item1.jpg">
 
-                    <div class="feedbacks__row-item-img">
-
-                        <img src="/assets/img/feedback2.jpg" alt="">
-
-                    </div>
-
-                    <div class="feedbacks__row-item-desc">
-
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-
-                        </p>
-
-                        <div class="feed-person">
-
-                            <img src="assets/img/feedback2.jpg" alt="">
-
-                            <p>alfamebel_uz</p>
-
-                        </div>
-
-                    </div>
+                    <img src="https://www.shatura.com/upload/images//gallery/feedback/item1.jpg" alt="">
 
                 </a>
 
@@ -236,31 +214,19 @@
 
             <div class="feedbacks__row-item">
 
-                <a href="https://www.instagram.com/">
+                <a href="https://www.shatura.com/upload/images//gallery/feedback/item2.jpg">
 
-                    <div class="feedbacks__row-item-img">
+                    <img src="https://www.shatura.com/upload/images//gallery/feedback/item2.jpg" alt="">
 
-                        <img src="/assets/img/feedback3.jpg" alt="">
+                </a>
 
-                    </div>
+            </div>
+    
+            <div class="feedbacks__row-item">
 
-                    <div class="feedbacks__row-item-desc">
+                <a href="https://www.shatura.com/upload/images//gallery/feedback/item5.jpg">
 
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-
-                        </p>
-
-                        <div class="feed-person">
-
-                            <img src="assets/img/feedback4.jpg" alt="">
-
-                            <p>alfamebel_uz</p>
-
-                        </div>
-
-                    </div>
+                    <img src="https://www.shatura.com/upload/images//gallery/feedback/item5.jpg" alt="">
 
                 </a>
 
@@ -268,31 +234,9 @@
 
             <div class="feedbacks__row-item">
 
-                <a href="https://www.instagram.com/">
+                <a href="https://www.shatura.com/upload/images//gallery/feedback/item3.jpg">
 
-                    <div class="feedbacks__row-item-img">
-
-                        <img src="/assets/img/feedback4.jpg" alt="">
-
-                    </div>
-
-                    <div class="feedbacks__row-item-desc">
-
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-
-                        </p>
-
-                        <div class="feed-person">
-
-                            <img src="assets/img/feedback4.jpg" alt="">
-
-                            <p>alfamebel_uz</p>
-
-                        </div>
-
-                    </div>
+                    <img src="https://www.shatura.com/upload/images//gallery/feedback/item3.jpg" alt="">
 
                 </a>
 
@@ -300,159 +244,9 @@
 
             <div class="feedbacks__row-item">
 
-                <a href="https://www.instagram.com/">
+                <a href="https://www.shatura.com/upload/images//gallery/feedback/item4.jpg">
 
-                    <div class="feedbacks__row-item-img">
-
-                        <img src="/assets/img/feedback1.jpg" alt="">
-
-                    </div>
-
-                    <div class="feedbacks__row-item-desc">
-
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-
-                        </p>
-
-                        <div class="feed-person">
-
-                            <img src="assets/img/feedback1.jpg" alt="">
-
-                            <p>alfamebel_uz</p>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-            <div class="feedbacks__row-item">
-
-                <a href="https://www.instagram.com/">
-
-                    <div class="feedbacks__row-item-img">
-
-                        <img src="/assets/img/feedback1.jpg" alt="">
-
-                    </div>
-
-                    <div class="feedbacks__row-item-desc">
-
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-
-                        </p>
-
-                        <div class="feed-person">
-
-                            <img src="assets/img/feedback1.jpg" alt="">
-
-                            <p>alfamebel_uz</p>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-            <div class="feedbacks__row-item">
-
-                <a href="https://www.instagram.com/">
-
-                    <div class="feedbacks__row-item-img">
-
-                        <img src="/assets/img/feedback1.jpg" alt="">
-
-                    </div>
-
-                    <div class="feedbacks__row-item-desc">
-
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-
-                        </p>
-
-                        <div class="feed-person">
-
-                            <img src="assets/img/feedback1.jpg" alt="">
-
-                            <p>alfamebel_uz</p>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-            <div class="feedbacks__row-item">
-
-                <a href="https://www.instagram.com/">
-
-                    <div class="feedbacks__row-item-img">
-
-                        <img src="/assets/img/feedback1.jpg" alt="">
-
-                    </div>
-
-                    <div class="feedbacks__row-item-desc">
-
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-
-                        </p>
-
-                        <div class="feed-person">
-
-                            <img src="assets/img/feedback1.jpg" alt="">
-
-                            <p>alfamebel_uz</p>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
-            </div>
-
-            <div class="feedbacks__row-item">
-
-                <a href="https://www.instagram.com/">
-
-                    <div class="feedbacks__row-item-img">
-
-                        <img src="/assets/img/feedback1.jpg" alt="">
-
-                    </div>
-
-                    <div class="feedbacks__row-item-desc">
-
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-
-                        </p>
-
-                        <div class="feed-person">
-
-                            <img src="assets/img/feedback1.jpg" alt="">
-
-                            <p>alfamebel_uz</p>
-
-                        </div>
-
-                    </div>
+                    <img src="https://www.shatura.com/upload/images//gallery/feedback/item4.jpg" alt="">
 
                 </a>
 
