@@ -24,8 +24,7 @@
                             <input class="filter-items" :id="'classic' + attribute.id" type="checkbox"
                             v-model="attribute.checked"
                             @click="selectAttribute(attribute)"
-                            :true-value="1"
-                            :false-value="0"
+                            
                             />
                             <label :for="'classic' + attribute.id">{{ attribute.title }}</label>
                         </li>
@@ -52,7 +51,7 @@
                             </div>
                         </a>
                         <div class="details">
-                            <div class="price">
+                            <div class="price text-nowrap">
                                 <div>от {{ product.sale != 0 ? $helper.formatMoney(product.price - ((product.price / 100) * product.sale)) : $helper.formatMoney(product.price) }} сум
                                     <div class="more" v-if="product.note">?<span>{{ product.note }}</span>
                                     </div>
@@ -63,7 +62,7 @@
                                 <div>
                                     <span>В рассрочку от </span>
                                     <a :href="'/installment'">
-                                        <p>« {{ calculate(product) }} сум/мес »</p>
+                                        <p>{{ calculate(product) }} сум/мес</p>
                                     </a>
                                    
                                 </div>
@@ -139,7 +138,12 @@
             },
             cancelFilters() {
                 for (let i = 0; i < this.data.length; i++) {
-                    this.data[i]['checked'] = 0
+                    this.data[i]['checked'] = false
+                }
+                for (let i = 0; i < this.filters.length; i++) {
+                    for (let j = 0; j < this.filters[i]['attributes'].length; j++) {
+                        this.filters[i]['attributes'][j]['checked'] = false
+                    }
                 }
                 this.data = this.initialData
             },

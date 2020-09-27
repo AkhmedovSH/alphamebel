@@ -111,7 +111,6 @@ class ProductController extends Controller
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
         $products = Product::where('category_id', $category->id)->get();
         $attributes = Attribute::whereIn('id', json_decode($category->attribute_ids))->get();
-
         return view('goods/wardobesBedsComods', compact('products', 'filters', 'category', 'attributes'));
     }
 
@@ -134,8 +133,9 @@ class ProductController extends Controller
         ));
     }
 
-    public function mattress($category_id) //mattress
+    public function mattress($category_id, Request $request) //mattress
     {
+        Session::put('show_all_url', $request->url());
         $category = Category::where('id', 21)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
         $products = Product::where('category_id', $category->id)->where('collection_product_ids', '!=', null)->get();

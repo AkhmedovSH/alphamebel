@@ -500,7 +500,7 @@ input::-webkit-inner-spin-button {
   margin-right: 10px;
   width: auto;
 }
-.stocks__row-item-desc .title {
+.stocks__row-item-desc p {
   font-size: 16px;
   line-height: 150%;
   padding: 15px;
@@ -1460,7 +1460,7 @@ input::-webkit-inner-spin-button {
     width: 100%;
     object-fit: contain;
   }
-  .stocks__row-item-desc .title,
+  .stocks__row-item-desc p,
   .stocks__row-item-desc .date {
     font-size: 12px;
     padding: 15px;

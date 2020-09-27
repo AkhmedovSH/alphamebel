@@ -6,7 +6,7 @@
         </a>
     </li>
 
-    <li><a href="{{route('posts.index')}}"><i class="fa fa-newspaper-o"></i><span>Посты</span></a></li>
+    <li><a href="{{route('posts.index')}}"><i class="fa fa-newspaper-o"></i><span>Акции</span></a></li>
     <li><a href="{{route('slider.index')}}"><i class="fa fa-file-image-o"></i><span>Слайдер</span></a></li>
     <li><a href="{{route('categories.index')}}"><i class="fa fa-bars"></i><span>Категории</span></a></li>
 

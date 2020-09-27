@@ -22,10 +22,10 @@
                 </ul>
             </div>
             <div class="btns">
-                <button type="button" @click="cancelFilters()" id="reset4">
+                <button type="button" @click="cancelFilters()" id="reset">
                     Сбросить фильтры
                 </button>
-                <button type="button" @click="filterByAttributes()" id="accept4">
+                <button type="button" @click="filterByAttributes()" id="accept">
                     ПРИМЕНИТЬ
                 </button>
             </div>
@@ -59,9 +59,9 @@
                             </div>
                         </a>
                         <div class="order">
-                            <div class="price">
+                            <div class="price text-nowrap">
                                 {{ product.sale != 0 ? $helper.formatMoney(product.price - ((product.price / 100) * product.sale)) : $helper.formatMoney(product.price) }}
-                                
+                                сум
                             </div>
                             <a :href="'/singleProductRight/' + category.id + '/' + product.id" class="add">КУПИТЬ</a>
                         </div>
@@ -132,11 +132,16 @@ export default {
             
         },
         cancelFilters() {
-            for (let i = 0; i < this.data.length; i++) {
-                this.data[i]['checked'] = 0
-            }
-            this.data = this.initialData
-        },
+                for (let i = 0; i < this.data.length; i++) {
+                    this.data[i]['checked'] = false
+                }
+                for (let i = 0; i < this.filters.length; i++) {
+                    for (let j = 0; j < this.filters[i]['attributes'].length; j++) {
+                        this.filters[i]['attributes'][j]['checked'] = false
+                    }
+                }
+                this.data = this.initialData
+            },
         getUniqueArray(arr=[], compareProps=[]) {
             let modifiedArray= [];
             if(compareProps.length === 0 && arr.length > 0)

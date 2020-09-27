@@ -47,14 +47,13 @@
                         <div class="goodscard content">
                             <div class="img">
                                 <a :href="'/singleProductRight/' + category.id + '/' + product.id" class="goodsimg-main card_main">
-                                        <img :src="'/uploads/products/' + product.image"  class="main_img">
+                                    <img :src="'/uploads/products/' + product.image"  class="main_img">
                                 </a>
                                 <div class="img_markers">
-                                    <img src="/assets/img/goods/sofa/sofas.jpg" class="img_item1">
-                                    <img src="/assets/img/goods/beds/item (3).jpg" class="img_item2">
+                                    <img :src="'/uploads/products/' + item.image" class="img_item1" v-for="item in JSON.parse(product.images)" :key="item.id">
                                 </div>
                                 <div class="stock">
-                                    <span v-if="product.sale != 0">-10%</span>
+                                    <span v-if="product.sale != 0">-{{ product.sale }}%</span>
                                     <p v-if="product.sale != 0">Распродажа</p>
                                 </div>
                             </div>
@@ -70,7 +69,7 @@
                                     </div>
                                 </a>
                                 <div class="order">
-                                    <div class="price">
+                                    <div class="price text-nowrap">
                                         <span>{{ product.sale != 0 ? $helper.formatMoney(product.price - ((product.price / 100) * product.sale)) : $helper.formatMoney(product.price) }} сум</span>
                                         
                                     </div>
@@ -153,11 +152,16 @@ export default {
             
         },
         cancelFilters() {
-            for (let i = 0; i < this.data.length; i++) {
-                this.data[i]['checked'] = 0
-            }
-            this.data = this.initialData
-        },
+                for (let i = 0; i < this.data.length; i++) {
+                    this.data[i]['checked'] = false
+                }
+                for (let i = 0; i < this.filters.length; i++) {
+                    for (let j = 0; j < this.filters[i]['attributes'].length; j++) {
+                        this.filters[i]['attributes'][j]['checked'] = false
+                    }
+                }
+                this.data = this.initialData
+            },
         getUniqueArray(arr=[], compareProps=[]) {
             let modifiedArray= [];
             if(compareProps.length === 0 && arr.length > 0)

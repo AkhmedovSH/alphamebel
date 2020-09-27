@@ -2100,7 +2100,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -2251,7 +2257,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -2304,7 +2309,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -2513,7 +2524,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -2708,7 +2725,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -2874,7 +2897,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -2927,7 +2949,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -3073,7 +3101,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -3126,7 +3153,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -3271,7 +3304,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -3324,7 +3356,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -3468,7 +3506,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -3521,7 +3558,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -3665,7 +3708,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -3718,7 +3760,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -3863,7 +3911,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -3916,7 +3963,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -4061,7 +4114,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -4114,7 +4166,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -4259,7 +4317,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -4312,7 +4369,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -4457,7 +4520,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes'],
   data: function data() {
@@ -4510,7 +4572,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -4707,7 +4775,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -4904,7 +4978,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -5101,7 +5181,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     },
     cancelFilters: function cancelFilters() {
       for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = 0;
+        this.data[i]['checked'] = false;
+      }
+
+      for (var _i = 0; _i < this.filters.length; _i++) {
+        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
+          this.filters[_i]['attributes'][j]['checked'] = false;
+        }
       }
 
       this.data = this.initialData;
@@ -5945,14 +6031,12 @@ var render = function() {
                           staticClass: "filter-items",
                           attrs: {
                             id: "classic" + attribute.id,
-                            type: "checkbox",
-                            "true-value": 1,
-                            "false-value": 0
+                            type: "checkbox"
                           },
                           domProps: {
                             checked: Array.isArray(attribute.checked)
                               ? _vm._i(attribute.checked, null) > -1
-                              : _vm._q(attribute.checked, 1)
+                              : attribute.checked
                           },
                           on: {
                             click: function($event) {
@@ -5961,7 +6045,7 @@ var render = function() {
                             change: function($event) {
                               var $$a = attribute.checked,
                                 $$el = $event.target,
-                                $$c = $$el.checked ? 1 : 0
+                                $$c = $$el.checked ? true : false
                               if (Array.isArray($$a)) {
                                 var $$v = null,
                                   $$i = _vm._i($$a, $$v)
@@ -6087,7 +6171,7 @@ var render = function() {
                   ),
                   _vm._v(" "),
                   _c("div", { staticClass: "details" }, [
-                    _c("div", { staticClass: "price" }, [
+                    _c("div", { staticClass: "price text-nowrap" }, [
                       _c("div", [
                         _vm._v(
                           "от " +
@@ -6128,11 +6212,7 @@ var render = function() {
                         _vm._v(" "),
                         _c("a", { attrs: { href: "/installment" } }, [
                           _c("p", [
-                            _vm._v(
-                              "« " +
-                                _vm._s(_vm.calculate(product)) +
-                                " сум/мес »"
-                            )
+                            _vm._v(_vm._s(_vm.calculate(product)) + " сум/мес")
                           ])
                         ])
                       ]),
@@ -6674,11 +6754,24 @@ var render = function() {
                         ]
                       ),
                       _vm._v(" "),
-                      _vm._m(2, true),
+                      _c(
+                        "div",
+                        { staticClass: "img_markers" },
+                        _vm._l(JSON.parse(product.images), function(item) {
+                          return _c("img", {
+                            key: item.id,
+                            staticClass: "img_item1",
+                            attrs: { src: "/uploads/products/" + item.image }
+                          })
+                        }),
+                        0
+                      ),
                       _vm._v(" "),
                       _c("div", { staticClass: "stock" }, [
                         product.sale != 0
-                          ? _c("span", [_vm._v("-10%")])
+                          ? _c("span", [
+                              _vm._v("-" + _vm._s(product.sale) + "%")
+                            ])
                           : _vm._e(),
                         _vm._v(" "),
                         product.sale != 0
@@ -6734,7 +6827,7 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
-                        _c("div", { staticClass: "price" }, [
+                        _c("div", { staticClass: "price text-nowrap" }, [
                           _c("span", [
                             _vm._v(
                               _vm._s(
@@ -6778,12 +6871,12 @@ var render = function() {
             0
           ),
           _vm._v(" "),
-          _vm._m(3)
+          _vm._m(2)
         ]
       )
     ]),
     _vm._v(" "),
-    _vm._m(4)
+    _vm._m(3)
   ])
 }
 var staticRenderFns = [
@@ -6802,22 +6895,6 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("img", {
         attrs: { src: "/assets/img/elements/filter-icon.svg", alt: "" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img_markers" }, [
-      _c("img", {
-        staticClass: "img_item1",
-        attrs: { src: "/assets/img/goods/sofa/sofas.jpg" }
-      }),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "img_item2",
-        attrs: { src: "/assets/img/goods/beds/item (3).jpg" }
       })
     ])
   },
@@ -6901,14 +6978,12 @@ var render = function() {
                         staticClass: "filter-items",
                         attrs: {
                           id: "classic" + attribute.id,
-                          type: "checkbox",
-                          "true-value": 1,
-                          "false-value": 0
+                          type: "checkbox"
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : _vm._q(attribute.checked, 1)
+                            : attribute.checked
                         },
                         on: {
                           click: function($event) {
@@ -6917,7 +6992,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? 1 : 0
+                              $$c = $$el.checked ? true : false
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -7116,7 +7191,7 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
-                        _c("div", { staticClass: "price" }, [
+                        _c("div", { staticClass: "price text-nowrap" }, [
                           _vm._v(
                             "\r\n                                    " +
                               _vm._s(
@@ -7241,14 +7316,12 @@ var render = function() {
                         staticClass: "filter-items",
                         attrs: {
                           id: "classic" + 2000 + attribute.id,
-                          type: "checkbox",
-                          "true-value": 1,
-                          "false-value": 0
+                          type: "checkbox"
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : _vm._q(attribute.checked, 1)
+                            : attribute.checked
                         },
                         on: {
                           click: function($event) {
@@ -7257,7 +7330,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? 1 : 0
+                              $$c = $$el.checked ? true : false
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -7299,7 +7372,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "reset2" },
+                  attrs: { type: "button", id: "reset" },
                   on: {
                     click: function($event) {
                       return _vm.cancelFilters()
@@ -7316,7 +7389,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "accept2" },
+                  attrs: { type: "button", id: "accept" },
                   on: {
                     click: function($event) {
                       return _vm.filterByAttributes()
@@ -7456,7 +7529,7 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
-                        _c("div", { staticClass: "price" }, [
+                        _c("div", { staticClass: "price text-nowrap" }, [
                           _vm._v(
                             "\r\n                                    " +
                               _vm._s(
@@ -7467,7 +7540,7 @@ var render = function() {
                                     )
                                   : _vm.$helper.formatMoney(product.price)
                               ) +
-                              "\r\n                                    \r\n                                "
+                              "\r\n                                    сум\r\n                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -7581,14 +7654,12 @@ var render = function() {
                         staticClass: "filter-items",
                         attrs: {
                           id: "classic" + 2000 + attribute.id,
-                          type: "checkbox",
-                          "true-value": 1,
-                          "false-value": 0
+                          type: "checkbox"
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : _vm._q(attribute.checked, 1)
+                            : attribute.checked
                         },
                         on: {
                           click: function($event) {
@@ -7597,7 +7668,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? 1 : 0
+                              $$c = $$el.checked ? true : false
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -7639,7 +7710,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "reset2" },
+                  attrs: { type: "button", id: "reset" },
                   on: {
                     click: function($event) {
                       return _vm.cancelFilters()
@@ -7656,7 +7727,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "accept2" },
+                  attrs: { type: "button", id: "accept" },
                   on: {
                     click: function($event) {
                       return _vm.filterByAttributes()
@@ -7796,7 +7867,7 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
-                        _c("div", { staticClass: "price" }, [
+                        _c("div", { staticClass: "price text-nowrap" }, [
                           _c("span", [
                             _vm._v(
                               _vm._s(
@@ -7921,14 +7992,12 @@ var render = function() {
                         staticClass: "filter-items",
                         attrs: {
                           id: "classic" + 4000 + attribute.id,
-                          type: "checkbox",
-                          "true-value": 1,
-                          "false-value": 0
+                          type: "checkbox"
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : _vm._q(attribute.checked, 1)
+                            : attribute.checked
                         },
                         on: {
                           click: function($event) {
@@ -7937,7 +8006,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? 1 : 0
+                              $$c = $$el.checked ? true : false
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -7979,7 +8048,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "reset4" },
+                  attrs: { type: "button", id: "reset" },
                   on: {
                     click: function($event) {
                       return _vm.cancelFilters()
@@ -7996,7 +8065,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "accept4" },
+                  attrs: { type: "button", id: "accept" },
                   on: {
                     click: function($event) {
                       return _vm.filterByAttributes()
@@ -8136,7 +8205,7 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
-                        _c("div", { staticClass: "price" }, [
+                        _c("div", { staticClass: "price text-nowrap" }, [
                           _c("span", [
                             _vm._v(
                               _vm._s(
@@ -8261,14 +8330,12 @@ var render = function() {
                         staticClass: "filter-items",
                         attrs: {
                           id: "classic" + attribute.id,
-                          type: "checkbox",
-                          "true-value": 1,
-                          "false-value": 0
+                          type: "checkbox"
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : _vm._q(attribute.checked, 1)
+                            : attribute.checked
                         },
                         on: {
                           click: function($event) {
@@ -8277,7 +8344,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? 1 : 0
+                              $$c = $$el.checked ? true : false
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -8476,7 +8543,7 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
-                        _c("div", { staticClass: "price" }, [
+                        _c("div", { staticClass: "price text-nowrap" }, [
                           _vm._v(
                             "\r\n                                    " +
                               _vm._s(
@@ -8487,7 +8554,7 @@ var render = function() {
                                     )
                                   : _vm.$helper.formatMoney(product.price)
                               ) +
-                              "\r\n                                    \r\n                                "
+                              "\r\n                                    сум\r\n                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -8601,14 +8668,12 @@ var render = function() {
                         staticClass: "filter-items",
                         attrs: {
                           id: "classic" + 3000 + attribute.id,
-                          type: "checkbox",
-                          "true-value": 1,
-                          "false-value": 0
+                          type: "checkbox"
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : _vm._q(attribute.checked, 1)
+                            : attribute.checked
                         },
                         on: {
                           click: function($event) {
@@ -8617,7 +8682,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? 1 : 0
+                              $$c = $$el.checked ? true : false
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -8659,7 +8724,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "reset3" },
+                  attrs: { type: "button", id: "reset" },
                   on: {
                     click: function($event) {
                       return _vm.cancelFilters()
@@ -8676,7 +8741,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "accept3" },
+                  attrs: { type: "button", id: "accept" },
                   on: {
                     click: function($event) {
                       return _vm.filterByAttributes()
@@ -8816,7 +8881,7 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
-                        _c("div", { staticClass: "price" }, [
+                        _c("div", { staticClass: "price text-nowrap" }, [
                           _vm._v(
                             "\r\n                                    " +
                               _vm._s(
@@ -8827,7 +8892,7 @@ var render = function() {
                                     )
                                   : _vm.$helper.formatMoney(product.price)
                               ) +
-                              "\r\n                                    \r\n                                "
+                              "\r\n                                    сум\r\n                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -8941,14 +9006,12 @@ var render = function() {
                         staticClass: "filter-items",
                         attrs: {
                           id: "classic" + 5000 + attribute.id,
-                          type: "checkbox",
-                          "true-value": 1,
-                          "false-value": 0
+                          type: "checkbox"
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : _vm._q(attribute.checked, 1)
+                            : attribute.checked
                         },
                         on: {
                           click: function($event) {
@@ -8957,7 +9020,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? 1 : 0
+                              $$c = $$el.checked ? true : false
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -8999,7 +9062,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "reset5" },
+                  attrs: { type: "button", id: "reset" },
                   on: {
                     click: function($event) {
                       return _vm.cancelFilters()
@@ -9016,7 +9079,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "accept5" },
+                  attrs: { type: "button", id: "accept" },
                   on: {
                     click: function($event) {
                       return _vm.filterByAttributes()
@@ -9156,7 +9219,7 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
-                        _c("div", { staticClass: "price" }, [
+                        _c("div", { staticClass: "price text-nowrap" }, [
                           _vm._v(
                             "\r\n                                    " +
                               _vm._s(
@@ -9167,7 +9230,7 @@ var render = function() {
                                     )
                                   : _vm.$helper.formatMoney(product.price)
                               ) +
-                              "\r\n                                    \r\n                                "
+                              "\r\n                                    сум\r\n                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -9281,14 +9344,12 @@ var render = function() {
                         staticClass: "filter-items",
                         attrs: {
                           id: "classic" + 2000 + attribute.id,
-                          type: "checkbox",
-                          "true-value": 1,
-                          "false-value": 0
+                          type: "checkbox"
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : _vm._q(attribute.checked, 1)
+                            : attribute.checked
                         },
                         on: {
                           click: function($event) {
@@ -9297,7 +9358,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? 1 : 0
+                              $$c = $$el.checked ? true : false
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -9339,7 +9400,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "reset2" },
+                  attrs: { type: "button", id: "reset" },
                   on: {
                     click: function($event) {
                       return _vm.cancelFilters()
@@ -9356,7 +9417,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "accept2" },
+                  attrs: { type: "button", id: "accept" },
                   on: {
                     click: function($event) {
                       return _vm.filterByAttributes()
@@ -9496,7 +9557,7 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
-                        _c("div", { staticClass: "price" }, [
+                        _c("div", { staticClass: "price text-nowrap" }, [
                           _vm._v(
                             "\r\n                                    " +
                               _vm._s(
@@ -9507,7 +9568,7 @@ var render = function() {
                                     )
                                   : _vm.$helper.formatMoney(product.price)
                               ) +
-                              "\r\n                                    \r\n                                "
+                              "\r\n                                    сум\r\n                                "
                           )
                         ]),
                         _vm._v(" "),
@@ -9679,7 +9740,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "reset3" },
+                  attrs: { type: "button", id: "reset" },
                   on: {
                     click: function($event) {
                       return _vm.cancelFilters()
@@ -9696,7 +9757,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "accept3" },
+                  attrs: { type: "button", id: "accept" },
                   on: {
                     click: function($event) {
                       return _vm.filterByAttributes()
@@ -9836,7 +9897,7 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
-                        _c("div", { staticClass: "price" }, [
+                        _c("div", { staticClass: "price text-nowrap" }, [
                           _vm._v(
                             "\r\n                                " +
                               _vm._s(
@@ -9847,7 +9908,7 @@ var render = function() {
                                     )
                                   : _vm.$helper.formatMoney(product.price)
                               ) +
-                              "\r\n                                \r\n                            "
+                              "\r\n                                сум\r\n                            "
                           )
                         ]),
                         _vm._v(" "),
@@ -10017,7 +10078,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "reset4" },
+                  attrs: { type: "button", id: "reset" },
                   on: {
                     click: function($event) {
                       return _vm.cancelFilters()
@@ -10034,7 +10095,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  attrs: { type: "button", id: "accept4" },
+                  attrs: { type: "button", id: "accept" },
                   on: {
                     click: function($event) {
                       return _vm.filterByAttributes()
@@ -10174,7 +10235,7 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
-                        _c("div", { staticClass: "price" }, [
+                        _c("div", { staticClass: "price text-nowrap" }, [
                           _vm._v(
                             "\r\n                                " +
                               _vm._s(
@@ -10185,7 +10246,7 @@ var render = function() {
                                     )
                                   : _vm.$helper.formatMoney(product.price)
                               ) +
-                              "\r\n                                \r\n                            "
+                              "\r\n                                сум\r\n                            "
                           )
                         ]),
                         _vm._v(" "),
@@ -10512,7 +10573,7 @@ var render = function() {
                       ),
                       _vm._v(" "),
                       _c("div", { staticClass: "order" }, [
-                        _c("div", { staticClass: "price" }, [
+                        _c("div", { staticClass: "price text-nowrap" }, [
                           _vm._v(
                             "\r\n                                " +
                               _vm._s(
@@ -10523,7 +10584,7 @@ var render = function() {
                                     )
                                   : _vm.$helper.formatMoney(product.price)
                               ) +
-                              "\r\n                                \r\n                            "
+                              "\r\n                                сум\r\n                            "
                           )
                         ]),
                         _vm._v(" "),

@@ -15,8 +15,7 @@
                             <input class="filter-items" :id="'classic' + attribute.id" type="checkbox"
                             v-model="attribute.checked"
                             @click="selectAttribute(attribute)"
-                            :true-value="1"
-                            :false-value="0"
+                            
                             />
                             <label :for="'classic' + attribute.id">{{ attribute.title }}</label>
                         </li>
@@ -60,9 +59,9 @@
                                 </div>
                             </a>
                             <div class="order">
-                                <div class="price">
+                                <div class="price text-nowrap">
                                     {{ product.sale != 0 ? $helper.formatMoney(product.price - ((product.price / 100) * product.sale)) : $helper.formatMoney(product.price) }}
-                                    
+                                    сум
                                 </div>
                                 <a :href="'/singleProductAnotherType/' + category.id + '/' + product.id" class="add">КУПИТЬ</a>
                             </div>
@@ -133,11 +132,16 @@ export default {
             
         },
         cancelFilters() {
-            for (let i = 0; i < this.data.length; i++) {
-                this.data[i]['checked'] = 0
-            }
-            this.data = this.initialData
-        },
+                for (let i = 0; i < this.data.length; i++) {
+                    this.data[i]['checked'] = false
+                }
+                for (let i = 0; i < this.filters.length; i++) {
+                    for (let j = 0; j < this.filters[i]['attributes'].length; j++) {
+                        this.filters[i]['attributes'][j]['checked'] = false
+                    }
+                }
+                this.data = this.initialData
+            },
         getUniqueArray(arr=[], compareProps=[]) {
             let modifiedArray= [];
             if(compareProps.length === 0 && arr.length > 0)

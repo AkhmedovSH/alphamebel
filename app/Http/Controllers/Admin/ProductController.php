@@ -93,7 +93,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //dd($request->all());
+        dd($request->all());
         $this->validate($request, [
             'title' => 'required',
             'category_id' => 'required',

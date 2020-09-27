@@ -81,7 +81,7 @@
                                             </div>
                                         </a>
                                         <div class="order">
-                                            <div class="price">
+                                            <div class="price text-nowrap">
                                                 <p>{{ $product->sale != 0 ? number_format($product->price - (($product->price / 100) * $product->sale), 0) : $product->price }} сум</p>
                                                 <p>{{ number_format($product->price) }} сум</p>
                                             </div>

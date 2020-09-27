@@ -137,11 +137,16 @@ export default {
             
         },
         cancelFilters() {
-            for (let i = 0; i < this.data.length; i++) {
-                this.data[i]['checked'] = 0
-            }
-            this.data = this.initialData
-        },
+                for (let i = 0; i < this.data.length; i++) {
+                    this.data[i]['checked'] = false
+                }
+                for (let i = 0; i < this.filters.length; i++) {
+                    for (let j = 0; j < this.filters[i]['attributes'].length; j++) {
+                        this.filters[i]['attributes'][j]['checked'] = false
+                    }
+                }
+                this.data = this.initialData
+            },
         getUniqueArray(arr=[], compareProps=[]) {
             let modifiedArray= [];
             if(compareProps.length === 0 && arr.length > 0)
