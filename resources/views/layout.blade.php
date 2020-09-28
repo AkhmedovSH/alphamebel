@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/assets/style/wearechoosen.css">
     <link rel="stylesheet" href="/assets/style/stocks.css">
     <link rel="stylesheet" href="/assets/style/collection.css">
-    <link rel="stylesheet" href="/assets/style/main.css">
+    <link rel="stylesheet" href="/assets/style/main.css?v=1">
     <link rel="stylesheet" href="/assets/style/goods.css">
     <link rel="stylesheet" href="/assets/style/basket.css">
     <link rel="stylesheet" href="/assets/style/catalogs.css">
@@ -47,7 +47,7 @@
 
     </div>
 
-<script src="{{  asset('js/app.js')}}"></script>
+<script src="{{  asset('js/app.js?v=1')}}"></script>
 <script src="/assets/script/jquery-3.4.1.min.js"></script>
 <script src="/assets/script/jquery.lazyload.min.js"></script>
 <script src="/assets/script/jquery.mask.js"></script>
