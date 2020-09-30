@@ -134,7 +134,7 @@
         <h2>Отзывы</h2>
         <div id="feedbacks-carousel" class="owl-carousel feedbacks__row">
             <div class="feedbacks__row-item">
-                <a href="https://www.instagram.com/p/CFWgCyipmA_/?utm_source=ig_web_copy_link">
+                <a target="_blank" href="https://www.instagram.com/p/CFWgCyipmA_/?utm_source=ig_web_copy_link">
                     <div class="feedbacks__row-item-img">
                         <img src="assets/img/instagramfeed/1.jpg">
                     </div>
@@ -149,133 +149,65 @@
                 </a>
             </div>
             <div class="feedbacks__row-item">
-                <a href="https://www.instagram.com/">
+                <a target="_blank" href="https://www.instagram.com/tv/CEnmbf_JDkF/?utm_source=ig_web_copy_link">
                     <div class="feedbacks__row-item-img">
-                        <img src="assets/img/feedback2.jpg">
+                        <img src="assets/img/instagramfeed/2.jpg">
                     </div>
                     <div class="feedbacks__row-item-desc">
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
+                        <p class="feed-text">Почувствуйте атмосферу Италии у себя дома с новой мебелью "Rimini" Всё разнообразие и многогранность Италии воплотилось итальянским дизайнером в палитре цветовых решений ...
                         </p>
                         <div class="feed-person">
-                            <img src="assets/img/feedback2.jpg">
-                            <p>alfamebel_uz</p>
+                            <img src="assets/img/elements/logo.svg">
+                            <p>@shatura.uz</p>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="feedbacks__row-item">
-                <a href="https://www.instagram.com/">
+                <a target="_blank" href="https://www.instagram.com/p/CFeKu9nJ1_3/?utm_source=ig_web_copy_link">
                     <div class="feedbacks__row-item-img">
-                        <img src="assets/img/feedback3.jpg">
+                        <img src="assets/img/instagramfeed/3.jpg">
                     </div>
                     <div class="feedbacks__row-item-desc">
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
+                        <p class="feed-text">Что можно сказать о современных коллекциях мебели Шатура? Всех их можно коротко описать одним словом "Rimini" Смотрите ролик чтобы узнать всё подробнее.
                         </p>
                         <div class="feed-person">
-                            <img src="assets/img/feedback4.jpg">
-                            <p>alfamebel_uz</p>
+                            <img src="assets/img/elements/logo.svg">
+                            <p>@shatura.uz</p>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="feedbacks__row-item">
-                <a href="https://www.instagram.com/">
+                <a target="_blank" href="https://www.instagram.com/p/B-_S6c3icxy/?utm_source=ig_web_copy_link">
                     <div class="feedbacks__row-item-img">
-                        <img src="assets/img/feedback4.jpg">
+                        <img src="assets/img/instagramfeed/4.jpg">
                     </div>
                     <div class="feedbacks__row-item-desc">
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
+                        <p class="feed-text">К выбору матрасов нужно подходить очень серьезно. От матраса зависит то, насколько качественный у вас будет сон. А от того, насколько качественный будет сон зависит ваше благополучие ...
                         </p>
                         <div class="feed-person">
-                            <img src="assets/img/feedback4.jpg">
-                            <p>alfamebel_uz</p>
+                            <img src="assets/img/elements/logo.svg">
+                            <p>@shatura.uz</p>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="feedbacks__row-item">
-                <a href="https://www.instagram.com/">
+                <a target="_blank" href="https://www.instagram.com/p/CEx88J8p7TR/?utm_source=ig_web_copy_link">
                     <div class="feedbacks__row-item-img">
-                        <img src="assets/img/feedback1.jpg">
+                        <img src="assets/img/instagramfeed/5.jpg">
                     </div>
                     <div class="feedbacks__row-item-desc">
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-                        </p>
+                        <p class="feed-text">Какой должна быть хорошая мебель для молодёжной комнаты? 🔥Давайте узнаем у самого молодого поколения!</p>
                         <div class="feed-person">
-                            <img src="assets/img/feedback1.jpg">
-                            <p>alfamebel_uz</p>
+                            <img src="assets/img/elements/logo.svg">
+                            <p>@shatura.uz</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="feedbacks__row-item">
-                <a href="https://www.instagram.com/">
-                    <div class="feedbacks__row-item-img">
-                        <img src="assets/img/feedback1.jpg">
-                    </div>
-                    <div class="feedbacks__row-item-desc">
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-                        </p>
-                        <div class="feed-person">
-                            <img src="assets/img/feedback1.jpg">
-                            <p>alfamebel_uz</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="feedbacks__row-item">
-                <a href="https://www.instagram.com/">
-                    <div class="feedbacks__row-item-img">
-                        <img src="assets/img/feedback1.jpg">
-                    </div>
-                    <div class="feedbacks__row-item-desc">
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-                        </p>
-                        <div class="feed-person">
-                            <img src="assets/img/feedback1.jpg">
-                            <p>alfamebel_uz</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="feedbacks__row-item">
-                <a href="https://www.instagram.com/">
-                    <div class="feedbacks__row-item-img">
-                        <img src="assets/img/feedback1.jpg">
-                    </div>
-                    <div class="feedbacks__row-item-desc">
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-                        </p>
-                        <div class="feed-person">
-                            <img src="assets/img/feedback1.jpg">
-                            <p>alfamebel_uz</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="feedbacks__row-item">
-                <a href="https://www.instagram.com/">
-                    <div class="feedbacks__row-item-img">
-                        <img src="assets/img/feedback1.jpg">
-                    </div>
-                    <div class="feedbacks__row-item-desc">
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
-                        </p>
-                        <div class="feed-person">
-                            <img src="assets/img/feedback1.jpg">
-                            <p>alfamebel_uz</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+
         </div>
     </div>
     <div class="leaveapp">
