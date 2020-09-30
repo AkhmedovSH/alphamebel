@@ -134,17 +134,16 @@
         <h2>Отзывы</h2>
         <div id="feedbacks-carousel" class="owl-carousel feedbacks__row">
             <div class="feedbacks__row-item">
-                <a href="https://www.instagram.com/">
+                <a href="https://www.instagram.com/p/CFWgCyipmA_/?utm_source=ig_web_copy_link">
                     <div class="feedbacks__row-item-img">
-                        <img src="assets/img/feedback1.jpg">
+                        <img src="assets/img/instagramfeed/1.jpg">
                     </div>
                     <div class="feedbacks__row-item-desc">
-                        <p class="feed-text">Персонал магазина работает слаженно,на удивление оперативно. Заказывали
-                            обеденный стол и стулья. Через день приехала машина на отгрузку, занесли в квартиру...
+                        <p class="feed-text">Какой на самом деле должна быть качественная мебель? На этот вопрос наш эксперт подготовил для вас несколько советов и полезных рекомендаций о которых вы узнаете из видео.
                         </p>
                         <div class="feed-person">
-                            <img src="assets/img/feedback1.jpg">
-                            <p>alfamebel_uz</p>
+                            <img src="assets/img/elements/logo.svg">
+                            <p>@shatura.uz</p>
                         </div>
                     </div>
                 </a>
