@@ -171,6 +171,7 @@
 }
 .collections .cards-row .card .details .price div .more:hover span {
   display: flex;
+  white-space: pre-wrap;
 }
 .collections .cards-row .card .details .price .old-price {
   color: #828282;
