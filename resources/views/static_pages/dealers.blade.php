@@ -78,17 +78,18 @@
 
         <form class="col-xl-7 col-lg-8 col-md-8 col-sm-12 col-12" action="/sendRequest" method="POST">
 
-            <h2>Стать партнёром</h2>
+					<h2>Стать партнёром</h2>
 
-            <input type="hidden" name="_token" value="XXNDbb0SwIjFQL2FATN4J5UiYKjQGeYNjzzY6fFc">
+					@csrf
 
-            <input type="text" name="name" placeholder="Имя" required="required">
+					<input type="text" name="name" placeholder="Имя" required="required">
 
-            <input type="number" name="phone" placeholder="Номер телефона" required="required">
+					<input type="number" name="phone" placeholder="Номер телефона" required="required">
 
-            <input type="text" name="text" placeholder="Сообщение">
+					<input type="text" name="comment" placeholder="Сообщение">
+					<input type="hidden" name="section" value="dealers">
 
-            <button type="submit">Отправить</button>
+					<button type="submit">Отправить</button>
 
         </form>
 

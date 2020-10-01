@@ -30,12 +30,6 @@ class HomeController extends Controller
         return view('stocks/stock_inner', compact('post'));
     }
 
-    public function sales()
-    {
-        $data = Product::where('sale', '!=', 0)->paginate(10);
-        return view('sales', compact('data'));
-    }
-
     public function search(Request $request)
     {
         $data = Product::where('title', 'like', '%' . $request->text . '%')->get();

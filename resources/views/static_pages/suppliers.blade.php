@@ -50,15 +50,16 @@
 
     </div>
 
-    <form class="col-xl-7 col-lg-8 col-md-8 col-sm-12 col-12" action="" method="">
-
+		<form class="col-xl-7 col-lg-8 col-md-8 col-sm-12 col-12"  action="/sendRequest" method="POST">
+				@csrf
         <h2>Стать партнёром</h2>
 
-        <input type="text" placeholder="Имя" required>
+        <input type="text" placeholder="Имя" name="name" required>
 
-        <input type="number" placeholder="Номер телефона" required>
+        <input type="number" placeholder="Номер телефона" name="phone" required>
 
-        <input type="text" placeholder="Сообщение">
+				<input type="text" placeholder="Сообщение" name="comment"> 
+				<input type="hidden" name="section" value="suppliers">
 
         <button type="submit">Отправить</button>
 

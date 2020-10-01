@@ -37,8 +37,14 @@
                             <div class="form-group w-100" style="width: 100%">
                                 <label for="exampleInputEmail1">Позиция</label>
                                 <input type="number" class="form-control" id="exampleInputEmail1" name="position" value="0">
-                            </div>
-                        </div>
+														</div>
+												</div>
+
+												<label>Распродажа</label><br>
+												<input type="radio" id="no" name="sale_out" value="0" checked>
+												<label for="no">Нет</label>
+												<input type="radio" id="yes" name="sale_out" value="1">
+												<label for="yes">Да</label>
 
                         <div class="form-group">
                             <label for="exampleInputFile">Лицевая картинка jpeg jpg png</label>

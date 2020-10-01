@@ -11,7 +11,7 @@
             </ul>
         </div>
         <div class="alpha-navigation__sale col-xl-2">
-            <a href="/sales">
+            <a href="/sale/sofas/16">
                 <img src="/assets/img/elements/sale.svg" alt="">
                 <p>Распродажа</p>
             </a>

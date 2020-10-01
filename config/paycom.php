@@ -1,7 +1,7 @@
 <?php 
 return [
 //created by ME need 
-    'merchant_id' => '5c860c0dd5d7060e1b219632', // merchant ID
+    'merchant_id' => '5f7599ce2a1efb16263bff66', // merchant ID
     'login' => 'Paycom',//always
-    'keyFile' => 'WqyGfNW61F6XbBqGWQofQ9pNZOrhQopR7bQs',// test key or the production key --- depends which stage you are (test or production)
+    'keyFile' => '%ipEKqm%xT&wc2Jd1o7aHftvjju?Y%6SNofQ',// test key or the production key --- depends which stage you are (test or production)
 ];

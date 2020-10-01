@@ -12,10 +12,17 @@
                 @include('admin.errors')
                 <!-- /.box-header -->
                 <div class="box-body">
-                    <div class="form-group">
+                    <div style="display: flex; justify-content: space-between; margin-bottom:15px">
                         <a href="{{route('product.create')}}" class="btn btn-success">Добавить</a>
+                        <form method="GET" action="/admin/search-product">
+													@csrf
+													<div style="display: flex;">
+														<input class="form-control" type="text" name="title">
+														<button type="submit" class="btn btn-success">Поиск</button>
+													</div>
+												</form>
                     </div>
-                    <table id="example1" class="table table-bordered table-striped">
+                    <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
                             <th>ID</th>
@@ -43,7 +50,7 @@
                         @endforeach
                         </tfoot>
                     </table>
-                    {{-- {{$data->links()}} --}}
+                    {{$data->links()}}
                 </div>
                 <!-- /.box-body -->
             </div>

@@ -42,9 +42,19 @@ class RequestController extends Controller
             $arr = [
                 'Раздел: ' => 'Хочу присоединиться',
                 'Имя: ' => $request->name,
-                'Номер телефона: ' => $request->phone,
+								'Номер телефона: ' => $request->phone,
+								'Комментарий: ' => $request->comment,
             ];
-        }
+				}
+				
+				if($request->section == 'suppliers') {
+					$arr = [
+							'Раздел: ' => 'Стать партнёром',
+							'Имя: ' => $request->name,
+							'Номер телефона: ' => $request->phone,
+							'Комментарий: ' => $request->comment,
+					];
+			}
         $txt = "";
         foreach ($arr as $key => $value) {
             $txt .= "<b>" . $key . "</b> " . $value . "%0A";

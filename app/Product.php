@@ -11,7 +11,8 @@ class Product extends Model
 
     protected $fillable = [
         'title', 'description', 'attribute_ids', 'isCollection', 'collection_product_ids', 'position',
-        'category_id', 'price', 'note', 'code', 'sale', 'width', 'height', 'length', 'length_type_id'
+				'category_id', 'price', 'note', 'code', 'sale', 'width', 'height', 'length', 'length_type_id', 'sale_out',
+				'is_hidden'
     ];
 
     protected $casts = [

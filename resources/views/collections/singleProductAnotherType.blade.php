@@ -174,7 +174,7 @@
 
                                         <p>{{ $item->width }}</p>
 
-                                        <span>{{ $item->price }} сум</span>
+                                        <span>{{ number_format($item->price, 0,","," ") }} сум</span>
 
                                         <form action="/cart" method="post">
 
@@ -216,7 +216,7 @@
 
                                         <p>{{ $item->width }}</p>
 
-                                        <span>{{ $item->price }} сум</span>
+                                        <span>{{ number_format($item->price, 0,","," ") }} сум</span>
 
                                         <form action="/cart" method="post">
 
@@ -258,7 +258,7 @@
 
                                         <p>{{ $item->width }}</p>
 
-                                        <span>{{ $item->price }} сум</span>
+                                        <span>{{ number_format($item->price, 0,","," ") }} сум</span>
 
                                         <form action="/cart" method="post">
 

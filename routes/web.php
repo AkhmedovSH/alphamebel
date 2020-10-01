@@ -90,7 +90,13 @@ Route::get('/comods/{category_id}', 'ProductController@wardobesBedsComods');
 Route::get('/single-right-product/{category_id}/{product_id}', 'ProductController@singleRightProduct');
 /************************** CATEGORIES **************************/
 
-
+/* РАСПРОДАЖА */
+Route::get('/sale/sofas/{category_id}', 'SaleController@sofas');
+Route::get('/sale/wardobes/{category_id}', 'SaleController@wardobesBedsComods');
+Route::get('/sale/comods/{category_id}', 'SaleController@wardobesBedsComods');
+Route::get('/sale/beds/{category_id}', 'SaleController@wardobesBedsComods');
+Route::get('/sale/chairs/{category_id}', 'SaleController@chairs');
+Route::get('/sale/mattress/{category_id}', 'SaleController@mattress');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::get('/', 'DashboardController@index')->name('dashboard');
@@ -101,6 +107,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function () {
     Route::resource('/filter','FilterController');
     Route::resource('/attribute','AttributeController');
     Route::resource('/credit','CreditController');
+    Route::get('/search-product','ProductController@search');
 });
 
 

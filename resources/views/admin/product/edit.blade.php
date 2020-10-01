@@ -41,8 +41,21 @@
                                 <label for="exampleInputEmail1">Позиция</label>
                                 <input type="number" class="form-control" id="exampleInputEmail1" name="position" value="{{$data->position}}">
                             </div>
-                        </div>
-                        
+												</div>
+												
+												<label>Распродажа</label><br>
+												<input type="radio" id="no" name="sale_out" value="0" 
+												@if($data->sale_out == 0)
+												checked
+												@endif
+												>
+												<label for="no">Нет</label>
+												<input type="radio" id="yes" name="sale_out" value="1"
+												@if($data->sale_out == 1)
+												checked
+												@endif>
+												<label for="yes">Да</label>
+												
                         <div class="form-group">
                             <img src="{{$data->getImage()}}" alt="" class="img-responsive" width="200">
                             <label for="exampleInputFile">Лицевая картинка</label>

@@ -13,7 +13,14 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $data = Product::orderBy('id', 'DESC')->get();
+        $data = Product::orderBy('id', 'DESC')->paginate(30);
+
+        return view('admin.product.index', compact('data'));
+		}
+		
+		public function search(Request $request)
+    {
+        $data = Product::where('title', 'like', '%' . $request->title . '%')->paginate(30);
 
         return view('admin.product.index', compact('data'));
     }
@@ -93,7 +100,6 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request->all());
         $this->validate($request, [
             'title' => 'required',
             'category_id' => 'required',
