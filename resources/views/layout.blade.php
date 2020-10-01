@@ -32,7 +32,40 @@
     <link rel="stylesheet" href="/assets/style/sales.css">
     <link rel="stylesheet" href="/assets/style/search.css">
     <link rel="stylesheet" href="/assets/style/mattrasses.css">
-    @stack('styles')
+		@stack('styles')
+		<style>
+			/*--------------------------------------- PAGINATION -----------------------------------------*/
+		.pagination {
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		}
+		.page-item.active .page-link {
+			color: #555;
+			background-color: #F7D917;
+			border-color: #F7D917;
+		}
+		.page-link {
+			position: relative;
+			display: block;
+			padding: .5rem .75rem;
+			margin-left: -1px;
+			line-height: 1.25;
+			color: #555;
+			background-color: #fff;
+			border: 0 solid #dee2e6;
+		}
+		.page-link:hover {
+			color: #555;
+			background-color: #ecf0f3;
+			border-color: #e5e5e5;
+		}
+		.pagination li {
+			margin-left: .3125rem;
+		}
+		*:focus {
+			outline: none;
+		}
+		</style>
     <title>Шатура-мебель</title>
 
 </head>

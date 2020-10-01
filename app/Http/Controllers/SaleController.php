@@ -48,7 +48,7 @@ class SaleController extends Controller
 	public function mattress($category_id) //mattress
 	{
 			$category = Category::where('id', 21)->first();
-			$products = Product::where('category_id', $category->id)->where('collection_product_ids', '!=', null)->get();
+			$products = Product::where('category_id', $category->id)->where('collection_product_ids', '!=', null)->where('sale_out', 1)->get();
 		 
 			$category2 = Category::where('id', 32)->first();
 			$products2 = Product::where('category_id', $category2->id)->where('sale_out', 1)->get();
