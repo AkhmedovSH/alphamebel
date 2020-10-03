@@ -20,7 +20,7 @@ class ClickController extends Controller
         if(strlen($request['merchant_trans_id']) <= 13){
             $user = User::where('name', $request['merchant_trans_id'])->first();
             if($user == null) {
-                $new_user = USER::create([
+                $new_user = User::create([
                     'name' => $request['merchant_trans_id'],
                 ]);
                 $new_user->save();

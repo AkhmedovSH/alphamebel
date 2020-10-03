@@ -84,11 +84,17 @@ class ProductController extends Controller
             $selectedProducts = Product::whereIn('id', $data->collection_product_ids)->pluck('id')->all();
         }else {
             $selectedProducts = [];
-        }
+				}
+				
+				if($data->mattress_product_ids != null) {
+					$selectedMattressProducts = Product::whereIn('id', $data->mattress_product_ids)->pluck('id')->all();
+				}else {
+					$selectedMattressProducts = [];
+				}
 
         $products_length_types = ProductLengthType::pluck('title', 'id')->all();
         //dd($attributes, $selectedAttributes);
-        return view('admin.product.edit', compact('data', 'attributes', 'categories', 'selectedAttributes', 'products', 'selectedProducts', 'products_length_types'));
+        return view('admin.product.edit', compact('data', 'attributes', 'categories', 'selectedAttributes', 'products', 'selectedProducts', 'selectedMattressProducts', 'products_length_types'));
     }
 
     /**

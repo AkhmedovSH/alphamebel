@@ -138,7 +138,7 @@ class ProductController extends Controller
         Session::put('show_all_url', $request->url());
         $category = Category::where('id', 21)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
-        $products = Product::where('category_id', $category->id)->where('collection_product_ids', '!=', null)->get();
+        $products = Product::where('category_id', $category->id)->where('collection_product_ids', '!=', null)->where('is_hidden', 0)->get();
         $attributes = Attribute::whereIn('id', json_decode($category->attribute_ids))->get();
        
         $category2 = Category::where('id', 32)->first();
@@ -183,19 +183,16 @@ class ProductController extends Controller
         $collectionItem = Product::where('category_id', 10)->get()->random(1)->first();
 
         if($product->collection_product_ids != null) {
-            $sames = Product::whereIn('id', $product->collection_product_ids)->get();
+            $sames = Product::whereIn('id', $product->collection_product_ids)->where('is_hidden', 0)->get();
+            $samesNoStandart = Product::whereIn('id', $product->collection_product_ids)->where('is_hidden', 1)->get();
         }else {
             $sames = [];
-        }
-        return view('collections/singleProductAnotherType', compact('product', 'attributes', 'category', 'images', 'similarProducts', 'collectionItem', 'sames'));
-    }
-
-
-
-
-
-
-
+            $samesNoStandart = [];
+				}
+        return view('collections/singleProductAnotherType', compact('product', 'attributes', 'category', 'images', 'similarProducts', 'collectionItem', 'sames', 'samesNoStandart'));
+		}
+		
+		
     public function singleRightProduct($category_id, $product_id)
     {
         $product = Product::where('id', $product_id)->first();

@@ -37,49 +37,47 @@ class Application
      */
     public function run()
     {
-        try {
-            // authorize session
-            $this->merchant->Authorize($this->request->id);
-
-            // handle request
-            switch ($this->request->method) {
-                case 'CheckPerformTransaction':
-                    $this->CheckPerformTransaction();
-                    break;
-                case 'CheckTransaction':
-                    $this->CheckTransaction();
-                    break;
-                case 'CreateTransaction':
-                    $this->CreateTransaction();
-                    break;
-                case 'PerformTransaction':
-                    $this->PerformTransaction();
-                    break;
-                case 'CancelTransaction':
-                    $this->CancelTransaction();
-                    break;
-                case 'ChangePassword':
-                    $this->ChangePassword();
-                    break;
-                case 'GetStatement':
-                    $this->GetStatement();
-                    break;
-                default:
-                    $this->response->error(
-                        PaycomException::ERROR_METHOD_NOT_FOUND,
-                        'Method not found.',
-                        $this->request->method
-                    );
-                    break;
-            }
-        } catch (PaycomException $exc) {
-            $exc->send();
-        }
+			try {
+					// authorize session
+					$this->merchant->Authorize($this->request->id);
+					// handle request
+					switch ($this->request->method) {
+							case 'CheckPerformTransaction':
+									$this->CheckPerformTransaction();
+									break;
+							case 'CheckTransaction':
+									$this->CheckTransaction();
+									break;
+							case 'CreateTransaction':
+									$this->CreateTransaction();
+									break;
+							case 'PerformTransaction':
+									$this->PerformTransaction();
+									break;
+							case 'CancelTransaction':
+									$this->CancelTransaction();
+									break;
+							case 'ChangePassword':
+									$this->ChangePassword();
+									break;
+							case 'GetStatement':
+									$this->GetStatement();
+									break;
+							default:
+									$this->response->error(
+											PaycomException::ERROR_METHOD_NOT_FOUND,
+											'Method not found.',
+											$this->request->method
+									);
+									break;
+					}
+			} catch (PaycomException $exc) {
+				$exc->send();
+			}
     }
 
     private function CheckPerformTransaction()
     {
-
         $user = User::find(intval($this->request->params['account']['user_id']));
         if (!$user) {
             throw new PaycomException(
@@ -241,11 +239,6 @@ class Application
                     $found->perform_time = Format::timestamp2datetime($perform_time);;
                     $found->save();
 
-                    //created by me to save money
-                    $user = User::find($found->user_id);
-                    $user->money += ($found->amount/100);
-                    $user->save();
-
                     //created by me to show transactions history for user
                     TransactionsHistory::create([
                         'user_id' => $found->user_id,
@@ -326,11 +319,6 @@ class Application
                     // after $found->cancel(), cancel_time and state properties populated with data
                     $found->save();
                  
-
-                    //created by me to save money
-                    $user = User::find($found->user_id);
-                    $user->money -= ($found->amount/100);
-                    $user->save();
                     //created by me to show transactions history for user
                     TransactionsHistory::create([
                         'user_id' => $found->user_id,

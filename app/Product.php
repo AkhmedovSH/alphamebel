@@ -10,13 +10,14 @@ class Product extends Model
 {
 
     protected $fillable = [
-        'title', 'description', 'attribute_ids', 'isCollection', 'collection_product_ids', 'position',
+        'title', 'description', 'attribute_ids', 'isCollection', 'collection_product_ids', 'mattress_product_ids', 'position',
 				'category_id', 'price', 'note', 'code', 'sale', 'width', 'height', 'length', 'length_type_id', 'sale_out',
 				'is_hidden'
     ];
 
     protected $casts = [
         'attribute_ids' => 'array',
+        'mattress_product_ids' => 'array',
         'collection_product_ids' => 'array',
         'images' => 'array',
         'two_images' => 'array',
@@ -40,7 +41,14 @@ class Product extends Model
         }else{
             $data->isCollection = 0;
             $data->collection_product_ids = null;
-        }
+				}
+				if(isset($fields['mattress_product_ids'])) {
+					$data->is_hidden = 1;
+					$data->mattress_product_ids = $fields['mattress_product_ids'];
+				}else{
+						$data->is_hidden = 0;
+						$data->mattress_product_ids = null;
+				}
 
         if($fields['sale'] == null){
             $data->sale = 0;
@@ -71,7 +79,15 @@ class Product extends Model
         }else{
             $this->isCollection = 0;
             $this->collection_product_ids = null;
-        }
+				}
+				
+				if(isset($fields['mattress_product_ids'])) {
+					$this->is_hidden = 1;
+					$this->mattress_product_ids = $fields['mattress_product_ids'];
+				}else{
+						$this->is_hidden = 0;
+						$this->mattress_product_ids = null;
+				}
        
         $this->save();
     }

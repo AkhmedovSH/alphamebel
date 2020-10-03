@@ -138,7 +138,16 @@
                                 $data->length_type_id,
                                 ['class' => 'form-control select2'])
                             }}
-                        </div>
+												</div>
+												
+												<div class="form-group">
+													<label>Нестандартные размеры матрасов относящиеся к этому матрасу</label>
+													{{Form::select('mattress_product_ids[]',
+															$products,
+															$selectedMattressProducts,
+															['class' => 'form-control select2', 'multiple'])
+													}}
+												</div>
                     </div>
 
                     <div class="col-md-12">

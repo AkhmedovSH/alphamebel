@@ -283,7 +283,38 @@
 
                     </div>
 
-                </div>
+								</div>
+								
+								<div class="mattrasses__nonstandart">
+									<h4 class="nonstandart-title">{{ $product->title }} нестандартного размера</h4>
+									<div class="nonstandart-content">
+											<p>Ширина матраса:</p>
+											<ul>
+												@foreach ($samesNoStandart as $item)
+													<li class="nonstandartitem">
+														<input id="nonstandart1" type="radio" name="nonstandart" />
+														<label for="nonstandart1">{{ $item->title }}</label>
+														<span style="margin-right: 5px">{{ number_format($item->price, 0,","," ") }} сум</span>
+														<form action="/cart" method="post">
+
+															@csrf
+
+															<input type="hidden" name="id" value="{{ $item->id }}">
+
+															<input type="hidden" name="title" value="{{ $item->title }}">
+
+															<input type="hidden" name="price" value="{{ $item->price }}">
+
+															<input type="hidden" name="sale" value="{{ $item->sale }}">
+
+															<button style="margin: 0" type="submit" class="add"><img src="../../assets/img/basket/basket_icon_add.svg"></button>
+
+													</form>
+													</li>
+												@endforeach
+											</ul>
+									</div>
+								</div>
 
 
                 <div class="tabs">
