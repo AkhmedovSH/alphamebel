@@ -3,7 +3,6 @@
 namespace App\Paycom;
 
 use App\User;
-use App\TransactionsHistory;
 use App\Transaction;
 use App\Paycom\Format;
 use App\Paycom\Request;
@@ -38,38 +37,39 @@ class Application
     public function run()
     {
 			try {
-					// authorize session
-					$this->merchant->Authorize($this->request->id);
-					// handle request
-					switch ($this->request->method) {
-							case 'CheckPerformTransaction':
-									$this->CheckPerformTransaction();
-									break;
-							case 'CheckTransaction':
-									$this->CheckTransaction();
-									break;
-							case 'CreateTransaction':
-									$this->CreateTransaction();
-									break;
-							case 'PerformTransaction':
-									$this->PerformTransaction();
-									break;
-							case 'CancelTransaction':
-									$this->CancelTransaction();
-									break;
-							case 'ChangePassword':
-									$this->ChangePassword();
-									break;
-							case 'GetStatement':
-									$this->GetStatement();
-									break;
-							default:
-									$this->response->error(
-											PaycomException::ERROR_METHOD_NOT_FOUND,
-											'Method not found.',
-											$this->request->method
-									);
-									break;
+				
+				// authorize session
+				$this->merchant->Authorize($this->request->id);
+				// handle request
+				switch ($this->request->method) {
+					case 'CheckPerformTransaction':
+							$this->CheckPerformTransaction();
+							break;
+					case 'CheckTransaction':
+							$this->CheckTransaction();
+							break;
+					case 'CreateTransaction':
+							$this->CreateTransaction();
+							break;
+					case 'PerformTransaction':
+							$this->PerformTransaction();
+							break;
+					case 'CancelTransaction':
+							$this->CancelTransaction();
+							break;
+					case 'ChangePassword':
+							$this->ChangePassword();
+							break;
+					case 'GetStatement':
+							$this->GetStatement();
+							break;
+					default:
+							$this->response->error(
+									PaycomException::ERROR_METHOD_NOT_FOUND,
+									'Method not found.',
+									$this->request->method
+							);
+							break;
 					}
 			} catch (PaycomException $exc) {
 				$exc->send();
@@ -169,7 +169,7 @@ class Application
                 );
             } else { // if transaction found and active, send it as response
                 $this->response->send([
-                    'create_time' => (int)Format::datetime2timestamp($found->create_time)*1000,
+										'create_time' => Format::datetime2timestamp($found->create_time),
                     'transaction' => strval($found->id),
                     'state' => (int)$found->state,
                     'receivers' => $found->receivers,
@@ -206,7 +206,7 @@ class Application
             // created by ME save the response in the second table 
 
             $this->response->send([
-                'create_time' => $create_time,
+                'create_time' => Format::datetime2timestamp($transaction->create_time),
                 'transaction' => strval($transaction->id),
                 'state' => $transaction->state,
                 'receivers' => null
@@ -236,17 +236,8 @@ class Application
                     
                     $perform_time = Format::timestamp();
                     $found->state = Transaction::STATE_COMPLETED;
-                    $found->perform_time = Format::timestamp2datetime($perform_time);;
+                    $found->perform_time = Format::timestamp2datetime($perform_time);
                     $found->save();
-
-                    //created by me to show transactions history for user
-                    TransactionsHistory::create([
-                        'user_id' => $found->user_id,
-                        'amount' => ($found->amount/100),
-                        'description' => 'Hisob to\'ldirildi',
-                        'paid' => 'Paycom'
-                    ]);
-                    //created by me end
 
                     $this->response->send([
                         'transaction' => strval($found->id),
@@ -319,14 +310,6 @@ class Application
                     // after $found->cancel(), cancel_time and state properties populated with data
                     $found->save();
                  
-                    //created by me to show transactions history for user
-                    TransactionsHistory::create([
-                        'user_id' => $found->user_id,
-                        'amount' => -($found->amount/100),
-                        'description' => 'To\'lov bekor qilindi',
-                        'paid' => 'Paycom'
-                    ]);
-                    //created by me end
 
                     // send response
                     $this->response->send([

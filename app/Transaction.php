@@ -32,7 +32,7 @@ class Transaction extends Model
     {
         // todo: Implement transaction expiration check
         // for example, if transaction is active and passed TIMEOUT milliseconds after its creation, then it is expired
-        return $this->state == self::STATE_CREATED && Format::datetime2timestamp($this->create_time) - time() > self::TIMEOUT;
+        return $this->state == self::STATE_CREATED && abs(Format::datetime2timestamp($this->create_time) - Format::timestamp(true)) > self::TIMEOUT;
     }
 
     public function cancel($reason)

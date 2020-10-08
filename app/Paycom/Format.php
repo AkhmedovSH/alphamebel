@@ -91,11 +91,11 @@ class Format
      */
     public static function datetime2timestamp($datetime)
     {
-        if ($datetime) {
-            return strtotime($datetime);
-        }
+			if ($datetime) {
+					return 1000 * strtotime($datetime);
+			}
 
-        return $datetime;
+			return $datetime;
     }
 
 }
