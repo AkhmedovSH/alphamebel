@@ -241,7 +241,7 @@ class Application
 
                     $this->response->send([
                         'transaction' => strval($found->id),
-                        'perform_time' => $found->perform_time,
+                        'perform_time' => Format::datetime2timestamp($found->perform_time),
                         'state' => (int)$found->state
                     ]);
                 }
@@ -252,7 +252,7 @@ class Application
                 $perform_time = Format::timestamp();
                 $this->response->send([
                     'transaction' => (string)$found->id,
-                    'perform_time' => (int)Format::datetime2timestamp($found->perform_time),
+                    'perform_time' => Format::datetime2timestamp($found->perform_time),
                     'state' => (int)$found->state
                 ]);
                 break;
