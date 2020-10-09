@@ -17,27 +17,27 @@
                 <img src="/assets/img/elements/filter-icon.svg" alt="">
             </div>
             <div id="filterContent" class="content">
-                <div class="styles" v-for="(filter, index) in filters" :key="index">
-                    <h4>{{ filter.title }}</h4>
-                    <ul>
-                        <li v-for="(attribute, index) in filter.attributes" :key="index" >
-                            <input class="filter-items" :id="'classic' + attribute.id" type="checkbox"
-                            v-model="attribute.checked"
-                            @click="selectAttribute(attribute)"
-                            
-                            />
-                            <label :for="'classic' + attribute.id">{{ attribute.title }}</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="collections-filter__btns bedrooms-filter__btns">
-                    <button @click="cancelFilters()" id="reset">
-                        Сбросить фильтры
-                    </button>
-                    <button @click="filterByAttributes()" id="accept">
-                        ПРИМЕНИТЬ
-                    </button>
-                </div>
+							<div class="styles" v-for="(filter, index) in filters" :key="index">
+								<h4>{{ filter.title }}</h4>
+								<ul>
+									<li v-for="(attribute, index) in filter.attributes" :key="index" >
+										<input class="filter-items" :id="'classic' + attribute.id" type="checkbox"
+										:checked="attributeIds.includes(attribute.id)"
+										
+										@click="selectAttribute(attribute)"
+										/>
+										<label :for="'classic' + attribute.id">{{ attribute.title }}</label>
+									</li>
+								</ul>
+							</div>
+							<div class="collections-filter__btns bedrooms-filter__btns">
+								<button @click="cancelFilters()" id="reset">
+									Сбросить фильтры
+								</button>
+								<button @click="filterByAttributes()" id="accept">
+									ПРИМЕНИТЬ
+								</button>
+							</div>
             </div>
         </div>
         <div class="collections-cards col-xl-9 col-lg-12">
@@ -85,96 +85,91 @@
 </template>
 
 <script>
-    export default {
-        props:['products', 'filters', 'category', 'attributes', 'credit'],
-         data() {
-            return {
-                initialData: [],
-                attributeIds: [],
-                data: [],
-                filteredProducts: [],
-            };
-        },
-        methods: {
-            selectAttribute(attribute) {
-                if(attribute.checked == 0) {
-                    this.attributeIds.push(attribute.id)
-                }else{
-                    const key = this.attributeIds.indexOf(attribute.id);
-                    this.attributeIds.splice(key, 1)
-                }
-            },
-            calculate(product) {
-                var newPrice = 0
-                if(product.sale != 0) {
-                    var newPrice = (((product.price / 100) * product.sale) * this.credit.credit) / this.credit.month
-                    // var productPrice = (product.price / 100) * product.sale
-                    // newPrice = (productPrice * (sale/productPrice)) / this.credit.month
-                   
-                    return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
-                } else {
-                    //sale = (product.price / 100) * this.credit.credit
-                    
-                    newPrice = (product.price * this.credit.credit) / this.credit.month
-                    return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
-                }
-            },
-            filterByAttributes() {
-                if(this.attributeIds.length != 0){
-                    this.filteredProducts = []
-                    for (let i = 0; i < this.initialData.length; i++) {
-                        for (let j = 0; j < this.initialData[i]['attribute_ids'].length; j++) {
-                            for (let k = 0; k < this.attributeIds.length; k++) {
-                                if(this.initialData[i]['attribute_ids'][j] == this.attributeIds[k]){
-                                    this.filteredProducts.push(this.initialData[i])
-                                }
-                            }
-                        }
-                    }
-                    this.data = this.getUniqueArray(this.filteredProducts)
-                }
-                
-                
-            },
-            cancelFilters() {
-                for (let i = 0; i < this.data.length; i++) {
-                    this.data[i]['checked'] = false
-                }
-                for (let i = 0; i < this.filters.length; i++) {
-                    for (let j = 0; j < this.filters[i]['attributes'].length; j++) {
-                        this.filters[i]['attributes'][j]['checked'] = false
-                    }
-                }
-                this.data = this.initialData
-            },
-            getUniqueArray(arr=[], compareProps=[]) {
-                let modifiedArray= [];
-                if(compareProps.length === 0 && arr.length > 0)
-                compareProps.push(...Object.keys(arr[0]));
-                    arr.map(item=> {
-                if(modifiedArray.length === 0){
-                modifiedArray.push(item);
-                }else {
-                if(!modifiedArray.some(item2=> 
-                compareProps.every(eachProps=> item2[eachProps] === item[eachProps])
-                )){modifiedArray.push(item);}
-                }
-                });
-                return modifiedArray;
-            }
-        },
-        mounted() {
-            for (let i = 0; i < this.filters.length; i++) {
-                this.filters[i]['attributes'] = []
-                for (let j = 0; j < this.attributes.length; j++) {
-                    if(this.filters[i]['id'] == this.attributes[j]['filter_id']) {
-                        this.filters[i]['attributes'].push(this.attributes[j])
-                    }
-                }
-            }
-            
-            this.data = this.products
-            this.initialData = this.products
-        }
-    }
+	export default {
+		props:['products', 'filtersz', 'category', 'attributes', 'credit'],
+		data() {
+			return {
+				filters: this.filtersz,
+				initialData: [],
+				attributeIds: [],
+				data: [],
+				filteredProducts: [],
+			};
+		},
+		methods: {
+			selectAttribute(attribute) {
+				if(attribute.checked == 0 || attribute.checked == false) {
+					attribute.checked = 1
+					this.attributeIds.push(attribute.id)
+				} else if(attribute.checked == 1 || attribute.checked == true) {
+					attribute.checked = 0
+					const key = this.attributeIds.indexOf(attribute.id);
+					this.attributeIds.splice(key, 1)
+				}
+			},
+			calculate(product) {
+					var newPrice = 0
+					if(product.sale != 0) {
+							var newPrice = (((product.price / 100) * product.sale) * this.credit.credit) / this.credit.month
+							// var productPrice = (product.price / 100) * product.sale
+							// newPrice = (productPrice * (sale/productPrice)) / this.credit.month
+							
+							return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+					} else {
+							//sale = (product.price / 100) * this.credit.credit
+							
+							newPrice = (product.price * this.credit.credit) / this.credit.month
+							return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+					}
+			},
+			filterByAttributes() {
+				if(this.attributeIds.length != 0){
+					this.filteredProducts = []
+					for (let i = 0; i < this.initialData.length; i++) {
+						if(this.initialData[i]['attribute_ids'] != null)
+							for (let j = 0; j < this.initialData[i]['attribute_ids'].length; j++) {
+								for (let k = 0; k < this.attributeIds.length; k++) {
+									if(this.initialData[i]['attribute_ids'][j] == this.attributeIds[k]){
+										this.filteredProducts.push(this.initialData[i])
+									}
+								}
+							}
+					}
+					this.data = this.getUniqueArray(this.filteredProducts)
+				}
+			},
+			cancelFilters() {
+				this.attributeIds = []
+				this.data = this.initialData
+			},
+			getUniqueArray(arr=[], compareProps=[]) {
+					let modifiedArray= [];
+					if(compareProps.length === 0 && arr.length > 0)
+					compareProps.push(...Object.keys(arr[0]));
+							arr.map(item=> {
+					if(modifiedArray.length === 0){
+					modifiedArray.push(item);
+					}else {
+					if(!modifiedArray.some(item2=> 
+					compareProps.every(eachProps=> item2[eachProps] === item[eachProps])
+					)){modifiedArray.push(item);}
+					}
+					});
+					return modifiedArray;
+				}
+		},
+		mounted() {
+			for (let i = 0; i < this.filters.length; i++) {
+				this.filters[i]['attributes'] = []
+				for (let j = 0; j < this.attributes.length; j++) {
+					if(this.filters[i]['id'] == this.attributes[j]['filter_id']) {
+						this.filters[i]['attributes'].push(this.attributes[j])
+					}
+				}
+			}
+			
+			this.data = this.products
+			this.initialData = this.products
+		}
+	}
 </script>

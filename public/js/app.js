@@ -2258,9 +2258,10 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['products', 'filters', 'category', 'attributes', 'credit'],
+  props: ['products', 'filtersz', 'category', 'attributes', 'credit'],
   data: function data() {
     return {
+      filters: this.filtersz,
       initialData: [],
       attributeIds: [],
       data: [],
@@ -2269,9 +2270,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   },
   methods: {
     selectAttribute: function selectAttribute(attribute) {
-      if (attribute.checked == 0) {
+      if (attribute.checked == 0 || attribute.checked == false) {
+        attribute.checked = 1;
         this.attributeIds.push(attribute.id);
-      } else {
+      } else if (attribute.checked == 1 || attribute.checked == true) {
+        attribute.checked = 0;
         var key = this.attributeIds.indexOf(attribute.id);
         this.attributeIds.splice(key, 1);
       }
@@ -2295,7 +2298,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         this.filteredProducts = [];
 
         for (var i = 0; i < this.initialData.length; i++) {
-          for (var j = 0; j < this.initialData[i]['attribute_ids'].length; j++) {
+          if (this.initialData[i]['attribute_ids'] != null) for (var j = 0; j < this.initialData[i]['attribute_ids'].length; j++) {
             for (var k = 0; k < this.attributeIds.length; k++) {
               if (this.initialData[i]['attribute_ids'][j] == this.attributeIds[k]) {
                 this.filteredProducts.push(this.initialData[i]);
@@ -2308,16 +2311,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }
     },
     cancelFilters: function cancelFilters() {
-      for (var i = 0; i < this.data.length; i++) {
-        this.data[i]['checked'] = false;
-      }
-
-      for (var _i = 0; _i < this.filters.length; _i++) {
-        for (var j = 0; j < this.filters[_i]['attributes'].length; j++) {
-          this.filters[_i]['attributes'][j]['checked'] = false;
-        }
-      }
-
+      this.attributeIds = [];
       this.data = this.initialData;
     },
     getUniqueArray: function getUniqueArray() {
@@ -6020,55 +6014,17 @@ var render = function() {
                     _vm._l(filter.attributes, function(attribute, index) {
                       return _c("li", { key: index }, [
                         _c("input", {
-                          directives: [
-                            {
-                              name: "model",
-                              rawName: "v-model",
-                              value: attribute.checked,
-                              expression: "attribute.checked"
-                            }
-                          ],
                           staticClass: "filter-items",
                           attrs: {
                             id: "classic" + attribute.id,
                             type: "checkbox"
                           },
                           domProps: {
-                            checked: Array.isArray(attribute.checked)
-                              ? _vm._i(attribute.checked, null) > -1
-                              : attribute.checked
+                            checked: _vm.attributeIds.includes(attribute.id)
                           },
                           on: {
                             click: function($event) {
                               return _vm.selectAttribute(attribute)
-                            },
-                            change: function($event) {
-                              var $$a = attribute.checked,
-                                $$el = $event.target,
-                                $$c = $$el.checked ? true : false
-                              if (Array.isArray($$a)) {
-                                var $$v = null,
-                                  $$i = _vm._i($$a, $$v)
-                                if ($$el.checked) {
-                                  $$i < 0 &&
-                                    _vm.$set(
-                                      attribute,
-                                      "checked",
-                                      $$a.concat([$$v])
-                                    )
-                                } else {
-                                  $$i > -1 &&
-                                    _vm.$set(
-                                      attribute,
-                                      "checked",
-                                      $$a
-                                        .slice(0, $$i)
-                                        .concat($$a.slice($$i + 1))
-                                    )
-                                }
-                              } else {
-                                _vm.$set(attribute, "checked", $$c)
-                              }
                             }
                           }
                         }),
@@ -6103,7 +6059,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\r\n                        Сбросить фильтры\r\n                    "
+                        "\r\n\t\t\t\t\t\t\t\t\tСбросить фильтры\r\n\t\t\t\t\t\t\t\t"
                       )
                     ]
                   ),
@@ -6120,7 +6076,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\r\n                        ПРИМЕНИТЬ\r\n                    "
+                        "\r\n\t\t\t\t\t\t\t\t\tПРИМЕНИТЬ\r\n\t\t\t\t\t\t\t\t"
                       )
                     ]
                   )
