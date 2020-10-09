@@ -128,7 +128,7 @@ class RequestController extends Controller
 						}
 					}
 					
-					$url = 'https://checkout.paycom.uz/' . base64_encode('m=5f7599ce2a1efb16263bff66;ac.user_id=' . $request->phone .';a=' . $request->phone * 100 . ';c=http://shatura.uz');
+					$url = 'https://checkout.paycom.uz/' . base64_encode('m=5f7599ce2a1efb16263bff66;ac.user_id=' . $request->phone .';a=' . $request->phone * 100 . ';c=http://shatura.uz/payment-success/' . $request->phone);
 					return redirect($url);
 				}
 

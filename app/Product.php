@@ -177,15 +177,15 @@ class Product extends Model
         $credit = Credit::where('id', 1)->first();
         $newPrice = 0;
         if($this->sale != 0) {
-            $sale = ((($this->price / 100) * $this->sale) / 100) * $credit->credit;
-            $productPrice = ($this->price / 100) * $this->sale;
-            $newPrice = ($productPrice * ($sale/$productPrice)) / $credit->month;
+            $newPrice = ((($this->price / 100) * $this->sale) / $credit->credit) * $credit->month;
+            //$productPrice = ($this->price / 100) * $this->sale;
+            //$newPrice = ($productPrice * ($sale/$productPrice)) / $credit->month;
             
             return number_format($newPrice, 0,","," ");
         } else {
-            $sale = ($this->price / 100) * $credit->credit;
-            
-            $newPrice = ($this->price * ($sale/$this->price)) / $credit->month;
+            //$sale = ($this->price / 100) * $credit->credit;
+            //$newPrice = ($this->price * ($sale/$this->price)) / $credit->month;
+            $newPrice = ($this->price * $credit->credit) / $credit->month;
             return number_format($newPrice, 0,","," ");
         }
     }

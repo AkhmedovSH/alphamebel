@@ -2280,13 +2280,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var newPrice = 0;
 
       if (product.sale != 0) {
-        var sale = product.price / 100 * product.sale / 100 * this.credit.credit;
-        var productPrice = product.price / 100 * product.sale;
-        newPrice = productPrice * (sale / productPrice) / this.credit.month;
+        var newPrice = product.price / 100 * product.sale * this.credit.credit / this.credit.month; // var productPrice = (product.price / 100) * product.sale
+        // newPrice = (productPrice * (sale/productPrice)) / this.credit.month
+
         return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       } else {
-        sale = product.price / 100 * this.credit.credit;
-        newPrice = product.price * (sale / product.price) / this.credit.month;
+        //sale = (product.price / 100) * this.credit.credit
+        newPrice = product.price * this.credit.credit / this.credit.month;
         return newPrice.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
       }
     },
