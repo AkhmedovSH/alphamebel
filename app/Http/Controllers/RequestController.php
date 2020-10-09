@@ -125,10 +125,12 @@ class RequestController extends Controller
 								'name' => $request->phone,
 							]);
 							$new_user->save();
+						} else {
+							$new_user = User::where('name', $request->phone)->first();
 						}
 					}
 					
-					$url = 'https://checkout.paycom.uz/' . base64_encode('m=5f7599ce2a1efb16263bff66;ac.user_id=' . $request->phone .';a=' . $request->phone * 100 . ';c=http://shatura.uz/payment-success/' . $request->phone);
+					$url = 'https://checkout.paycom.uz/' . base64_encode('m=5f7599ce2a1efb16263bff66;ac.user_id=' . $new_user->id .';a=' . $request->amount * 100 . ';c=http://shatura.uz/payment-success/' . $request->phone);
 					return redirect($url);
 				}
 
