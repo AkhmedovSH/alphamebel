@@ -80,7 +80,7 @@
 
     </div>
 
-<script src="{{  asset('js/app.js?v=1')}}"></script>
+<script src="{{  asset('js/app.js?v=2')}}"></script>
 <script src="/assets/script/jquery-3.4.1.min.js"></script>
 <script src="/assets/script/jquery.lazyload.min.js"></script>
 <script src="/assets/script/jquery.mask.js"></script>
