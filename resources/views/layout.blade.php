@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="/assets/style/vacancy.css">
     <link rel="stylesheet" href="/assets/style/wearechoosen.css">
     <link rel="stylesheet" href="/assets/style/stocks.css">
-    <link rel="stylesheet" href="/assets/style/collection.css">
+    <link rel="stylesheet" href="/assets/style/collection.css?v=3">
     <link rel="stylesheet" href="/assets/style/main.css?v=3">
-    <link rel="stylesheet" href="/assets/style/goods.css">
+    <link rel="stylesheet" href="/assets/style/goods.css?v=3">
     <link rel="stylesheet" href="/assets/style/basket.css">
     <link rel="stylesheet" href="/assets/style/catalogs.css">
     <link rel="stylesheet" href="/assets/style/ideas.css">
