@@ -27,9 +27,9 @@
                     <div class="stocks__row-item-desc">
                         <div class="desc">
                             <p class="stockflag">Акция</p>
-                            <p class="date"><img src="assets/img/elements/clock.svg"> до 11 мая</p>
+                            <p class="date"><img src="assets/img/elements/clock.svg"> {{ $item->date }}</p>
                         </div>
-                        <p class="title">Весна! Время покупать!</p>
+                        <p class="title">{{ $item->title }}</p>
                     </div>
                 </a>
             </div>

@@ -7947,7 +7947,7 @@ var render = function() {
                         ],
                         staticClass: "filter-items",
                         attrs: {
-                          id: "classic" + 4000 + attribute.id,
+                          id: "classic" + 3000 + attribute.id,
                           type: "checkbox"
                         },
                         domProps: {
@@ -7990,7 +7990,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "label",
-                        { attrs: { for: "classic" + 4000 + attribute.id } },
+                        { attrs: { for: "classic" + 3000 + attribute.id } },
                         [_vm._v(_vm._s(attribute.title))]
                       )
                     ])
@@ -8285,7 +8285,7 @@ var render = function() {
                         ],
                         staticClass: "filter-items",
                         attrs: {
-                          id: "classic" + attribute.id,
+                          id: "classic" + 4000 + attribute.id,
                           type: "checkbox"
                         },
                         domProps: {
@@ -8328,7 +8328,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "label",
-                        { attrs: { for: "classic" + attribute.id } },
+                        { attrs: { for: "classic" + 4000 + attribute.id } },
                         [_vm._v(_vm._s(attribute.title))]
                       )
                     ])
@@ -8623,7 +8623,7 @@ var render = function() {
                         ],
                         staticClass: "filter-items",
                         attrs: {
-                          id: "classic" + 3000 + attribute.id,
+                          id: "classic" + 5000 + attribute.id,
                           type: "checkbox"
                         },
                         domProps: {
@@ -8666,7 +8666,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "label",
-                        { attrs: { for: "classic" + 3000 + attribute.id } },
+                        { attrs: { for: "classic" + 5000 + attribute.id } },
                         [_vm._v(_vm._s(attribute.title))]
                       )
                     ])
@@ -8961,7 +8961,7 @@ var render = function() {
                         ],
                         staticClass: "filter-items",
                         attrs: {
-                          id: "classic" + 5000 + attribute.id,
+                          id: "classic" + 6000 + attribute.id,
                           type: "checkbox"
                         },
                         domProps: {
@@ -9004,7 +9004,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "label",
-                        { attrs: { for: "classic" + 5000 + attribute.id } },
+                        { attrs: { for: "classic" + 6000 + attribute.id } },
                         [_vm._v(_vm._s(attribute.title))]
                       )
                     ])

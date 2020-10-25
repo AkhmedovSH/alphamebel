@@ -18,17 +18,16 @@
 
 
 
-    <form action="/sendRequest" method="POST">
-
-        <input type="hidden" name="_token" value="XXNDbb0SwIjFQL2FATN4J5UiYKjQGeYNjzzY6fFc">
-
+		<form action="/sendRequest" method="POST">
+				@csrf
+        <input type="hidden" name="section" value="question">
         <input type="text" name="name" placeholder="Ваше Имя" required>
 
         <input type="number" name="phone" placeholder="Номер телефона" required>
 
         <textarea name="comment" placeholder="Ваш вопрос..." required></textarea>
 
-        <input type="submit" name="" id="questionsend" value="Отправить">
+				<input type="submit" name="" id="questionsend" value="Отправить">
 
     </form>
 

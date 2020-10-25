@@ -23,7 +23,12 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Заголовок</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" placeholder="" name="title" value="{{old('title')}}">
-                        </div>
+												</div>
+												
+												<div class="form-group">
+													<label>Дата действия акции</label>
+													<input type="text" class="form-control"  placeholder="До 31 декабря" name="date" value="{{old('date')}}">
+												</div>
 
                         <div class="form-group">
                             <label for="exampleInputFile">Лицевая картинка</label>

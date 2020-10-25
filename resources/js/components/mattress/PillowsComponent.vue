@@ -12,12 +12,12 @@
                     <h4 class="filteropentitle style-title-closed">{{ filter.title }}</h4>
                     <ul class="list style-list">
                         <li v-for="(attribute, index) in filter.attributes" :key="index" >
-                            <input class="filter-items" :id="'classic' + 5000 + attribute.id" type="checkbox"
+                            <input class="filter-items" :id="'classic' + 6000 + attribute.id" type="checkbox"
                             v-model="attribute.checked"
                             @click="selectAttribute(attribute)"
                             
                             />
-                            <label :for="'classic' + 5000 + attribute.id">{{ attribute.title }}</label>
+                            <label :for="'classic' + 6000 + attribute.id">{{ attribute.title }}</label>
                         </li>
                     </ul>
                 </div>

@@ -26,7 +26,13 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Заголовок</label>
                             <input type="text" class="form-control" id="exampleInputEmail1" name="title" value="{{$post->title}}">
-                        </div>
+												</div>
+												
+												<div class="form-group">
+													<label>Дата действия акции</label>
+													<input type="text" class="form-control" placeholder="До 31 декабря" name="date" value="{{$post->date}}">
+												</div>
+
                         <div class="form-group">
                             <img src="{{$post->getImage()}}" alt="" class="img-responsive" width="200">
                             <label for="exampleInputFile">Лицевая картинка</label>

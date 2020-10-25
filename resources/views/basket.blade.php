@@ -116,7 +116,7 @@
                         <div class="privacy-agreement">
                             <input id="privacy" type="checkbox" required>
                             <label for="privacy">Прочитал и согласен с
-                                <a href="/public_offer" class="privacy-policy">политикой
+                                <a href="/offerContract" class="privacy-policy">политикой
                                     конфиденциальности</a>
                             </label>
                         </div>
