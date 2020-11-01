@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="/assets/style/vacancy.css">
     <link rel="stylesheet" href="/assets/style/wearechoosen.css">
     <link rel="stylesheet" href="/assets/style/stocks.css">
-    <link rel="stylesheet" href="/assets/style/collection.css?v=3">
-    <link rel="stylesheet" href="/assets/style/main.css?v=3">
-    <link rel="stylesheet" href="/assets/style/goods.css?v=3">
+    <link rel="stylesheet" href="/assets/style/collection.css?v=4">
+    <link rel="stylesheet" href="/assets/style/main.css?v=4">
+    <link rel="stylesheet" href="/assets/style/goods.css?v=4">
     <link rel="stylesheet" href="/assets/style/basket.css">
     <link rel="stylesheet" href="/assets/style/catalogs.css">
     <link rel="stylesheet" href="/assets/style/ideas.css">
@@ -80,7 +80,7 @@
 
     </div>
 
-<script src="{{  asset('js/app.js?v=3')}}"></script>
+<script src="{{  asset('js/app.js?v=4')}}"></script>
 <script src="/assets/script/jquery-3.4.1.min.js"></script>
 <script src="/assets/script/jquery.lazyload.min.js"></script>
 <script src="/assets/script/jquery.mask.js"></script>

@@ -300,7 +300,7 @@
 
                 
 
-                <a href="{{ Session::get('show_all_url') }}">СМОТРЕТЬ ВСЕ</a>
+                <a href="/find-collection/{{ $product->id }}">СМОТРЕТЬ ВСЕ</a>
 
             </div>
 

@@ -26,7 +26,8 @@ class RequestController extends Controller
         };
        
         fopen("https://api.telegram.org/bot{$this->token}/sendMessage?chat_id={$this->chat_id}&parse_mode=html&text={$txt}", "r");
-        return redirect()->back();
+        $weRecallText = 'Спасибо, наши менеджеры свяжутся с вами.';
+				return view('paymentSuccess', compact('weRecallText'));
     }
     
     public function sendRequest(Request $request)
@@ -74,38 +75,40 @@ class RequestController extends Controller
             $txt .= "<b>" . $key . "</b> " . $value . "%0A";
         };
         fopen("https://api.telegram.org/bot{$this->token}/sendMessage?chat_id={$this->chat_id}&parse_mode=html&text={$txt}", "r");
-        return redirect()->back();
+        $weRecallText = 'Спасибо, наши менеджеры свяжутся с вами.';
+				return view('paymentSuccess', compact('weRecallText'));
     }
 
     public function virtualDesign(Request $request)
     {
         $arr = [
-            'Раздел: ' => 'Виртуальный дизайн',
-            'Имя: ' => $request->name,
-            'Номер телефона: ' => $request->phone,
-            'Записка: ' => $request->comment,
-            'Свзяь: ' => $request->user_connection,
+					'Раздел: ' => 'Виртуальный дизайн',
+					'Имя: ' => $request->name,
+					'Номер телефона: ' => $request->phone,
+					'Записка: ' => $request->comment,
+					'Свзяь: ' => $request->user_connection,
         ];
         $txt = "";
         foreach ($arr as $key => $value) {
-            $txt .= "<b>" . $key . "</b> " . $value . "%0A";
+					$txt .= "<b>" . $key . "</b> " . $value . "%0A";
         };
        
         fopen("https://api.telegram.org/bot{$this->token}/sendMessage?chat_id={$this->chat_id}&parse_mode=html&text={$txt}", "r");
-        return redirect()->back();
+        $weRecallText = 'Спасибо, наши менеджеры свяжутся с вами.';
+				return view('paymentSuccess', compact('weRecallText'));
     }
 
     public function order(Request $request)
     {
         $arr = [
-            'Раздел: ' => 'Оставить заявку',
-            'Имя: ' => $request->name,
-            'Номер телефона: ' => $request->phone,
-            'Комментарий: ' => $request->comment,
+					'Раздел: ' => 'Оставить заявку',
+					'Имя: ' => $request->name,
+					'Номер телефона: ' => $request->phone,
+					'Комментарий: ' => $request->comment,
         ];
         $txt = "";
         foreach ($arr as $key => $value) {
-            $txt .= "<b>" . $key . "</b> " . $value . "%0A";
+					$txt .= "<b>" . $key . "</b> " . $value . "%0A";
         };
        
         fopen("https://api.telegram.org/bot{$this->token}/sendMessage?chat_id={$this->chat_id}&parse_mode=html&text={$txt}", "r");
@@ -164,10 +167,11 @@ class RequestController extends Controller
 						$totalAmount = 0;
             foreach (Cart::content() as $key => $value) {
 							$totalAmount += $value->model->price * $value->qty;
-							$txt .= "<b>" .  $value->name . "</b> " . "<b>" . "Код товара: " .$value->model->code . "</b> " . number_format($value->model->price, 0,","," ") . ' сум | ' . $value->qty . ' шт' . "\n";
+							$txt .= "<b>" .  $value->name . "</b> " . "<b>" . "Код товара: " .$value->model->code . "</b> "
+							. number_format($value->model->price, 0,","," ") . ' сум | ' . $value->qty . ' шт' . "\n";
 						}
-						$txt .= "Общая сумма: " . number_format($totalAmount, 0,","," ") . " сум" . "</b> ";
-
+						$txt .= "<b>" . "Общая сумма: " . "</b> " . number_format($totalAmount, 0,","," ") . " сум";
+						
             $website="https://api.telegram.org/bot".$this->token;
             $chatId = $this->chat_id;
             $params=[
@@ -180,10 +184,10 @@ class RequestController extends Controller
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, ($params));
-            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+						curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
             $result = curl_exec($ch);
             curl_close($ch);
-            $weRecallText = '«Спасибо за покупку! Наши менеджеры свяжутся с вами»';
+            $weRecallText = 'Спасибо за покупку! Наши менеджеры свяжутся с вами.';
             return view('paymentSuccess', compact('weRecallText'));
         }
     }
@@ -211,7 +215,7 @@ class RequestController extends Controller
 						$totalAmount += $value->price;
 						$txt .= "<b>" .  $value->name . "</b> " . "<b>" . "Код товара: " .$value->code . "</b> " . number_format($value->price, 0,","," ") . ' сум | ' . 1 . ' шт' . "\n";
 					};
-					$txt .= "Общая сумма: " . number_format($totalAmount, 0,","," ") . " сум" . "</b> ";
+					$txt .= "<b>" . "Общая сумма: " . "</b> " . number_format($totalAmount, 0,","," ") . " сум";
 					$website="https://api.telegram.org/bot".$this->token;
 					$chatId = $this->chat_id;
 					$params=[
@@ -228,7 +232,7 @@ class RequestController extends Controller
 					$result = curl_exec($ch);
 					curl_close($ch);
 			}
-			$weRecallText = '«Спасибо за покупку! Ваша оплата принята. Код подтверждения №' . $order->id . '. Наши менеджеры свяжутся с вами.»';
+			$weRecallText = 'Спасибо за покупку! Ваша оплата принята. Код подтверждения №' . $order->id . '. Наши менеджеры свяжутся с вами.';
 			return view('paymentSuccess', compact('weRecallText'));
        
     }

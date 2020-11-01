@@ -28,6 +28,9 @@ Route::post('/makePayment', 'RequestController@makePayment');
 Route::get('/payment-success/{phone}', 'RequestController@paymentSuccess');
 
 
+Route::get('/find-collection/{product_id}', 'ProductController@findCollection');
+
+
 
 /* REQUEST CONTROLLER */
 Route::post('/order', 'RequestController@order')->name('order');

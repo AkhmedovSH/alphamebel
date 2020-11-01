@@ -11,7 +11,34 @@ use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
 {
-    public function products($category_id)
+	
+    public function findCollection($product_id)
+    {
+			$category = Category::where('id', 10)->first();
+			$products = Product::where('category_id', $category->id)->orderBy('position', 'DESC')->get();
+
+			$finded = false;
+			$collection;
+
+			foreach ($products as $key => $value) {
+				if(in_array($product_id, $products[$key]['collection_product_ids'])) {
+					$finded = true;
+					$collection = $value;
+					break;
+				} else {
+					$finded = false;
+				}
+			}
+			
+			if($finded) {
+				return redirect()->route('singleProductLeft', ['category_id' => $collection->category_id, 'product_id' => $collection->id]);
+			} else {
+				$product =  Product::where('id', $product_id)->first();
+				return redirect(Session::get('show_all_url'));
+			}
+		}
+		
+		public function products($category_id)
     {
         $category = Category::where('id', $category_id)->first();
         $products = Product::where('category_id', $category->id)->orderBy('position', 'DESC')->get();

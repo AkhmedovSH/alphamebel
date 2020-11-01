@@ -23,7 +23,7 @@ class SaleController extends Controller
 
 		$category4 = Category::where('id', 29)->first();
 		$products4 = Product::where('category_id', $category4->id)->where('sale_out', 1)->get();
-
+	
 		return view('sales.sofas', compact('products', 'products2', 'products3', 'products4'));
 	}
 

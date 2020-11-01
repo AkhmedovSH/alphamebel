@@ -3500,6 +3500,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['products', 'filters', 'category', 'attributes', 'credit'],
   data: function data() {
@@ -3622,6 +3623,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+//
 //
 //
 //
@@ -3905,8 +3907,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['products', 'filters', 'category', 'attributes', 'credit'],
+  props: ['products', 'filters', 'category', 'attributes'],
   data: function data() {
     return {
       initialData: [],
@@ -4027,6 +4030,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+//
 //
 //
 //
@@ -4230,6 +4234,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+//
 //
 //
 //
@@ -7609,13 +7614,15 @@ var render = function() {
                         ],
                         staticClass: "filter-items",
                         attrs: {
-                          id: "classic" + 2000 + attribute.id,
-                          type: "checkbox"
+                          id: "classic" + attribute.id,
+                          type: "checkbox",
+                          "true-value": 1,
+                          "false-value": 0
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : attribute.checked
+                            : _vm._q(attribute.checked, 1)
                         },
                         on: {
                           click: function($event) {
@@ -7624,7 +7631,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? true : false
+                              $$c = $$el.checked ? 1 : 0
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -7652,7 +7659,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "label",
-                        { attrs: { for: "classic" + 2000 + attribute.id } },
+                        { attrs: { for: "classic" + attribute.id } },
                         [_vm._v(_vm._s(attribute.title))]
                       )
                     ])
@@ -7675,7 +7682,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\r\n                        Сбросить фильтры\r\n                    "
+                    "\r\n\t\t\t\t\t\t\t\t\t\t\tСбросить фильтры\r\n\t\t\t\t\t\t\t\t\t"
                   )
                 ]
               ),
@@ -7692,7 +7699,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\r\n                        ПРИМЕНИТЬ\r\n                    "
+                    "\r\n\t\t\t\t\t\t\t\t\t\t\tПРИМЕНИТЬ\r\n\t\t\t\t\t\t\t\t\t"
                   )
                 ]
               )
@@ -7947,13 +7954,15 @@ var render = function() {
                         ],
                         staticClass: "filter-items",
                         attrs: {
-                          id: "classic" + 3000 + attribute.id,
-                          type: "checkbox"
+                          id: "classic" + attribute.id,
+                          type: "checkbox",
+                          "true-value": 1,
+                          "false-value": 0
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : attribute.checked
+                            : _vm._q(attribute.checked, 1)
                         },
                         on: {
                           click: function($event) {
@@ -7962,7 +7971,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? true : false
+                              $$c = $$el.checked ? 1 : 0
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -7990,7 +7999,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "label",
-                        { attrs: { for: "classic" + 3000 + attribute.id } },
+                        { attrs: { for: "classic" + attribute.id } },
                         [_vm._v(_vm._s(attribute.title))]
                       )
                     ])
@@ -8013,7 +8022,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\r\n                        Сбросить фильтры\r\n                    "
+                    "\r\n\t\t\t\t\t\t\t\t\t\t\tСбросить фильтры\r\n\t\t\t\t\t\t\t\t\t"
                   )
                 ]
               ),
@@ -8030,7 +8039,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\r\n                        ПРИМЕНИТЬ\r\n                    "
+                    "\r\n\t\t\t\t\t\t\t\t\t\t\tПРИМЕНИТЬ\r\n\t\t\t\t\t\t\t\t\t"
                   )
                 ]
               )
@@ -8285,13 +8294,15 @@ var render = function() {
                         ],
                         staticClass: "filter-items",
                         attrs: {
-                          id: "classic" + 4000 + attribute.id,
-                          type: "checkbox"
+                          id: "classic" + attribute.id,
+                          type: "checkbox",
+                          "true-value": 1,
+                          "false-value": 0
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : attribute.checked
+                            : _vm._q(attribute.checked, 1)
                         },
                         on: {
                           click: function($event) {
@@ -8300,7 +8311,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? true : false
+                              $$c = $$el.checked ? 1 : 0
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -8328,7 +8339,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "label",
-                        { attrs: { for: "classic" + 4000 + attribute.id } },
+                        { attrs: { for: "classic" + attribute.id } },
                         [_vm._v(_vm._s(attribute.title))]
                       )
                     ])
@@ -8351,7 +8362,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\r\n                        Сбросить фильтры\r\n                    "
+                    "\r\n\t\t\t\t\t\t\t\t\t\t\tСбросить фильтры\r\n\t\t\t\t\t\t\t\t\t"
                   )
                 ]
               ),
@@ -8368,7 +8379,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\r\n                        ПРИМЕНИТЬ\r\n                    "
+                    "\r\n\t\t\t\t\t\t\t\t\t\t\tПРИМЕНИТЬ\r\n\t\t\t\t\t\t\t\t\t"
                   )
                 ]
               )
@@ -8623,13 +8634,15 @@ var render = function() {
                         ],
                         staticClass: "filter-items",
                         attrs: {
-                          id: "classic" + 5000 + attribute.id,
-                          type: "checkbox"
+                          id: "classic" + attribute.id,
+                          type: "checkbox",
+                          "true-value": 1,
+                          "false-value": 0
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : attribute.checked
+                            : _vm._q(attribute.checked, 1)
                         },
                         on: {
                           click: function($event) {
@@ -8638,7 +8651,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? true : false
+                              $$c = $$el.checked ? 1 : 0
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -8666,7 +8679,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "label",
-                        { attrs: { for: "classic" + 5000 + attribute.id } },
+                        { attrs: { for: "classic" + attribute.id } },
                         [_vm._v(_vm._s(attribute.title))]
                       )
                     ])
@@ -8689,7 +8702,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\r\n                        Сбросить фильтры\r\n                    "
+                    "\r\n\t\t\t\t\t\t\t\t\t\t\tСбросить фильтры\r\n\t\t\t\t\t\t\t\t\t"
                   )
                 ]
               ),
@@ -8706,7 +8719,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\r\n                        ПРИМЕНИТЬ\r\n                    "
+                    "\r\n\t\t\t\t\t\t\t\t\t\t\tПРИМЕНИТЬ\r\n\t\t\t\t\t\t\t\t\t"
                   )
                 ]
               )
@@ -8961,13 +8974,15 @@ var render = function() {
                         ],
                         staticClass: "filter-items",
                         attrs: {
-                          id: "classic" + 6000 + attribute.id,
-                          type: "checkbox"
+                          id: "classic" + attribute.id,
+                          type: "checkbox",
+                          "true-value": 1,
+                          "false-value": 0
                         },
                         domProps: {
                           checked: Array.isArray(attribute.checked)
                             ? _vm._i(attribute.checked, null) > -1
-                            : attribute.checked
+                            : _vm._q(attribute.checked, 1)
                         },
                         on: {
                           click: function($event) {
@@ -8976,7 +8991,7 @@ var render = function() {
                           change: function($event) {
                             var $$a = attribute.checked,
                               $$el = $event.target,
-                              $$c = $$el.checked ? true : false
+                              $$c = $$el.checked ? 1 : 0
                             if (Array.isArray($$a)) {
                               var $$v = null,
                                 $$i = _vm._i($$a, $$v)
@@ -9004,7 +9019,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "label",
-                        { attrs: { for: "classic" + 6000 + attribute.id } },
+                        { attrs: { for: "classic" + attribute.id } },
                         [_vm._v(_vm._s(attribute.title))]
                       )
                     ])
@@ -9027,7 +9042,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\r\n                        Сбросить фильтры\r\n                    "
+                    "\r\n\t\t\t\t\t\t\t\t\t\t\tСбросить фильтры\r\n\t\t\t\t\t\t\t\t\t"
                   )
                 ]
               ),
@@ -9044,7 +9059,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\r\n                        ПРИМЕНИТЬ\r\n                    "
+                    "\r\n\t\t\t\t\t\t\t\t\t\t\tПРИМЕНИТЬ\r\n\t\t\t\t\t\t\t\t\t"
                   )
                 ]
               )

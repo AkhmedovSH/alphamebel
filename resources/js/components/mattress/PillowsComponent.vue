@@ -8,28 +8,29 @@
             </div>
 
             <div id="filterContent" class="content">
-                <div class="styles" v-for="(filter, index) in filters" :key="index">
-                    <h4 class="filteropentitle style-title-closed">{{ filter.title }}</h4>
-                    <ul class="list style-list">
-                        <li v-for="(attribute, index) in filter.attributes" :key="index" >
-                            <input class="filter-items" :id="'classic' + 6000 + attribute.id" type="checkbox"
-                            v-model="attribute.checked"
-                            @click="selectAttribute(attribute)"
-                            
-                            />
-                            <label :for="'classic' + 6000 + attribute.id">{{ attribute.title }}</label>
-                        </li>
-                    </ul>
-                </div>
-                <div class="btns">
-                    <button type="button" @click="cancelFilters()" id="reset">
-                        Сбросить фильтры
-                    </button>
-                    <button type="button" @click="filterByAttributes()" id="accept">
-                        ПРИМЕНИТЬ
-                    </button>
-                </div>
-            </div>
+							<div class="styles" v-for="(filter, index) in filters" :key="index">
+									<h4 class="filteropentitle style-title-closed">{{ filter.title }}</h4>
+									<ul class="list style-list">
+											<li v-for="(attribute, index) in filter.attributes" :key="index" >
+													<input class="filter-items" :id="'classic' + attribute.id" type="checkbox"
+													v-model="attribute.checked"
+													@click="selectAttribute(attribute)"
+													:true-value="1"
+													:false-value="0"
+													/>
+													<label :for="'classic' + attribute.id">{{ attribute.title }}</label>
+											</li>
+									</ul>
+							</div>
+							<div class="btns">
+									<button type="button" @click="cancelFilters()" id="reset">
+											Сбросить фильтры
+									</button>
+									<button type="button" @click="filterByAttributes()" id="accept">
+											ПРИМЕНИТЬ
+									</button>
+							</div>
+						</div>
         </form>
         <div id="goodswrapper" class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
             <div class="cards contents">
