@@ -78,60 +78,61 @@
                 </li>
                 @endforeach
 
-            </ul>
-            <div class="credit-pay">
-                <div class="order col-xl-4">
-                    <input id="installmentorder" type="checkbox">
-                    <label for="installmentorder">Купить в рассрочку</label>
-                </div>
-                <div class="price col-xl-4">
-                    <p id="totalPrice">Общая сумма заказа:
-                        <span>{{ Cart::subtotal(0, 0, ' ') }} сум</span>
-                    </p>
-                </div>
-            </div>
-            <div class="order-form container">
-                <h2>укажите ваши данные</h2>
-                <div class="form">
-                <form id="form1" action="/makePayment" method="post">
-                    @csrf
-                    <input type="hidden" name="amount" value="{{ Cart::subtotal(0, 0, '') }}">
-                    <input type="hidden" name="merchant_id" value="11309">
-                    <input type="hidden" name="merchant_user_id" value="16169">
-                    <input type="hidden" name="service_id" value="15788">
-                    <input type="hidden" name="return_url" value="http://shatura.uz/">
+						</ul>
+						<form id="form1" action="/makePayment" method="post">
+							@csrf
+							<div class="credit-pay">
+									<div class="order col-xl-4">
+											<input id="installmentorder" name="installment" type="checkbox" value="1">
+											<label for="installmentorder">Купить в рассрочку</label>
+									</div>
+									<div class="price col-xl-4">
+											<p id="totalPrice">Общая сумма заказа:
+													<span>{{ Cart::subtotal(0, 0, ' ') }} сум</span>
+											</p>
+									</div>
+							</div>
+							<div class="order-form container">
+									<h2>укажите ваши данные</h2>
+									<div class="form">
+											<input type="hidden" name="amount" value="{{ Cart::subtotal(0, 0, '') }}">
+											<input type="hidden" name="merchant_id" value="11309">
+											<input type="hidden" name="merchant_user_id" value="16169">
+											<input type="hidden" name="service_id" value="15788">
+											<input type="hidden" name="return_url" value="http://shatura.uz/">
 
-                    <input required class="name" type="text" name="name" placeholder="Ф.И.О">
-                    <input required class="tel" name="phone" type="number" placeholder="Номер телефона">
-                    <input class="email" type="email" name="email" placeholder="E-mail">
-                    <select required class="paytype" name="payment_type">
-                        <option value disabled selected>Способ оплаты</option>
-                        <option value="cash">Наличными или через терминал курьеру</option>
-                        <option value="payme">PayMe</option>
-                        <option value="click">Click</option>
-                    </select>
-                    <input name="address" required class="adress" type="text" placeholder="Адрес доставки">
-                    <textarea name="comment" name="" id="" cols="30" rows="10" placeholder="Комментарий к заказу..."></textarea>
-                    <div class="complete-order">
-                        <div class="privacy-agreement">
-                            <input id="privacy" type="checkbox" required>
-                            <label for="privacy">Прочитал и согласен с
-                                <a href="/offerContract" class="privacy-policy">политикой
-                                    конфиденциальности</a>
-                            </label>
-                        </div>
-                        <button type="submit">
-                            <p>Оформить покупку</p>
-                        </button>
-                    </div>
-                    <p class="warning-text col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">* Нажимая на кнопку
-                        «оформить
-                        заказ», Вы подтверждаете, что согласны с условиями поставки, а так
-                        же даете своё согласие на сбор и обработку персональных данных.</p>
-                </form>
-                </div>
-                
-            </div>
+											<input required class="name" type="text" name="name" placeholder="Ф.И.О">
+											<input required class="tel" name="phone" type="number" placeholder="Номер телефона">
+											<input class="email" type="email" name="email" placeholder="E-mail">
+											<select required class="paytype" name="payment_type">
+													<option value disabled selected>Способ оплаты</option>
+													<option value="cash">Наличными или через терминал курьеру</option>
+													<option value="payme">PayMe</option>
+													<option value="click">Click</option>
+											</select>
+											<input name="address" required class="adress" type="text" placeholder="Адрес доставки">
+											<textarea name="comment" name="" id="" cols="30" rows="10" placeholder="Комментарий к заказу..."></textarea>
+											<div class="complete-order">
+													<div class="privacy-agreement">
+															<input id="privacy" type="checkbox" required>
+															<label for="privacy">Прочитал и согласен с
+																	<a href="/offerContract" class="privacy-policy">политикой
+																			конфиденциальности</a>
+															</label>
+													</div>
+													<button type="submit">
+															<p>Оформить покупку</p>
+													</button>
+											</div>
+											<p class="warning-text col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">* Нажимая на кнопку
+													«оформить
+													заказ», Вы подтверждаете, что согласны с условиями поставки, а так
+													же даете своё согласие на сбор и обработку персональных данных.</p>
+									
+									</div>
+									
+							</div>
+						</form>
     </div>
 </main>
 @endsection

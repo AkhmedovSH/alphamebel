@@ -121,7 +121,6 @@ class RequestController extends Controller
             array_push($arr, $value->id);            
         }
         $order = Order::add($request->all(), $arr);
-        
         if($request->payment_type == 'click') {
             $url = 'https://my.click.uz/services/pay?service_id='
             . $request->service_id . '&merchant_id=' . $request->merchant_id . 
@@ -197,23 +196,25 @@ class RequestController extends Controller
 			if(isset($order)) {
 				$orders = Product::whereIn('id', json_decode($order->product_ids))->get();
 			}
+			
 			if(isset($order)) {
 					$order->status = 1;
 					$order->save();
 					$arr = [
 							'Раздел: ' => 'Корзина',
+							'В Рассрочка: ' => $order->installment == 1 ? 'Да' : 'Нет',
 							'Имя: ' => $order->name,
 							'Номер телефона: ' => $phone,
 							'Комментарий: ' => $order->comment,
 					];
 					$txt = "";
 					foreach ($arr as $key => $value) {
-						$txt .= "<b>" . $key . "</br> " . $value . "\n";
+						$txt .= "<b>" . $key . "</b> " . $value . "\n";
 					};
 					$totalAmount = 0;
 					foreach ($orders as $key => $value) {
 						$totalAmount += $value->price;
-						$txt .= "<b>" .  $value->name . "</b> " . "<b>" . "Код товара: " .$value->code . "</b> " . number_format($value->price, 0,","," ") . ' сум | ' . 1 . ' шт' . "\n";
+						$txt .= "<b>" .  $value->title . "</b> " . "<b>" . "Код товара: " .$value->code . "</b> " . number_format($value->price, 0,","," ") . ' сум | ' . 1 . ' шт' . "\n";
 					};
 					$txt .= "<b>" . "Общая сумма: " . "</b> " . number_format($totalAmount, 0,","," ") . " сум";
 					$website="https://api.telegram.org/bot".$this->token;
@@ -223,6 +224,8 @@ class RequestController extends Controller
 							'text'=> $txt,
 							'parse_mode' => 'html'
 					];
+				
+				
 					$ch = curl_init($website . '/sendMessage');
 					curl_setopt($ch, CURLOPT_HEADER, false);
 					curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -230,9 +233,11 @@ class RequestController extends Controller
 					curl_setopt($ch, CURLOPT_POSTFIELDS, ($params));
 					curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 					$result = curl_exec($ch);
+					
 					curl_close($ch);
 			}
 			$weRecallText = 'Спасибо за покупку! Ваша оплата принята. Код подтверждения №' . $order->id . '. Наши менеджеры свяжутся с вами.';
+			Cart::destroy();
 			return view('paymentSuccess', compact('weRecallText'));
        
     }

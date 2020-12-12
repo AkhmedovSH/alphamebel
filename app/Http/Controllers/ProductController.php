@@ -30,11 +30,15 @@ class ProductController extends Controller
 				}
 			}
 			
-			if($finded) {
-				return redirect()->route('singleProductLeft', ['category_id' => $collection->category_id, 'product_id' => $collection->id]);
-			} else {
-				$product =  Product::where('id', $product_id)->first();
-				return redirect(Session::get('show_all_url'));
+			try {
+				if($finded) {
+					return redirect()->route('singleProductLeft', ['category_id' => $collection->category_id, 'product_id' => $collection->id]);
+				} else {
+					$product =  Product::where('id', $product_id)->first();
+					return redirect(Session::get('show_all_url'));
+				}
+			} catch (\Throwable $th) {
+				return redirect()->back();
 			}
 		}
 		
@@ -100,8 +104,9 @@ class ProductController extends Controller
         return view('collections/kitchens');
     }
 
-    public function sofas($category_id) //sofas
+    public function sofas($category_id, Request $request) //sofas
     {
+				Session::put('show_all_url', $request->url());
         $category = Category::where('id', 26)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
         $products = Product::where('category_id', $category->id)->get();
@@ -142,8 +147,9 @@ class ProductController extends Controller
     }
 
 
-    public function chairs($category_id) //chairs
+    public function chairs($category_id, Request $request) //chairs
     {
+				Session::put('show_all_url', $request->url());
         $category = Category::where('id', 30)->first();
         $filters = Filter::whereIn('id', json_decode($category->filter_ids))->with('attributes')->get();
         $products = Product::where('category_id', $category->id)->get();
