@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\Order;
 use App\Product;
+use Carbon\Carbon;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -153,12 +154,20 @@ class RequestController extends Controller
 
             $order->status = 1;
             $order->save();
-            $arr = [
+            $date = Carbon::now();
+						$formatedDate = $date->format('d-m-Y H:i');
+
+						$arr = [
+							'Номер заказа:' => '№ ' . $order->id,
+							'Дата:' => $formatedDate,
 							'Раздел: ' => 'Корзина',
+							'Рассрочка: ' => $order->installment == 1 ? 'Да' : 'Нет',
 							'Имя: ' => $order->name,
-							'Номер телефона: ' => $request->phone,
+							'Номер телефона: ' => $phone,
 							'Комментарий: ' => $order->comment,
-            ];
+							'Тип оплаты: ' => $order->payment_type,
+							'Статус оплаты: ' => "Оплата наличкой",
+						];
             $txt = "";
             foreach ($arr as $key => $value) {
 							$txt .= "<b>" . $key . "</b> " . $value . "\n";
@@ -200,12 +209,19 @@ class RequestController extends Controller
 			if(isset($order)) {
 					$order->status = 1;
 					$order->save();
+					$date = Carbon::now();
+					$formatedDate = $date->format('d-m-Y H:i');
+
 					$arr = [
+							'Номер заказа:' => '№ ' . $order->id,
+							'Дата:' => $formatedDate,
 							'Раздел: ' => 'Корзина',
-							'В Рассрочка: ' => $order->installment == 1 ? 'Да' : 'Нет',
+							'Рассрочка: ' => $order->installment == 1 ? 'Да' : 'Нет',
 							'Имя: ' => $order->name,
 							'Номер телефона: ' => $phone,
 							'Комментарий: ' => $order->comment,
+							'Тип оплаты: ' => $order->payment_type,
+							'Статус оплаты: ' => $order->status == 1 ? "Успешно" : "Не оплачено",
 					];
 					$txt = "";
 					foreach ($arr as $key => $value) {
