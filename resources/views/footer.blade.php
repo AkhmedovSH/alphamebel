@@ -114,7 +114,7 @@
 
                 <div class="contact-info">
 
-                    <p><a href="tel:+998900324445">+99890 032 44 45</a></p>
+                    <p><a href="tel:+998900033335">+99890 003 33 35</a></p>
 
                     <div class="social">
 
@@ -240,7 +240,7 @@
 
         <div class="developer">
 
-            <p><a href="https://kiranoweb.ru/">Разработано в Кирано</a></p>
+            <p><a href="https://kirano.uz/">Разработано в Кирано</a></p>
 
         </div>
 
